@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="gapselect">
+    <name>
+      <text>Elementare Funktionen: Inj, Surj, Bij</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;h4&gt;Injektiv, Surjektiv und Bijektiv&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Es werden die folgenden Mengen betrachtet:&lt;/p&gt;&lt;p&gt;&amp;nbsp;\(S=\Big\{\)Menge aller &lt;b&gt;Studierenden&lt;/b&gt;&amp;nbsp;an der TH Köln\(\Big\}\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; \(I=\Big\{\)Menge aller&amp;nbsp;&lt;b&gt;Studierenden der Ingenieurwissenschaften&lt;/b&gt;&amp;nbsp;an der TH Köln\(\Big\}\)&lt;/p&gt;&lt;p&gt;\(M=\Big\{\)Menge aller &lt;b&gt;Matrikelnummern&lt;/b&gt; der TH Köln\(\Big\}\)&lt;/p&gt;&lt;p&gt;&amp;nbsp;\(F=\Big\{\)Menge aller &lt;b&gt;Fakultäten&lt;/b&gt; der TH Köln\(\Big\}\)&lt;/p&gt;&lt;p&gt;Die Funktion \(f\) weist den (ingenieurwissenschaftlichen) Studierenden jeweils ihre Matrikelnummer/Fakultät zu.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Entscheiden Sie:&lt;/p&gt;&lt;p&gt;Die Funktion \(f: S \rightarrow M\) ist [[3]].&lt;/p&gt;&lt;p&gt;Die Funktion \(f: S \rightarrow F\)&amp;nbsp; ist [[2]].&lt;/p&gt;&lt;p&gt;Die Funktion \(f: I \rightarrow M\)&amp;nbsp; ist [[1]].&lt;/p&gt;&lt;p&gt;Die Funktion \(f: I \rightarrow F\)&amp;nbsp; &amp;nbsp;ist [[4]].&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;h5&gt;Lösung&lt;/h5&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Die Funktion \(f: S \rightarrow M\) ist bijektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Jedem Studierenden wird genau eine Matrikelnummer zugewiesen, d.h. keine Matrikelnummer wird mehrfach vergeben. (&lt;b&gt;injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Jede Matrikelnummer wir angenommen, da alle Studierenden betrachtet werden. D.h. es gibt keine Matrikelnummer, die nicht einem Studierenden zugeordnet werden kann. Die Zielmenge entspricht dem Wertebereich. (&lt;b&gt;surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Die Funktion \(f: S \rightarrow F\)&amp;nbsp; ist surjektiv, aber nicht injektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Mehrere Studierende werden derselben Fakultät zugeordnet. (&lt;b&gt;nicht injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;In jeder Fakultät ist mindestens ein Studierender eingeschrieben, d.h. auch hier entspricht die Zielmenge dem Wertebereich. (&lt;b&gt;surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Die Funktion \(f: I \rightarrow M\)&amp;nbsp; ist injektiv, aber nicht surjektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Analog zu der ersten Funktion kann jedem ingenieurwissenschaftlichen Studierenden eine Matrikelnummer zu geordnet werden. (i&lt;b&gt;njektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Es existieren Matrikelnummern, die von keinem&amp;nbsp;ingenieurwissenschaftlichen Studierenden sind (z.B von einem Studierenden der Geisteswissenschaft). Somit entspricht die Zielmenge nicht dem Wertebereich. (&lt;b&gt;nicht surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Die Funktion&amp;nbsp;\(f: I \rightarrow F\) ist weder injektiv noch surjektiv:&lt;/li&gt;&lt;/ul&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Wie zuvor sind wieder mehrere Studierende an derselben Fakultät. (&lt;b&gt;nicht injektiv)&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Dieses mal gibt es auch Fakultäten, die nicht ingenieurwissenschaftlich sind und damit auch kein ingenieurwissenschaftlicher Studierender dort zugewiesen wird. Die Zielmenge entspricht also nicht dem Wertebereich. (&lt;b&gt;nicht surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <shuffleanswers>1</shuffleanswers>
+    <correctfeedback format="html">
+      <text>Die Antwort ist richtig.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Die Antwort ist teilweise richtig.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Die Antwort ist falsch.</text>
+    </incorrectfeedback>
+    <shownumcorrect />
+    <selectoption>
+      <text>injektiv, aber nicht surjektiv</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>surjektiv, aber nicht injektiv</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>bijektiv</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>weder injektiv noch surjektiv</text>
+      <group>1</group>
+    </selectoption>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="gapselect">
+    <name>
+      <text>Elementare Funktionen: Inj, Surj, Bij (Fkt.)</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;Injektiv, Surjektiv und Bijektiv&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sei die Funktion \(f(x)=3x^2\)&amp;nbsp; gegeben.&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Wenn \(f: \ \ \ \ \ \mathbb{R} \ \rightarrow \ \mathbb{R}\)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;gilt, dann ist \(f\)&amp;nbsp; &amp;nbsp; [[1]].&lt;/p&gt;&lt;p&gt;Wenn \(f: [0, \infty [ \ \rightarrow \ \mathbb{R}\)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; gilt, dann ist \(f\)&amp;nbsp; &amp;nbsp; [[2]].&lt;/p&gt;&lt;p&gt;Wenn \(f: \ \ \ \ \ \mathbb{R} \ \rightarrow \ [0,\infty [ \) gilt, dann ist \(f\)&amp;nbsp; &amp;nbsp; [[3]].&lt;br&gt;&lt;/p&gt;&lt;p&gt;Wenn \(f: [0,\infty [ \ \rightarrow \ [0,\infty [ \)&amp;nbsp; gilt, dann ist \(f\)&amp;nbsp; &amp;nbsp;[[4]].&lt;/p&gt;&lt;p&gt;Wenn \(f: \ \ \ \ \ \mathbb{N} \ \rightarrow \ \mathbb{N}\)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;gilt, dann ist \(f\)&amp;nbsp; &amp;nbsp; [[2]].&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;h5&gt;Lösung&lt;/h5&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Wenn \(f: \mathbb{R} \ \rightarrow \ \mathbb{R}\) gilt, dann ist \(f\) weder injektiv noch surjektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-1)=3\cdot (-1)^2=3=3\cdot (1)=f(1)\) (&lt;b&gt;nicht injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Zielmenge \(Z=\mathbb{R}\) entspricht nicht dem Wertebereich \(W_f= [0,\infty [\). (&lt;b&gt;nicht surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Wenn \(f: [0, \infty [ \ \rightarrow \ \mathbb{R}\) gilt, dann ist \(f\) injektiv, aber nicht surjektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Da \(x\) nur positive Werte annimmt, wird jeder Funktionswert genau einmal getroffen. (&lt;b&gt;injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Die Zielmenge entspricht wieder nicht dem Wertebereich (siehe oben). (&lt;b&gt;nicht surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Wenn \(f: \mathbb{R} \ \rightarrow \ [0,\infty [ \) gilt, dann ist \(f\) surjektiv, aber nicht injektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-1)=3\cdot (-1)^2=3=3\cdot (1)=f(1)\) (&lt;b&gt;nicht injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Die Zielmenge entspricht dieses mal dem Wertebereich. (&lt;b&gt;surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Wenn \(f: [0,\infty [ \ \rightarrow \ [0,\infty [ \)&amp;nbsp; gilt, dann ist \(f\) ist bijektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Da \(x\) nur positive Werte annimmt, wird jeder Funktionswert genau einmal getroffen. (&lt;b&gt;injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Die Zielmenge entspricht wieder dem Wertebereich. (&lt;b&gt;surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Wenn \(f:\mathbb{N} \ \rightarrow \ \mathbb{N}\)&amp;nbsp;gilt, dann ist \(f\) injektiv, aber nicht surjektiv:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Da \(x\) nur positive Werte (\(D_f=\mathbb{N}\)) annimmt, wird jeder Funktionswert genau einmal getroffen. (&lt;b&gt;injektiv&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Der Wertebereich \(W_f=\{3 \cdot 1^2, 3 \cdot 2^2, 3 \cdot 3^2,... \}=\{3,12,27,..\}\) entspricht nicht der Zielmenge \(\mathbb{N}\). (&lt;b&gt;nicht surjektiv&lt;/b&gt;)&lt;/p&gt;&lt;/div&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <shuffleanswers>1</shuffleanswers>
+    <correctfeedback format="html">
+      <text>Die Antwort ist richtig.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Die Antwort ist teilweise richtig.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Die Antwort ist falsch.</text>
+    </incorrectfeedback>
+    <shownumcorrect />
+    <selectoption>
+      <text>weder injektiv noch surjektiv</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>injektiv, aber nicht surjektiv</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>surjektiv, aber nicht injektiv</text>
+      <group>1</group>
+    </selectoption>
+    <selectoption>
+      <text>bijektiv</text>
+      <group>1</group>
+    </selectoption>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="multichoice">
+    <name>
+      <text>Elementare Funktionen: Df, Wf (einfach)</text>
+    </name>
+    <questiontext format="html">
+      <text>Was trifft für den Definitions- und Wertebereich der folgenden Funktion zu?&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(x)=\sqrt{x+2}\)&lt;/p&gt;&lt;/div&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Damit der Term \(x+2\) unter der Wurzel nicht negativ wird, muss \(x \geq -2\) sein und damit ist der Definitionsbereich:&lt;/p&gt;&lt;p&gt;\(D_f=\big\{ x\in \mathbb{R} \ | \ x \geq -2 \big\}\)&lt;/p&gt;&lt;p&gt;\(f\) nimmt nur positive Funktionswerte an, d.h für den Wertebereich gilt:&lt;/p&gt;&lt;p&gt;\(W_f=\big\{ x\in \mathbb{R} \ | \ x \geq 0 \big\}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Die Antwort ist richtig.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Die Antwort ist teilweise richtig.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Die Antwort ist falsch.</text>
+    </incorrectfeedback>
+    <shownumcorrect />
+    <answer fraction="50" format="html">
+      <text>&lt;p&gt;\(D_f=\big\{ x\in \mathbb{R} \ | \ x \geq -2 \big\}\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>&lt;p&gt;\(D_f=\big\{ x\in \mathbb{R} \ | \ x \geq 0 \big\}\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>&lt;p&gt;\(W_f=\big\{ x\in \mathbb{R} \ | \ x \geq -2 \big\}\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>&lt;p&gt;\(W_f=\big\{ x\in \mathbb{R} \ | \ x \geq 0 \big\}\)&lt;br&gt;&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="multichoice">
+    <name>
+      <text>Elementare Funktionen: gerade Funktionen</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Welche der folgenden Funktionen sind gerade?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;h5&gt;Lösung&lt;/h5&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Für eine gerade Funktion gilt \(f(-x)=f(x)\).&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=x^2+x\) ist keine gerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-x)=(-x)^2+(-x)=x^2-x \neq f(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=x^8 \cdot (x+5)\) ist keine gerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-x)= (-x)^8 \cdot (-x+5)= x^8 \cdot (-x+5) \neq f(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=\frac{1}{x^2+3}\) ist eine gerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;\(f(-x)=\frac{1}{(-x)^2+3}=\frac{1}{x^2+3}=f(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=2\) ist eine gerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;\(f(-x)=2=f(x)\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Die Antwort ist richtig.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Die Antwort ist teilweise richtig.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Die Antwort ist falsch.</text>
+    </incorrectfeedback>
+    <shownumcorrect />
+    <answer fraction="-50" format="html">
+      <text>&lt;p&gt;\(f(x)=x^2+x\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>&lt;p&gt;\(f(x)=x^8 \cdot (x+5)\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>&lt;p&gt;\(f(x)=\frac{1}{x^2+3}\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>&lt;p&gt;\(f(x)=2\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="multichoice">
+    <name>
+      <text>Elementare Funktionen: ungerade Funktionen</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Welche der folgenden Funktionen sind ungerade?&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;h5&gt;Lösung&lt;/h5&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Für ungerade Funktionen gilt \(f(-x)=-f(x)\).&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=x^3+1\) ist keine ungerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-x)=(-x)^3+1=-x^3+1 \neq -f(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=\frac{1}{x^3(x+1)}\) ist keine ungerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-x)=\frac{1}{(-x)^3(-x+1)}=\frac{1}{-x^3(-x+1)} \neq -f(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=x^5 \cdot(1-x^2)\) ist eine ungerade Funktion:&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-x)=(-x)^5 \cdot(1-(-x)^2)= -x^5 \cdot(1-x^2)=-f(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f(x)=6\cdot x\) ist eine ungerade Funktion:&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(-x)=6\cdot (-x)=-6 \cdot x=-f(x)\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <single>false</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Die Antwort ist richtig.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Die Antwort ist teilweise richtig.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Die Antwort ist falsch.</text>
+    </incorrectfeedback>
+    <shownumcorrect />
+    <answer fraction="-50" format="html">
+      <text>&lt;p&gt;\(f(x)=x^3+1\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="-50" format="html">
+      <text>&lt;p&gt;\(f(x)=\frac{1}{x^3(x+1)}\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>&lt;p&gt;\(f(x)=x^5 \cdot(1-x^2)\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="50" format="html">
+      <text>&lt;p&gt;\(f(x)=6\cdot x\)&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="stack">
+    <name>
+      <text>Elementare Funktionen: Linearfaktorzerlegung</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 0.9375rem;"&gt;Sei \(f(x)\) eine Funktion mit&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(x)={@f@}\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Bestimmen Sie die Linearfaktorzerlegung. Die gesuchten Zahlen können positiv oder negativ sein.&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(x)=\) [[input:ans3]] \( \cdot \Big(x-\)&amp;nbsp; [[input:ans1]]&amp;nbsp; \(\Big)\cdot \Big(x-\)&amp;nbsp; [[input:ans2]]&amp;nbsp;\(\Big)\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;[[validation:ans1]] [[validation:ans2]][[validation:ans3]]&lt;/p&gt;&lt;p&gt;[[feedback:prt1]]&amp;nbsp;[[feedback:prt2]]&amp;nbsp;&lt;br&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f(x)={@f@}={@c@} \cdot ({@f1@})\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Berechnung der Nullstellen von {@f1@}:&lt;/p&gt;&lt;p&gt;\(x_{0,1}=\frac{{@a+b@}}{2} \pm \sqrt{\frac{{@(a+b)^2@}}{4}-({@a*b@})}={@(a+b)/2@}\pm {@((a+b)^2/4-(a*b))^(1/2)@}\)&lt;/p&gt;&lt;p&gt;Daraus folgt \(x_0={@a@}\) und \(x_1={@b@}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Das heißt, die Linearfaktorzerlegung hat die Darstellung&lt;/p&gt;&lt;p&gt;\(f(x)={@c@} \cdot (x-({@a@})) \cdot (x-({@b@}))\)&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <stackversion>
+      <text>2020101501</text>
+    </stackversion>
+    <questionvariables>
+      <text>a: rand([-3,-2,2,3])
+b: rand_with_prohib(-7,-2,[a])
+c: 2+rand(5)
+f:expand(c*(x-a)*(x-b))
+f1:expand((x-a)*(x-b))
+</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text />
+    </specificfeedback>
+    <questionnote>
+      <text>Linearfaktoren</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text>Richtige Antwort, gut gemacht!</text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text>Ihre Antwort ist teilweise korrekt.</text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text>Falsche Antwort.</text>
+    </prtincorrect>
+    <multiplicationsign>dot</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <logicsymbol>lang</logicsymbol>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed />
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>a</tans>
+      <boxsize>3</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>b</tans>
+      <boxsize>3</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>c</tans>
+      <boxsize>3</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text>true1: if ans1=b then a: b
+true2: if ans2=a then b: a</text>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>a</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>+</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>2</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>b</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>+</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>b</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>3</truenextnode>
+        <trueanswernote>prt1-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>+</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>3</falsenextnode>
+        <falseanswernote>prt1-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
+        <name>3</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>a</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-4-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>+</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-4-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>c</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="stack">
+    <name>
+      <text>Elementare Funktionen: Verkettung</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 0.9375rem;"&gt;Berechnen Sie für die Funktionen&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(x)=x^{@a@}\)&lt;/p&gt;&lt;p&gt;\(g(x)=e^{x+{@b@}}\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp; &amp;nbsp; \(\Big(f \circ g \Big)(x)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp; &amp;nbsp; \(\Big(g \circ f \Big)(x)=\)&amp;nbsp;[[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;br&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&amp;nbsp; &amp;nbsp; \(\Big(f \circ g \Big)(x)= (e^{x+{@b@}})^{@a@}=e^{{@a@}(x+{@b@})}\)&amp;nbsp;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&amp;nbsp; &amp;nbsp; \(\Big(g \circ f \Big)(x)=e^{x^{@a@}+{@b@}}\)&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <stackversion>
+      <text>2020101501</text>
+    </stackversion>
+    <questionvariables>
+      <text>a: 2+rand(5)
+b: 2+rand(5)</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>&lt;h5&gt;&lt;br&gt;&lt;/h5&gt;</text>
+    </specificfeedback>
+    <questionnote>
+      <text>Verkettung</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text>Richtige Antwort, gut gemacht!</text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text>Ihre Antwort ist teilweise korrekt.</text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text>Falsche Antwort.</text>
+    </prtincorrect>
+    <multiplicationsign>dot</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <logicsymbol>lang</logicsymbol>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed />
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>e^(a*(x+b))</tans>
+      <boxsize>10</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>e^(x^a+b)</tans>
+      <boxsize>10</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>e^(a*(x+b))</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>e^(x^a+b)</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+<question type="stack">
+    <name>
+      <text>Elementare Funktionen: Verkettung (einfach)</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;h4&gt;Verkettung von Funktionen&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie für die Funktionen&amp;nbsp;&lt;/p&gt;&lt;div&gt;&lt;p&gt;\(f(x)=x^{@a@}\)&lt;/p&gt;&lt;p&gt;\(g(x)=x^2+{@b@}x+{@c@}\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp; &amp;nbsp; \(\Big(f \circ g \Big)(x)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp; &amp;nbsp; \(\Big(g \circ f \Big)(x)=\)&amp;nbsp;[[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;&lt;h5&gt;Lösung&lt;/h5&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp; &amp;nbsp; \(\Big(f \circ g \Big)(x)=(x^2+{@b@}x+{@c@})^{@a@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp; &amp;nbsp; \(\Big(g \circ f \Big)(x)=(x^{@a@})^2+{@b@}(x^{@a@})+{@c@}=x^{@2*a@}+{@b@}x^{@a@}+{@c@}\)&lt;/p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.1000000</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <stackversion>
+      <text>2019052700</text>
+    </stackversion>
+    <questionvariables>
+      <text>a: 3+rand(4)
+b: 2+rand(4)
+c: 2+rand(4)
+
+loes1: (x^2+b*x+c)^a
+loes2: x^(2*a)+b*x^a+c</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text>&lt;h5&gt;&lt;br&gt;&lt;/h5&gt;</text>
+    </specificfeedback>
+    <questionnote>
+      <text>verkettung</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text>Richtige Antwort, gut gemacht!</text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text>Ihre Antwort ist teilweise korrekt.</text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text>Falsche Antwort.</text>
+    </prtincorrect>
+    <multiplicationsign>dot</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <logicsymbol>lang</logicsymbol>
+    <matrixparens>(</matrixparens>
+    <variantsselectionseed />
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>loes1</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>loes2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>loes1</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>loes2</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+    </tags>
+  </question>
+
+
+  
+</quiz>

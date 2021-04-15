@@ -1,0 +1,5 @@
+# Mapping: SourceCategory (from Moodle) -> Directory in this repository
+$system$/top/2. Elementare Funktionen/Eigenschaften
+    ElementareFunktionen/ElementareFunktionen_Eigenschaften
+$system$/top/8. Komplexe Zahlen/Komplexe Folgen, Reihen
+    KomplexeZahlen/KomplexeZahlen_FolgenReihen
