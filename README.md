@@ -1,10 +1,10 @@
 
 
 
-## Fellowships für Innovationen in der digitalen Hochschullehre“ (digiFellow) 
+## Fellowships für Innovationen in der digitalen Hochschullehre (digiFellow) 
 # Digitaler Aufgabenpool Mathematik  ![Logo](aufgabenpool-logo.png)
 
-## Team
+## Team an der TH Köln
 - Fakultät 04: Prof. Dr. Jan-Philipp Schmidt
 - Fakultät 07: Prof. Dr. Heiko Knospe, Wiss. Mitarbeiter*innen Patricia Graf, Katharina Hammersen und Andreas Schwenk
 - Fakultät 09: Prof. Dr. Angela Schmitz, Wiss. Mitarbeiter*innen Silvia Becher, Dr. Susanne Hilger und Jan Reißner
