@@ -233,22 +233,22 @@
         }
     ],
     "tags": [
-        "L\u00f6sung",
-        "getestet",
-        "extern",
-        "\u00dcbung",
-        "Tangente",
         "Produktregel",
-        "Quotientenregel",
+        "\u00dcbung",
+        "extern",
+        "Monotonie",
         "Anwendung",
         "Plot",
-        "Verst\u00e4ndnis",
-        "MC",
-        "Transfer",
-        "Monotonie",
+        "Differentialrechnung",
         "Kettenregel",
-        "taylor",
+        "Verst\u00e4ndnis",
+        "Transfer",
+        "MC",
         "Extrema",
-        "Differentialrechnung"
+        "getestet",
+        "Quotientenregel",
+        "taylor",
+        "L\u00f6sung",
+        "Tangente"
     ]
 }

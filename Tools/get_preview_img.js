@@ -1,84 +1,64 @@
+//******************************************************************************
+//  Moodle Question Preview
+//  (c) 2021 by TH Köln
+//  Author: Andreas Schwenk, andreas.schwenk@th-koeln.de
+//  Version: 0.01
+//******************************************************************************
+
+// Note: This script is SLOW, since we need to wait for Maxima and MathJax...
+
+const moodle_url = 'https://sell.f07-its.fh-koeln.de/moodle'
+const moodle_user = 'puppeteer';
+const moodle_pwd = 'dGDs988S#';  // TODO: must be secret!!!!!
+
+console.log(process.argv)
+
+if(process.argv.length != 5) {
+    console.log("usage: node get_preveiw_img COURSE_ID QUESTION_ID OUTPUT_PATH")
+    process.exit(-1);
+}
+
+//const course_id = 2;
+const course_id = process.argv[2];
+//const question_id = 3282;
+const question_id = process.argv[3];
+//const img_out_path = '../Data/0.png';
+const img_out_path = process.argv[4];
+
+console.log(question_id)
+console.log(course_id)
+console.log(img_out_path)
+
 const puppeteer = require('puppeteer');
 
 (async() => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://sell.f07-its.fh-koeln.de/moodle/login/index.php', {waitUntil: 'load'});
+    await page.goto(moodle_url + '/login/index.php', {waitUntil: 'load'});
 
     const userInput = await page.waitForSelector("#username");
     await userInput.focus();
-    await userInput.type("puppeteer");
+    await userInput.type(moodle_user);
 
     const userPassword = await page.waitForSelector("#password");
     await userPassword.focus();
-    await userPassword.type("dGDs988S#");   // TODO: must be secret!!!!!
+    await userPassword.type(moodle_pwd);
 
     await page.click('#loginbtn');
     await page.waitForNavigation(); 
 
-    await page.goto('https://sell.f07-its.fh-koeln.de/moodle/question/preview.php?id=3282&courseid=2', {waitUntil: 'load'});
+    await page.goto(moodle_url + '/question/preview.php?id=' + question_id + '&courseid=' + course_id, {waitUntil: 'load'});
 
-    
-    /*const questionDiv = await page.waitForSelector(".content");
-    console.log(questionDiv.innerHTML);*/
+    await new Promise(resolve => setTimeout(resolve, 1000)); // wait for MathJax
 
-    /*let xxxx = await page.evaluate(() => {
-        let element = document.querySelector(".content");
-        return element;
-    });
-    console.log(xxxx);
+    const questionDiv = await page.$(".content");
+    await questionDiv.screenshot({path: img_out_path});
 
-    await xxxx.screenshot({path: 'screenshot-test-2.png'});*/
-
-    const elements = await page.$$('*');
-    for (let i = 0; i < elements.length; i++) {
-        let element = elements[i];
-        console.log(element.class);
-    }
-
-    /*let xxxx = await page.evaluate(() => {
-        //let questionDivId = null;
-        //let elements = document.getElementsByClassName('formulation clearfix');
-        let elements = document.getElementsByClassName('content');
-        //for (let element of elements)
-            //questionDivId = element;
-        //return questionDivId;
-        //return JSON.stringify(elements[0], null, 4)
-        //return elements[0].innerHTML;
-        return elements[0].id;
-    });
-
-    console.log(xxxx);*/
-    //console.log(JSON.stringify(xxxx, null, 4));
-
-    //username
-    //password
-    //loginbtn
-
-    await page.screenshot({path: 'screenshot-test.png'});
-
-
-    /*// Type our query into the search bar
-    await page.focus('.js-search-field');
-    await page.type('puppeteer');
-
-    // Submit form
-    await page.press('Enter');
-
-    // Wait for search results page to load
-    await page.waitForNavigation({waitUntil: 'load'});
-
-
-    console.log('FOUND!', page.url());
-
-    // Extract the results from the page
-    const links = await page.evaluate(() => {
-      const anchors = Array.from(document.querySelectorAll('.result-link a'));
-      return anchors.map(anchor => anchor.textContent);
-    });
-    console.log(links.join('\n'));*/
+    //await page.screenshot({path: 'screenshot-test.png'});
 
     browser.close();
 
 })();
+
+console.log("..ready")

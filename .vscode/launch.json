@@ -3,7 +3,8 @@
     "configurations": [
         {
             "name": "get_prewiew_img.js",
-            "program": "${workspaceFolder}/app.js",
+            "cwd": "${workspaceFolder}/Tools/",
+            "program": "${workspaceFolder}/Tools/get_preview_img.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"

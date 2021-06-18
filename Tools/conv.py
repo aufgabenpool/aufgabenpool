@@ -41,11 +41,9 @@ questionid = ''
 questionIdx = 0
 
 for i, question in enumerate(quiz):
-
     if question.tag == '!comment':
         questionid = question.text
         continue
-
     t = question.attrib['type']
     if t == "category":
         current_category = question.find('category')[0].text
@@ -70,11 +68,15 @@ for i, question in enumerate(quiz):
         'tags':taglist,
         'category':current_category}
     )
-
     f = open(path_out + str(questionIdx) + ".xml", "w")
     questionStr = ET.tostring(question, encoding="unicode")
     f.write(questionStr)
     f.close()
+
+    # convert image
+    moodleQuestionId = int(questionid[11:])
+    cmd = 'cd Tools && node get_preview_img.js 2 ' + str(moodleQuestionId) + ' ' + '../Data/' + str(questionIdx) + '.png'
+    os.system(cmd)
 
     questionIdx += 1
 
