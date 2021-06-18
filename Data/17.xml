@@ -1,0 +1,40 @@
+<question type="truefalse">
+    <name>
+      <text>lok Min</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;Entscheiden Sie, ob die folgende Aussage wahr oder falsch ist.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Sei $$f$$ eine auf $$]a,b[$$ zweimal differenzierbare Funktion und $$ x_0 \in$$ &amp;nbsp;$$]a,b[$$ eine stationäre Stelle.&amp;nbsp;&lt;/p&gt;&lt;br&gt;Gilt $$f''(x_0)&amp;gt;0$$, so besitzt $$f$$ an der Stelle $$x_0$$ ein lokales Maximum. &lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text />
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+      <tag><text>Extrema</text>
+</tag>
+      <tag><text>Differentialrechnung</text>
+</tag>
+      <tag><text>Verständnis</text>
+</tag>
+      <tag><text>MC</text>
+</tag>
+    </tags>
+  </question>
+
