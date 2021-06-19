@@ -10,8 +10,10 @@ import os
 import xml.etree.ElementTree as ET
 import json
 
+# TODO: run puppeteer in batch (do NOT login for every question...)
 
-# https://dustinoprea.com/2019/01/22/python-parsing-xml-and-retaining-the-comments/
+
+# the following class code is taken from: https://dustinoprea.com/2019/01/22/python-parsing-xml-and-retaining-the-comments/
 class _CommentedTreeBuilder(ET.TreeBuilder):
     def comment(self, data):
         self.start('!comment', {})
@@ -19,8 +21,8 @@ class _CommentedTreeBuilder(ET.TreeBuilder):
         self.end('!comment')
 
 
-path_in = "Rohdaten/quiz-pool-Differentialrechnung-20210617-1847.xml"  # TODO!!
-path_out = "Data/"
+path_in = "../Rohdaten/quiz-pool-Differentialrechnung-20210617-1847.xml"  # TODO!!
+path_out = "../Data/"
 
 os.system("rm -rf " + path_out)
 os.system("mkdir -p " + path_out)
@@ -75,7 +77,7 @@ for i, question in enumerate(quiz):
 
     # convert image
     moodleQuestionId = int(questionid[11:])
-    cmd = 'cd Tools && node get_preview_img.js 2 ' + str(moodleQuestionId) + ' ' + '../Data/' + str(questionIdx) + '.png'
+    cmd = 'node get_preview_img.js 2 ' + str(moodleQuestionId) + ' ' + '../Data/' + str(questionIdx) + '.png'
     os.system(cmd)
 
     questionIdx += 1
@@ -90,3 +92,10 @@ print(metadata_json)
 f = open(path_out + "meta.json", "w")
 f.write(metadata_json)
 f.close()
+
+# remove image background
+from shutil import which
+if which('mogrify') is None:
+    print("warning: imagemagick is not installed!")
+else:
+    os.system('cd ../Data/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')

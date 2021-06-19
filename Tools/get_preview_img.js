@@ -14,7 +14,8 @@ const moodle_pwd = 'dGDs988S#';  // TODO: must be secret!!!!!
 console.log(process.argv)
 
 if(process.argv.length != 5) {
-    console.log("usage: node get_preveiw_img COURSE_ID QUESTION_ID OUTPUT_PATH")
+    console.log("usage: node get_preview_img.js COURSE_ID QUESTION_ID OUTPUT_PATH")
+    console.log("example: node get_preview_img.js 2 3271 ~/Downloads/xx.png")
     process.exit(-1);
 }
 
@@ -53,12 +54,18 @@ const puppeteer = require('puppeteer');
     await new Promise(resolve => setTimeout(resolve, 1000)); // wait for MathJax
 
     const questionDiv = await page.$(".content");
-    await questionDiv.screenshot({path: img_out_path});
+
+    const box = await questionDiv.boundingBox();
+    const yoffset = 12;  // clip links at top-right position
+    await questionDiv.screenshot({
+        'path': img_out_path,
+        'clip': {'x': box['x'], 'y': box['y']+yoffset, 
+                 'width': box['width'], 'height': box['height']-yoffset}
+    });
 
     //await page.screenshot({path: 'screenshot-test.png'});
 
     browser.close();
 
+    console.log("..ready")
 })();
-
-console.log("..ready")
