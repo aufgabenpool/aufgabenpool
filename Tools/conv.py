@@ -89,10 +89,12 @@ metadata["tags-all"] = list(tagset)
 
 with open("../Taxonomie/taxonomie.json") as f:
     tax = json.load(f)
+    metadata["tags-maintopics"] = []
     metadata["tags-didactics"] = tax["didactics"]
     metadata["tags-content"] = tax["content"]
     metadata["tags-difficulty"] = tax["difficulty"]
     for maintopic in tax["maintopics"]:
+        metadata["tags-maintopics"].append(maintopic)
         maintopic_tags = []
         for ex in metadata['exercises']:
             for tag in ex['tags']:
@@ -108,7 +110,7 @@ with open("../Taxonomie/taxonomie.json") as f:
                     continue
                 if tag not in maintopic_tags:
                     maintopic_tags.append(tag)
-        metadata["tags-" + maintopic] = maintopic_tags
+        metadata["tags-maintopic-" + maintopic] = maintopic_tags
 
 
 

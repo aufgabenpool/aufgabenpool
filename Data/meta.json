@@ -233,23 +233,26 @@
         }
     ],
     "tags-all": [
-        "Extrema",
-        "Monotonie",
-        "Kettenregel",
         "Anwendung",
+        "Extrema",
         "Verst\u00e4ndnis",
-        "Produktregel",
-        "Tangente",
-        "Transfer",
-        "getestet",
+        "Quotientenregel",
+        "taylor",
         "MC",
         "Plot",
-        "extern",
-        "taylor",
-        "Quotientenregel",
-        "\u00dcbung",
+        "Monotonie",
         "Differentialrechnung",
+        "\u00dcbung",
+        "Tangente",
+        "Kettenregel",
+        "Produktregel",
+        "getestet",
+        "Transfer",
+        "extern",
         "L\u00f6sung"
+    ],
+    "tags-maintopics": [
+        "Differentialrechnung"
     ],
     "tags-didactics": [
         "Transfer",
@@ -267,7 +270,7 @@
         "mittelschwer",
         "schwer"
     ],
-    "tags-Differentialrechnung": [
+    "tags-maintopic-Differentialrechnung": [
         "Tangente",
         "Produktregel",
         "Extrema",
