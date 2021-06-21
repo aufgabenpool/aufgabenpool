@@ -78,7 +78,7 @@ for i, question in enumerate(quiz):
     # get image
     moodleQuestionId = int(questionid[11:])
     cmd = 'node get_preview_img.js 2 ' + str(moodleQuestionId) + ' ' + '../Data/' + str(questionIdx) + '.png'
-    #os.system(cmd)
+    os.system(cmd)
 
     questionIdx += 1
 
