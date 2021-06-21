@@ -1,52 +1,49 @@
 <question type="stack">
     <name>
-      <text>Grenzkostenfunktion</text>
+      <text>Taylorformel: e^(-kx)</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Wie lautet die Grenzkostenfunktion zu folgender Kostenfunktion?&lt;/p&gt;
-&lt;p&gt;\[K(x)={@myK@}\]&lt;/p&gt;
-&lt;p&gt;Hierbei bezeichnet \(x\) die Produktionsmenge.&lt;/p&gt;
-&lt;p&gt;Grenzkostenfunktion \((x)\) = [[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Bestimmen Sie das Taylorpolynom \(\,p_{@deg@}(x)\,\) der folgenden Funktion&amp;nbsp;zum Entwicklungspunkt \(x_0 = 0\).&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\( f(x) = {@fcn@}\)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br&gt;\(p_{@deg@}(x)=\)&amp;nbsp;[[input:ans1]]&amp;nbsp;[[validation:ans1]] [[feedback:prt1]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
       <text />
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
+    <penalty>0.1000000</penalty>
     <hidden>0</hidden>
     <idnumber />
     <stackversion>
       <text>2020120600</text>
     </stackversion>
     <questionvariables>
-      <text>/* Zufall */
-a:rand_with_step(90,120,2);
-b:rand_with_step(8,20,1);
-/* Kostenfunktion */
-myK:ev(a+b*sqrt(x),simp);
-K(x):=a+b*sqrt(x);
-/* Antwort */
-ta1:diff(K(x),x,1);</text>
+      <text>c: rand_with_step(1,5,1);
+
+fcn: exp(-c*x);
+
+deg: rand_with_step(3,5,1);
+
+loes: taylor(fcn, x,0,deg);</text>
     </questionvariables>
     <specificfeedback format="html">
-      <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
+      <text />
     </specificfeedback>
     <questionnote>
-      <text>{@K@}</text>
+      <text>\(p_{@deg@}(x),\ f(x) = {@fcn@}, \ {@loes@} \)</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
     <assumereal>0</assumereal>
     <prtcorrect format="html">
-      <text />
+      <text>&lt;p&gt;Richtige Antwort, gut gemacht!&lt;/p&gt;</text>
     </prtcorrect>
     <prtpartiallycorrect format="html">
-      <text />
+      <text>&lt;p&gt;Ihre Antwort ist teilweise korrekt.&lt;/p&gt;</text>
     </prtpartiallycorrect>
     <prtincorrect format="html">
-      <text />
+      <text>&lt;p&gt;Falsche Antwort.&lt;/p&gt;</text>
     </prtincorrect>
-    <multiplicationsign>dot</multiplicationsign>
+    <multiplicationsign>none</multiplicationsign>
     <sqrtsign>1</sqrtsign>
     <complexno>i</complexno>
     <inversetrig>cos-1</inversetrig>
@@ -56,15 +53,15 @@ ta1:diff(K(x),x,1);</text>
     <input>
       <name>ans1</name>
       <type>algebraic</type>
-      <tans>ta1</tans>
-      <boxsize>15</boxsize>
+      <tans>loes</tans>
+      <boxsize>25</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
       <syntaxattribute>0</syntaxattribute>
-      <forbidwords>diff</forbidwords>
+      <forbidwords />
       <allowwords />
-      <forbidfloat>0</forbidfloat>
+      <forbidfloat>1</forbidfloat>
       <requirelowestterms>0</requirelowestterms>
       <checkanswertype>0</checkanswertype>
       <mustverify>1</mustverify>
@@ -83,22 +80,22 @@ ta1:diff(K(x),x,1);</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>ta1</tans>
+        <tans>loes</tans>
         <testoptions />
-        <quiet>1</quiet>
-        <truescoremode>+</truescoremode>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
         <truescore>1.0000000</truescore>
         <truepenalty>0.0000000</truepenalty>
         <truenextnode>-1</truenextnode>
-        <trueanswernote>prt1-0-T</trueanswernote>
+        <trueanswernote>prt1-1-T</trueanswernote>
         <truefeedback format="html">
           <text />
         </truefeedback>
-        <falsescoremode>+</falsescoremode>
+        <falsescoremode>=</falsescoremode>
         <falsescore>0.0000000</falsescore>
         <falsepenalty>0.0000000</falsepenalty>
         <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt1-0-F</falseanswernote>
+        <falseanswernote>prt1-1-F</falseanswernote>
         <falsefeedback format="html">
           <text />
         </falsefeedback>
@@ -107,7 +104,13 @@ ta1:diff(K(x),x,1);</text>
     <tags>
       <tag><text>getestet</text>
 </tag>
+      <tag><text>extern</text>
+</tag>
       <tag><text>Differentialrechnung</text>
+</tag>
+      <tag><text>Übung</text>
+</tag>
+      <tag><text>taylor</text>
 </tag>
     </tags>
   </question>

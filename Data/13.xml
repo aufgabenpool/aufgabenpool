@@ -1,12 +1,12 @@
 <question type="stack">
     <name>
-      <text>Quotienten- und Kettenregel Ableitung</text>
+      <text>Geradengleichung Tangente</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Bestimmen Sie die erste Ableitung der folgenden Funktion mit Hilfe der Ketten- und Quotientenregel:&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;\( f(x)= \dfrac{e^{{@A@}x^2+1}}{{@B@}x^2} \)&lt;/p&gt;\( f'(x) = \)&amp;nbsp;&amp;nbsp; [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;span style="font-size: 14px; font-weight: normal;"&gt;Sei \( f(x)= {@a@} x^{@b@} e^{{@n@}x}\).&lt;/span&gt;&lt;br&gt;&lt;/h4&gt;&lt;p&gt;Wie lautet die Geradengleichung der Tangente im Punkt \(x_0=1\)?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(y=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f(x)=\dfrac{e^{{@A@}x^2+1}}{{@B@}x^2}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sei \(u(x)=e^{{@A@}x^2+1}\)&amp;nbsp; &amp;nbsp; mit&amp;nbsp; &amp;nbsp; \(u^{\prime}(x)={@2*A@}xe^{{@A@}x^2+1}\) (Kettenregel)&lt;/p&gt;&lt;p&gt;und \(v(x)={@B@}x^2\)&amp;nbsp; &amp;nbsp; mit&amp;nbsp; &amp;nbsp; \(v^{\prime}(x)={@2*B@}x\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Mit&amp;nbsp;&lt;/p&gt;&lt;p&gt;\(f(x)=\dfrac{u(x)}{v(x)}=\dfrac{e^{{@A@}x^2+1}}{{@B@}x^2}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;und der Quotientenregel folgt&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)=\dfrac{u^{\prime}(x)v(x)-u(x)v^{\prime}(x)}{v(x)^2}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\dfrac{{@2*A@}xe^{{@A@}x^2+1}\cdot{@B@}x^2-e^{{@A@}x^2+1}\cdot{@2*B@}x}{({@B@}x^2)^2}\)&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\dfrac{({@2*A*B@}x^3-{@2*B@}x)e^{{@A@}x^2+1}}{{@B^2@}x^4}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\dfrac{({@2*A*B@}x^2-{@2*B@})e^{{@A@}x^2+1}}{{@B^2@}x^3}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Die Geradengleichung der Tangente \(f(x)\) bei \(x_0\) ist allgemein:&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(y=f(x_0)+f^{\prime}(x_0)(x-x_0)\)&lt;/p&gt;&lt;/div&gt;&lt;p style="font-size: 17.5px;"&gt;&lt;span style="font-size: 17.5px;"&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;Hier:&lt;br&gt;&lt;p&gt;\(f(x)= {@a@} x^{@b@} e^{{@n@}x}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)= ({@a*b@} x^{@b-1@} e^{{@n@}x})+({@a*n@} x^{@b@} e^{{@n@}x})\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Setzte \(x_0=1\):&lt;/p&gt;&lt;p&gt;\(f(1)= {@a@} \cdot 1^{@b@} e^{{@n@}\cdot 1}={@a@}e^{{@n@}}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(1)= ({@a*b@} \cdot 1^{@b-1@} e^{{@n@}\cdot 1}) + ({@a*n@} \cdot 1^{@b@} e^{{@n@}\cdot 1})={@a*b+a*n@}e^{@n@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Damit folgt aus der Formel:&lt;/p&gt;&lt;p&gt;\(y=f(1)+f^{\prime}(1)(x-1)={@a@}e^{{@n@}}+{@a*b+a*n@}e^{@n@}(x-1)={@a-a*b-a*n@}e^{{@n@}}+{@a*b+a*n@}xe^{@n@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.1000000</penalty>
@@ -16,18 +16,18 @@
       <text>2020120600</text>
     </stackversion>
     <questionvariables>
-      <text>A:2+rand(9);
-B:2+rand(9);
-f:e^(A*x^2+1)/(B*x^2);
-
-m1:diff(f,x);
-m2:ratsimp(m1);</text>
+      <text>a: 2+rand(8);
+b:2 +rand(6);
+n:2+rand(4);
+fx0:a*e^n;
+fstrichx0:a*b*e^n+ a*n*e^n;
+y: fx0+ fstrichx0*(x-1);</text>
     </questionvariables>
     <specificfeedback format="html">
       <text />
     </specificfeedback>
     <questionnote>
-      <text>n</text>
+      <text>{@a@}</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -51,8 +51,8 @@ m2:ratsimp(m1);</text>
     <input>
       <name>ans1</name>
       <type>algebraic</type>
-      <tans>m2</tans>
-      <boxsize>20</boxsize>
+      <tans>y</tans>
+      <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
@@ -78,7 +78,7 @@ m2:ratsimp(m1);</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>m2</tans>
+        <tans>y</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -104,13 +104,11 @@ m2:ratsimp(m1);</text>
 </tag>
       <tag><text>Lösung</text>
 </tag>
-      <tag><text>Quotientenregel</text>
-</tag>
-      <tag><text>Differentialrechnung</text>
+      <tag><text>Tangente</text>
 </tag>
       <tag><text>Übung</text>
 </tag>
-      <tag><text>Kettenregel</text>
+      <tag><text>Differentialrechnung</text>
 </tag>
     </tags>
   </question>

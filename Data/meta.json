@@ -1,5 +1,4 @@
 {
-    "date": "2021-06-21 14:10",
     "exercises": [
         {
             "importid": " question: 3282  ",
@@ -9,7 +8,8 @@
                 "getestet",
                 "Differentialrechnung",
                 "Transfer",
-                "L\u00f6sung"
+                "L\u00f6sung",
+                "Multiple-Choice"
             ],
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
@@ -22,14 +22,15 @@
                 "L\u00f6sung",
                 "Differentialrechnung",
                 "Tangente",
-                "\u00dcbung"
+                "\u00dcbung",
+                "Multiple-Choice"
             ],
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
             "importid": " question: 3271  ",
             "id": 2,
-            "title": "1.Ableitung",
+            "title": "1. Ableitung",
             "tags": [
                 "getestet",
                 "L\u00f6sung",
@@ -88,8 +89,22 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
-            "importid": " question: 3287  ",
+            "importid": " question: 3309  ",
             "id": 7,
+            "title": "Ableitung: Quotienten- und Kettenregel",
+            "tags": [
+                "getestet",
+                "L\u00f6sung",
+                "Quotientenregel",
+                "Differentialrechnung",
+                "\u00dcbung",
+                "Kettenregel"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3287  ",
+            "id": 8,
             "title": "Ableitung: Summenregel",
             "tags": [
                 "getestet",
@@ -100,9 +115,51 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
+            "importid": " question: 3341  ",
+            "id": 9,
+            "title": "Ableitung von Polynomen",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3345  ",
+            "id": 10,
+            "title": "Bedeutung Elastizit\u00e4t",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3339  ",
+            "id": 11,
+            "title": "Differenzenquotient",
+            "tags": [
+                "getestet",
+                "Differentialrechnung",
+                "Differenzenquotient"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3344  ",
+            "id": 12,
+            "title": "Elastizit\u00e4t bestimmen",
+            "tags": [
+                "getestet",
+                "Differentialrechnung",
+                "Elastizit\u00e4t"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
             "importid": " question: 3262  ",
-            "id": 8,
-            "title": "Geradengl Tangente",
+            "id": 13,
+            "title": "Geradengleichung Tangente",
             "tags": [
                 "getestet",
                 "L\u00f6sung",
@@ -114,7 +171,7 @@
         },
         {
             "importid": " question: 3324  ",
-            "id": 9,
+            "id": 14,
             "title": "Geschwindigkeit und Beschleunigung_Berechnung",
             "tags": [
                 "getestet",
@@ -126,8 +183,28 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
+            "importid": " question: 3340  ",
+            "id": 15,
+            "title": "Grenzkostenfunktion",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3343  ",
+            "id": 16,
+            "title": "Kettenregel",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
             "importid": " question: 3327  ",
-            "id": 10,
+            "id": 17,
             "title": "Kurvendiskussion",
             "tags": [
                 "getestet",
@@ -135,13 +212,14 @@
                 "Differentialrechnung",
                 "Transfer",
                 "\u00dcbung",
-                "Extrema"
+                "Extrema",
+                "Multiple-Choice"
             ],
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
             "importid": " question: 3334  ",
-            "id": 11,
+            "id": 18,
             "title": "Monotonie, station\u00e4re Stellen",
             "tags": [
                 "getestet",
@@ -155,8 +233,48 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
+            "importid": " question: 3348  ",
+            "id": 19,
+            "title": "Newton-Verfahren",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3347  ",
+            "id": 20,
+            "title": "Optimierung Gewinn",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3346  ",
+            "id": 21,
+            "title": "Optimierung Umsatz",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
+            "importid": " question: 3342  ",
+            "id": 22,
+            "title": "Produktregel",
+            "tags": [
+                "getestet",
+                "Differentialrechnung"
+            ],
+            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
+        },
+        {
             "importid": " question: 3251  ",
-            "id": 12,
+            "id": 23,
             "title": "Quotientenregel",
             "tags": [
                 "getestet",
@@ -167,23 +285,9 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         },
         {
-            "importid": " question: 3309  ",
-            "id": 13,
-            "title": "Quotienten- und Kettenregel Ableitung",
-            "tags": [
-                "getestet",
-                "L\u00f6sung",
-                "Quotientenregel",
-                "Differentialrechnung",
-                "\u00dcbung",
-                "Kettenregel"
-            ],
-            "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
-        },
-        {
             "importid": " question: 3335  ",
-            "id": 14,
-            "title": "station\u00e4re Stellen",
+            "id": 24,
+            "title": "Station\u00e4re Stellen",
             "tags": [
                 "getestet",
                 "L\u00f6sung",
@@ -195,7 +299,7 @@
         },
         {
             "importid": " question: 3263  ",
-            "id": 15,
+            "id": 25,
             "title": "Taylorformel: e^(-kx)",
             "tags": [
                 "getestet",
@@ -208,8 +312,8 @@
         },
         {
             "importid": " question: 3268  ",
-            "id": 16,
-            "title": "Taylorpolynom 3.Grades",
+            "id": 26,
+            "title": "Taylorpolynom 3. Grades",
             "tags": [
                 "getestet",
                 "taylor",
@@ -221,36 +325,39 @@
         },
         {
             "importid": " question: 3337  ",
-            "id": 17,
-            "title": "lok Min",
+            "id": 27,
+            "title": "Lokales Minimum",
             "tags": [
                 "getestet",
+                "Multiple-Choice",
                 "Extrema",
                 "Differentialrechnung",
-                "Verst\u00e4ndnis",
-                "MC"
+                "Verst\u00e4ndnis"
             ],
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         }
     ],
+    "date": "2021-06-21 14:15",
     "tags-all": [
-        "Anwendung",
-        "Extrema",
-        "Verst\u00e4ndnis",
-        "Quotientenregel",
-        "taylor",
-        "MC",
         "Plot",
-        "Monotonie",
-        "Differentialrechnung",
-        "\u00dcbung",
-        "Tangente",
-        "Kettenregel",
+        "Anwendung",
+        "taylor",
         "Produktregel",
-        "getestet",
+        "Extrema",
         "Transfer",
+        "\u00dcbung",
+        "Verst\u00e4ndnis",
+        "Monotonie",
+        "Kettenregel",
+        "Quotientenregel",
+        "L\u00f6sung",
+        "Tangente",
+        "Elastizit\u00e4t",
+        "Multiple-Choice",
+        "getestet",
+        "Differenzenquotient",
         "extern",
-        "L\u00f6sung"
+        "Differentialrechnung"
     ],
     "tags-maintopics": [
         "Differentialrechnung"
@@ -274,11 +381,12 @@
     "tags-maintopic-Differentialrechnung": [
         "Tangente",
         "Produktregel",
-        "Extrema",
-        "Monotonie",
         "Quotientenregel",
         "Kettenregel",
-        "taylor",
-        "MC"
+        "Differenzenquotient",
+        "Elastizit\u00e4t",
+        "Extrema",
+        "Monotonie",
+        "taylor"
     ]
 }

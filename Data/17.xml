@@ -1,39 +1,441 @@
-<question type="truefalse">
+<question type="stack">
     <name>
-      <text>lok Min</text>
+      <text>Kurvendiskussion</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Entscheiden Sie, ob die folgende Aussage wahr oder falsch ist.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Sei $$f$$ eine auf $$]a,b[$$ zweimal differenzierbare Funktion und $$ x_0 \in$$ &amp;nbsp;$$]a,b[$$ eine stationäre Stelle.&amp;nbsp;&lt;/p&gt;&lt;br&gt;Gilt $$f''(x_0)&amp;gt;0$$, so besitzt $$f$$ an der Stelle $$x_0$$ ein lokales Maximum. &lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+      <text>&lt;p&gt;Gegeben sei die Funktion&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;\( f(x)= \dfrac{x^2+{@A@}}{x-1} \)&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;b&gt;(a)&lt;/b&gt; Bestimmen Sie die Definitionsmenge. Welche Zahlen sind nicht zugelassen?&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;\(D_f=\mathbb{R} \setminus \Big\{\) [[input:ans1]] \(\Big\}\) [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;Bestimmen Sie die Polstelle der Funktion&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;\(x=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;Untersuchen Sie das Symmetrieverhalten der Funktion.&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;Die Funktion ist [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;b&gt;(d)&lt;/b&gt; Bestimmen Sie&amp;nbsp;den Grenzwert für \( x \rightarrow \infty :\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;[[input:ans4]] [[validation:ans4]][[feedback:prt4]]&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;b&gt;(e)&lt;/b&gt; Bestimmen Sie den Grenzwert für&amp;nbsp;\( x \rightarrow -\infty :\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;[[input:ans5]] [[validation:ans5]][[feedback:prt5]]&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;b&gt;(f)&lt;/b&gt; Bestimmen Sie die Extrema der Funktion:&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;Maximum bei \( x= \) [[input:ans6]] [[validation:ans6]][[feedback:prt6]]&lt;/p&gt;&lt;p style=""&gt;Minimum&amp;nbsp; bei \( x= \) [[input:ans7]] [[validation:ans7]][[feedback:prt7]]&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&amp;nbsp;&lt;/p&gt;
+
+
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text />
+      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; Damit der Nenner nicht Null wird, darf \(x=1\) nicht eingesetzt werden.&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(D_f=\mathbb{R} \setminus\{1\}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b) &lt;/strong&gt;\(f\) hat bei \(x=1\) eine Polstelle, da sich \((x-1)\) nicht mit dem Zähler kürzen lässt.&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; In diesem Fall wäre \(x=1\) eine hebbare Lücke.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt; Symmetrieverhalten:&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(f(-x)=\dfrac{(-x)^2+{@A@}}{(-x)-1}=-\dfrac{x^2+{@A@}}{x+1} \neq \pm f(x)\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(f(-x)\) entspricht weder \(f(x)\) noch \(-f(x)\).&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Das heißt \(f(x)\) ist weder gerade noch ungerade.&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt;&amp;nbsp;Bestimmen Sie&amp;nbsp;den Grenzwert für \( x \rightarrow \infty :\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Regel von de l'Hospital Typ "\(\frac{*}{\infty}\)"&amp;nbsp; &amp;nbsp; &amp;nbsp;(\(\displaystyle \lim_{x \to \infty} x-1=\infty\))&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(\displaystyle \lim_{x \to \infty} f(x)=\displaystyle \lim_{x \to \infty}\dfrac{x^2+{@A@}}{x-1}\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\displaystyle \lim_{x \to \infty}\dfrac{2x}{1}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; \(=\infty\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;strong&gt;(d)&lt;/strong&gt;&lt;/span&gt;&lt;span style=""&gt;&amp;nbsp;Bestimmen Sie&amp;nbsp;den Grenzwert für \( x \rightarrow -\infty :\)&lt;/span&gt;&lt;br&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;/div&gt;&lt;/div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Regel von de l'Hospital Typ "\(\frac{*}{\infty}\)"&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;(\(\displaystyle \lim_{x \to \infty} x-1=-\infty\))&lt;br&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;/div&gt;&lt;/div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(\displaystyle \lim_{x \to -\infty} f(x)=\displaystyle \lim_{x \to -\infty}\dfrac{x^2+{@A@}}{x-1}\)&lt;br&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; \(=\displaystyle \lim_{x \to -\infty} \dfrac{2x}{1}\)&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; \(=-\infty\)&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;(e) &lt;/strong&gt;Extrema:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/strong&gt;\(f^{\prime}(x)=\dfrac{2x(x-1)-(x^2-{@A@})}{(x-1)^2}\)&amp;nbsp; &amp;nbsp; (Produktregel)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(=\dfrac{x^2-2x-{@A@}}{(x-1)^2}\)&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(=\dfrac{(x-{@A1@})(x+{@A1@})}{(x-1)^2}\)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (Linearfaktorzerlegung des Zähler)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Für Extremstellen gilt \(f^{\prime}=0\). Bei dieser Ableitung ist der Nenner immer positiv. Das heißt, es müssen nur die Nullstellen des Zählers berechnet werden.&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(x_1={@A1@}\)&lt;/p&gt;&lt;p&gt;\(x_2={@-A1@}\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Überprüfung welche Art von Extremstelle vorliegt:&lt;/p&gt;&lt;p&gt;\(f^{\prime \prime}(x)=\dfrac{{@2+A@}}{(x-1)^3}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f^{\prime \prime}({@A1@})={@a1@}&amp;gt;0\)&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(x_1={@A1@}\) ist ein Minimum.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(f^{\prime \prime}({@-A1@})={@a11@}&amp;lt;0\)&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(x_2={@-A1@}\) ist ein Maximum.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
-    <penalty>1.0000000</penalty>
+    <penalty>0.1000000</penalty>
     <hidden>0</hidden>
     <idnumber />
-    <answer fraction="0" format="moodle_auto_format">
-      <text>true</text>
-      <feedback format="html">
+    <stackversion>
+      <text>2020120600</text>
+    </stackversion>
+    <questionvariables>
+      <text>A1:2+rand(7)
+A: A1^2-1
+
+ta:[["gerade",false],["ungerade",false],["weder gerade noch ungerade",true]];
+
+tb:[[0,false],[inf,true],[minf,false],[1,false]];
+tc:[[0,false],[inf,false],[minf,true],[1,false]];
+
+f:(x^2+A)/(x-1)
+m1:diff(f,x);
+m2:ratsimp(m1);
+versuch:solve(m2,x);
+versuch2:sort(versuch);
+l1:versuch2[1];
+l2:versuch2[2];
+ey:ev(x,l1);
+ey2:ev(x,l2);
+
+a1:ev((2+A)/(x-1)^3,x=A1)
+a11:ev((2+A)/(x-1)^3,x=-A1)</text>
+    </questionvariables>
+    <specificfeedback format="html">
+      <text />
+    </specificfeedback>
+    <questionnote>
+      <text>n</text>
+    </questionnote>
+    <questionsimplify>1</questionsimplify>
+    <assumepositive>0</assumepositive>
+    <assumereal>0</assumereal>
+    <prtcorrect format="html">
+      <text>Richtige Antwort, gut gemacht!</text>
+    </prtcorrect>
+    <prtpartiallycorrect format="html">
+      <text>Ihre Antwort ist teilweise korrekt.</text>
+    </prtpartiallycorrect>
+    <prtincorrect format="html">
+      <text>Falsche Antwort.</text>
+    </prtincorrect>
+    <multiplicationsign>dot</multiplicationsign>
+    <sqrtsign>1</sqrtsign>
+    <complexno>i</complexno>
+    <inversetrig>cos-1</inversetrig>
+    <logicsymbol>lang</logicsymbol>
+    <matrixparens>[</matrixparens>
+    <variantsselectionseed />
+    <input>
+      <name>ans1</name>
+      <type>algebraic</type>
+      <tans>1</tans>
+      <boxsize>3</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>dropdown</type>
+      <tans>ta</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options>latex</options>
+    </input>
+    <input>
+      <name>ans3</name>
+      <type>algebraic</type>
+      <tans>1</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>radio</type>
+      <tans>tb</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options>latex</options>
+    </input>
+    <input>
+      <name>ans5</name>
+      <type>radio</type>
+      <tans>tc</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>0</mustverify>
+      <showvalidation>0</showvalidation>
+      <options>latex</options>
+    </input>
+    <input>
+      <name>ans6</name>
+      <type>algebraic</type>
+      <tans>ey</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans7</name>
+      <type>algebraic</type>
+      <tans>ey2</tans>
+      <boxsize>5</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>0</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <prt>
+      <name>prt1</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
         <text />
-      </feedback>
-    </answer>
-    <answer fraction="100" format="moodle_auto_format">
-      <text>false</text>
-      <feedback format="html">
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans1</sans>
+        <tans>1</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
         <text />
-      </feedback>
-    </answer>
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>String</answertest>
+        <sans>ans2</sans>
+        <tans>"weder gerade noch ungerade"</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt3</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans3</sans>
+        <tans>1</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt3-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt3-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt4</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans4</sans>
+        <tans>inf</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt4-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt4-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt5</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans5</sans>
+        <tans>minf</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt5-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt5-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt6</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>NumRelative</answertest>
+        <sans>ans6</sans>
+        <tans>ey</tans>
+        <testoptions>0.05</testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt6-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt6-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt7</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>NumRelative</answertest>
+        <sans>ans7</sans>
+        <tans>ey2</tans>
+        <testoptions>0.05</testoptions>
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt7-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt7-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
     <tags>
       <tag><text>getestet</text>
 </tag>
-      <tag><text>Extrema</text>
+      <tag><text>Lösung</text>
 </tag>
       <tag><text>Differentialrechnung</text>
 </tag>
-      <tag><text>Verständnis</text>
+      <tag><text>Transfer</text>
 </tag>
-      <tag><text>MC</text>
+      <tag><text>Übung</text>
+</tag>
+      <tag><text>Extrema</text>
+</tag>
+      <tag><text>Multiple-Choice</text>
 </tag>
     </tags>
   </question>

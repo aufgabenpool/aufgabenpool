@@ -1,12 +1,12 @@
 <question type="stack">
     <name>
-      <text>Grenzkostenfunktion</text>
+      <text>Produktregel</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Wie lautet die Grenzkostenfunktion zu folgender Kostenfunktion?&lt;/p&gt;
-&lt;p&gt;\[K(x)={@myK@}\]&lt;/p&gt;
-&lt;p&gt;Hierbei bezeichnet \(x\) die Produktionsmenge.&lt;/p&gt;
-&lt;p&gt;Grenzkostenfunktion \((x)\) = [[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
+      <text>&lt;p&gt;Wie lautet die Ableitung der folgenden Funktion?&lt;/p&gt;
+&lt;p&gt;\[f(x)={@myf@}\]&lt;/p&gt;
+&lt;p&gt;Validieren Sie Ihre Eingabe vor Abgabe durch Klick auf den Haken.&lt;/p&gt;
+&lt;p&gt;\(f'(x)=\) [[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
       <text />
@@ -20,19 +20,19 @@
     </stackversion>
     <questionvariables>
       <text>/* Zufall */
-a:rand_with_step(90,120,2);
-b:rand_with_step(8,20,1);
-/* Kostenfunktion */
-myK:ev(a+b*sqrt(x),simp);
-K(x):=a+b*sqrt(x);
+a1:rand_with_step(2,9,1);
+b1:rand_with_step(4,9,1);
+/* Funktion */
+myf:ev(a1*x^(b1)*exp(x),simp);
+f(x):=myf;
 /* Antwort */
-ta1:diff(K(x),x,1);</text>
+ta1:diff(f(x),x,1);</text>
     </questionvariables>
     <specificfeedback format="html">
       <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
     </specificfeedback>
     <questionnote>
-      <text>{@K@}</text>
+      <text>{@myf@}</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -57,7 +57,7 @@ ta1:diff(K(x),x,1);</text>
       <name>ans1</name>
       <type>algebraic</type>
       <tans>ta1</tans>
-      <boxsize>15</boxsize>
+      <boxsize>20</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />

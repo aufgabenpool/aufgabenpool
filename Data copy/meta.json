@@ -1,4 +1,5 @@
 {
+    "date": "2021-06-21 14:10",
     "exercises": [
         {
             "importid": " question: 3282  ",
@@ -232,23 +233,52 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         }
     ],
-    "tags": [
-        "Tangente",
-        "Produktregel",
-        "Plot",
-        "Kettenregel",
-        "getestet",
-        "Differentialrechnung",
-        "MC",
-        "extern",
-        "Monotonie",
-        "Transfer",
+    "tags-all": [
+        "Anwendung",
         "Extrema",
         "Verst\u00e4ndnis",
-        "Anwendung",
-        "taylor",
-        "L\u00f6sung",
         "Quotientenregel",
+        "taylor",
+        "MC",
+        "Plot",
+        "Monotonie",
+        "Differentialrechnung",
+        "\u00dcbung",
+        "Tangente",
+        "Kettenregel",
+        "Produktregel",
+        "getestet",
+        "Transfer",
+        "extern",
+        "L\u00f6sung"
+    ],
+    "tags-maintopics": [
+        "Differentialrechnung"
+    ],
+    "tags-didactics": [
+        "Transfer",
+        "Verst\u00e4ndnis",
+        "Anwendung",
         "\u00dcbung"
+    ],
+    "tags-content": [
+        "Multiple-Choice",
+        "Plot",
+        "L\u00f6sung"
+    ],
+    "tags-difficulty": [
+        "einfach",
+        "mittelschwer",
+        "schwer"
+    ],
+    "tags-maintopic-Differentialrechnung": [
+        "Tangente",
+        "Produktregel",
+        "Extrema",
+        "Monotonie",
+        "Quotientenregel",
+        "Kettenregel",
+        "taylor",
+        "MC"
     ]
 }

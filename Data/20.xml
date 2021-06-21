@@ -1,12 +1,14 @@
 <question type="stack">
     <name>
-      <text>Grenzkostenfunktion</text>
+      <text>Optimierung Gewinn</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Wie lautet die Grenzkostenfunktion zu folgender Kostenfunktion?&lt;/p&gt;
-&lt;p&gt;\[K(x)={@myK@}\]&lt;/p&gt;
-&lt;p&gt;Hierbei bezeichnet \(x\) die Produktionsmenge.&lt;/p&gt;
-&lt;p&gt;Grenzkostenfunktion \((x)\) = [[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
+      <text>&lt;p&gt;Ein Unternehmen hat folgende Umsatzfunktion \[U(x)={@a@}\cdot x-\frac{x^2}{{@b@}}\]&lt;/p&gt;
+&lt;p&gt;und folgende Kostenfunktion \[K(x)={@c@}\cdot x+{@d@}\]&lt;/p&gt;
+&lt;p&gt;Dabei bezeichnet \(x\) die Absatzmenge.&lt;/p&gt;
+&lt;p&gt;Bei welcher Absatzmenge wird der Gewinn maximal?&lt;/p&gt;
+&lt;p&gt;Runden Sie Ihr Ergebnis kaufmännisch auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen einen Punkt.&lt;/p&gt;
+&lt;p&gt;[[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
       <text />
@@ -19,20 +21,17 @@
       <text>2020120600</text>
     </stackversion>
     <questionvariables>
-      <text>/* Zufall */
-a:rand_with_step(90,120,2);
-b:rand_with_step(8,20,1);
-/* Kostenfunktion */
-myK:ev(a+b*sqrt(x),simp);
-K(x):=a+b*sqrt(x);
-/* Antwort */
-ta1:diff(K(x),x,1);</text>
+      <text>a:rand_with_step(20,40,1);
+b:rand_with_step(10,40,1);
+c:rand_with_step(2,19,1);
+d:rand_with_step(200,500,1);
+ta1:decimalplaces(b/2*(a-c),2);</text>
     </questionvariables>
     <specificfeedback format="html">
       <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
     </specificfeedback>
     <questionnote>
-      <text>{@K@}</text>
+      <text>Ein Unternehmen hat folgende Umsatzfunktion \[U(x)={@a@}\cdot x-\frac{x^2}{{@b@}}\]und folgende Kostenfunktion \[K(x)={@c@}\cdot x+{@d@}\]</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -55,14 +54,14 @@ ta1:diff(K(x),x,1);</text>
     <variantsselectionseed />
     <input>
       <name>ans1</name>
-      <type>algebraic</type>
+      <type>numerical</type>
       <tans>ta1</tans>
       <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
       <syntaxattribute>0</syntaxattribute>
-      <forbidwords>diff</forbidwords>
+      <forbidwords />
       <allowwords />
       <forbidfloat>0</forbidfloat>
       <requirelowestterms>0</requirelowestterms>
@@ -81,10 +80,10 @@ ta1:diff(K(x),x,1);</text>
       </feedbackvariables>
       <node>
         <name>0</name>
-        <answertest>AlgEquiv</answertest>
+        <answertest>NumAbsolute</answertest>
         <sans>ans1</sans>
         <tans>ta1</tans>
-        <testoptions />
+        <testoptions>.1</testoptions>
         <quiet>1</quiet>
         <truescoremode>+</truescoremode>
         <truescore>1.0000000</truescore>
