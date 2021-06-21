@@ -2,6 +2,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "cony.py",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/Tools/",
+            "program": "${workspaceFolder}/Tools/conv.py",
+            "console": "integratedTerminal"
+        },
+        {
             "name": "get_prewiew_img.js",
             "cwd": "${workspaceFolder}/Tools/",
             "program": "${workspaceFolder}/Tools/get_preview_img.js",

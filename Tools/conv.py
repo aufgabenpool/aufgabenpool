@@ -64,26 +64,53 @@ for i, question in enumerate(quiz):
     if not tested:
         continue
     metadata['exercises'].append({
-        'importid':questionid,
-        'id':questionIdx,
-        'title':name,
-        'tags':taglist,
-        'category':current_category}
+        'importid': questionid,
+        'id': questionIdx,
+        'title': name,
+        'tags': taglist,
+        'category': current_category}
     )
     f = open(path_out + str(questionIdx) + ".xml", "w")
     questionStr = ET.tostring(question, encoding="unicode")
     f.write(questionStr)
     f.close()
 
-    # convert image
+    # get image
     moodleQuestionId = int(questionid[11:])
     cmd = 'node get_preview_img.js 2 ' + str(moodleQuestionId) + ' ' + '../Data/' + str(questionIdx) + '.png'
-    os.system(cmd)
+    #os.system(cmd)
 
     questionIdx += 1
 
 tagset.remove("")
-metadata["tags"] = list(tagset)
+metadata["tags-all"] = list(tagset)
+
+
+
+with open("../Taxonomie/taxonomie.json") as f:
+    tax = json.load(f)
+    metadata["tags-didactics"] = tax["didactics"]
+    metadata["tags-content"] = tax["content"]
+    metadata["tags-difficulty"] = tax["difficulty"]
+    for maintopic in tax["maintopics"]:
+        maintopic_tags = []
+        for ex in metadata['exercises']:
+            for tag in ex['tags']:
+                if tag == maintopic:
+                    continue
+                if tag in tax['didactics']:
+                    continue
+                if tag in tax['content']:
+                    continue
+                if tag in tax['difficulty']:
+                    continue
+                if tag in tax['ignore']:
+                    continue
+                if tag not in maintopic_tags:
+                    maintopic_tags.append(tag)
+        metadata["tags-" + maintopic] = maintopic_tags
+
+
 
 metadata_json = json.dumps(metadata, indent=4)
 

@@ -1,0 +1,86 @@
+<question type="multichoice">
+    <name>
+      <text>Tangente</text>
+    </name>
+    <questiontext format="html">
+      <text>&lt;p&gt;&lt;span style="font-size: 0.9375rem;"&gt;Die Tangente an $$f(x)=2x^{-1}$$ bei $$x_0=1$$ hat folgende Gleichung:&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Die Geradengleichung der Tangente an f(x) bei \(x_0\) ist allgemein:&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;p&gt;\(y=f(x_0)+f^{\prime}(x_0)(x-x_0)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;Hier:&lt;br&gt;&lt;p&gt;\(f(x)=2x^{-1}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)=-2x^{-2}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Setzte \(x_0=1\):&lt;/p&gt;&lt;p&gt;\(f(1)= 2 \cdot 1^{-1}=2\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(1)-2 \cdot 1^{-2}=-2\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Damit folgt aus der Formel:&lt;/p&gt;&lt;p&gt;\(y=f(1)+f^{\prime}(1)(x-1)=2+(-2)(x-1)=2-2x+2=2x+4\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;
+
+&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber />
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>none</answernumbering>
+    <showstandardinstruction>1</showstandardinstruction>
+    <correctfeedback format="html">
+      <text>Die Antwort ist richtig.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Die Antwort ist teilweise richtig.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Die Antwort ist falsch.</text>
+    </incorrectfeedback>
+    <shownumcorrect />
+    <answer fraction="100" format="html">
+      <text>&lt;p&gt;$$y=-2x+4$$&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;$$y=2x-4$$&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;$$y=2x^{-1} -2x^{-2}(x-1)$$&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;$$y=2-2x^{-2}(x-1)$$&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;$$y=-2x$$&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;$$y=2x^{-1} +2x^{-2}(x-1)$$&lt;br&gt;&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text>&lt;p&gt;Die Tangente ist wegen der Polstelle nicht definiert.&lt;/p&gt;</text>
+      <feedback format="html">
+        <text />
+      </feedback>
+    </answer>
+    <tags>
+      <tag><text>getestet</text>
+</tag>
+      <tag><text>Lösung</text>
+</tag>
+      <tag><text>Differentialrechnung</text>
+</tag>
+      <tag><text>Tangente</text>
+</tag>
+      <tag><text>Übung</text>
+</tag>
+    </tags>
+  </question>
+

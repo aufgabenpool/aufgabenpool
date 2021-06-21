@@ -232,49 +232,23 @@
             "category": "$course$/top/AUFGABENPOOL/Differentialrechnung"
         }
     ],
-    "tags-all": [
-        "Extrema",
-        "Monotonie",
-        "Kettenregel",
-        "Anwendung",
-        "Verst\u00e4ndnis",
-        "Produktregel",
+    "tags": [
         "Tangente",
-        "Transfer",
+        "Produktregel",
+        "Plot",
+        "Kettenregel",
         "getestet",
-        "MC",
-        "Plot",
-        "extern",
-        "taylor",
-        "Quotientenregel",
-        "\u00dcbung",
         "Differentialrechnung",
-        "L\u00f6sung"
-    ],
-    "tags-didactics": [
+        "MC",
+        "extern",
+        "Monotonie",
         "Transfer",
+        "Extrema",
         "Verst\u00e4ndnis",
         "Anwendung",
-        "\u00dcbung"
-    ],
-    "tags-content": [
-        "Multiple-Choice",
-        "Plot",
-        "L\u00f6sung"
-    ],
-    "tags-difficulty": [
-        "einfach",
-        "mittelschwer",
-        "schwer"
-    ],
-    "tags-Differentialrechnung": [
-        "Tangente",
-        "Produktregel",
-        "Extrema",
-        "Monotonie",
-        "Quotientenregel",
-        "Kettenregel",
         "taylor",
-        "MC"
+        "L\u00f6sung",
+        "Quotientenregel",
+        "\u00dcbung"
     ]
 }
