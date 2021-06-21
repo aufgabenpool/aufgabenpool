@@ -9,6 +9,7 @@
 import os
 import xml.etree.ElementTree as ET
 import json
+from datetime import datetime
 
 # TODO: run puppeteer in batch (do NOT login for every question...)
 
@@ -27,7 +28,7 @@ path_out = "../Data/"
 os.system("rm -rf " + path_out)
 os.system("mkdir -p " + path_out)
 
-metadata = {"exercises": []}
+metadata = {"exercises": [], "date": datetime.today().strftime('%Y-%m-%d %H:%M')}
 
 
 ctb = _CommentedTreeBuilder()
