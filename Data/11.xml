@@ -1,11 +1,12 @@
 <question type="stack">
     <name>
-      <text>Differenzenquotient</text>
+      <text>Bedeutung Elastizität</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Wir betrachten die Funktion \(f\), die durch folgende Gleichung definiert ist:&lt;/p&gt;
-&lt;p&gt;\[f(x)={@tshow@}\]&lt;/p&gt;
-&lt;p&gt;Wie lautet der Differenzenquotient \[\frac{f(x+h)-f(x)}{h}\] an der Stelle \(x={@x1@}\)?&lt;/p&gt;
+      <text>&lt;p&gt;Ein Produkt wird in einem Laden für 100 Euro angeboten. Es werden täglich 200 Stück verkauft.&lt;/p&gt;
+&lt;p&gt;Betrachten Sie folgende Aussage:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;"{@t1@}"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Welche Elastizität der Preis-Absatz-Funktion hat diese Bedeutung?&lt;/p&gt;
 &lt;p&gt;[[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
@@ -20,31 +21,28 @@
     </stackversion>
     <questionvariables>
       <text>/* Zufallszahlen */
-a1:rand_with_step(2,5,1);
-b1:rand_with_step(1,9,1);
-a2:rand_with_step(6,9,1);
-b2:rand_with_step(1,9,1);
-a3:a1;
-b3:rand_with_step(1,9,2);
-a4:a2;
-b4:rand_with_step(1,9,2);
-x1:rand_with_step(1,9,1);
+z1:rand_with_step(360,36000,360);
+p1:rand([2,4,12,24,120,360]);
+z2:round(z1/p1);
 /* mögliche Antworten */
-f1:a1*x^2+b1; 
-f2:a2*x^2+b2; 
-f3:a3*x^2+b3*x; 
-f4:a4*x^2+b4*x; s1:ev(a1*h+2*a1*x1,simp);
-s2:ev(a2*h+2*a2*x1,simp);
-s3:ev(a3*h+2*a3*x1+b3,simp);
-s4:ev(a4*h+2*a4*x1+b4,simp);
+a1:-1;
+a2:-2;
+a3:-1.5;
+a4:-0.5;
+f1:"Eine Erhöhung des Preises um 1 Euro senkt die Nachfrage um 2 Stück."; 
+f2:"Eine Absenkung des Preises um 1 Euro erhöht die Nachfrage um 4 Stück.";
+f3:"Eine Erhöhung des Preises um 1 Prozent senkt die Nachfrage um 3 Stück."; 
+f4:"Eine Absenkung des Preises um 1 Prozent erhöht die Nachfrage um 1 Stück.";
+s1:1;s2:2;s3:3;s4:4;
 /* wähle richtige Antwort zufällig aus */
-myterms:[[f1,s1], [f2,s2], [f3,s3], [f4,s4]];fshuffle:rand_selection(myterms, 4);
-tshow:fshuffle[1][1];
+myterms:[[f1,s1,a1], [f2,s2,a2], [f3,s3,a3], [f4,s4,a4]];
+fshuffle:rand_selection(myterms, 4);
 tac:fshuffle[1][2];
+t1:fshuffle[1][1];
 /* alle Antwortmöglichkeiten */
-ta: [[fshuffle[1][2], true], [fshuffle[2][2], false], [fshuffle[3][2], false], [fshuffle[4][2], false]];
+ta: [[fshuffle[1][2], true, fshuffle[1][3]], [fshuffle[2][2], false, fshuffle[2][3]], [fshuffle[3][2], false, fshuffle[3][3]], [fshuffle[4][2], false, fshuffle[4][3]]];
 ta:random_permutation(ta);
-tao:[null, false, "Der korrekte Ausdruck ist hier nicht aufgelistet."];
+tao:[null, false, "Der korrekte Wert der Elastizität ist hier nicht aufgelistet."];
 ta:append(ta,[tao]);
 /* Technik */
 tafunc:maplist(first, ta);
@@ -54,7 +52,7 @@ tabool:maplist(second, ta);</text>
       <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
     </specificfeedback>
     <questionnote>
-      <text>{@tshow@}</text>
+      <text>{@t1@}</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -102,16 +100,112 @@ tabool:maplist(second, ta);</text>
         <text>setans:setify(ans1);</text>
       </feedbackvariables>
       <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>elementp(tafunc[5], setans)</sans>
+        <tans>tabool[5]</tans>
+        <testoptions />
+        <quiet>1</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty>0.0000000</truepenalty>
+        <truenextnode>1</truenextnode>
+        <trueanswernote>prt1-0-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty>0.0000000</falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-0-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>elementp(tafunc[2], setans)</sans>
+        <tans>tabool[2]</tans>
+        <testoptions />
+        <quiet>1</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty>0.0000000</truepenalty>
+        <truenextnode>2</truenextnode>
+        <trueanswernote>prt1-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty>0.0000000</falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
+        <name>2</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>elementp(tafunc[3], setans)</sans>
+        <tans>tabool[3]</tans>
+        <testoptions />
+        <quiet>1</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty>0.0000000</truepenalty>
+        <truenextnode>3</truenextnode>
+        <trueanswernote>prt1-2-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty>0.0000000</falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-2-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
+        <name>3</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>elementp(tafunc[4], setans)</sans>
+        <tans>tabool[4]</tans>
+        <testoptions />
+        <quiet>1</quiet>
+        <truescoremode>+</truescoremode>
+        <truescore>0.0000000</truescore>
+        <truepenalty>0.0000000</truepenalty>
+        <truenextnode>4</truenextnode>
+        <trueanswernote>prt1-3-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>-</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty>0.0000000</falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt1-3-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+      <node>
         <name>4</name>
         <answertest>AlgEquiv</answertest>
         <sans>elementp(tafunc[1], setans)</sans>
         <tans>tabool[1]</tans>
         <testoptions />
         <quiet>1</quiet>
-        <truescoremode>+</truescoremode>
-        <truescore>0.0000000</truescore>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
         <truepenalty>0.0000000</truepenalty>
-        <truenextnode>5</truenextnode>
+        <truenextnode>-1</truenextnode>
         <trueanswernote>prt1-4-T</trueanswernote>
         <truefeedback format="html">
           <text />
@@ -125,109 +219,11 @@ tabool:maplist(second, ta);</text>
           <text />
         </falsefeedback>
       </node>
-      <node>
-        <name>5</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>elementp(tafunc[2], setans)</sans>
-        <tans>tabool[2]</tans>
-        <testoptions />
-        <quiet>1</quiet>
-        <truescoremode>+</truescoremode>
-        <truescore>0.0000000</truescore>
-        <truepenalty>0.0000000</truepenalty>
-        <truenextnode>6</truenextnode>
-        <trueanswernote>prt1-5-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty>0.0000000</falsepenalty>
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt1-5-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-      <node>
-        <name>6</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>elementp(tafunc[3], setans)</sans>
-        <tans>tabool[3]</tans>
-        <testoptions />
-        <quiet>1</quiet>
-        <truescoremode>+</truescoremode>
-        <truescore>0.0000000</truescore>
-        <truepenalty>0.0000000</truepenalty>
-        <truenextnode>7</truenextnode>
-        <trueanswernote>prt1-6-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty>0.0000000</falsepenalty>
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt1-6-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-      <node>
-        <name>7</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>elementp(tafunc[4], setans)</sans>
-        <tans>tabool[4]</tans>
-        <testoptions />
-        <quiet>1</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
-        <truepenalty>0.0000000</truepenalty>
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt1-7-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty>0.0000000</falsepenalty>
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt1-7-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-      <node>
-        <name>8</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>elementp(tafunc[5], setans)</sans>
-        <tans>tabool[5]</tans>
-        <testoptions />
-        <quiet>1</quiet>
-        <truescoremode>+</truescoremode>
-        <truescore>0.0000000</truescore>
-        <truepenalty>0.0000000</truepenalty>
-        <truenextnode>4</truenextnode>
-        <trueanswernote>prt1-8-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty>0.0000000</falsepenalty>
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt1-8-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
     </prt>
     <tags>
       <tag><text>getestet</text>
 </tag>
       <tag><text>Differentialrechnung</text>
-</tag>
-      <tag><text>Differenzenquotient</text>
 </tag>
     </tags>
   </question>

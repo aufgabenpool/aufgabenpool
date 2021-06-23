@@ -1,12 +1,16 @@
 <question type="stack">
     <name>
-      <text>Ableitung: dz/dx</text>
+      <text>Ableitung: 2. Ordnung</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Seien die folgenden Funktionen gegeben&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(z\big(y(x)\big)={@fa@}\)&amp;nbsp;&lt;/p&gt;&lt;p&gt;\(y(x)={@fb@}\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dy}=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;p style=""&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(\dfrac{dy}{dx}=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dx}=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;b&gt;Tipp:&lt;/b&gt;&amp;nbsp;Verwenden Sie \(\dfrac{dz}{dx}=\dfrac{dz}{dy}\cdot \dfrac{dy}{dx}\)&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechen Sie angegebene Ableitung der folgenden Funktionen&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;p&gt;\(f^{\prime \prime}(x)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2}{dx^2}f=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(f(t)={@fc@}\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2f}{dt^2}\)&amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;b&gt;Tipp:&lt;/b&gt; Denken Sie an die Logarithmus Rechenregeln!
+
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;b&gt;Lösung&lt;/b&gt;&lt;/h4&gt;&lt;p&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dy}={@-a@}\sin({@a@}y)\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(\dfrac{dy}{dx}={@b@}x^{@b-1@}+1\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dx}=\dfrac{dz}{dy}\cdot \dfrac{dy}{dx}={@-a@}\sin({@a@}y)\cdot({@b@}x^{@b-1@}+1)={@-a@}\sin({@a@}(x^{@b@}+x))\cdot({@b@}x^{@b-1@}+1)\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Im letzten Schritt wurde \(y\) wieder mit \(y(x)={@fb@}\) ersetzt.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f^{\prime}(x)={@a@}e^{{@a@}x+{@a1@}}+{@a1@}x^{@a1-1@}\)&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)={@a^2@}e^{{@a@}x+{@a1@}}+{@a1*(a1-1)@}x^{@a1-2@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;\(\dfrac{d}{dx}f={@-b@}x^{@-b-1@}+\cos(x)\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2}{dx^2}f={@-b*(-b-1)@}x^{@-b-2@}-\sin(x)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&amp;nbsp;\(f(t)={@fc@}=\ln({@c@})+ln(t)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{df}{dt}=\dfrac{1}{t}\)&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2f}{dt^2}=-\dfrac{1}{t^2}\)&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;
+
+&lt;/p&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.1000000</penalty>
@@ -16,18 +20,20 @@
       <text>2020120600</text>
     </stackversion>
     <questionvariables>
-      <text>a: rand_with_prohib(-9,9,[-1,0,1])
-b: rand_with_prohib(2,9,[a])
+      <text>a: rand_with_prohib(2,9,[-1,0,1])
+a1: rand_with_prohib(2,9,[a])
+b: rand_with_prohib(2,9,[a,a1])
+c: rand_with_prohib(2,9,[a,a1,b])
 
-fa: cos(a*y)
-fb: x^(b)+x
-fc: cos(a*(x^(b)+x))</text>
+fa: exp(a*x+a1)+x^a1
+fb: 1/x^b+sin(x)
+fc: ln(c*t)</text>
     </questionvariables>
     <specificfeedback format="html">
-      <text>&lt;h4&gt;&lt;br&gt;&lt;/h4&gt;</text>
+      <text />
     </specificfeedback>
     <questionnote>
-      <text>Ableiten</text>
+      <text>Höhere Ableitung</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -51,8 +57,8 @@ fc: cos(a*(x^(b)+x))</text>
     <input>
       <name>ans1</name>
       <type>algebraic</type>
-      <tans>diff(fa,y)</tans>
-      <boxsize>10</boxsize>
+      <tans>diff(diff(fa,x),x)</tans>
+      <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
@@ -69,8 +75,8 @@ fc: cos(a*(x^(b)+x))</text>
     <input>
       <name>ans2</name>
       <type>algebraic</type>
-      <tans>diff(fb,x)</tans>
-      <boxsize>10</boxsize>
+      <tans>diff(diff(fb,x),x)</tans>
+      <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
@@ -87,8 +93,8 @@ fc: cos(a*(x^(b)+x))</text>
     <input>
       <name>ans3</name>
       <type>algebraic</type>
-      <tans>diff(fc,x)</tans>
-      <boxsize>10</boxsize>
+      <tans>diff(diff(fc,t),t)</tans>
+      <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
@@ -114,7 +120,7 @@ fc: cos(a*(x^(b)+x))</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>diff(fa,y)</tans>
+        <tans>diff(diff(fa,x),x)</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -147,7 +153,7 @@ fc: cos(a*(x^(b)+x))</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans2</sans>
-        <tans>diff(fb,x)</tans>
+        <tans>diff(diff(fb,x),x)</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -180,7 +186,7 @@ fc: cos(a*(x^(b)+x))</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans3</sans>
-        <tans>diff(fc,x)</tans>
+        <tans>diff(diff(fc,t),t)</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -191,43 +197,20 @@ fc: cos(a*(x^(b)+x))</text>
         <truefeedback format="html">
           <text />
         </truefeedback>
-        <falsescoremode>+</falsescoremode>
+        <falsescoremode>=</falsescoremode>
         <falsescore>0.0000000</falsescore>
         <falsepenalty />
-        <falsenextnode>1</falsenextnode>
+        <falsenextnode>-1</falsenextnode>
         <falseanswernote>prt3-1-F</falseanswernote>
         <falsefeedback format="html">
           <text />
         </falsefeedback>
       </node>
-      <node>
-        <name>1</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>ans3</sans>
-        <tans>diff(fa,y)*diff(fb,x)</tans>
-        <testoptions />
-        <quiet>0</quiet>
-        <truescoremode>+</truescoremode>
-        <truescore>0.5000000</truescore>
-        <truepenalty />
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt3-2-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt3-2-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
     </prt>
-    <deployedseed>1555171955</deployedseed>
     <tags>
       <tag><text>getestet</text>
+</tag>
+      <tag><text>Übung</text>
 </tag>
       <tag><text>Lösung</text>
 </tag>

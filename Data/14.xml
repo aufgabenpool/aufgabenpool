@@ -1,12 +1,12 @@
 <question type="stack">
     <name>
-      <text>Geschwindigkeit und Beschleunigung_Berechnung</text>
+      <text>Geradengleichung Tangente</text>
     </name>
     <questiontext format="html">
-      <text>&lt;span style="font-size: 0.9375rem;"&gt;Die &lt;/span&gt;&lt;strong style="font-size: 0.9375rem;"&gt;Entfernung &lt;/strong&gt;&lt;span style="font-size: 0.9375rem;"&gt;in&amp;nbsp;\( km \)&amp;nbsp;eines Raumschiffes vom Ausgangsort nach&amp;nbsp;\( t \)&amp;nbsp;Stunden ist gegeben durch die Funktion&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;\( s(t)={@s@} \)&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=""&gt;&lt;strong&gt;Hinweis: &lt;/strong&gt;Die momentane Änderungsrate der Entfernung entspricht der momentanen Geschwindigkeit und die momentane Änderungsrate der Geschwindigkeit entspricht der momentanen Beschleunigung.&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=""&gt;&lt;strong&gt;(a)&lt;/strong&gt; Berechnen Sie die &lt;strong&gt;Geschwindigkeit&lt;/strong&gt; des Raumschiffes zum Zeitpunkt&amp;nbsp;\( t_1={@t0@} \).&lt;br&gt;&lt;/p&gt;&lt;p style=""&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; \( v(t_1)= \)&amp;nbsp;[[input:ans1]] \( km/h \)[[validation:ans1]]&amp;nbsp;[[feedback:prt1]]&lt;/p&gt;&lt;p style=""&gt;&lt;strong&gt;(b)&lt;/strong&gt; Welche Funktion beschreibt die &lt;strong&gt;Beschleunigung&lt;/strong&gt; des Raumschiffes?&lt;br&gt;&lt;/p&gt;&lt;p style=""&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; \( a(t)= \)&amp;nbsp;[[input:ans2]][[validation:ans2]] [[feedback:prt2]]&lt;/p&gt;&lt;p style=""&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Die Geschwindigkeit des Raumschiffes zum Zeitpunkt&amp;nbsp;&amp;nbsp;\( t_1={@t0@} \)&amp;nbsp; &amp;nbsp;nimmt&amp;nbsp; [[input:ans3]]. [[validation:ans3]] [[feedback:prt3]]&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;span style="font-size: 14px; font-weight: normal;"&gt;Sei \( f(x)= {@a@} x^{@b@} e^{{@n@}x}\).&lt;/span&gt;&lt;br&gt;&lt;/h4&gt;&lt;p&gt;Wie lautet die Geradengleichung der Tangente im Punkt \(x_0=1\)?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(y=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt; Die Funktion \(s^{\prime}(t)\) beschreibt die Geschwindigkeit des Raumschiffs.&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(v(t)=s^{\prime}(t)={@solution@}\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Zum Zeitpunkt \(t_1={@t0@}\) ergibt sich&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(v({@t0@})={@p1@}\cdot\big(\frac{1}{2\sqrt{{@t0@}+{@p2@}}}+1\big)={@ey@}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt; Die Funktion \(v^{\prime}(t)\) beschreibt die Beschleunigung des Raumschiffs.&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(a(t)=v^{\prime}(t)=s^{\prime \prime}(t)={@solution2@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Zum Zeitpunkt \(t_1={@t0@}\) ergibt sich&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(a({@t0@})={@ey2@}&amp;lt;0\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Die Beschleunigung des Raumschiffs zum Zeitpunkt \(t_1={@t0@}\) ist negativ und damit nimmt die Geschwindigkeit ab.&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Die Geradengleichung der Tangente \(f(x)\) bei \(x_0\) ist allgemein:&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(y=f(x_0)+f^{\prime}(x_0)(x-x_0)\)&lt;/p&gt;&lt;/div&gt;&lt;p style="font-size: 17.5px;"&gt;&lt;span style="font-size: 17.5px;"&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;Hier:&lt;br&gt;&lt;p&gt;\(f(x)= {@a@} x^{@b@} e^{{@n@}x}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)= ({@a*b@} x^{@b-1@} e^{{@n@}x})+({@a*n@} x^{@b@} e^{{@n@}x})\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Setzte \(x_0=1\):&lt;/p&gt;&lt;p&gt;\(f(1)= {@a@} \cdot 1^{@b@} e^{{@n@}\cdot 1}={@a@}e^{{@n@}}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f^{\prime}(1)= ({@a*b@} \cdot 1^{@b-1@} e^{{@n@}\cdot 1}) + ({@a*n@} \cdot 1^{@b@} e^{{@n@}\cdot 1})={@a*b+a*n@}e^{@n@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Damit folgt aus der Formel:&lt;/p&gt;&lt;p&gt;\(y=f(1)+f^{\prime}(1)(x-1)={@a@}e^{{@n@}}+{@a*b+a*n@}e^{@n@}(x-1)={@a-a*b-a*n@}e^{{@n@}}+{@a*b+a*n@}xe^{@n@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.1000000</penalty>
@@ -16,27 +16,18 @@
       <text>2020120600</text>
     </stackversion>
     <questionvariables>
-      <text>a:51+rand(48)
-p2:1+rand(4);
-t1: 3+ rand(5)
-t0: t1^2-p2
-p1: a*2*sqrt(t0+p2)
-s:(p1)*(sqrt(t+(p2)) +t);
-
-solution:(diff(s,t))
-solution2:(diff(solution,t))
-
-ey:ev(solution,t=t0);
-ey2:ev(solution2,t=t0);
-
-Tans : 2;
-AnsList: [[1, false, "zu"], [2, true, "ab"]];</text>
+      <text>a: 2+rand(8);
+b:2 +rand(6);
+n:2+rand(4);
+fx0:a*e^n;
+fstrichx0:a*b*e^n+ a*n*e^n;
+y: fx0+ fstrichx0*(x-1);</text>
     </questionvariables>
     <specificfeedback format="html">
       <text />
     </specificfeedback>
     <questionnote>
-      <text>n</text>
+      <text>{@a@}</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -60,44 +51,8 @@ AnsList: [[1, false, "zu"], [2, true, "ab"]];</text>
     <input>
       <name>ans1</name>
       <type>algebraic</type>
-      <tans>ey</tans>
-      <boxsize>7</boxsize>
-      <strictsyntax>1</strictsyntax>
-      <insertstars>0</insertstars>
-      <syntaxhint />
-      <syntaxattribute>0</syntaxattribute>
-      <forbidwords />
-      <allowwords />
-      <forbidfloat>0</forbidfloat>
-      <requirelowestterms>0</requirelowestterms>
-      <checkanswertype>0</checkanswertype>
-      <mustverify>1</mustverify>
-      <showvalidation>1</showvalidation>
-      <options />
-    </input>
-    <input>
-      <name>ans2</name>
-      <type>algebraic</type>
-      <tans>solution2</tans>
+      <tans>y</tans>
       <boxsize>15</boxsize>
-      <strictsyntax>1</strictsyntax>
-      <insertstars>0</insertstars>
-      <syntaxhint />
-      <syntaxattribute>0</syntaxattribute>
-      <forbidwords />
-      <allowwords />
-      <forbidfloat>0</forbidfloat>
-      <requirelowestterms>0</requirelowestterms>
-      <checkanswertype>0</checkanswertype>
-      <mustverify>1</mustverify>
-      <showvalidation>1</showvalidation>
-      <options />
-    </input>
-    <input>
-      <name>ans3</name>
-      <type>dropdown</type>
-      <tans>AnsList</tans>
-      <boxsize>1</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
       <syntaxhint />
@@ -107,7 +62,7 @@ AnsList: [[1, false, "zu"], [2, true, "ab"]];</text>
       <forbidfloat>1</forbidfloat>
       <requirelowestterms>0</requirelowestterms>
       <checkanswertype>0</checkanswertype>
-      <mustverify>0</mustverify>
+      <mustverify>1</mustverify>
       <showvalidation>1</showvalidation>
       <options />
     </input>
@@ -123,7 +78,7 @@ AnsList: [[1, false, "zu"], [2, true, "ab"]];</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>ey</tans>
+        <tans>y</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -144,82 +99,16 @@ AnsList: [[1, false, "zu"], [2, true, "ab"]];</text>
         </falsefeedback>
       </node>
     </prt>
-    <prt>
-      <name>prt2</name>
-      <value>1.0000000</value>
-      <autosimplify>1</autosimplify>
-      <feedbackstyle>1</feedbackstyle>
-      <feedbackvariables>
-        <text />
-      </feedbackvariables>
-      <node>
-        <name>0</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>ans2</sans>
-        <tans>solution2</tans>
-        <testoptions />
-        <quiet>0</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
-        <truepenalty />
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt2-1-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt2-1-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-    </prt>
-    <prt>
-      <name>prt3</name>
-      <value>1.0000000</value>
-      <autosimplify>1</autosimplify>
-      <feedbackstyle>1</feedbackstyle>
-      <feedbackvariables>
-        <text />
-      </feedbackvariables>
-      <node>
-        <name>0</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>ans3</sans>
-        <tans>Tans</tans>
-        <testoptions />
-        <quiet>0</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
-        <truepenalty />
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt3-1-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt3-1-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-    </prt>
     <tags>
       <tag><text>getestet</text>
 </tag>
       <tag><text>Lösung</text>
 </tag>
+      <tag><text>Tangente</text>
+</tag>
+      <tag><text>Übung</text>
+</tag>
       <tag><text>Differentialrechnung</text>
-</tag>
-      <tag><text>Transfer</text>
-</tag>
-      <tag><text>Anwendung</text>
 </tag>
     </tags>
   </question>

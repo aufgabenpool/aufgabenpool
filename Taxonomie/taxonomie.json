@@ -3,5 +3,6 @@
     "didactics": ["Transfer", "Verständnis", "Anwendung", "Übung"],
     "content": ["Multiple-Choice", "Plot", "Lösung"],
     "difficulty": ["einfach", "mittelschwer", "schwer"],
-    "ignore": ["getestet", "extern"]
+    "ignore": ["extern"],
+    "status": ["getestet", "ungetestet"]
 }

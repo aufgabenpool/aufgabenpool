@@ -22,7 +22,7 @@ class _CommentedTreeBuilder(ET.TreeBuilder):
         self.end('!comment')
 
 
-path_in = "../Rohdaten/quiz-pool-Differentialrechnung-20210621-1422.xml"  # TODO!!
+path_in = "../Rohdaten/quiz-pool-Differentialrechnung-20210623-1611.xml"  # TODO: sys.argv!!
 path_out = "../Data/"
 
 os.system("rm -rf " + path_out)

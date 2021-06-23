@@ -1,49 +1,49 @@
 <question type="stack">
     <name>
-      <text>Optimierung Gewinn</text>
+      <text>IM1 (21) - steilster Anstieg (Prüfungsformulierung)</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;Ein Unternehmen hat folgende Umsatzfunktion \[U(x)={@a@}\cdot x-\frac{x^2}{{@b@}}\]&lt;/p&gt;
-&lt;p&gt;und folgende Kostenfunktion \[K(x)={@c@}\cdot x+{@d@}\]&lt;/p&gt;
-&lt;p&gt;Dabei bezeichnet \(x\) die Absatzmenge.&lt;/p&gt;
-&lt;p&gt;Bei welcher Absatzmenge wird der Gewinn maximal?&lt;/p&gt;
-&lt;p&gt;Runden Sie Ihr Ergebnis kaufmännisch auf zwei Nachkommastellen und verwenden Sie als Dezimaltrennzeichen einen Punkt.&lt;/p&gt;
-&lt;p&gt;[[input:ans1]] [[validation:ans1]]&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;strong&gt;(mit Rechenweg)&lt;/strong&gt; Gegeben ist \(f: \mathbb{R}^2 \to \mathbb{R}\) mit \(f(x;y) = {@a@}({@b@}x) y^2\). Geben Sie die Koordinaten \((x;y)\) der Richtung des steilsten Anstiegs von \(f\) in \((x_0;y_0) = \left(\frac{{@c@}}{4} \pi; {@d@}\right)\) an.&lt;/p&gt;
+&lt;p style="text-align: right;"&gt;(2 + 2 Punkte)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;em&gt;Geben Sie die Antworten nach Möglichkeit ohne Verwendung von Leerzeichen in den entsprechenden digitalen Antwortfeldern ein.&lt;/em&gt;&lt;/p&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;Mit dem Haken neben dem Eingabefeld können Sie überprüfen, wie Ihr Ergebnis vom System gelesen wird. &lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;em&gt;&lt;/em&gt;&lt;em&gt;Beispiele für Eingaben: &lt;/em&gt;\(3x \rightarrow 3x, \log(3x) \rightarrow \ln(3x), x \hat{} 3 \rightarrow x^3, x \hat{} (1/3) \rightarrow \sqrt[3]{x}, sqrt(3) \rightarrow \sqrt{3}, pi \rightarrow \pi \)&lt;br /&gt;&lt;em&gt;Schreiben Sie &lt;strong&gt;zusätzlich&lt;/strong&gt; Ihren Weg inklusive Ergebnis handschriftlich auf Papier auf (inkl. Aufgabenbezeichnung) und laden Sie ihn am Ende der Online-Prüfung hoch.&lt;/em&gt;&lt;br /&gt;&lt;em&gt;Wertung nur, wenn Sie das Ergebnis digital eintragen &lt;strong&gt;und&lt;/strong&gt; den Weg hochladen!&lt;br /&gt;&lt;br /&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p style="text-align: left;"&gt;&lt;strong&gt;Antwort:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;\(x=\ \)[[input:ans1]] [[validation:ans1]]&lt;/p&gt;
+&lt;p&gt;\(y=\ \)[[input:ans2]] [[validation:ans2]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
       <text />
     </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
+    <defaultgrade>4.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
     <hidden>0</hidden>
     <idnumber />
     <stackversion>
-      <text>2020120600</text>
+      <text />
     </stackversion>
     <questionvariables>
-      <text>a:rand_with_step(20,40,1);
-b:rand_with_step(10,40,1);
-c:rand_with_step(2,19,1);
-d:rand_with_step(200,500,1);
-ta1:decimalplaces(b/2*(a-c),2);</text>
+      <text>/* randomisierte Parameter */a: rand([sin,cos]);b: rand([2,4]);c: rand([1,3]);d: rand([2,3,5]);/* erste Ableitung nach x und nach y */f1: diff(a(b*x)*y^2,x);f2: diff(a(b*x)*y^2,y);/* x- und y-Werte */x: c/4*pi;y: d;/*x- und y-Werte in jeweils erste Ableitung eingesetzt */M_ans1: ev(f1,x=c/4*pi,y=d);M_ans2: ev(f2,x=c/4*pi,y=d);</text>
     </questionvariables>
     <specificfeedback format="html">
-      <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
+      <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;
+&lt;p&gt;[[feedback:prt2]]&lt;/p&gt;</text>
     </specificfeedback>
     <questionnote>
-      <text>Ein Unternehmen hat folgende Umsatzfunktion \[U(x)={@a@}\cdot x-\frac{x^2}{{@b@}}\]und folgende Kostenfunktion \[K(x)={@c@}\cdot x+{@d@}\]</text>
+      <text>\(f(x;y) = {@a@}({@b@}x) y^2\) und \(f\) in \((x_0;y_0) = \left(\frac{{@c@}}{4} \pi; {@d@}\right)\)</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
     <assumereal>0</assumereal>
     <prtcorrect format="html">
-      <text />
+      <text>&lt;p&gt;Correct answer, well done.&lt;/p&gt;</text>
     </prtcorrect>
     <prtpartiallycorrect format="html">
-      <text />
+      <text>&lt;p&gt;Your answer is partially correct.&lt;/p&gt;</text>
     </prtpartiallycorrect>
     <prtincorrect format="html">
-      <text />
+      <text>&lt;p&gt;Incorrect answer.&lt;/p&gt;</text>
     </prtincorrect>
     <multiplicationsign>dot</multiplicationsign>
     <sqrtsign>1</sqrtsign>
@@ -54,8 +54,8 @@ ta1:decimalplaces(b/2*(a-c),2);</text>
     <variantsselectionseed />
     <input>
       <name>ans1</name>
-      <type>numerical</type>
-      <tans>ta1</tans>
+      <type>algebraic</type>
+      <tans>M_ans1</tans>
       <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
@@ -63,7 +63,25 @@ ta1:decimalplaces(b/2*(a-c),2);</text>
       <syntaxattribute>0</syntaxattribute>
       <forbidwords />
       <allowwords />
-      <forbidfloat>0</forbidfloat>
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans2</name>
+      <type>algebraic</type>
+      <tans>M_ans2</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
       <requirelowestterms>0</requirelowestterms>
       <checkanswertype>0</checkanswertype>
       <mustverify>1</mustverify>
@@ -79,34 +97,69 @@ ta1:decimalplaces(b/2*(a-c),2);</text>
         <text />
       </feedbackvariables>
       <node>
-        <name>0</name>
-        <answertest>NumAbsolute</answertest>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>ta1</tans>
-        <testoptions>.1</testoptions>
-        <quiet>1</quiet>
-        <truescoremode>+</truescoremode>
+        <tans>M_ans1</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
         <truescore>1.0000000</truescore>
         <truepenalty>0.0000000</truepenalty>
         <truenextnode>-1</truenextnode>
-        <trueanswernote>prt1-0-T</trueanswernote>
+        <trueanswernote>prt1-1-T</trueanswernote>
         <truefeedback format="html">
           <text />
         </truefeedback>
-        <falsescoremode>+</falsescoremode>
+        <falsescoremode>=</falsescoremode>
         <falsescore>0.0000000</falsescore>
         <falsepenalty>0.0000000</falsepenalty>
         <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt1-0-F</falseanswernote>
+        <falseanswernote>prt1-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
+    <prt>
+      <name>prt2</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>1</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans2</sans>
+        <tans>M_ans2</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty>0.0000000</truepenalty>
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt2-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty>0.0000000</falsepenalty>
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt2-1-F</falseanswernote>
         <falsefeedback format="html">
           <text />
         </falsefeedback>
       </node>
     </prt>
     <tags>
-      <tag><text>getestet</text>
+      <tag><text>ungetestet</text>
 </tag>
-      <tag><text>Differentialrechnung</text>
+      <tag><text>Differentialrechnung mehrerer Veränderlicher</text>
+</tag>
+      <tag><text>Gradient</text>
 </tag>
     </tags>
   </question>

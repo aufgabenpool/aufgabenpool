@@ -1,12 +1,12 @@
 <question type="stack">
     <name>
-      <text>Ableitung: elementare Funktionen</text>
+      <text>Ableitung: dz/dx</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie jeweils die Ableitung der folgenden Funktionen&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt; \(f(x)={@fa@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f'(x)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;p style=""&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;\(f'(x)=\)&amp;nbsp;[[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;div&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(f(x)={@fc@}\) mit \(c \in \mathbb{R}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(d)&lt;/b&gt;&amp;nbsp;\(f(x)={@fd@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=\) [[input:ans4]] [[validation:ans4]][[feedback:prt4]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(e)&lt;/b&gt;&amp;nbsp;\(f(x)={@fe@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=\) [[input:ans5]] [[validation:ans5]][[feedback:prt5]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;br&gt;&lt;/span&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Seien die folgenden Funktionen gegeben&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(z\big(y(x)\big)={@fa@}\)&amp;nbsp;&lt;/p&gt;&lt;p&gt;\(y(x)={@fb@}\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dy}=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;p style=""&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(\dfrac{dy}{dx}=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dx}=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;b&gt;Tipp:&lt;/b&gt;&amp;nbsp;Verwenden Sie \(\dfrac{dz}{dx}=\dfrac{dz}{dy}\cdot \dfrac{dy}{dx}\)&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;\(f'(x)={@a*a1@}x^{@a1-1@}\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;p&gt;\(f'(x)={@b*b1@} \cdot e^{@b1*x@}\)&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fc@}\) mit \(c \in \mathbb{R}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=-c \cdot cos(x)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fd@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=\dfrac{{@d@}}{x}\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(e)&lt;/strong&gt;&amp;nbsp;\(f(x)=\dfrac{{@e2@}}{x^{@e1@}}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=\dfrac{{@-e1*e2@}}{x^{@e1+1@}}\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;span&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;b&gt;Lösung&lt;/b&gt;&lt;/h4&gt;&lt;p&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dy}={@-a@}\sin({@a@}y)\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(\dfrac{dy}{dx}={@b@}x^{@b-1@}+1\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(\dfrac{dz}{dx}=\dfrac{dz}{dy}\cdot \dfrac{dy}{dx}={@-a@}\sin({@a@}y)\cdot({@b@}x^{@b-1@}+1)={@-a@}\sin({@a@}(x^{@b@}+x))\cdot({@b@}x^{@b-1@}+1)\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Im letzten Schritt wurde \(y\) wieder mit \(y(x)={@fb@}\) ersetzt.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.1000000</penalty>
@@ -17,22 +17,14 @@
     </stackversion>
     <questionvariables>
       <text>a: rand_with_prohib(-9,9,[-1,0,1])
-a1: rand_with_prohib(2,9,[a])
-b: rand_with_prohib(-9,9,[-1,0,1])
-b1: rand_with_prohib(2,9,[a])
-d: rand_with_prohib(2,9,[a,a1,b,b1,c])
-e2: rand_with_prohib(-9,9,[-1,0,1,a,a1,b,b1,c,d])
-e1: rand_with_prohib(2,9,[a,a1,b,b1,c,d,e2])
+b: rand_with_prohib(2,9,[a])
 
-fa: a*x^(a1)
-fb: b*exp(b1*x)
-abc: diff(fb,x)
-fc: -c*sin(x)
-fd: ln(x^d)
-fe: e2/x^(e1)</text>
+fa: cos(a*y)
+fb: x^(b)+x
+fc: cos(a*(x^(b)+x))</text>
     </questionvariables>
     <specificfeedback format="html">
-      <text />
+      <text>&lt;h4&gt;&lt;br&gt;&lt;/h4&gt;</text>
     </specificfeedback>
     <questionnote>
       <text>Ableiten</text>
@@ -59,7 +51,7 @@ fe: e2/x^(e1)</text>
     <input>
       <name>ans1</name>
       <type>algebraic</type>
-      <tans>diff(fa,x)</tans>
+      <tans>diff(fa,y)</tans>
       <boxsize>10</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
@@ -110,42 +102,6 @@ fe: e2/x^(e1)</text>
       <showvalidation>1</showvalidation>
       <options />
     </input>
-    <input>
-      <name>ans4</name>
-      <type>algebraic</type>
-      <tans>diff(fd,x)</tans>
-      <boxsize>10</boxsize>
-      <strictsyntax>1</strictsyntax>
-      <insertstars>0</insertstars>
-      <syntaxhint />
-      <syntaxattribute>0</syntaxattribute>
-      <forbidwords />
-      <allowwords />
-      <forbidfloat>1</forbidfloat>
-      <requirelowestterms>0</requirelowestterms>
-      <checkanswertype>0</checkanswertype>
-      <mustverify>1</mustverify>
-      <showvalidation>1</showvalidation>
-      <options />
-    </input>
-    <input>
-      <name>ans5</name>
-      <type>algebraic</type>
-      <tans>diff(fe,x)</tans>
-      <boxsize>10</boxsize>
-      <strictsyntax>1</strictsyntax>
-      <insertstars>0</insertstars>
-      <syntaxhint />
-      <syntaxattribute>0</syntaxattribute>
-      <forbidwords />
-      <allowwords />
-      <forbidfloat>1</forbidfloat>
-      <requirelowestterms>0</requirelowestterms>
-      <checkanswertype>0</checkanswertype>
-      <mustverify>1</mustverify>
-      <showvalidation>1</showvalidation>
-      <options />
-    </input>
     <prt>
       <name>prt1</name>
       <value>1.0000000</value>
@@ -158,7 +114,7 @@ fe: e2/x^(e1)</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>diff(fa,x)</tans>
+        <tans>diff(fa,y)</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -235,36 +191,27 @@ fe: e2/x^(e1)</text>
         <truefeedback format="html">
           <text />
         </truefeedback>
-        <falsescoremode>=</falsescoremode>
+        <falsescoremode>+</falsescoremode>
         <falsescore>0.0000000</falsescore>
         <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
+        <falsenextnode>1</falsenextnode>
         <falseanswernote>prt3-1-F</falseanswernote>
         <falsefeedback format="html">
           <text />
         </falsefeedback>
       </node>
-    </prt>
-    <prt>
-      <name>prt4</name>
-      <value>1.0000000</value>
-      <autosimplify>1</autosimplify>
-      <feedbackstyle>1</feedbackstyle>
-      <feedbackvariables>
-        <text />
-      </feedbackvariables>
       <node>
-        <name>0</name>
+        <name>1</name>
         <answertest>AlgEquiv</answertest>
-        <sans>ans4</sans>
-        <tans>diff(fd,x)</tans>
+        <sans>ans3</sans>
+        <tans>diff(fa,y)*diff(fb,x)</tans>
         <testoptions />
         <quiet>0</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
+        <truescoremode>+</truescoremode>
+        <truescore>0.5000000</truescore>
         <truepenalty />
         <truenextnode>-1</truenextnode>
-        <trueanswernote>prt4-1-T</trueanswernote>
+        <trueanswernote>prt3-2-T</trueanswernote>
         <truefeedback format="html">
           <text />
         </truefeedback>
@@ -272,51 +219,17 @@ fe: e2/x^(e1)</text>
         <falsescore>0.0000000</falsescore>
         <falsepenalty />
         <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt4-1-F</falseanswernote>
+        <falseanswernote>prt3-2-F</falseanswernote>
         <falsefeedback format="html">
           <text />
         </falsefeedback>
       </node>
     </prt>
-    <prt>
-      <name>prt5</name>
-      <value>1.0000000</value>
-      <autosimplify>1</autosimplify>
-      <feedbackstyle>1</feedbackstyle>
-      <feedbackvariables>
-        <text />
-      </feedbackvariables>
-      <node>
-        <name>0</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>ans5</sans>
-        <tans>diff(fe,x)</tans>
-        <testoptions />
-        <quiet>0</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
-        <truepenalty />
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt5-1-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt5-1-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-    </prt>
+    <deployedseed>1555171955</deployedseed>
     <tags>
       <tag><text>getestet</text>
 </tag>
       <tag><text>Lösung</text>
-</tag>
-      <tag><text>Übung</text>
 </tag>
       <tag><text>Differentialrechnung</text>
 </tag>

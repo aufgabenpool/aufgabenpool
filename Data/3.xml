@@ -1,99 +1,60 @@
 <question type="stack">
     <name>
-      <text>Ableitung: 2. Ordnung</text>
+      <text>Ableitung</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechen Sie angegebene Ableitung der folgenden Funktionen&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;p&gt;\(f^{\prime \prime}(x)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2}{dx^2}f=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(f(t)={@fc@}\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2f}{dt^2}\)&amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;b&gt;Tipp:&lt;/b&gt; Denken Sie an die Logarithmus Rechenregeln!
-
-&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;p&gt;Leiten Sie die Funktion \(f(x)={@f@}\)&lt;span class="latex"&gt;&lt;/span&gt; nach \(x\) ab.&lt;/p&gt;
+&lt;p style="text-align: right;"&gt;(1 Punkt)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;em&gt;Geben Sie die Antwort nach Möglichkeit ohne Verwendung von Leerzeichen in dem entsprechenden digitalen Antwortfeld ein.&lt;/em&gt;&lt;/p&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;&lt;em&gt;Mit dem Haken neben dem Eingabefeld können Sie überprüfen, wie Ihr Ergebnis vom System gelesen wird. &lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;em&gt;Beispiele für Eingaben: &lt;/em&gt;\(3x \rightarrow 3x, \log(3x) \rightarrow \ln(3x), x \hat{} 3 \rightarrow x^3, x \hat{} (1/3) \rightarrow \sqrt[3]{x}, sqrt(3) \rightarrow \sqrt{3}, pi \rightarrow \pi \)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;/p&gt;
+&lt;p style="-qt-block-indent: 0; text-indent: 0px; margin: 0px;"&gt;&lt;strong&gt;Antwort:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;\(f'(x)=\ \) [[input:Ableitung]] [[validation:Ableitung]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f^{\prime}(x)={@a@}e^{{@a@}x+{@a1@}}+{@a1@}x^{@a1-1@}\)&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)={@a^2@}e^{{@a@}x+{@a1@}}+{@a1*(a1-1)@}x^{@a1-2@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;\(\dfrac{d}{dx}f={@-b@}x^{@-b-1@}+\cos(x)\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2}{dx^2}f={@-b*(-b-1)@}x^{@-b-2@}-\sin(x)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&amp;nbsp;\(f(t)={@fc@}=\ln({@c@})+ln(t)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{df}{dt}=\dfrac{1}{t}\)&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2f}{dt^2}=-\dfrac{1}{t^2}\)&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;
-
-&lt;/p&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text />
     </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.1000000</penalty>
+    <defaultgrade>2.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
     <hidden>0</hidden>
     <idnumber />
     <stackversion>
-      <text>2020120600</text>
+      <text />
     </stackversion>
     <questionvariables>
-      <text>a: rand_with_prohib(2,9,[-1,0,1])
-a1: rand_with_prohib(2,9,[a])
-b: rand_with_prohib(2,9,[a,a1])
-c: rand_with_prohib(2,9,[a,a1,b])
-
-fa: exp(a*x+a1)+x^a1
-fb: 1/x^b+sin(x)
-fc: ln(c*t)</text>
+      <text>/* randomisierte Parameter */a: rand(4)+2;b: rand_with_prohib(-5,5,[0]);c: rand([3,6,9]);d: rand_with_step(3,9,2);/* Funktion */f: a*(x+b)^c+d;/* erste Ableitung der Funktion */M_Ableitung: diff(f,x);</text>
     </questionvariables>
     <specificfeedback format="html">
-      <text />
+      <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
     </specificfeedback>
     <questionnote>
-      <text>Höhere Ableitung</text>
+      <text>\[\frac{d}{d@x@}\left(@f@\right)=@diff(f,x)@\].</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
     <assumereal>0</assumereal>
     <prtcorrect format="html">
-      <text>Richtige Antwort, gut gemacht!</text>
+      <text>&lt;p&gt;Correct answer, well done.&lt;/p&gt;</text>
     </prtcorrect>
     <prtpartiallycorrect format="html">
-      <text>Ihre Antwort ist teilweise korrekt.</text>
+      <text>&lt;p&gt;Your answer is partially correct.&lt;/p&gt;</text>
     </prtpartiallycorrect>
     <prtincorrect format="html">
-      <text>Falsche Antwort.</text>
+      <text>&lt;p&gt;Incorrect answer.&lt;/p&gt;</text>
     </prtincorrect>
     <multiplicationsign>dot</multiplicationsign>
     <sqrtsign>1</sqrtsign>
     <complexno>i</complexno>
     <inversetrig>cos-1</inversetrig>
     <logicsymbol>lang</logicsymbol>
-    <matrixparens>(</matrixparens>
+    <matrixparens>[</matrixparens>
     <variantsselectionseed />
     <input>
-      <name>ans1</name>
+      <name>Ableitung</name>
       <type>algebraic</type>
-      <tans>diff(diff(fa,x),x)</tans>
-      <boxsize>15</boxsize>
-      <strictsyntax>1</strictsyntax>
-      <insertstars>0</insertstars>
-      <syntaxhint />
-      <syntaxattribute>0</syntaxattribute>
-      <forbidwords />
-      <allowwords />
-      <forbidfloat>1</forbidfloat>
-      <requirelowestterms>0</requirelowestterms>
-      <checkanswertype>0</checkanswertype>
-      <mustverify>1</mustverify>
-      <showvalidation>1</showvalidation>
-      <options />
-    </input>
-    <input>
-      <name>ans2</name>
-      <type>algebraic</type>
-      <tans>diff(diff(fb,x),x)</tans>
-      <boxsize>15</boxsize>
-      <strictsyntax>1</strictsyntax>
-      <insertstars>0</insertstars>
-      <syntaxhint />
-      <syntaxattribute>0</syntaxattribute>
-      <forbidwords />
-      <allowwords />
-      <forbidfloat>1</forbidfloat>
-      <requirelowestterms>0</requirelowestterms>
-      <checkanswertype>0</checkanswertype>
-      <mustverify>1</mustverify>
-      <showvalidation>1</showvalidation>
-      <options />
-    </input>
-    <input>
-      <name>ans3</name>
-      <type>algebraic</type>
-      <tans>diff(diff(fc,t),t)</tans>
+      <tans>M_Ableitung</tans>
       <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
@@ -110,22 +71,22 @@ fc: ln(c*t)</text>
     </input>
     <prt>
       <name>prt1</name>
-      <value>1.0000000</value>
+      <value>2.0000000</value>
       <autosimplify>1</autosimplify>
       <feedbackstyle>1</feedbackstyle>
       <feedbackvariables>
         <text />
       </feedbackvariables>
       <node>
-        <name>0</name>
+        <name>1</name>
         <answertest>AlgEquiv</answertest>
-        <sans>ans1</sans>
-        <tans>diff(diff(fa,x),x)</tans>
+        <sans>Ableitung</sans>
+        <tans>M_Ableitung</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
         <truescore>1.0000000</truescore>
-        <truepenalty />
+        <truepenalty>0.0000000</truepenalty>
         <truenextnode>-1</truenextnode>
         <trueanswernote>prt1-1-T</trueanswernote>
         <truefeedback format="html">
@@ -133,7 +94,7 @@ fc: ln(c*t)</text>
         </truefeedback>
         <falsescoremode>=</falsescoremode>
         <falsescore>0.0000000</falsescore>
-        <falsepenalty />
+        <falsepenalty>0.0000000</falsepenalty>
         <falsenextnode>-1</falsenextnode>
         <falseanswernote>prt1-1-F</falseanswernote>
         <falsefeedback format="html">
@@ -141,80 +102,12 @@ fc: ln(c*t)</text>
         </falsefeedback>
       </node>
     </prt>
-    <prt>
-      <name>prt2</name>
-      <value>1.0000000</value>
-      <autosimplify>1</autosimplify>
-      <feedbackstyle>1</feedbackstyle>
-      <feedbackvariables>
-        <text />
-      </feedbackvariables>
-      <node>
-        <name>0</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>ans2</sans>
-        <tans>diff(diff(fb,x),x)</tans>
-        <testoptions />
-        <quiet>0</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
-        <truepenalty />
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt2-1-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt2-1-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-    </prt>
-    <prt>
-      <name>prt3</name>
-      <value>1.0000000</value>
-      <autosimplify>1</autosimplify>
-      <feedbackstyle>1</feedbackstyle>
-      <feedbackvariables>
-        <text />
-      </feedbackvariables>
-      <node>
-        <name>0</name>
-        <answertest>AlgEquiv</answertest>
-        <sans>ans3</sans>
-        <tans>diff(diff(fc,t),t)</tans>
-        <testoptions />
-        <quiet>0</quiet>
-        <truescoremode>=</truescoremode>
-        <truescore>1.0000000</truescore>
-        <truepenalty />
-        <truenextnode>-1</truenextnode>
-        <trueanswernote>prt3-1-T</trueanswernote>
-        <truefeedback format="html">
-          <text />
-        </truefeedback>
-        <falsescoremode>=</falsescoremode>
-        <falsescore>0.0000000</falsescore>
-        <falsepenalty />
-        <falsenextnode>-1</falsenextnode>
-        <falseanswernote>prt3-1-F</falseanswernote>
-        <falsefeedback format="html">
-          <text />
-        </falsefeedback>
-      </node>
-    </prt>
     <tags>
-      <tag><text>getestet</text>
-</tag>
-      <tag><text>Übung</text>
-</tag>
-      <tag><text>Lösung</text>
+      <tag><text>ungetestet</text>
 </tag>
       <tag><text>Differentialrechnung</text>
+</tag>
+      <tag><text>Faktorregel</text>
 </tag>
     </tags>
   </question>

@@ -1,6 +1,6 @@
 <question type="truefalse">
     <name>
-      <text>lok Min</text>
+      <text>Lokales Minimum</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Entscheiden Sie, ob die folgende Aussage wahr oder falsch ist.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;Sei $$f$$ eine auf $$]a,b[$$ zweimal differenzierbare Funktion und $$ x_0 \in$$ &amp;nbsp;$$]a,b[$$ eine stationäre Stelle.&amp;nbsp;&lt;/p&gt;&lt;br&gt;Gilt $$f''(x_0)&amp;gt;0$$, so besitzt $$f$$ an der Stelle $$x_0$$ ein lokales Maximum. &lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
@@ -27,13 +27,13 @@
     <tags>
       <tag><text>getestet</text>
 </tag>
+      <tag><text>Multiple-Choice</text>
+</tag>
       <tag><text>Extrema</text>
 </tag>
       <tag><text>Differentialrechnung</text>
 </tag>
       <tag><text>Verständnis</text>
-</tag>
-      <tag><text>MC</text>
 </tag>
     </tags>
   </question>

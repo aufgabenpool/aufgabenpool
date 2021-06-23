@@ -1,16 +1,12 @@
 <question type="stack">
     <name>
-      <text>Ableitung: 2. Ordnung</text>
+      <text>Taylorpolynom 3. Grades</text>
     </name>
     <questiontext format="html">
-      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechen Sie angegebene Ableitung der folgenden Funktionen&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;p&gt;\(f^{\prime \prime}(x)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2}{dx^2}f=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(f(t)={@fc@}\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2f}{dt^2}\)&amp;nbsp; &amp;nbsp; &amp;nbsp;\(=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &lt;b&gt;Tipp:&lt;/b&gt; Denken Sie an die Logarithmus Rechenregeln!
-
-&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Bestimmen Sie für die Funktion&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(x)={@a@}x^3+{@b1@} \cos(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(f^{\prime}(x)=\)&amp;nbsp; &amp;nbsp;[[input:ans1]][[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f^{\prime \prime}(x)=\)&amp;nbsp; [[input:ans2]][[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(f^{\prime \prime \prime}(x)=\) [[input:ans3]][[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;p&gt;&lt;b&gt;(d)&lt;/b&gt; Das Taylorpolynom 3. Grades bei \(x_0=0\).&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(p_3(x)=\) [[input:ans4]] [[validation:ans4]][[feedback:prt4]]&lt;/p&gt;</text>
     </questiontext>
     <generalfeedback format="html">
-      <text>&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fa@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f^{\prime}(x)={@a@}e^{{@a@}x+{@a1@}}+{@a1@}x^{@a1-1@}\)&lt;/p&gt;&lt;p&gt;\(f^{\prime}(x)={@a^2@}e^{{@a@}x+{@a1@}}+{@a1*(a1-1)@}x^{@a1-2@}\)&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;\(\dfrac{d}{dx}f={@-b@}x^{@-b-1@}+\cos(x)\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2}{dx^2}f={@-b*(-b-1)@}x^{@-b-2@}-\sin(x)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&amp;nbsp;\(f(t)={@fc@}=\ln({@c@})+ln(t)\)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{df}{dt}=\dfrac{1}{t}\)&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{d^2f}{dt^2}=-\dfrac{1}{t^2}\)&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;
-
-&lt;/p&gt;&lt;/div&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;</text>
+      <text>&lt;p&gt;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;Lösung&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Taylorpolynom an der Stelle \(x_0\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;\(p_n(x)=\displaystyle \sum_{k=0}^n \dfrac{f^{(k)}(x)}{k!}(x-x_0)^k\)&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;\(f(x)={@f@}\) zum Entwicklungspunkt \(x_0 = 0\)&lt;br&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(a)&lt;/strong&gt;&amp;nbsp;\(f^{\prime}(x)={@f1@}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(b)&lt;/strong&gt;&amp;nbsp;\(f^{\prime \prime}(x)={@f2@}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(c)&lt;/strong&gt;&amp;nbsp;\(f^{\prime \prime \prime}(x)={@f3@}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(d)&lt;/strong&gt;&amp;nbsp;Das Taylorpolynom 3. Grades bei \(x_0=0\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(f(0)={@ev0@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(f^{\prime}(0)={@ev1@}\)&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(f^{\prime \prime}(0)={@ev2@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(f^{\prime \prime \prime}(0)={@ev3@}\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;In die Taylorsumme eingesetzt:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(p_3(x)=f(0)+f^{\prime}(0)(x-0)+\dfrac{f^{\prime \prime}(0)}{2}(x-0)^2+\dfrac{f^{\prime \prime \prime}(0)}{6}(x-0)^3\)&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; \( ={@ev0@}+{@ev1@}x+\dfrac{{@ev2@}}{2}x^2+\dfrac{{@ev3@}}{6}x^3\)&amp;nbsp;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; \(={@b1@}-{@b@}x^2-{@-a@}x^3\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.1000000</penalty>
@@ -20,20 +16,26 @@
       <text>2020120600</text>
     </stackversion>
     <questionvariables>
-      <text>a: rand_with_prohib(2,9,[-1,0,1])
-a1: rand_with_prohib(2,9,[a])
-b: rand_with_prohib(2,9,[a,a1])
-c: rand_with_prohib(2,9,[a,a1,b])
+      <text>a: -9+rand(7)
+b: rand_with_prohib(1,4,[-a])
+b1: 2*b
 
-fa: exp(a*x+a1)+x^a1
-fb: 1/x^b+sin(x)
-fc: ln(c*t)</text>
+f: a*x^3+b1*cos(x)
+f1: diff(f,x)
+f2:diff(f1,x)
+f3:diff(f2,x)
+p3: b1-b*x^2+a*x^3
+
+ev0: ev(f,x=0)
+ev1: ev(f1,x=0)
+ev2: ev(f2,x=0)
+ev3: ev(f3,x=0)</text>
     </questionvariables>
     <specificfeedback format="html">
       <text />
     </specificfeedback>
     <questionnote>
-      <text>Höhere Ableitung</text>
+      <text>Taylor</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>
@@ -57,7 +59,7 @@ fc: ln(c*t)</text>
     <input>
       <name>ans1</name>
       <type>algebraic</type>
-      <tans>diff(diff(fa,x),x)</tans>
+      <tans>f1</tans>
       <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
@@ -75,7 +77,7 @@ fc: ln(c*t)</text>
     <input>
       <name>ans2</name>
       <type>algebraic</type>
-      <tans>diff(diff(fb,x),x)</tans>
+      <tans>f2</tans>
       <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
@@ -93,7 +95,25 @@ fc: ln(c*t)</text>
     <input>
       <name>ans3</name>
       <type>algebraic</type>
-      <tans>diff(diff(fc,t),t)</tans>
+      <tans>f3</tans>
+      <boxsize>15</boxsize>
+      <strictsyntax>1</strictsyntax>
+      <insertstars>0</insertstars>
+      <syntaxhint />
+      <syntaxattribute>0</syntaxattribute>
+      <forbidwords />
+      <allowwords />
+      <forbidfloat>1</forbidfloat>
+      <requirelowestterms>0</requirelowestterms>
+      <checkanswertype>0</checkanswertype>
+      <mustverify>1</mustverify>
+      <showvalidation>1</showvalidation>
+      <options />
+    </input>
+    <input>
+      <name>ans4</name>
+      <type>algebraic</type>
+      <tans>p3</tans>
       <boxsize>15</boxsize>
       <strictsyntax>1</strictsyntax>
       <insertstars>0</insertstars>
@@ -120,7 +140,7 @@ fc: ln(c*t)</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans1</sans>
-        <tans>diff(diff(fa,x),x)</tans>
+        <tans>f1</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -153,7 +173,7 @@ fc: ln(c*t)</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans2</sans>
-        <tans>diff(diff(fb,x),x)</tans>
+        <tans>f2</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -186,7 +206,7 @@ fc: ln(c*t)</text>
         <name>0</name>
         <answertest>AlgEquiv</answertest>
         <sans>ans3</sans>
-        <tans>diff(diff(fc,t),t)</tans>
+        <tans>f3</tans>
         <testoptions />
         <quiet>0</quiet>
         <truescoremode>=</truescoremode>
@@ -207,14 +227,49 @@ fc: ln(c*t)</text>
         </falsefeedback>
       </node>
     </prt>
+    <prt>
+      <name>prt4</name>
+      <value>1.0000000</value>
+      <autosimplify>1</autosimplify>
+      <feedbackstyle>1</feedbackstyle>
+      <feedbackvariables>
+        <text />
+      </feedbackvariables>
+      <node>
+        <name>0</name>
+        <answertest>AlgEquiv</answertest>
+        <sans>ans4</sans>
+        <tans>p3</tans>
+        <testoptions />
+        <quiet>0</quiet>
+        <truescoremode>=</truescoremode>
+        <truescore>1.0000000</truescore>
+        <truepenalty />
+        <truenextnode>-1</truenextnode>
+        <trueanswernote>prt4-1-T</trueanswernote>
+        <truefeedback format="html">
+          <text />
+        </truefeedback>
+        <falsescoremode>=</falsescoremode>
+        <falsescore>0.0000000</falsescore>
+        <falsepenalty />
+        <falsenextnode>-1</falsenextnode>
+        <falseanswernote>prt4-1-F</falseanswernote>
+        <falsefeedback format="html">
+          <text />
+        </falsefeedback>
+      </node>
+    </prt>
     <tags>
       <tag><text>getestet</text>
 </tag>
-      <tag><text>Übung</text>
+      <tag><text>taylor</text>
 </tag>
       <tag><text>Lösung</text>
 </tag>
       <tag><text>Differentialrechnung</text>
+</tag>
+      <tag><text>Übung</text>
 </tag>
     </tags>
   </question>
