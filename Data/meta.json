@@ -437,6 +437,10 @@
         "mittelschwer",
         "schwer"
     ],
+    "tags-status": [
+        "getestet", 
+        "ungetestet"
+    ],
     "tags-maintopic-Differentialrechnung": [
         "getestet",
         "Tangente",

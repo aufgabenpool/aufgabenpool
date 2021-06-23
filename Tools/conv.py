@@ -90,10 +90,12 @@ metadata["tags-all"] = list(tagset)
 
 with open("../Taxonomie/taxonomie.json") as f:
     tax = json.load(f)
+    # TODO: crawl automatically from tax[..]
     metadata["tags-maintopics"] = []
     metadata["tags-didactics"] = tax["didactics"]
     metadata["tags-content"] = tax["content"]
     metadata["tags-difficulty"] = tax["difficulty"]
+    metadata["tags-status"] = tax["status"]
     for maintopic in tax["maintopics"]:
         metadata["tags-maintopics"].append(maintopic)
         maintopic_tags = []
@@ -101,7 +103,7 @@ with open("../Taxonomie/taxonomie.json") as f:
             for tag in ex['tags']:
                 if tag == maintopic:
                     continue
-                if tag in tax['didactics']:
+                if tag in tax['didactics']:  # TODO: crawl automatically from tax[..]
                     continue
                 if tag in tax['content']:
                     continue
