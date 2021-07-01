@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Optimierung Gewinn</text>
+      <text>024) Optimierung Gewinn</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Ein Unternehmen hat folgende Umsatzfunktion \[U(x)={@a@}\cdot x-\frac{x^2}{{@b@}}\]&lt;/p&gt;

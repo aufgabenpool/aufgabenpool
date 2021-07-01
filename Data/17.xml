@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>IM1 (16) - Tangente parallel zu Gerade</text>
+      <text>016) IM1 (16) - Tangente parallel zu Gerade</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Gegeben ist die Funktion &lt;span class="latex"&gt;f: \mathbb{R} \to \mathbb{R}&lt;/span&gt; mit \(f(x)=e^{{@a@}x}\). Bestimmen Sie die Koordinate &lt;span class="latex"&gt;x_0&lt;/span&gt; des Punktes, in dem die Tangente von &lt;span class="latex"&gt;f&lt;/span&gt; parallel zur Geraden \(y={@m@}x{@c@}{@b@}\) verläuft.&lt;/p&gt;
@@ -19,7 +19,7 @@
     <hidden>0</hidden>
     <idnumber />
     <stackversion>
-      <text />
+      <text>2020120600</text>
     </stackversion>
     <questionvariables>
       <text>/* e^(a*x) */a: rand([3,4,6,8]);/* y=mx+b */m: rand([12,16,24,36]);b: rand([1,2,3]);c: if b=1 then "+" else "-"; /* c=Vorzeichen von b, da +1,-2,-3 möglich sein sollen (nur relevant für Aufgabenstellung) *//* erste Ableitung */f1: a*e^(a*x);/* f1=b, Gleichung nach x auflösen */x: (1/a)*log(m/a);/* float macht aus derLösung eine Gleitkommazahl, fpprintprec gibt die Anzahl Nachkommastellen vor*/fpprintprec : 4;M_ans1: float(x);</text>

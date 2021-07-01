@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Quotientenregel</text>
+      <text>027) Quotientenregel</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Bestimmen Sie die erste Ableitung der folgenden Funktion mit Hilfe der Quotientenregel&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p style=""&gt;&amp;nbsp;\( f(t)= \dfrac{t^{@A@}}{{@B@}\cdot e^{t}} \)&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=""&gt;\(f'(t)=\) [[input:ans1]] [[validation:ans1]] [[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;</text>

@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Optimierung Umsatz</text>
+      <text>025) Optimierung Umsatz</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Die Umsatzfunktion eines Unternehmens sei gegeben durch: \[U(x)={@a@}\cdot x\cdot\exp\left(-{@b@}\cdot x\right)\]&lt;/p&gt;

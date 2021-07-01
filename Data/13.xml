@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Elastizität bestimmen</text>
+      <text>012) Elastizität bestimmen</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Bestimmen Sie die Elastizität der Funktion \(f\) an der Stelle \(x={@x1@}\).&lt;/p&gt;

@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Ableitung</text>
+      <text>002) Ableitung</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Leiten Sie die Funktion \(f(x)={@f@}\)&lt;span class="latex"&gt;&lt;/span&gt; nach \(x\) ab.&lt;/p&gt;
@@ -21,7 +21,7 @@
     <hidden>0</hidden>
     <idnumber />
     <stackversion>
-      <text />
+      <text>2020120600</text>
     </stackversion>
     <questionvariables>
       <text>/* randomisierte Parameter */a: rand(4)+2;b: rand_with_prohib(-5,5,[0]);c: rand([3,6,9]);d: rand_with_step(3,9,2);/* Funktion */f: a*(x+b)^c+d;/* erste Ableitung der Funktion */M_Ableitung: diff(f,x);</text>
@@ -30,7 +30,7 @@
       <text>&lt;p&gt;[[feedback:prt1]]&lt;/p&gt;</text>
     </specificfeedback>
     <questionnote>
-      <text>\[\frac{d}{d@x@}\left(@f@\right)=@diff(f,x)@\].</text>
+      <text>\[\frac{d}{d{@x@}\left({@f@}\right)={@diff(f,x)@}\].</text>
     </questionnote>
     <questionsimplify>1</questionsimplify>
     <assumepositive>0</assumepositive>

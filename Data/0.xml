@@ -1,6 +1,6 @@
 <question type="multichoice">
     <name>
-      <text>Ableitung: sin^2+cos^2</text>
+      <text>032) Ableitung: sin^2+cos^2</text>
     </name>
     <questiontext format="html">
       <text>Geben sei die Funktion&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;$$f(x) = \sin^2(x) + \cos^2(x)$$.&amp;nbsp;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie die Ableitung $$f'(x)$$.&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</text>

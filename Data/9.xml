@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Ableitung: Summenregel</text>
+      <text>008) Ableitung: Summenregel</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechen Sie die Ableitung der folgenden Funktionen&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(f(t)={@fa@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;p&gt;\(f'(t)=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f(x)={@fb@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;\(f'(x)=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;br&gt;

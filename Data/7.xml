@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Ableitung: Produktregel</text>
+      <text>006) Ableitung: Produktregel</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie jeweils die Ableitung der folgenden Funktionen mit Hilfe der Produktregel&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt; \(y={@fa@}\)&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(\dfrac{dy}{dx}=\) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;p style=""&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(y={@fb@}\)&lt;/p&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;\(\dfrac{dy}{dt}=\) [[input:ans2]] [[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(y={@fc@}\)&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/span&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;span style=""&gt;&lt;div style=""&gt;&lt;p style=""&gt;&lt;/p&gt;&lt;div&gt;&lt;p&gt;\(\dfrac{dy}{dx}=\) [[input:ans3]] [[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</text>

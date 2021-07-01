@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>IM1 (17) - Näherungswert</text>
+      <text>017) IM1 (17) - Näherungswert</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;Gegeben ist eine Funktion &lt;span class="latex"&gt;f:\mathbb{R} \to \mathbb{R}&lt;/span&gt; mit \(f(0)={@a@}\) und \(f'(0)={@b@}\). Geben Sie einen Näherungswert für \(f({@c@})\) an. Verwenden Sie dazu die Tangente an &lt;span class="latex"&gt;f&lt;/span&gt; bei \(x_0=0\).&lt;br /&gt;Hinweis: Die Angabe des Funktionsterms von &lt;span class="latex"&gt;f&lt;/span&gt; ist für die Aufgabenstellung nicht notwendig.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
@@ -19,7 +19,7 @@
     <hidden>0</hidden>
     <idnumber />
     <stackversion>
-      <text />
+      <text>2020120600</text>
     </stackversion>
     <questionvariables>
       <text>/* randomisierte Parameter */a: rand([0,1]);b: rand([2,3,4]);c: rand([-0.4,-0.3,-0.2,0.2,0.3,0.4]);/* Lösung */M_ans1: b*c+a;</text>

@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>1. Ableitung</text>
+      <text>001) 1. Ableitung</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Berechnen Sie die Ableitung der folgenden Funktion&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\( \displaystyle f(x)= {@c@} \)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;\(f'(x)= \) [[input:ans1]] [[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>

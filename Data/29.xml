@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Stationäre Stellen</text>
+      <text>028) Stationäre Stellen</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Geben Sie die stationären Stellen der folgenden Funktion an&lt;br&gt;&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\( f(x) = \displaystyle{@f2@} \)&lt;/p&gt;&lt;p&gt;/*{@f1@}, {@df2@}*/&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;\(x_0 =\) [[input:ans1]] [[validation:ans1]]&lt;/li&gt;&lt;li&gt;\(x_1=\) [[input:ans2]] [[validation:ans2]][[feedback:prt1]]&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;</text>

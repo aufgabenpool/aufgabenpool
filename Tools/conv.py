@@ -7,12 +7,14 @@
 # ******************************************************************************
 
 import os
+import os.path
 import xml.etree.ElementTree as ET
 import json
+import sys
+
 from datetime import datetime
 
 # TODO: run puppeteer in batch (do NOT login for every question...)
-
 
 # the following class code is taken from: https://dustinoprea.com/2019/01/22/python-parsing-xml-and-retaining-the-comments/
 class _CommentedTreeBuilder(ET.TreeBuilder):
@@ -21,9 +23,16 @@ class _CommentedTreeBuilder(ET.TreeBuilder):
         self.data(data)
         self.end('!comment')
 
+if len(sys.argv) != 2:
+    print("usage: python3 conv.py INPUTPATH")
+    sys.exit(-1)
 
-path_in = "../Rohdaten/quiz-pool-Differentialrechnung-20210623-1611.xml"  # TODO: sys.argv!!
+path_in = sys.argv[1]
 path_out = "../Data/"
+
+if not os.path.isfile(path_in):
+    print("error: input path does not exist")
+    sys.exit(-1)
 
 os.system("rm -rf " + path_out)
 os.system("mkdir -p " + path_out)

@@ -1,6 +1,6 @@
 <question type="stack">
     <name>
-      <text>Taylorpolynom 3. Grades</text>
+      <text>030) Taylorpolynom 3. Grades</text>
     </name>
     <questiontext format="html">
       <text>&lt;p&gt;&lt;/p&gt;&lt;p&gt;Bestimmen Sie für die Funktion&lt;/p&gt;&lt;div class="editor-indent" style="margin-left: 30px;"&gt;&lt;p&gt;\(f(x)={@a@}x^3+{@b1@} \cos(x)\)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(a)&lt;/b&gt;&amp;nbsp;\(f^{\prime}(x)=\)&amp;nbsp; &amp;nbsp;[[input:ans1]][[validation:ans1]][[feedback:prt1]]&lt;/p&gt;&lt;p&gt;&lt;b&gt;(b)&lt;/b&gt;&amp;nbsp;\(f^{\prime \prime}(x)=\)&amp;nbsp; [[input:ans2]][[validation:ans2]][[feedback:prt2]]&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;(c)&lt;/b&gt;&amp;nbsp;\(f^{\prime \prime \prime}(x)=\) [[input:ans3]][[validation:ans3]][[feedback:prt3]]&lt;/p&gt;&lt;p&gt;&lt;b&gt;(d)&lt;/b&gt; Das Taylorpolynom 3. Grades bei \(x_0=0\).&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;\(p_3(x)=\) [[input:ans4]] [[validation:ans4]][[feedback:prt4]]&lt;/p&gt;</text>
