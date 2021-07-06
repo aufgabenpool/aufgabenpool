@@ -34,7 +34,7 @@ if not os.path.isfile(path_in):
     print("error: input path does not exist")
     sys.exit(-1)
 
-os.system("rm -rf " + path_out)
+#os.system("rm -rf " + path_out)
 os.system("mkdir -p " + path_out)
 
 metadata = {"exercises": [], "date": datetime.today().strftime('%Y-%m-%d %H:%M')}
