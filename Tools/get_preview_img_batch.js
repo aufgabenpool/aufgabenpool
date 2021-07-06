@@ -35,7 +35,7 @@ let exercises = meta["exercises"];
 (async() => {
 
     // init puppeteer
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless: true, args: ['--no-sandbox']});
 
     // goto login page
     const page = await browser.newPage();

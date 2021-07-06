@@ -20,7 +20,8 @@ os.system("mkdir -p ../Data-tmp/")
 # 1.) Download question pool as moodle-xml file
 x = os.system('node download_pool.js')
 if x != 0:
-    print('ERROR: failed to get question pool as moodle-xml file. using old file!')
+    print('ERROR: failed to get question pool as moodle-xml file.')
+    sys.exit(-1)
 moodle_xml_files = glob.glob("../Data-tmp/*.xml")
 moodle_xml_path = max(moodle_xml_files, key=os.path.getctime)  # get newest file
 
