@@ -13,6 +13,9 @@ from shutil import which
 
 print('Moodle Question Extractor - Author: Andreas Schwenk / TH Köln')
 
+# 0.) Delete "../Data-tmp/"
+os.system("rm -r ../Data-tmp/")
+
 # 1.) Download question pool as moodle-xml file
 x = os.system('node download_pool.js')
 if x != 0:
@@ -35,6 +38,10 @@ if x != 0:
 if which('mogrify') is None:
    print("warning: imagemagick is not installed!")
 else:
-   os.system('cd ../Data/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')
+   os.system('cd ../Data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')
+
+# 5.) Replace current "../Data/" directory
+os.system("rm -r ../Data/")
+os.system("mv ../Data-tmp ../Data")
 
 print('..extration finished')

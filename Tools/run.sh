@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 conv.py
+python3 run.py
 

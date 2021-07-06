@@ -15,7 +15,8 @@ const moodle_url = 'https://sell.f07-its.fh-koeln.de/moodle'
 const moodle_user = 'puppeteer';
 const moodle_pwd = 'dGDs988S#';  // TODO: must be secret!!!!!
 const course_id = 2; // TODO: this is static...
-const img_out_path = '../Data/';
+const meta_data_path = "../Data-tmp/meta.json";
+const img_out_path = '../Data-tmp/';
 
 let first_exercise_id = 0;
 let last_exercise_id = 1e12;
@@ -26,7 +27,7 @@ if(process.argv.length == 4) {
 }
 
 // exercise meta data
-let meta = fs.readFileSync("../Data/meta.json");
+let meta = fs.readFileSync(meta_data_path);
 meta = JSON.parse(meta);
 let exercises = meta["exercises"];
 

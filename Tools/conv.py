@@ -28,7 +28,7 @@ if len(sys.argv) != 2:
     sys.exit(-1)
 
 path_in = sys.argv[1]
-path_out = "../Data/"
+path_out = "../Data-tmp/"
 
 if not os.path.isfile(path_in):
     print("error: input path does not exist")
