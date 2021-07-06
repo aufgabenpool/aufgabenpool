@@ -85,12 +85,6 @@ for i, question in enumerate(quiz):
     f.write(questionStr)
     f.close()
 
-    # get image
-    moodleQuestionId = int(questionid[11:])
-    for i in range(3):
-        cmd = 'node get_preview_img.js 2 ' + str(moodleQuestionId) + ' ' + '../Data/' + str(questionIdx) + '_' + str(i) + '.png'
-        os.system(cmd)
-
     questionIdx += 1
 
 tagset.remove("")
@@ -134,10 +128,3 @@ print(metadata_json)
 f = open(path_out + "meta.json", "w")
 f.write(metadata_json)
 f.close()
-
-# remove image background
-from shutil import which
-if which('mogrify') is None:
-    print("warning: imagemagick is not installed!")
-else:
-    os.system('cd ../Data/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')

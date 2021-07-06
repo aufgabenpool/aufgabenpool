@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cony.py",
+            "name": "conv.py",
             "type": "python",
             "request": "launch",
             "cwd": "${workspaceFolder}/Tools/",
@@ -20,10 +20,21 @@
             "type": "pwa-node"
         },
         {
+            "name": "get_prewiew_img_batch.js",
+            "cwd": "${workspaceFolder}/Tools/",
+            "program": "${workspaceFolder}/Tools/get_preview_img_batch.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
+            "cwd": "${workspaceFolder}/Tools/",
             "console": "integratedTerminal"
         }
     ]
