@@ -1,37 +1,37 @@
-
-
-
 ## Fellowships für Innovationen in der digitalen Hochschullehre (digiFellow) 
-# Digitaler Aufgabenpool Mathematik  ![Logo](aufgabenpool-logo.png)
+# Digitaler Aufgabenpool Mathematik  ![Logo](Logo/aufgabenpool-logo.png)
 
 ## Team an der TH Köln
 - Fakultät 04: Prof. Dr. Jan-Philipp Schmidt
-- Fakultät 07: Prof. Dr. Heiko Knospe, Wiss. Mitarbeiter*innen Patricia Graf, Katharina Hammersen und Andreas Schwenk
-- Fakultät 09: Prof. Dr. Angela Schmitz, Wiss. Mitarbeiter*innen Silvia Becher, Dr. Susanne Hilger und Jan Reißner
+- Fakultät 07: Prof. Dr. Heiko Knospe, Wiss. Mitarbeiter*innen Patricia Graf, B.Sc. und Andreas Schwenk, M.Sc.
+- Fakultät 09: Prof. Dr. Angela Schmitz, Wiss. Mitarbeiter Jan Reißner, M.Sc.
 
-## Overview
-Ilias & Moodle STACK Aufgaben -->
 
-Taxonomie und QS -->
+## Nutzung
 
-Export (XML) von Ilias & Moodle nach GitHub -->
+Der aktuelle Workflow sieht vor, dass der Aufgabenbestand über Moodle verwaltet wird:
 
-Such-, Filter und Previewfunktionen -->
+	https://sell.f07-its.fh-koeln.de/moodle/
 
-Import (XML) von GitHub nach Ilias & Moodle 
+NutzerInnen des Pools steht die folgende Webseite zur Verfügung (noch nicht öffentlich)
+
+	https://sell.f07-its.fh-koeln.de/pool-auto/
+
+
+## Informationen für Entwickler
+
+Im Ordern Tools/ stehen Skript bereit, die den Aufgabenbestand aus Moodle automatisch extrahieren und für die Webseite aufbereiten.
+Der Konvertierungsvorgang wird durch `run.sh` bzw. `run.py` gestartet. In diesen Dateien findet man detaillierte Informationen.
 
 
 <!--
-**aufgabenpool/aufgabenpool** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Ilias & Moodle STACK Aufgaben
 
-Here are some ideas to get you started:
+Taxonomie und QS
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+Export (XML) von Ilias & Moodle nach GitHub
+
+Such-, Filter und Previewfunktionen
+
+Import (XML) von GitHub nach Ilias & Moodle 
 -->
