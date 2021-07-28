@@ -26,7 +26,7 @@ moodle_xml_files = glob.glob("../Data-tmp/*.xml")
 moodle_xml_path = max(moodle_xml_files, key=os.path.getctime)  # get newest file
 
 # 2.) create meta.json + an xml-file for each question
-x = os.system('python3 conv.py ' + moodle_xml_path)
+x = os.system('python3 conv.py ' + moodle_xml_path + ' ../Data-tmp/')
 if x != 0:
     print('ERROR: failed to convert question pool')
     sys.exit(-1)

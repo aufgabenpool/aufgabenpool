@@ -6,25 +6,29 @@
 #  Version: 0.01
 # ******************************************************************************
 
-# dependencies:
-#   pip3 install lxml
-
 import os
 import os.path
+import xml.etree.ElementTree as ET
 import json
 import sys
 
-from lxml import etree
 from datetime import datetime
 
-if len(sys.argv) != 3:
-    print("usage: python3 conv.py INPUTPATH OUTPUTPATH")
-    sys.exit(-1)
+# the following 5 files of code are taken from: https://dustinoprea.com/2019/01/22/python-parsing-xml-and-retaining-the-comments/
+class _CommentedTreeBuilder(ET.TreeBuilder):
+    def comment(self, data):
+        self.start('!comment', {})
+        self.data(data)
+        self.end('!comment')
 
-path_in = sys.argv[1]
-#path_in = "../Data/quiz-pool-AUFGABENPOOL-20210728-0755.xml"
-path_out = sys.argv[2]
-#path_out = "../Data-tmp/"
+#if len(sys.argv) != 3:
+#    print("usage: python3 conv.py INPUTPATH OUTPUTPATH")
+#    sys.exit(-1)
+
+#path_in = sys.argv[1]
+path_in = "../Data/quiz-pool-AUFGABENPOOL-20210728-0755.xml"
+#path_out = sys.argv[2]
+path_out = "../Data-tmp/"
 
 if not os.path.isfile(path_in):
     print("error: input path does not exist")
@@ -35,10 +39,11 @@ os.system("mkdir -p " + path_out)
 metadata = {"exercises": [], "date": datetime.today().strftime('%Y-%m-%d %H:%M')}
 
 
-parser = etree.XMLParser(strip_cdata=False)
-tree = etree.parse(path_in, parser)
-quiz = tree.getroot()
+ctb = _CommentedTreeBuilder()
+xp = ET.XMLParser(target=ctb)
+tree = ET.parse(path_in, parser=xp)
 
+quiz = tree.getroot()
 
 tagset = {""}
 
@@ -47,14 +52,13 @@ questionid = ''
 questionIdx = 0
 
 for i, question in enumerate(quiz):
-    if question.tag is etree.Comment:
+    if question.tag == '!comment':
         questionid = question.text
         continue
     t = question.attrib['type']
     if t == "category":
         current_category = question.find('category')[0].text
         continue
-    questionType = question.attrib['type']
     name = question.find('name')[0].text
     tested = False
     tags = question.find('tags')
@@ -73,12 +77,11 @@ for i, question in enumerate(quiz):
         'id': questionIdx,
         'title': name,
         'tags': taglist,
-        'category': current_category,
-        'type': questionType}
+        'category': current_category}
     )
     f = open(path_out + str(questionIdx) + ".xml", "w")
-    questionStr = etree.tostring(question, encoding='unicode', pretty_print=True)
-    questionStr = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' + str(questionStr) + '\n</quiz>\n'
+    questionStr = ET.tostring(question, encoding="unicode")
+    questionStr = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' + questionStr + '\n</quiz>\n'
     f.write(questionStr)
     f.close()
 
