@@ -1,0 +1,40 @@
+Bloom #ff0000
+    Bloom:1=Wissen
+    Bloom:2=Verständnis
+    Bloom:3=Anwendung
+    Bloom:4=Analyse
+    Bloom:5=Synthese
+    Bloom:6=Beurteilung
+
+Maier #0000ff
+    Wissensart
+        Maier:1:1=Fakten
+        Maier:1:2=Prozeduren
+        Maier:1:3=Konzepte
+        Maier:1:4=Metakognition
+    Kognitiver Prozess
+        Maier:2:1=Preproduktion
+        Maier:2:2=Naher Transfer
+        Maier:2:3=Weiter Transfer
+        Maier:2:4=Problemlösen
+    Wissenseinheiten
+        Maier:3:1=Eine Wissenseinheit
+        Maier:3:2=Bis zu 4 Wissenseinheiten
+        Maier:3:3=Mehr als 4 Wissenseinheiten
+    Offenheit
+        Maier:4:1=Definiert/konvergent
+        Maier:4:2=Definiert/divergent
+        Maier:4:3=Nicht definiert/divergent
+    Lebensweltbezug
+        Maier:5:1=kein
+        Maier:5:2=konstruiert
+        Maier:5:3=authentisch
+        Maier:5:4=real
+    Sprachlogische Komplexität
+        Maier:6:1=niedrig
+        Maier:6:2=mittel
+        Maier:6:3=hoch
+    Repräsentationsformen
+        Maier:7:1=eine
+        Maier:7:2=Integration
+        Maier:7:3=Transformation
