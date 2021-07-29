@@ -18,9 +18,9 @@ Maier #0000ff
         Maier:2:3=Weiter Transfer
         Maier:2:4=Problemlösen
     Wissenseinheiten
-        Maier:3:1=Eine Wissenseinheit
-        Maier:3:2=Bis zu 4 Wissenseinheiten
-        Maier:3:3=Mehr als 4 Wissenseinheiten
+        Maier:3:1=Eine
+        Maier:3:2=Bis zu 4
+        Maier:3:3=Mehr als 4
     Offenheit
         Maier:4:1=Definiert/konvergent
         Maier:4:2=Definiert/divergent
