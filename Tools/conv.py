@@ -66,8 +66,8 @@ for i, question in enumerate(quiz):
                 tested = True
             taglist.append(tag_name)
             tagset.add(tag_name)
-    if not tested:
-        continue
+    #if not tested:
+    #    continue
     metadata['exercises'].append({
         'importid': questionid,
         'id': questionIdx,
