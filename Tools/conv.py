@@ -54,7 +54,12 @@ for i, question in enumerate(quiz):
     if t == "category":
         current_category = question.find('category')[0].text
         continue
+    questionStr = etree.tostring(question, encoding='unicode', pretty_print=True)
+    questionStr = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' + str(questionStr) + '\n</quiz>\n'
     questionType = question.attrib['type']
+    if questionType == 'stack' and ('<type>checkbox</type>' in questionStr):
+        questionType = 'stack-multichoice'
+    print(questionType)
     name = question.find('name')[0].text
     tested = False
     tags = question.find('tags')
@@ -77,8 +82,6 @@ for i, question in enumerate(quiz):
         'type': questionType}
     )
     f = open(path_out + str(questionIdx) + ".xml", "w")
-    questionStr = etree.tostring(question, encoding='unicode', pretty_print=True)
-    questionStr = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' + str(questionStr) + '\n</quiz>\n'
     f.write(questionStr)
     f.close()
 
@@ -120,7 +123,7 @@ with open("../Taxonomie/taxonomie.json") as f:
 
 metadata_json = json.dumps(metadata, indent=4)
 
-print(metadata_json)
+#print(metadata_json)
 
 f = open(path_out + "meta.json", "w")
 f.write(metadata_json)
