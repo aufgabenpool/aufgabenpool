@@ -41,10 +41,11 @@ if not skip_screenshots:
         sys.exit(-1)
 
 # 4.) postprocess screenshots (set background color transparent)
-if which('mogrify') is None:
-   print("warning: imagemagick is not installed!")
-else:
-   os.system('cd ../Data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')
+if not skip_screenshots:
+    if which('mogrify') is None:
+        print("warning: imagemagick is not installed!")
+    else:
+        os.system('cd ../Data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')
 
 # 5.) Replace current "../Data/" directory. This is done only in case no error occourred. Otherwise, the old version remains
 os.system("rm -rf ../Data/")
