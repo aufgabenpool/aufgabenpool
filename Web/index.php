@@ -55,8 +55,7 @@
     <!--<script>
     </script>-->
 
-    <script src="index.js?v=2"></script>
-
+    <script src="src/index.js?v=2"></script>
 
     <?php include 'body_scripts.php'; ?>
 </body>
