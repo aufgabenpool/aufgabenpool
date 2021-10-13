@@ -7,3 +7,4 @@ cd ..
 
 cd Web
 npm install
+npm run build

@@ -3,14 +3,20 @@
  * Author: Andreas Schwenk, TH Köln
  */
 
-var basket = [];
+import $ from 'jquery';
 
-// tag_button_data := array of dictionaries with entries:
-// - "selected" : bool
-// - "category" : ID
-// - "name" : ID
-// - "color": ID (bootstrap 5.0 color, e.g. "primary")
-var tag_button_data = [];
+var basket : Array<number> = [];
+
+class TagButton {
+    selected = false;
+    category = "";
+    name = "";
+    color = ""; // (bootstrap 5.0 color, e.g. "primary")
+    constructor() {
+    }
+}
+
+var tag_button_data : Array<TagButton> = [];
 var mapping_tagname_category = {};
 
 var metadata = null;
@@ -24,7 +30,7 @@ var taglist_div = document.getElementById("taglist_div");
 var exercises_div = document.getElementById("exercises_div");
 var basket_div = document.getElementById("basket_div");
 
-function clicked_on_pool_tab() {
+export function clicked_on_pool_tab() {
     pool_element.className = "nav-link active";
     basket_element.className = "nav-link";
     taglist_div.style.display = "block";
@@ -32,7 +38,7 @@ function clicked_on_pool_tab() {
     basket_div.style.display = "none";
 }
 
-function clicked_on_basket_tab() {
+export function clicked_on_basket_tab() {
     pool_element.className = "nav-link";
     basket_element.className = "nav-link active";
     taglist_div.style.display = "none";
@@ -44,14 +50,14 @@ function clicked_on_basket_tab() {
     //TODO: basket_div.innerHTML = html;
 }
 
-function create_tag(category, tagname, color, tagpostfix='') {
+function create_tag(category : string, tagname : string, color : string, tagpostfix='') {
     let idx = tag_button_data.length;
-    tag_button_data.push({
-        "selected": false,
-        "category": category,
-        "color": color,
-        "name": tagname
-    })
+    let tb = new TagButton();
+    tb.selected = false;
+    tb.category = category;
+    tb.color = color;
+    tb.name = tagname;
+    tag_button_data.push(tb);
     mapping_tagname_category[tagname] = category;
     return '<button id="button_tag_' + idx + '" type="button" class="btn btn-outline-' + color + ' btn-sm m-1" onclick="toggleTag(\'' + idx + '\');">'
     + tagname + tagpostfix
@@ -79,9 +85,9 @@ function create_tax_desc(category, id, description='') {
 
 var tax_texts = {};
 var tax_cnt = {};
-var tax_selected = {};
+var tax_selected : {[id:string]:boolean} = {};
 
-function create_tax_element(id, text, description='') {
+function create_tax_element(id : string, text : string, description='') {
 
     let cnt = get_tag_count(id);
 
@@ -96,15 +102,15 @@ function create_tax_element(id, text, description='') {
     let color = 'secondary';
     //return '<button id="tex_element_"' + id + ' type="button" class="btn btn-outline-secondary btn-sm py-0">' + text + ' <span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
     if(cnt == 0)
-        return '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + '</button> ';
+        return '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + '</button> ';
     else
-        return '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + ' <span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
+        return '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + ' <span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
     //color = 'dark';
     //id = id.toUpperCase();
     //return '<button type="button" class="btn btn-outline-' + color + ' btn-sm py-1"><b>' + id + ' </b><span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
 }
 
-function clicked_tax_element(id) {
+export function clicked_tax_element(id : string) {
     console.log("clicked on " + id);
     let element = document.getElementById("tax_element_" + id);
     let text = tax_texts[id];
@@ -132,6 +138,10 @@ function clicked_tax_element(id) {
             element.innerHTML = text;
     }
 
+    // rebuild topic hierarchy
+    build_topic_hierarchy();
+
+    // exercises
     build_exercises_tree();
 }
 
@@ -157,28 +167,27 @@ function build_document() {
 
     tags_html += create_tax_head('Themengebiet');
     tags_html += create_tax_desc('TE_1', 'I');
+
+    // TODO: get main topics from metadata...
+    tags_html += create_tax_element('TE_1_ElementareFunktionen', 'Elementare Funktionen');
+    tags_html += create_tax_element('TE_1_GrenzwerteUndStetigkeit', 'Grenzwerte und Stetigkeit');
     tags_html += create_tax_element('TE_1_Differentialrechnung', 'Differentialrechnung');
     tags_html += create_tax_element('TE_1_Integralrechnung', 'Integralrechnung');
-    tags_html += create_tax_desc('TE_2', 'II');
+    
+    //tags_html += create_tax_desc('TE_2', 'II');
+    tags_html += '<div id="TE_2"></div>'
     //tags_html += create_tax_element('PartielleIntegration', 'Partielle Integration', 5);
 
-    for(let i=0; i<metadata["tags-all"].length; i++) {
+    /*for(let i=0; i<metadata["tags-all"].length; i++) {
         let tag = metadata["tags-all"][i];
         if(tag.startsWith("TE:2:")) {
             let tag_displayed = tag.split(':');
             tag_displayed = tag_displayed[tag_displayed.length-1];
             tags_html += create_tax_element(tag.replaceAll(":","_"), tag_displayed);
         }
-    }
-    /*TODO: tags_html += create_tax_desc('TE_3', 'III');
-    for(let i=0; i<metadata["tags-all"].length; i++) {
-        let tag = metadata["tags-all"][i];
-        if(tag.startsWith("TE:3:")) {
-            let tag_displayed = tag.split(':');
-            tag_displayed = tag_displayed[tag_displayed.length-1];
-            tags_html += create_tax_element(tag.replaceAll(":","_"), tag_displayed);
-        }
     }*/
+
+    tags_html += '<div id="TE_3"></div>'
 
     tags_html += '<br/>';
 
@@ -242,8 +251,59 @@ function build_document() {
 
     let tags_element = document.getElementById('taglist_div');
     tags_element.innerHTML = tags_html;
+    // topic hierarchy
+    build_topic_hierarchy();
     // exercises
     build_exercises_tree();
+}
+
+function build_topic_hierarchy() {
+    let te2div = document.getElementById("TE_2");
+
+
+    TODO: PUT THIS INTO METADATA!!!!!
+
+    let selected_te1 : Array<string> = [];
+    for(let tax_id in tax_selected) {
+        if(tax_id.startsWith("TE_1_") && tax_selected[tax_id] == true) {
+            selected_te1.push(tax_id.toLowerCase().replaceAll("_",":"));
+        }
+    }
+
+    console.log(selected_te1); // all selected topics of level 1
+
+    te2div.innerHTML = "";
+    if(selected_te1.length > 0) {
+        te2div.innerHTML = create_tax_desc('TE_2', 'II');
+        // for all exercises: add all tags starting with TE_2_ for all exercises that contain a tag in selected_te1:
+        for(let me of metadata_exercises) {
+            for(let tag of me["tags"]) {
+                if(selected_te1.includes(tag) && tag.toLowerCase().startsWith("TE:2:")) {
+                    
+                    console.log(tag);
+                }
+            }
+        }
+    }
+
+
+    //console.log(tax_selected);
+
+    //tags_html += create_tax_desc('TE_2', 'II');
+    //tags_html += '<div id="TE_2"></div>'
+    //tags_html += create_tax_element('PartielleIntegration', 'Partielle Integration', 5);
+
+    /*for(let i=0; i<metadata["tags-all"].length; i++) {
+        let tag = metadata["tags-all"][i];
+        if(tag.startsWith("TE:2:")) {
+            let tag_displayed = tag.split(':');
+            tag_displayed = tag_displayed[tag_displayed.length-1];
+            tags_html += create_tax_element(tag.replaceAll(":","_"), tag_displayed);
+        }
+    }*/
+
+    let te3div = document.getElementById("TE_2");
+    te3div.innerHTML += create_tax_desc('TE_2', 'II');
 }
 
 let exercise_template = `
@@ -413,7 +473,7 @@ function build_exercises_tree() {
     exercises_element.innerHTML = exercises_html;
     // activate button tooltips
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip({
+        (<any>$('[data-toggle="tooltip"]')).tooltip({
             trigger: 'hover'
         });
     });
@@ -445,7 +505,7 @@ function build_basket_tree() {
     exercises_element.innerHTML = exercises_html;
     // activate button tooltips
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip({
+        (<any>$('[data-toggle="tooltip"]')).tooltip({
             trigger: 'hover'
         });
     });
@@ -457,7 +517,7 @@ $( document ).ready(function() {
 
 function getMetaData() {
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    metadata_path = 'Data/meta.json' + '?time=' + timestamp;
+    let metadata_path = 'Data/meta.json' + '?time=' + timestamp;
     $.ajax({
         url: metadata_path,
         type: 'GET',
@@ -480,7 +540,7 @@ function getMetaData() {
 
 function getTaxonomyData() {
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    metadata_path = 'Taxonomie/taxonomie.txt' + '?time=' + timestamp;
+    let metadata_path = 'Taxonomie/taxonomie.txt' + '?time=' + timestamp;
     $.ajax({
         url: metadata_path,
         type: 'GET',
@@ -511,10 +571,10 @@ function getTaxonomyData() {
                     taxonomyData[taxonomyData.length-1]
                         [taxonomyData[taxonomyData.length-1].length-1]
                         .push([line.trim()]);
-                console.log(tabs)
-                console.log(line)
+                //console.log(tabs)
+                //console.log(line)
             }
-            console.log(taxonomyData);
+            //console.log(taxonomyData);
             build_document();
         },
         error: function(xhr, status, error) {
@@ -523,18 +583,18 @@ function getTaxonomyData() {
     });
 }
 
-function toggleTag(tag_idx) {
+function toggleTag(tag_idx : number) {
     let buttonData = tag_button_data[tag_idx]
     let tagElement = document.getElementById("button_tag_" + tag_idx);
-    buttonData["selected"] = !buttonData["selected"];
-    if(buttonData["selected"])
-        tagElement.setAttribute("class", "btn btn-" + buttonData["color"] + " btn-sm m-1");
+    buttonData.selected = !buttonData.selected;
+    if(buttonData.selected)
+        tagElement.setAttribute("class", "btn btn-" + buttonData.color + " btn-sm m-1");
     else
-        tagElement.setAttribute("class", "btn btn-outline-" + buttonData["color"] + " btn-sm m-1");
+        tagElement.setAttribute("class", "btn btn-outline-" + buttonData.color + " btn-sm m-1");
     build_exercises_tree();
 }
 
-function select_exercise(idx) {
+function select_exercise(idx : number) {
     // only push to basket, if not already done
     for(let i=0; i<basket.length; i++) {
         if(basket[i] == idx)
@@ -544,7 +604,7 @@ function select_exercise(idx) {
     basket.push(idx);
 }
 
-function remove_exercise(idx) {
+function remove_exercise(idx : number) {
     let new_basket = [];
     for(let i=0; i<basket.length; i++) {
         if(basket[i] == idx)
@@ -555,19 +615,19 @@ function remove_exercise(idx) {
     build_basket_tree();
     // update button tooltips
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip({
+        (<any>$('[data-toggle="tooltip"]')).tooltip({
             trigger: 'hover'
         });
     });
 }
 
-function download_selected_exercises(idx) {
+function download_selected_exercises(idx : number) {
     alert("... noch nicht implementiert");
 }
 
-function download_exercise(idx) {
+function download_exercise(idx : number) {
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    exercise_path = 'Data/' + idx + '.xml?time=' + timestamp;
+    let exercise_path = 'Data/' + idx + '.xml?time=' + timestamp;
     $.ajax({
         url: exercise_path,
         type: 'GET',

@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "esModuleInterop": false,
+        "target": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "strict": false,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "noUnusedLocals": false,
+        "lib": [
+            "ESNext.String",  // TODO: this may not be supported by all browsers!
+            "DOM"
+        ]
+    },
+    "include": ["src/*.ts"],
+    "lib": [
+    ]
+}

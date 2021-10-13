@@ -1,15 +1,21 @@
-import { terser } from "rollup-plugin-terser";
+import { babel } from '@rollup/plugin-babel';
+//import { terser } from "rollup-plugin-terser";
 
 export default {
-    input: 'src/index.js',
+    input: 'dist/index.js',
     output: {
         file: 'build/js/aufgabenpool.min.js',
         format: 'iife',
         name: 'aufgabenpool',
+        globals: {
+            "jquery": '$'
+        }
     },
     external: [
+        "jquery"
     ],
     plugins: [
-        terser()
+        babel({ babelHelpers: 'bundled' })
+        //,terser()  TODO!!!!
     ]
 };

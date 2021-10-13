@@ -52,10 +52,7 @@
 
     <?php include 'footer.php'; ?>
 
-    <!--<script>
-    </script>-->
-
-    <script src="src/index.js?v=2"></script>
+    <script src="build/js/aufgabenpool.min.js?v=< ?php echo time();?> "></script>
 
     <?php include 'body_scripts.php'; ?>
 </body>
