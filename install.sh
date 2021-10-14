@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# TODO: also check if node, python3, ... is installed
+if ! command -v tsc &> /dev/null
+then
+	echo "Error: Typescript is not installed! Please run e.g.:"
+	echo "sudo npm install -g typescript"
+	exit -1
+fi
+
 cd Tools
 npm install
 pip3 install lxml

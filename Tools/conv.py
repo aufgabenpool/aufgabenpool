@@ -6,6 +6,11 @@
 #  Version: 0.01
 # ******************************************************************************
 
+
+# TODO: remove all unused taxonomy json files and other unused config files!!
+# TODO: code doc of this file!
+
+
 # dependencies:
 #   pip3 install lxml
 
@@ -22,9 +27,7 @@ if len(sys.argv) != 3:
     sys.exit(-1)
 
 path_in = sys.argv[1]
-#path_in = "../Data/quiz-pool-AUFGABENPOOL-20210728-0755.xml"
 path_out = sys.argv[2]
-#path_out = "../Data-tmp/"
 
 if not os.path.isfile(path_in):
     print("error: input path does not exist")
@@ -32,21 +35,47 @@ if not os.path.isfile(path_in):
 
 os.system("mkdir -p " + path_out)
 
-metadata = {"exercises": [], "date": datetime.today().strftime('%Y-%m-%d %H:%M')}
-
+metadata = {
+    "exercises": [], 
+    "date": datetime.today().strftime('%Y-%m-%d %H:%M'),
+    "topic_hierarchy": {"":""}
+}
 
 parser = etree.XMLParser(strip_cdata=False)
 tree = etree.parse(path_in, parser)
 quiz = tree.getroot()
 
-
 tagset = {""}
-
 questionid = ''
-
 questionIdx = 0
 
-metadata["topic_hierarchy"] = {"":""}
+
+class CriticalTag:
+    def __init__(self):
+        self.exerciseId = ""
+        self.exerciseTitle = ""
+        self.tag = ""
+    def __str__(self):
+        link = '<a href="https://sell.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(self.exerciseId) + '">Link</a>'
+        s = "Aufgabe: " + str(self.exerciseTitle) + " " + link + ", Tag: " + str(self.tag)
+        return s
+
+criticalTags = []
+
+
+def format_tag(tag):
+    # replaces e.g. "TE:1:Differentialrechung" -> "te_1_Differentialrechnung"
+    tag = tag.replace(":", "_")
+    tag_tokens = tag.split("_")
+    tag_new = ""
+    for i, tk in enumerate(tag_tokens):
+        if i < len(tag_tokens) - 1:
+            tk = tk.lower()
+        if len(tag_new) > 0:
+            tag_new += "_"
+        tag_new += tk
+    return tag_new
+
 
 for i, question in enumerate(quiz):
     if question.tag is etree.Comment:
@@ -71,27 +100,36 @@ for i, question in enumerate(quiz):
             tag_name = tag[0].text
             if "getestet" in tag_name:
                 tested = True
-            q_tagset.add(tag_name.replace(":","_").lower())
-            tagset.add(tag_name.replace(":","_").lower())
+            tag_formatted = format_tag(tag_name)
+            q_tagset.add(tag_formatted)
+            tagset.add(tag_formatted)
+
+            # tag valid?
+            if "_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet"]:
+                ct = CriticalTag()
+                ct.exerciseId = i
+                ct.tag = tag_name
+                criticalTags.append(ct)
+
     q_tagset.remove("")
 
     te1 = ""
     te2 = ""
     te3 = ""
-    for tag in tagset:
+    for tag in q_tagset:
         if tag.startswith("te_1_"):
             te1 = tag
         elif tag.startswith("te_2_"):
             te2 = tag
         elif tag.startswith("te_3_"):
             te3 = tag
-            #metadata["topic_hierarchy"][tag] = {"":""}
     
-    xxx
-    if len(te1) > 0 and te1 not in metadata["topic_hierarchy"]:
-        metadata["topic_hierarchy"][te1] = {"":""}
-        if len(te2) > 0 and te2 not in metadata["topic_hierarchy"][te1]:
-            metadata["topic_hierarchy"][te1][te2] = {"":""}
+    if len(te1) > 0:
+        if te1 not in metadata["topic_hierarchy"]:
+            metadata["topic_hierarchy"][te1] = {"":""}
+        if len(te2) > 0:
+            if te2 not in metadata["topic_hierarchy"][te1]:
+                metadata["topic_hierarchy"][te1][te2] = {"":""}
 
 
     #if not tested:
@@ -111,10 +149,18 @@ for i, question in enumerate(quiz):
     questionIdx += 1
 
 tagset.remove("")
-metadata["tags-all"] = list(tagset)
+metadata["tags"] = list(tagset)
 
 
+# remove empty tags
+del metadata["topic_hierarchy"][""]
+for t1 in metadata["topic_hierarchy"]:
+    del metadata["topic_hierarchy"][t1][""]
+    for t2 in metadata["topic_hierarchy"][t1]:
+        del metadata["topic_hierarchy"][t1][t2][""]
 
+
+# TODO: remove old src:
 # with open("../Taxonomie/taxonomie.json") as f:
 #     tax = json.load(f)
 #     # TODO: crawl automatically from tax[..]
@@ -144,11 +190,19 @@ metadata["tags-all"] = list(tagset)
 
 
 
-
-metadata_json = json.dumps(metadata, indent=4)
-
-#print(metadata_json)
-
+# write metadata to file
 f = open(path_out + "meta.json", "w")
+metadata_json = json.dumps(metadata, indent=4)
 f.write(metadata_json)
+f.close()
+
+# write critical tags to file
+f = open(path_out + "critical_tags.txt", "w")
+f.write("<html>")
+
+TODO!!!!!
+
+for ct in criticalTags:
+    f.write(str(ct) + "<br/>\n")
+f.write("</html>")
 f.close()
