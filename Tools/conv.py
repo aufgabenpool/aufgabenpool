@@ -56,8 +56,8 @@ class CriticalTag:
         self.exerciseTitle = ""
         self.tag = ""
     def __str__(self):
-        link = '<a href="https://sell.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(self.exerciseId) + '">Link</a>'
-        s = "Aufgabe: " + str(self.exerciseTitle) + " " + link + ", Tag: " + str(self.tag)
+        link = '<a href="https://sell.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(self.exerciseId) + '" target="_blank">Link</a>'
+        s = "Aufgabe: " + str(self.exerciseTitle) + " " + link + ", Tag: '" + str(self.tag) + "'"
         return s
 
 criticalTags = []
@@ -80,6 +80,7 @@ def format_tag(tag):
 for i, question in enumerate(quiz):
     if question.tag is etree.Comment:
         questionid = question.text
+        questionid = int(questionid[11:].strip())
         continue
     t = question.attrib['type']
     if t == "category":
@@ -105,9 +106,11 @@ for i, question in enumerate(quiz):
             tagset.add(tag_formatted)
 
             # tag valid?
-            if "_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet"]:
+            if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet"]) \
+                or (tag_formatted.startswith("maier_") and tag_formatted.count("_") != 2) \
+                or (tag_formatted.startswith("bloom_") and tag_formatted.count("_") != 1):
                 ct = CriticalTag()
-                ct.exerciseId = i
+                ct.exerciseId = questionid
                 ct.tag = tag_name
                 criticalTags.append(ct)
 
@@ -130,6 +133,9 @@ for i, question in enumerate(quiz):
         if len(te2) > 0:
             if te2 not in metadata["topic_hierarchy"][te1]:
                 metadata["topic_hierarchy"][te1][te2] = {"":""}
+            if len(te3) > 0:
+                if te3 not in metadata["topic_hierarchy"][te1][te2]:
+                    metadata["topic_hierarchy"][te1][te2][te3] = {}
 
 
     #if not tested:
@@ -197,12 +203,22 @@ f.write(metadata_json)
 f.close()
 
 # write critical tags to file
-f = open(path_out + "critical_tags.txt", "w")
-f.write("<html>")
-
-TODO!!!!!
-
+f = open(path_out + "critical_tags.html", "w")
+f.write("<!DOCTYPE html>\n")
+f.write("<html>\n")
+f.write("<head><meta charset=\"utf-8\"/><title>digifellow Aufgabenpool</title></head>\n")
+f.write("<body>\n")
+f.write("<h1>Potenziell fehlerhafte Tags</h1>\n")
+f.write("Im Falle von fehlerhaften Auflistungen: ")
+f.write("Mail an <a href=\"mailto:andreas.schwenk@th-koeln.de\">andreas.schwenk@th-koeln.de</a> senden!<br/><br/>\n")
+f.write("ACHTUNG: Diese Liste wird automatisch nachts aktualisiert. ")
+f.write(" In Moodle vorgenommene Änderungen werden also erst am <b>nächsten Tag</b> sichtbar!<br/>\n")
+f.write("<ul>\n")
 for ct in criticalTags:
+    f.write("<li>")
     f.write(str(ct) + "<br/>\n")
+    f.write("</li>")
+f.write("</ul>\n")
+f.write("</body>")
 f.write("</html>")
 f.close()
