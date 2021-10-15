@@ -56,7 +56,7 @@ let exercises = meta["exercises"];
     // for all exercises...
     for(let i=first_exercise_id; i<exercises.length && i<last_exercise_id; i++) {
         let exercise = exercises[i];
-        let question_id = parseInt(exercise["id"].substring(11));
+        let question_id = exercise["id"];
 
         for(let k=0; k<3; k++) { // create 3 scrrenshot to show random behavior
             let screenshot_path = img_out_path + exercise["id"] + "_" + k + ".png";
