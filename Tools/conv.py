@@ -121,6 +121,7 @@ for i, question in enumerate(quiz):
         metadata["tag_count"]['type_5'] += 1
     else:
         warnings += "FRAGETYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
+    has_te_1_tag = False
     if tags is not None:
         for tag in tags:
             tag_name = tag[0].text
@@ -129,6 +130,9 @@ for i, question in enumerate(quiz):
             tag_formatted = format_tag(tag_name)
             q_tagset.add(tag_formatted)
             tagset.add(tag_formatted)
+
+            if tag_formatted.startswith("te_1_"):
+                has_te_1_tag = True
 
             # number of occurences of tags (tag count)
             if tag_formatted not in metadata["tag_count"]:
@@ -143,6 +147,11 @@ for i, question in enumerate(quiz):
                 ct.exerciseId = questionid
                 ct.tag = tag_name
                 criticalTags.append(ct)
+        
+    if has_te_1_tag == False:
+        ct = CriticalTag()
+        ct.exerciseId = questionid
+        ct.tag = "'TE_1_' fehlt!"
 
     q_tagset.remove("")
 
