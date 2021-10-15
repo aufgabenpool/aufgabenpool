@@ -152,6 +152,7 @@ for i, question in enumerate(quiz):
         ct = CriticalTag()
         ct.exerciseId = questionid
         ct.tag = "'TE_1_' fehlt!"
+        criticalTags.append(ct)
 
     q_tagset.remove("")
 
