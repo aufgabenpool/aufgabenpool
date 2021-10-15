@@ -1,0 +1,4 @@
+AuthName "Login Aufgabenpool"
+AuthType Basic
+AuthUserFile /opt/passwd/.htpasswd
+Require valid-user
