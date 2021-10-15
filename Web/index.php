@@ -17,7 +17,7 @@
                     Diese Webseite zum Projekt "digitaler Aufgabenpool Mathematik" befindet sich momentan noch im Aufbau.
                     <br/>
                     Das Projekt wird gefördert durch
-                    <i>"Fellowships für Innovationen in der digitalen Hochschullehre NRW" (digiFellow)</i> <a href="https://www.stifterverband.org/digital-lehrfellows-nrw">Link</a>.
+                    <i>"Fellowships für Innovationen in der digitalen Hochschullehre NRW" (digiFellow)</i> <a href="https://www.stifterverband.org/digital-lehrfellows-nrw" target="_blank">Link</a>.
                 </p>
                 <p><small><i>(Zuletzt aktualisiert: <span id="pool-date"></span>)</i></small></p>
             </div>    
@@ -32,10 +32,10 @@
             <div class="col-lg">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a id="pool-tab" class="nav-link active" href="#" onclick="clicked_on_pool_tab();"><b>Aufgabenpool</b></a>
+                        <a id="pool-tab" class="nav-link active" href="#" onclick="aufgabenpool.clicked_on_pool_tab();"><b>Aufgabenpool</b></a>
                     </li>
                     <li class="nav-item">
-                        <a id="basket-tab" class="nav-link" href="#" onclick="clicked_on_basket_tab();"><b>Aufgabenblatt</b></a>
+                        <a id="basket-tab" class="nav-link" href="#" onclick="aufgabenpool.clicked_on_basket_tab();"><b>Aufgabenblatt</b></a>
                     </li>
                 </ul>
                 <div class="border border-top-0 p-1">

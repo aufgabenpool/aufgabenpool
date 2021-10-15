@@ -1,0 +1,79 @@
+# Auf der Aufgabenwebseite https://sell.f07-its.fh-koeln.de/pool-auto/ (Login: pool, erdos) wird zu jedem Taxonomie-Tag ein kurzer Beschreibungstext angezeigt, wenn man die Maus über den jeweiligen Tag bewegt. Bisher sind diese Texte komplett aus externen Publikationen kopiert worden. Aus Copyright-Gründen sollte die Formulierung von uns etwas angepasst werden. Dies kann in der hier vorliegenden Datei geschehen. Bitte im Falle von Änderungen eine kurze Infomail an andreas.schwenk@th-koeln.de senden, damit die Webseite aktualisiert wird.
+# Formathinweis: Jede Beschreibung besteht aus einem einzigen Textblock, der nur am Ende einen expliziten Zeilenumbruch enthält! Bitte die Metadaten (z.B. "@Bloom:1 #Wissen") NICHT ändern!
+
+@Bloom
+@Bloom:1 #Wissen
+Faktenwissen, Kennen
+@Bloom:2 #Verständnis
+Verstehen, mit eigenen Worten begründen
+@Bloom:3 #Anwendung
+Umsetzung eindimensionaler Lerninhalte, Beispiele aus eigener Praxis
+@Bloom:4 #Analyse
+Zerlegen in Einzelteile, Fallstudien
+@Bloom:5 #Synthese
+Vernetzen und optimieren, fachübergreifend darstellen, Projektaufgaben
+@Bloom:6 #Beurteilung
+Synthese + zusätzliche Bewertung durch die Lernenden
+
+@Maier
+@Maier:1 #Wissensart
+@Maier:1:1 #Fakten
+explizit verbalisierbar, in Aussagenform gespeichert, Kenntnis isolierter aber auch komplexer Fakten, terminologisches Wissen, Regeln abfragen ohne Anwendung
+@Maier:1:2 #Prozeduren
+implizit und nicht verbalisierbar, Automatisierte Verhaltensweisen, Routinen, Algorithmen, Fertigkeiten bis zu komplexen Routinen und Handlungsmustern
+@Maier:1:3 #Konzepte
+verbalisierbar und/oder implizit, Klassifikationen, Schemata, Kategorien, Begriffsnetze, Modellierungen, Erklärungen, vielfach vernetzt zu Zusammenhängen und Begriffsnetzen
+@Maier:1:4 #Metakognition
+Wissen über eigenes Wissen, Steuerung von Lernhandlungen, (Monitoring), Wissen über Informationsverarbeitungsstrategien, wird direkt in der Aufgabenstellung angeregt oder gefordert
+
+@Maier:2 #Kognitiver Prozess
+@Maier:2:1 #Reproduktion
+Abruf von Wissen aus dem Langzeitgedächtnis, Wiedergabe von gespeicherten Wissen, Nachahmung von Prozeduren, auch metakogn. und konzept. Wissen kann reproduziert werden
+@Maier:2:2 #naher Transfer
+Aufgabensituation und gespeichertes Wissen unterscheiden sich nur geringfügig; eindeutig, welches Wissen (Fakten, Konzepte, etc.) zur Anwendung kommt, einfache Verfahren anwenden, kleinschrittiges Ausführen
+@Maier:2:3 #weiter Transfer 
+nwendungssituation/Aufgabe ist relativ neu, nicht sofort einsichtig, welches Wissen zur Anwendung kommt; Wissen ist allerdings in der Form vorhanden, in der es zur Anwendung kommt; Einige Anhaltspunkte sind vorgegeben, ohne jedoch auf einen Lösungsweg festzulegen
+@Maier:2:4 #Problemlösen
+unbekannte Aufgabensituation; unklar, welches Wissen zur Anwendung kommt; das zur Bearbeitung einer Situation erforderliche Wissen muss erst zusammengefügt werden; Schüler müssen auf unterschiedliche Wissensarten zurückgreifen (Fakten, Konzepte, Prozeduren, Strategiewissen); Problemlöseprozess: Problem finden bzw. definieren, Lösungen entwerfen, Lösungen umsetzen und Lösungen bewerten.
+
+@Maier:3 #Wissenseinheiten
+@Maier:3:1 #eine
+Nur ein Begriff, Konzept oder eine Prozedur auf höchster Ebene zu aktivieren.
+@Maier:3:2 #bis zu 4
+bis 4 Begriffe; Konzepte oder Prozeduren müssen auf oberster Hierarchieebene gleichzeitig aktiviert und verknüpft werden
+@Maier:3:3 #mehr als 4
+Eine große Zahl (mehr als 4) verschiedener Begriffe, Konzepte oder Prozeduren muss gleichzeitig aktiviert werden
+
+@Maier:4 #Offenheit
+@Maier:4:1 #definiert / konvergent
+Die Aufgabe umfasst einen eindeutigen Arbeitsauftrag bzw. eine klar identifizierbare Fragestellung; Eine Lösung ist gesucht bzw. richtig; dies muss allerdings nicht explizit angegeben sein
+@Maier:4:2 #definiert / divergent
+eindeutiger Arbeitsauftrag; bei dem mehrere Lösungen möglich sind. Die Aufgabe umfasst eine klar identifizierbare Fragestellung; mehrere Lösungen (bzw. Lösungswege) sind gesucht bzw. richtig; in der Regel werden die Schüler auf diesen Umstand hingewiesen
+@Maier:4:3 #nicht definiert / divergent
+Die Schüler erhalten Informationen über ein Problem, eine Situation, etc. Es sind unterschiedliche Fragestellungen denkbar; eine Problemsituation ist die einzige Handlungsaufforderung; damit sind auch mehrere Lösungen (bzw. Lösungswege) gesucht bzw. richtig
+
+@Maier:5 #Lebensweltbezug
+@Maier:5:1 #kein
+Keine Verknüpfung zwischen Fachwissen und Lebenswelt/Erfahrungsbereich der Schüler/innen gefordert oder vorgegeben
+@Maier:5:2 #konstruiert
+Verknüpfung zwischen Fachwissen und Lebenswelt stark konstruiert; entspricht eher nicht den Erfahrungen des Schülers; Analogien zur eigenen Erfahrung kaum erkennbar; Bezug wirkt "aufgesetzt"; Fachwissen soll eingekleidet werden
+@Maier:5:3 #authentisch
+Lebensweltbezug ist konstruiert, macht im Zusammenhang der Aufgabe aber Sinn; entspricht größtenteils den Erfahrungen der Schüler; wirkt nicht aufgesetzt; sinnvolle Anwendungen für Alltag, Berufsleben, etc
+@Maier:5:4 #real
+Keine Differenz zwischen Aufgabe und Lebenswelt; reale Problemstellung ist zu bearbeiten
+
+@Maier:6 #Sprachliche Komplexität
+@Maier:6:1 #niedrig
+wenig Text; chronologisch geordnet; einfache Syntax; kein oder kaum Text. Reihenfolge der Sätze entspricht Aufgabenbearbeitung; einfache Haupt und Nebensätze
+@Maier:6:2 #mittel
+Textpassagen mit teilweise für die Aufgabenbearbeitung irrelevanten Informationen; sprachlich komplexer. Reihenfolge der Sätze entspricht nicht immer der Aufgabenbearbeitung; Textpassagen mit irrelevanter Information
+@Maier:6:3 #hoch
+z.T. irrelevante, irritierende Formulierungen; komplexe Syntax. Aufgabe verdeckt die inneren, logischen Bezüge; logische Funktionen (Verneinungen, wenndann Verknüpfungen, Allaussagen, etc.); komplexe Satzgefüge
+
+@Maier:7 #Repräsentationsformen
+@Maier:7:1 #eine 
+Aufgabenstellung und Aufgabenlösung basieren auf einer Repräsentationsform. Aufgabeninformation und Aufgabenlösung basieren auf Wissen in einer Repräsentationsform; eventuell noch andere Repräsentationsformen vorhanden, die für die Lösung jedoch irrelevant sind (z.B. Bild zur Illustration)
+@Maier:7:2 #Integration
+Aufgabe gibt Wissen in verschiedenen Repräsentationsformen vor; Integration dieser Formen für die Lösung nötig; Aufgabenlösung bewegt sich  innerhalb der vorgegebenen Repräsentationsformen
+@Maier:7:3 #Transformation
+Integration und Transformation des Wissens. Schüler muss für die Aufgabenlösung das vorliegende Wissen in eine Repräsentationsform transformieren, die nicht durch die Aufgabe vorgegeben wird

@@ -4,6 +4,7 @@
  */
 
 import $ from 'jquery';
+import * as templates from './templates.js';
 
 var basket : Array<number> = [];
 
@@ -16,11 +17,12 @@ class TagButton {
     }
 }
 
+var taxonomy_tag_names : {[key:string]:string} = {};  // e.g. "maier_2_3" -> "weiter Transfer"
+var taxonomy_tag_dim_names : {[key:string]:string} = {};  // e.g. "maier_2_3" -> "Kognitiver Prozess"
+
 var tag_button_data : Array<TagButton> = [];
-var mapping_tagname_category = {};
 
 var metadata = null;
-var taxonomyData = null;
 var metadata_exercises = null;
 
 
@@ -43,44 +45,24 @@ export function clicked_on_basket_tab() {
     basket_element.className = "nav-link active";
     taglist_div.style.display = "none";
     exercises_div.style.display = "none";
-
     build_basket_tree();
     basket_div.style.display = "block";
-
-    //TODO: basket_div.innerHTML = html;
 }
 
-function create_tag(category : string, tagname : string, color : string, tagpostfix='') {
-    let idx = tag_button_data.length;
-    let tb = new TagButton();
-    tb.selected = false;
-    tb.category = category;
-    tb.color = color;
-    tb.name = tagname;
-    tag_button_data.push(tb);
-    mapping_tagname_category[tagname] = category;
-    return '<button id="button_tag_' + idx + '" type="button" class="btn btn-outline-' + color + ' btn-sm m-1" onclick="toggleTag(\'' + idx + '\');">'
-    + tagname + tagpostfix
-    /*+ ' <span class="badge rounded-pill bg-' + color + '">9</span>'*/ // TODO
-    + '</button>';
-}
-
-function create_tax_head(id, color='dark', link='') {
+function create_tax_head(id:string, color='dark', link='') {
     return '<br/><button id="tax_head_' + id + '" type="button" class="btn btn-' + color + ' btn-sm m-1 py-0" onclick="window.open(\'' + link + '\', \'_blank\');">' + id + '</button>';
 }
 
 var category_texts = {};
 
-function create_tax_desc(category, id, description='') {
-
+function create_tax_desc(category:string, id:string, description='') {
     let desc_props = "";
     if(description.length > 0) {
         desc_props = ` data-toggle="tooltip" data-placement="top" title="` + description + `" `;
     }
-
     category_texts[category] = id;
     let color = 'secondary';
-    return '</br><button id="tax_desc_' + id + '" type="button" class="btn btn-' + color + ' btn-sm m-1 py-0" onclick=""' + desc_props + '>' + id + '</button>';
+    return '<button id="tax_desc_' + id + '" type="button" class="btn btn-' + color + ' btn-sm m-1 py-0" onclick=""' + desc_props + '>' + id + '</button>';
 }
 
 var tax_texts = {};
@@ -88,163 +70,103 @@ var tax_cnt = {};
 var tax_selected : {[id:string]:boolean} = {};
 
 function create_tax_element(id : string, text : string, description='') {
-
-    let cnt = get_tag_count(id);
-
+    let cnt = id in metadata["tag_count"] ? metadata["tag_count"][id] : 0;
     let desc_props = "";
-    if(description.length > 0) {
+    if(description.length > 0)
         desc_props = ` data-toggle="tooltip" data-placement="top" title="` + description + `" `;
-    }
-
     tax_texts[id] = text;
     tax_cnt[id] = cnt;
-    tax_selected[id] = false;
-    let color = 'secondary';
-    //return '<button id="tex_element_"' + id + ' type="button" class="btn btn-outline-secondary btn-sm py-0">' + text + ' <span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
-    if(cnt == 0)
-        return '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + '</button> ';
+    if(!(id in tax_selected))
+        tax_selected[id] = false;
+    let html_cnt = cnt==0 ? '' : ' <span class="badge rounded-pill bg-danger">' + cnt + '</span>';
+    let html = '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + html_cnt + '</button> ';
+    return html;
+}
+
+function mark_tag_element(id: string) {
+    let element = document.getElementById("tax_element_" + id);
+    let text = tax_texts[id];
+    element.classList.remove("py-0");
+    element.classList.add("py-1");
+    element.classList.remove("btn-outline-secondary");
+    element.classList.add("btn-outline-dark");
+    if(tax_cnt[id] > 0)
+        element.innerHTML = "<b>" + text.toUpperCase() + ' <span class="badge rounded-pill bg-danger">' + tax_cnt[id] + '</span></button>' + "</b>";
     else
-        return '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + ' <span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
-    //color = 'dark';
-    //id = id.toUpperCase();
-    //return '<button type="button" class="btn btn-outline-' + color + ' btn-sm py-1"><b>' + id + ' </b><span class="badge rounded-pill bg-danger">' + cnt + '</span></button> ';
+        element.innerHTML = "<b>" + text.toUpperCase() + "</b>";
+}
+
+function unmark_tag_element(id: string) {
+    let element = document.getElementById("tax_element_" + id);
+    let text = tax_texts[id];
+    element.classList.add("py-0");
+    element.classList.remove("py-1");
+    element.classList.add("btn-outline-secondary");
+    element.classList.remove("btn-outline-dark");
+    if(tax_cnt[id] > 0)
+        element.innerHTML = text + ' <span class="badge rounded-pill bg-danger">' + tax_cnt[id] + '</span></button>';
+    else
+        element.innerHTML = text;
 }
 
 export function clicked_tax_element(id : string) {
-    console.log("clicked on " + id);
-    let element = document.getElementById("tax_element_" + id);
+    console.log("clicked on " + id); // TODO: remove this line
     let text = tax_texts[id];
     if(tax_selected[id] == false) {
         tax_selected[id] = true;
-        element.classList.remove("py-0");
-        element.classList.add("py-1");
-        element.classList.remove("btn-outline-secondary");
-        element.classList.add("btn-outline-dark");
-        //element.classList.add("bg-dark");
-        if(tax_cnt[id] > 0)
-            element.innerHTML = "<b>" + text.toUpperCase() + ' <span class="badge rounded-pill bg-danger">' + tax_cnt[id] + '</span></button>' + "</b>";
-        else
-            element.innerHTML = "<b>" + text.toUpperCase() + "</b>";
+        mark_tag_element(id);
     } else {
         tax_selected[id] = false;
-        element.classList.add("py-0");
-        element.classList.remove("py-1");
-        element.classList.add("btn-outline-secondary");
-        element.classList.remove("btn-outline-dark");
-        //element.classList.remove("bg-dark");
-        if(tax_cnt[id] > 0)
-            element.innerHTML = text + ' <span class="badge rounded-pill bg-danger">' + tax_cnt[id] + '</span></button>';
-        else
-            element.innerHTML = text;
+        unmark_tag_element(id);
     }
-
     // rebuild topic hierarchy
     build_topic_hierarchy();
-
     // exercises
     build_exercises_tree();
 }
 
-function get_tag_count(id) {
-    let cnt = 0;
-    let tmp = id.replaceAll('_', ':');
-    for(let i=0; i<metadata_exercises.length; i++) {
-        let exercise = metadata_exercises[i];
-        let exercise_tags = exercise['tags'];
-        if(exercise_tags.includes(tmp))
-            cnt ++;
-    }
-    return cnt;
-}
-
 function build_document() {
     metadata_exercises = metadata["exercises"];
-
     document.getElementById("pool-date").innerHTML = metadata["date"];
-
     let tags_html = '';
-    //tags_html += '<span class="text-danger">ACHTUNG: die folgenden Buttons zur Filterung sind momentan nicht funktional. Dies wird nachgeholt, sobald ein paar der Aufgaben in Moodle mit den vereinbarten Tags versehen worden sind :-)</span><br/>';
-
     tags_html += create_tax_head('Themengebiet');
-    tags_html += create_tax_desc('TE_1', 'I');
-
-    // TODO: get main topics from metadata...
-    tags_html += create_tax_element('TE_1_ElementareFunktionen', 'Elementare Funktionen');
-    tags_html += create_tax_element('TE_1_GrenzwerteUndStetigkeit', 'Grenzwerte und Stetigkeit');
-    tags_html += create_tax_element('TE_1_Differentialrechnung', 'Differentialrechnung');
-    tags_html += create_tax_element('TE_1_Integralrechnung', 'Integralrechnung');
-    
-    //tags_html += create_tax_desc('TE_2', 'II');
-    tags_html += '<div id="TE_2"></div>'
-    //tags_html += create_tax_element('PartielleIntegration', 'Partielle Integration', 5);
-
-    /*for(let i=0; i<metadata["tags-all"].length; i++) {
-        let tag = metadata["tags-all"][i];
-        if(tag.startsWith("TE:2:")) {
-            let tag_displayed = tag.split(':');
-            tag_displayed = tag_displayed[tag_displayed.length-1];
-            tags_html += create_tax_element(tag.replaceAll(":","_"), tag_displayed);
-        }
+    /*tags_html += '<br/>' + create_tax_desc('TE_1', 'I');
+    for(let topic_id in metadata["topic_hierarchy"]) {
+        let tokens = topic_id.split("_");
+        let topic = tokens[tokens.length-1];
+        tags_html += create_tax_element(topic_id, topic);
     }*/
+    tags_html += '<div class="p-0 m-0" id="TE"></div>'
 
-    tags_html += '<div id="TE_3"></div>'
-
-    tags_html += '<br/>';
-
-    // TODO: ERKLÄRUNGSTEXTE DIREKT AUS LITERATURQUELLEN KOPIERT -> UMSCHREIBEN!!
-
-    tags_html += create_tax_head('Bloom', 'success', 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=bloom+taxonomy+1956&btnG=');
-    tags_html += '<br/>&nbsp;';
-    tags_html += create_tax_element('Bloom_1', 'Wissen', 'Faktenwissen, Kennen');
-    tags_html += create_tax_element('Bloom_2', 'Verständnis', 'Verstehen, mit eigenen Worten begründen');
-    tags_html += create_tax_element('Bloom_3', 'Anwendung', 'Umsetzung eindimensionaler Lerninhalte, Beispiele aus eigener Praxis');
-    tags_html += create_tax_element('Bloom_4', 'Analyse', 'Zerlegen in Einzelteile, Fallstudien');
-    tags_html += create_tax_element('Bloom_5', 'Synthese', 'Vernetzen und optimieren, fachübergreifend darstellen, Projektaufgaben');
-    tags_html += create_tax_element('Bloom_6', 'Beurteilung', 'Synthese + zusätzliche Bewertung durch die Lernenden');
-
-    tags_html += '<br/>';
-
-    tags_html += create_tax_head('Maier', 'primary', 'https://www.pedocs.de/frontdoor.php?source_opus=13874');
-    tags_html += create_tax_desc('Maier_1', 'Wissensart');
-    //tags_html += '<br/>&nbsp;&nbsp;Wissensart ';
-    tags_html += create_tax_element('Maier_1_1', 'Fakten', 'explizit verbalisierbar, in Aussagenform gespeichert, Kenntnis isolierter aber auch komplexer Fakten, terminologisches Wissen, Regeln abfragen ohne Anwendung');
-    tags_html += create_tax_element('Maier_1_2', 'Prozeduren', 'implizit und nicht verbalisierbar, Automatisierte Verhaltensweisen, Routinen, Algorithmen, Fertigkeiten bis zu komplexen Routinen und Handlungsmustern');
-    tags_html += create_tax_element('Maier_1_3', 'Konzepte', 'verbalisierbar und/oder implizit, Klassifikationen, Schemata, Kategorien, Begriffsnetze, Modellierungen, Erklärungen, vielfach vernetzt zu Zusammenhängen und Begriffsnetzen');
-    tags_html += create_tax_element('Maier_1_4', 'Metakognition', 'Wissen über eigenes Wissen, Steuerung von Lernhandlungen, (Monitoring), Wissen über Informationsverarbeitungsstrategien, wird direkt in der Aufgabenstellung angeregt oder gefordert');
-    tags_html += create_tax_desc('Maier_2', 'Kognitiver Prozess');
-    tags_html += create_tax_element('Maier_2_1', 'Reproduktion', 'Abruf von Wissen aus dem Langzeitgedächtnis, Wiedergabe von gespeicherten Wissen, Nachahmung von Prozeduren, auch metakogn. und konzept. Wissen kann reproduziert werden');
-    tags_html += create_tax_element('Maier_2_2', 'naher Transfer', 'Aufgabensituation und gespeichertes Wissen unterscheiden sich nur geringfügig; eindeutig, welches Wissen (Fakten, Konzepte, etc.) zur Anwendung kommt, einfache Verfahren anwenden, kleinschrittiges Ausführen');
-    tags_html += create_tax_element('Maier_2_3', 'weiter Transfer', 'Anwendungssituation/Aufgabe ist relativ neu, nicht sofort einsichtig, welches Wissen zur Anwendung kommt; Wissen ist allerdings in der Form vorhanden, in der es zur Anwendung kommt; Einige Anhaltspunkte sind vorgegeben, ohne jedoch auf einen Lösungsweg festzulegen');
-    tags_html += create_tax_element('Maier_2_4', 'Problemlösen', 'unbekannte Aufgabensituation; unklar, welches Wissen zur Anwendung kommt; das zur Bearbeitung einer Situation erforderliche Wissen muss erst zusammengefügt werden; Schüler müssen auf unterschiedliche Wissensarten zurückgreifen (Fakten, Konzepte, Prozeduren, Strategiewissen); Problemlöseprozess: Problem finden bzw. definieren, Lösungen entwerfen, Lösungen umsetzen und Lösungen bewerten.');
-    tags_html += create_tax_desc('Maier_3', 'Wissenseinheiten');
-    tags_html += create_tax_element('Maier_3_1', 'eine', 'Nur ein Begriff, Konzept oder eine Prozedur auf höchster Ebene zu aktivieren.');
-    tags_html += create_tax_element('Maier_3_2', 'bis zu 4', 'bis 4 Begriffe; Konzepte oder Prozeduren müssen auf oberster Hierarchieebene gleichzeitig aktiviert und verknüpft werden');
-    tags_html += create_tax_element('Maier_3_3', 'mehr als 4', 'Eine große Zahl (mehr als 4) verschiedener Begriffe, Konzepte oder Prozeduren muss gleichzeitig aktiviert werden');
-    tags_html += create_tax_desc('Maier_4', 'Offenheit');
-    tags_html += create_tax_element('Maier_4_1', 'definiert / konvergent', 'Die Aufgabe umfasst einen eindeutigen Arbeitsauftrag bzw. eine klar identifizierbare Fragestellung; Eine Lösung ist gesucht bzw. richtig; dies muss allerdings nicht explizit angegeben sein');
-    tags_html += create_tax_element('Maier_4_2', 'definiert / divergent', 'eindeutiger Arbeitsauftrag; bei dem mehrere Lösungen möglich sind. Die Aufgabe umfasst eine klar identifizierbare Fragestellung; mehrere Lösungen (bzw. Lösungswege) sind gesucht bzw. richtig; in der Regel werden die Schüler auf diesen Umstand hingewiesen');
-    tags_html += create_tax_element('Maier_4_3', 'nicht definiert / divergent', 'Die Schüler erhalten Informationen über ein Problem, eine Situation, etc. Es sind unterschiedliche Fragestellungen denkbar; eine Problemsituation ist die einzige Handlungsaufforderung; damit sind auch mehrere Lösungen (bzw. Lösungswege) gesucht bzw. richtig');
-    tags_html += create_tax_desc('Maier_5', 'Lebensweltbezug');
-    tags_html += create_tax_element('Maier_5_1', 'kein', 'Keine Verknüpfung zwischen Fachwissen und Lebenswelt/Erfahrungsbereich der Schüler/innen gefordert oder vorgegeben');
-    tags_html += create_tax_element('Maier_5_2', 'konstruiert', 'Verknüpfung zwischen Fachwissen und Lebenswelt stark konstruiert; entspricht eher nicht den Erfahrungen des Schülers; Analogien zur eigenen Erfahrung kaum erkennbar; Bezug wirkt „aufgesetzt“; Fachwissen soll eingekleidet werden');
-    tags_html += create_tax_element('Maier_5_3', 'authentisch', 'Lebensweltbezug ist konstruiert, macht im Zusammenhang der Aufgabe aber Sinn; entspricht größtenteils den Erfahrungen der Schüler; wirkt nicht aufgesetzt; sinnvolle Anwendungen für Alltag, Berufsleben, etc');
-    tags_html += create_tax_element('Maier_5_4', 'real', 'Keine Differenz zwischen Aufgabe und Lebenswelt; reale Problemstellung ist zu bearbeiten');
-    tags_html += create_tax_desc('Maier_6', 'Sprachliche Komplexität');
-    tags_html += create_tax_element('Maier_6_1', 'niedrig', 'wenig Text; chronologisch geordnet; einfache Syntax; kein oder kaum Text. Reihenfolge der Sätze entspricht Aufgabenbearbeitung; einfache Haupt und Nebensätze');
-    tags_html += create_tax_element('Maier_6_2', 'mittel', 'Textpassagen mit teilweise für die Aufgabenbearbeitung irrelevanten Informationen; sprachlich komplexer. Reihenfolge der Sätze entspricht nicht immer der Aufgabenbearbeitung; Textpassagen mit irrelevanter Information');
-    tags_html += create_tax_element('Maier_6_3', 'hoch', 'z.T. irrelevante, irritierende Formulierungen; komplexe Syntax. Aufgabe verdeckt die inneren, logischen Bezüge; logische Funktionen (Verneinungen, wenndann Verknüpfungen, Allaussagen, etc.); komplexe Satzgefüge');
-    tags_html += create_tax_desc('Maier_7', 'Repräsentationsformen');
-    tags_html += create_tax_element('Maier_7_1', 'eine', ' Aufgabenstellung und Aufgabenlösung basieren auf einer Repräsentationsform. Aufgabeninformation und Aufgabenlösung basieren auf Wissen in einer Repräsentationsform; eventuell noch andere Repräsentationsformen vorhanden, die für die Lösung jedoch irrelevant sind (z.B. Bild zur Illustration)');
-    tags_html += create_tax_element('Maier_7_2', 'Integration', 'Aufgabe gibt Wissen in verschiedenen Repräsentationsformen vor; Integration dieser Formen für die Lösung nötig; Aufgabenlösung bewegt sich  innerhalb der vorgegebenen Repräsentationsformen');
-    tags_html += create_tax_element('Maier_7_3', 'Transformation', ' Integration und Transformation des Wissens. Schüler muss für die Aufgabenlösung das vorliegende Wissen in eine Repräsentationsform transformieren, die nicht durch die Aufgabe vorgegeben wird');
-
-    tags_html += '<br/>';
-
-    tags_html += create_tax_head('Typ');
-    tags_html += '<br/>&nbsp;';
-    tags_html += create_tax_element('type_truefalse', 'Wahr/Falsch');
-    tags_html += create_tax_element('type_multichoice', 'Multiple-Choice');
-    tags_html += create_tax_element('type_stack', 'Stack');
+    // build taxonomy buttons from metadata
+    for(let i=0; i<metadata["taxonomy"].length; i++) {
+        let command = metadata["taxonomy"][i];
+        let tokens = command.split(":");
+        if(tokens[0] === "head") {
+            let name = tokens[1];
+            let color = tokens[2];
+            let url = tokens[3] in metadata["taxonomy_urls"] ? metadata["taxonomy_urls"][tokens[3]] : "";
+            tags_html += i==0 ? "" : '<br/>';
+            tags_html += create_tax_head(name, color, url);
+        } else if(tokens[0] === "dim") {
+            let id = tokens[2];
+            let name = tokens[1];
+            if(name.length > 0)
+                tags_html += '<br/>' + create_tax_desc(id, name);
+            else
+                tags_html += '<br/>&nbsp;';
+            let names = tokens[3].split(",");
+            for(let k=0; k<names.length; k++) {
+                let id_k = id + '_' + (k+1);
+                let desc = "";
+                if(id_k in metadata["taxonomy_desc"])
+                    desc = metadata["taxonomy_desc"][id_k];
+                taxonomy_tag_names[id_k] = names[k];
+                taxonomy_tag_dim_names[id_k] = name;
+                tags_html += create_tax_element(id_k, names[k], desc);
+            }
+        }
+    }
 
     tags_html += '<br/>';
     tags_html += '<br/>';
@@ -258,124 +180,69 @@ function build_document() {
 }
 
 function build_topic_hierarchy() {
-    let te2div = document.getElementById("TE_2");
-
-
-    TODO: PUT THIS INTO METADATA!!!!!
-
+    // get all selected topics of level 1
     let selected_te1 : Array<string> = [];
     for(let tax_id in tax_selected) {
-        if(tax_id.startsWith("TE_1_") && tax_selected[tax_id] == true) {
-            selected_te1.push(tax_id.toLowerCase().replaceAll("_",":"));
-        }
+        if(tax_id.startsWith("te_1_") && tax_selected[tax_id] == true)
+            selected_te1.push(tax_id);
     }
-
-    console.log(selected_te1); // all selected topics of level 1
-
-    te2div.innerHTML = "";
+    // get all selected topics of level 2
+    let selected_te2 : Array<string> = [];
+    for(let tax_id in tax_selected) {
+        if(tax_id.startsWith("te_2_") && tax_selected[tax_id] == true)
+            selected_te2.push(tax_id);
+    }
+    // create HTML elements
+    let tediv = document.getElementById("TE");
+    tediv.innerHTML = "";
+    // - first level
+    tediv.innerHTML += create_tax_desc('TE_1', 'I');
+    for(let te1_i in metadata["topic_hierarchy"]) {
+        let tokens = te1_i.split("_");
+        let topic = tokens[tokens.length-1];
+        tediv.innerHTML += create_tax_element(te1_i, topic);
+        if(tax_selected[te1_i])
+            mark_tag_element(te1_i);
+    }
+    tediv.innerHTML += '<br/>';
+    // - second level
     if(selected_te1.length > 0) {
-        te2div.innerHTML = create_tax_desc('TE_2', 'II');
-        // for all exercises: add all tags starting with TE_2_ for all exercises that contain a tag in selected_te1:
-        for(let me of metadata_exercises) {
-            for(let tag of me["tags"]) {
-                if(selected_te1.includes(tag) && tag.toLowerCase().startsWith("TE:2:")) {
-                    
-                    console.log(tag);
+        tediv.innerHTML += create_tax_desc('TE_2', 'II');
+        for(let te1_i in metadata["topic_hierarchy"]) {
+            if(selected_te1.includes(te1_i)) {
+                for(let te2_j in metadata["topic_hierarchy"][te1_i]) {
+                    let tokens = te2_j.split("_");
+                    let topic = tokens[tokens.length-1];
+                    tediv.innerHTML += create_tax_element(te2_j, topic);
+                    if(tax_selected[te2_j])
+                        mark_tag_element(te2_j);
                 }
             }
         }
     }
-
-
-    //console.log(tax_selected);
-
-    //tags_html += create_tax_desc('TE_2', 'II');
-    //tags_html += '<div id="TE_2"></div>'
-    //tags_html += create_tax_element('PartielleIntegration', 'Partielle Integration', 5);
-
-    /*for(let i=0; i<metadata["tags-all"].length; i++) {
-        let tag = metadata["tags-all"][i];
-        if(tag.startsWith("TE:2:")) {
-            let tag_displayed = tag.split(':');
-            tag_displayed = tag_displayed[tag_displayed.length-1];
-            tags_html += create_tax_element(tag.replaceAll(":","_"), tag_displayed);
+    // - third level
+    if(selected_te2.length > 0) {
+        tediv.innerHTML += '<br/>' + create_tax_desc('TE_3', 'III');
+        for(let te1_i in metadata["topic_hierarchy"]) {
+            if(selected_te1.includes(te1_i)) {
+                for(let te2_j in metadata["topic_hierarchy"][te1_i]) {
+                    if(selected_te2.includes(te2_j)) {
+                        for(let te3_k in metadata["topic_hierarchy"][te1_i][te2_j]) {
+                            let tokens = te3_k.split("_");
+                            let topic = tokens[tokens.length-1];
+                            tediv.innerHTML += create_tax_element(te3_k, topic);
+                            if(tax_selected[te3_k])
+                                mark_tag_element(te3_k);
+                        }
+                    }
+                }
+            }
         }
-    }*/
-
-    let te3div = document.getElementById("TE_2");
-    te3div.innerHTML += create_tax_desc('TE_2', 'II');
+    }
 }
 
-let exercise_template = `
-    <div class="card bg-white border-primary p-0">
-        <div class="card-body m-0 p-2">
-            <small>!EXERCISE_TYPE! &nbsp;</small>
-            <h5 class="card-title"><b>!TITLE!</b></h5>
-            <p class="card-text">
-                !TAGS!
-            </p>
-            <div id="carousel_!EXERCISE_ID!" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel_!EXERCISE_ID!" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel_!EXERCISE_ID!" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel_!EXERCISE_ID!" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="Data/!EXERCISE_ID!_0.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="Data/!EXERCISE_ID!_1.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="Data/!EXERCISE_ID!_2.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center m-1">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                !OPTIONAL_BUTTONS!
-                <button type="button" 
-                    class="btn btn-outline-primary btn-sm" 
-                    onclick="download_exercise('!EXERCISE_ID!')"
-                    data-toggle="tooltip" 
-                    data-placement="top" 
-                    title="Aufgabe im Format Moodle-XML Downloaden">
-                    <i class="fa fa-download" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-`;
-
-let select_exercise_template = `
-    <button type="button" 
-        class="btn btn-outline-primary btn-sm"    
-        onclick="select_exercise('!EXERCISE_ID!')" 
-        id="btn_select_exercise_!EXERCISE_ID!"
-        data-toggle="tooltip" 
-        data-placement="top" 
-        title="Zum Aufgabenblatt hinzufügen">
-        <!--<i class="fa fa-shopping-cart"></i>-->
-        <i class="fa fa-book"></i>
-    </button>
-`;
-
-let remove_exercise_template = `
-    <button type="button" 
-        class="btn btn-outline-primary btn-sm"    
-        onclick="remove_exercise('!EXERCISE_ID!')" 
-        id="btn_remove_exercise_!EXERCISE_ID!"
-        data-toggle="tooltip" 
-        data-placement="top" 
-        title="Vom Aufgabenblatt entfernen">
-        <i class="fa fa-ban"></i>
-    </button>
-`;
-
 function build_exercise(exercise, isBasket=false) {
-    let exercise_html = exercise_template;
+    let exercise_html = templates.exercise_template;
     if(isBasket)
         exercise_html = exercise_html.replaceAll("carousel_", "carouselbasket_");
     let title = exercise["title"];
@@ -383,11 +250,11 @@ function build_exercise(exercise, isBasket=false) {
         title = title.substr(5);
     let optional_buttons = '';
     if(isBasket)
-        optional_buttons += remove_exercise_template;
+        optional_buttons += templates.remove_exercise_template;
     else
-        optional_buttons += select_exercise_template;
+        optional_buttons += templates.select_exercise_template;
     exercise_html = exercise_html.replaceAll('!OPTIONAL_BUTTONS!', optional_buttons);
-    exercise_html = exercise_html.replaceAll('!TITLE!', title);
+    exercise_html = exercise_html.replaceAll('!TITLE!', title.toUpperCase());
     exercise_html = exercise_html.replaceAll('!EXERCISE_ID!', exercise["id"]);
     let exercise_type = exercise["type"];
     if(exercise_type === 'stack')
@@ -398,32 +265,67 @@ function build_exercise(exercise, isBasket=false) {
         exercise_type = 'WAHR/FALSCH';
     exercise_html = exercise_html.replaceAll('!EXERCISE_TYPE!', exercise_type);
     let exercise_tags = exercise['tags'];
+    let exercise_tags_sorted = exercise_tags.sort();
+    let exercise_topic_html = '';
+    // te_1
+    for(let j=0; j<exercise_tags_sorted.length; j++) {
+        let tag = exercise_tags_sorted[j];
+        if(tag.startsWith("te_1_"))
+            exercise_topic_html += '<span class="">'
+                + tag.substr(5) + '</span>&nbsp;';
+    }
+    // te_2
+    for(let j=0; j<exercise_tags_sorted.length; j++) {
+        let tag = exercise_tags_sorted[j];
+        if(tag.startsWith("te_2_"))
+        exercise_topic_html += '&raquo; <span class="">' 
+                + tag.substr(5) + '</span>&nbsp;';
+    }
+    // te_3
+    for(let j=0; j<exercise_tags_sorted.length; j++) {
+        let tag = exercise_tags_sorted[j];
+        if(tag.startsWith("te_3_"))
+        exercise_topic_html += '&raquo; <span class="">' 
+                + tag.substr(5) + '</span>&nbsp;';
+    }
+    exercise_html = exercise_html.replaceAll('!TOPIC!', exercise_topic_html);
+
     let exercise_tags_html = '';
-    for(let j=0; j<exercise_tags.length; j++) {
-        let tag_text = exercise_tags[j].replaceAll(':','_');
-        let color = 'dark';
-        if(tag_text.includes('Bloom'))
-            color = 'success';
-        else if(tag_text.includes('Maier'))
-            color = 'primary';
-        let category = '';
-        let tokens = tag_text.split("_");
-        if(tokens.length > 1) {
-            for(let k=0; k<tokens.length-1; k++) {
-                if(k > 0)
-                    category += '_';
-                category += tokens[k];
-            }
-        }
-        if(tag_text in tax_texts) {
-            if(category in category_texts)
-                category = category_texts[category];
-            tag_text = category + ': ' + tax_texts[tag_text];
-        }
-        exercise_tags_html += '<span class="badge rounded-pill bg-' + color + '">' + tag_text + '</span>&nbsp;';
+    // bloom
+    for(let j=0; j<exercise_tags_sorted.length; j++) {
+        let tag = exercise_tags_sorted[j];
+        let tag_name = taxonomy_tag_names[tag];
+        if(tag.startsWith("bloom_"))
+            exercise_tags_html += '<span class="badge rounded-pill bg-success">' 
+                + tag_name + '</span>&nbsp;';
+    }
+    // maier
+    for(let j=0; j<exercise_tags_sorted.length; j++) {
+        let tag = exercise_tags_sorted[j];
+        let tag_name = taxonomy_tag_dim_names[tag] + ": " + taxonomy_tag_names[tag];
+        if(tag.startsWith("maier_"))
+            exercise_tags_html += '<span class="badge rounded-pill bg-primary">' 
+                + tag_name + '</span>&nbsp;';
     }
     exercise_html = exercise_html.replaceAll('!TAGS!', exercise_tags_html);
     return exercise_html;
+}
+
+function get_tagdim_selection(dim_prefix="") : Array<string> {
+    let selected : Array<string> = [];
+    for(let tax_id in tax_selected) {
+        if(tax_id.startsWith(dim_prefix) && tax_selected[tax_id] == true)
+            selected.push(tax_id);
+    }
+    return selected
+}
+
+function arr_contains(u : Array<string>, v : Array<string>) : boolean {
+    for(let ui of u) {
+        if(v.includes(ui))
+            return true;
+    }
+    return false;
 }
 
 function build_exercises_tree() {
@@ -432,23 +334,52 @@ function build_exercises_tree() {
         let display_exercise = true;
         let exercise = metadata_exercises[i];
         let exercise_html = build_exercise(exercise, false);
-        let exercise_tags = exercise['tags'];
-
-        /*let exercise_tags_underscore = [];
-        for(let t of exercise_tags) { // TODO: do this only once!!
-            exercise_tags_underscore.push(t.replaceAll(":","_"));
-        }
+        let exercise_tags : Array<string> = exercise['tags'];
+        // filter te_1_
+        let selected_te1 = get_tagdim_selection("te_1_");
+        if(selected_te1.length == 0)
+            continue;    
+        if(arr_contains(selected_te1, exercise_tags) == false)
+            continue;
+        // filter te_2_
+        let selected_te2 = get_tagdim_selection("te_2_");
+        if(selected_te2.length > 0 && arr_contains(selected_te2, exercise_tags) == false)
+            continue;
+        // filter te_3_
+        let selected_te3 = get_tagdim_selection("te_3_");
+        if(selected_te3.length > 0 && arr_contains(selected_te3, exercise_tags) == false)
+            continue;
         
-
-        for(let t of exercise_tags_underscore) {
-            if(tax_selected[t] == undefined)
-                continue;
-            if(tax_selected[t] == false)
-                display_exercise = false;
-        }*/
-        
-        
-        for(let t in tax_selected) {
+        // TODO: do the following based on metadata to get ALL new dimensiona immediately...
+        let selected_bloom = get_tagdim_selection("bloom_");
+        if(selected_bloom.length > 0 && arr_contains(selected_bloom, exercise_tags) == false)
+            continue;
+        let selected_maier_1 = get_tagdim_selection("maier_1_");
+        if(selected_maier_1.length > 0 && arr_contains(selected_maier_1, exercise_tags) == false)
+            continue;
+        let selected_maier_2 = get_tagdim_selection("maier_2_");
+        if(selected_maier_2.length > 0 && arr_contains(selected_maier_2, exercise_tags) == false)
+            continue;
+        let selected_maier_3 = get_tagdim_selection("maier_3_");
+        if(selected_maier_3.length > 0 && arr_contains(selected_maier_3, exercise_tags) == false)
+            continue;
+        let selected_maier_4 = get_tagdim_selection("maier_4_");
+        if(selected_maier_4.length > 0 && arr_contains(selected_maier_4, exercise_tags) == false)
+            continue;
+        let selected_maier_5 = get_tagdim_selection("maier_5_");
+        if(selected_maier_5.length > 0 && arr_contains(selected_maier_5, exercise_tags) == false)
+            continue;
+        let selected_maier_6 = get_tagdim_selection("maier_6_");
+        if(selected_maier_6.length > 0 && arr_contains(selected_maier_6, exercise_tags) == false)
+            continue;
+        let selected_maier_7 = get_tagdim_selection("maier_7_");
+        if(selected_maier_7.length > 0 && arr_contains(selected_maier_7, exercise_tags) == false)
+            continue;
+        let selected_type = get_tagdim_selection("type_");
+        if(selected_type.length > 0 && arr_contains(selected_type, exercise_tags) == false)
+            continue;
+    
+        /*for(let t in tax_selected) {
             if(tax_selected[t]) {
                 if(t.startsWith("type_"))  // exercise type is handled below
                     continue;
@@ -464,8 +395,7 @@ function build_exercises_tree() {
         if(tax_selected['type_truefalse'] && exercise["type"] !== 'truefalse')
             display_exercise = false;
         if(tax_selected['type_multichoice'] && exercise["type"] !== 'multichoice')
-            display_exercise = false;
-
+            display_exercise = false;*/
         if(display_exercise)
             exercises_html += exercise_html + '<br/>';
     }
@@ -517,7 +447,7 @@ $( document ).ready(function() {
 
 function getMetaData() {
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    let metadata_path = 'Data/meta.json' + '?time=' + timestamp;
+    let metadata_path = 'Data/meta.json' + '?time=' + timestamp; // TODO!!!! test path set!!!!!
     $.ajax({
         url: metadata_path,
         type: 'GET',
@@ -529,7 +459,7 @@ function getMetaData() {
                 return a.title > b.title;
             });
             metadata["exercises"] = ex;
-            getTaxonomyData();
+            build_document();
             
         },
         error: function(xhr, status, error) {
@@ -538,52 +468,7 @@ function getMetaData() {
     });
 }
 
-function getTaxonomyData() {
-    let timestamp = Math.round((new Date()).getTime() / 1000);
-    let metadata_path = 'Taxonomie/taxonomie.txt' + '?time=' + timestamp;
-    $.ajax({
-        url: metadata_path,
-        type: 'GET',
-        success: function(data,status,xhr) {
-            taxonomyData = [];
-            let lines = xhr.responseText.split("\n");
-            for(let i=0; i<lines.length; i++) {
-                let line = lines[i];
-                if(line.length == 0)
-                    continue;
-                let tabs = 0;
-                for(let j=0; j<line.length; j++) {
-                    if(line[j] == ' ')
-                        tabs ++;
-                    else if(line[j] == '\t')
-                        tabs += 4;
-                    else
-                        break;
-                }
-                tabs /= 4;
-                if(tabs == 0)
-                    taxonomyData
-                        .push([line.trim()]);
-                else if(tabs == 1)
-                    taxonomyData[taxonomyData.length-1]
-                        .push([line.trim()]);
-                else if(tabs == 2)
-                    taxonomyData[taxonomyData.length-1]
-                        [taxonomyData[taxonomyData.length-1].length-1]
-                        .push([line.trim()]);
-                //console.log(tabs)
-                //console.log(line)
-            }
-            //console.log(taxonomyData);
-            build_document();
-        },
-        error: function(xhr, status, error) {
-            alert("ERROR: " + xhr.responseText);
-        }
-    });
-}
-
-function toggleTag(tag_idx : number) {
+export function toggleTag(tag_idx : number) {
     let buttonData = tag_button_data[tag_idx]
     let tagElement = document.getElementById("button_tag_" + tag_idx);
     buttonData.selected = !buttonData.selected;
@@ -594,7 +479,7 @@ function toggleTag(tag_idx : number) {
     build_exercises_tree();
 }
 
-function select_exercise(idx : number) {
+export function select_exercise(idx : number) {
     // only push to basket, if not already done
     for(let i=0; i<basket.length; i++) {
         if(basket[i] == idx)
@@ -604,7 +489,7 @@ function select_exercise(idx : number) {
     basket.push(idx);
 }
 
-function remove_exercise(idx : number) {
+export function remove_exercise(idx : number) {
     let new_basket = [];
     for(let i=0; i<basket.length; i++) {
         if(basket[i] == idx)
@@ -621,11 +506,16 @@ function remove_exercise(idx : number) {
     });
 }
 
-function download_selected_exercises(idx : number) {
+export function download_selected_exercises(idx : number) {
     alert("... noch nicht implementiert");
 }
 
-function download_exercise(idx : number) {
+export function edit_exercise(id: number) {
+    let link = "https://sell.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=" + id;
+    window.open(link);
+}
+
+export function download_exercise(idx : number) {
     let timestamp = Math.round((new Date()).getTime() / 1000);
     let exercise_path = 'Data/' + idx + '.xml?time=' + timestamp;
     $.ajax({

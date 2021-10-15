@@ -26,6 +26,8 @@ if len(sys.argv) != 3:
     print("usage: python3 conv.py INPUTPATH OUTPUTPATH")
     sys.exit(-1)
 
+warnings = ""
+
 path_in = sys.argv[1]
 path_out = sys.argv[2]
 
@@ -38,7 +40,9 @@ os.system("mkdir -p " + path_out)
 metadata = {
     "exercises": [], 
     "date": datetime.today().strftime('%Y-%m-%d %H:%M'),
-    "topic_hierarchy": {"":""}
+    "topic_hierarchy": {"":""},
+    "tag_count": {},
+    "taxonomy_desc": {}
 }
 
 parser = etree.XMLParser(strip_cdata=False)
@@ -46,9 +50,7 @@ tree = etree.parse(path_in, parser)
 quiz = tree.getroot()
 
 tagset = {""}
-questionid = ''
-questionIdx = 0
-
+questionid = 0
 
 class CriticalTag:
     def __init__(self):
@@ -71,11 +73,17 @@ def format_tag(tag):
     for i, tk in enumerate(tag_tokens):
         if i < len(tag_tokens) - 1:
             tk = tk.lower()
+        elif tag.startswith("te_"):
+            tk = tk.capitalize()
         if len(tag_new) > 0:
             tag_new += "_"
         tag_new += tk
     return tag_new
 
+for i in range(1,20):
+    id = 'type_' + str(i)
+    tagset.add(id)
+    metadata["tag_count"][id] = 0
 
 for i, question in enumerate(quiz):
     if question.tag is etree.Comment:
@@ -96,6 +104,23 @@ for i, question in enumerate(quiz):
     tested = False
     tags = question.find('tags')
     q_tagset = {""}
+    if questionType == "stack":
+        q_tagset.add('type_1')
+        metadata["tag_count"]['type_1'] += 1
+    elif questionType == "truefalse":
+        q_tagset.add('type_2')
+        metadata["tag_count"]['type_2'] += 1
+    elif questionType == "multichoice":
+        q_tagset.add('type_3')
+        metadata["tag_count"]['type_3'] += 1
+    elif questionType == "stack-multichoice":
+        q_tagset.add('type_4')
+        metadata["tag_count"]['type_4'] += 1
+    elif questionType == "gapselect":
+        q_tagset.add('type_5')
+        metadata["tag_count"]['type_5'] += 1
+    else:
+        warnings += "FRAGETYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
     if tags is not None:
         for tag in tags:
             tag_name = tag[0].text
@@ -104,6 +129,11 @@ for i, question in enumerate(quiz):
             tag_formatted = format_tag(tag_name)
             q_tagset.add(tag_formatted)
             tagset.add(tag_formatted)
+
+            # number of occurences of tags (tag count)
+            if tag_formatted not in metadata["tag_count"]:
+                metadata["tag_count"][tag_formatted] = 0
+            metadata["tag_count"][tag_formatted] += 1
 
             # tag valid?
             if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet"]) \
@@ -137,26 +167,20 @@ for i, question in enumerate(quiz):
                 if te3 not in metadata["topic_hierarchy"][te1][te2]:
                     metadata["topic_hierarchy"][te1][te2][te3] = {}
 
-
-    #if not tested:
-    #    continue
     metadata['exercises'].append({
-        'importid': questionid,
-        'id': questionIdx,
+        'id': questionid,
         'title': name,
         'tags': list(q_tagset),
         'category': current_category,
         'type': questionType}
     )
-    f = open(path_out + str(questionIdx) + ".xml", "w")
+    f = open(path_out + str(questionid) + ".xml", "w")
     f.write(questionStr)
     f.close()
 
-    questionIdx += 1
 
 tagset.remove("")
-metadata["tags"] = list(tagset)
-
+#metadata["tags"] = list(tagset)
 
 # remove empty tags
 del metadata["topic_hierarchy"][""]
@@ -165,36 +189,28 @@ for t1 in metadata["topic_hierarchy"]:
     for t2 in metadata["topic_hierarchy"][t1]:
         del metadata["topic_hierarchy"][t1][t2][""]
 
+# import taxonomy
+f = open("../Taxonomie/taxonomie.json", "r")
+tax_json = json.load(f)
+metadata["taxonomy"] = tax_json["taxonomy"]
+metadata["taxonomy_urls"] = tax_json["taxonomy_urls"]
+f.close()
 
-# TODO: remove old src:
-# with open("../Taxonomie/taxonomie.json") as f:
-#     tax = json.load(f)
-#     # TODO: crawl automatically from tax[..]
-#     metadata["tags-maintopics"] = []
-#     #metadata["tags-didactics"] = tax["didactics"]
-#     #metadata["tags-content"] = tax["content"]
-#     #metadata["tags-difficulty"] = tax["difficulty"]
-#     #metadata["tags-status"] = tax["status"]
-#     for maintopic in tax["maintopics"]:
-#         metadata["tags-maintopics"].append(maintopic.lower())
-#         maintopic_tags = []
-#         for ex in metadata['exercises']:
-#             for tag in ex['tags']:
-#                 if tag == maintopic:
-#                     continue
-#                 if tag in tax['didactics']:  # TODO: crawl automatically from tax[..]
-#                     continue
-#                 if tag in tax['content']:
-#                     continue
-#                 if tag in tax['difficulty']:
-#                     continue
-#                 if tag in tax['ignore']:
-#                     continue
-#                 if tag not in maintopic_tags:
-#                     maintopic_tags.append(tag.lower())
-#         metadata["tags-maintopic-" + maintopic.lower()] = maintopic_tags
-
-
+# parse taxonomy descriptions
+f = open("../Taxonomie/taxonomie-beschreibungen.txt", "r")
+lines = f.readlines()
+f.close()
+tag = ""
+for line in lines:
+    line = line[:-1] # remove "\n"
+    if line.startswith("#") or len(line) == 0:
+        continue
+    elif line.startswith("@"):
+        tokens = line.split("#")
+        tag = tokens[0][1:].strip().lower().replace(":","_")
+    else:
+        tag_desc = line
+        metadata["taxonomy_desc"][tag] = tag_desc
 
 # write metadata to file
 f = open(path_out + "meta.json", "w")
@@ -213,6 +229,7 @@ f.write("Im Falle von fehlerhaften Auflistungen: ")
 f.write("Mail an <a href=\"mailto:andreas.schwenk@th-koeln.de\">andreas.schwenk@th-koeln.de</a> senden!<br/><br/>\n")
 f.write("ACHTUNG: Diese Liste wird automatisch nachts aktualisiert. ")
 f.write(" In Moodle vorgenommene Änderungen werden also erst am <b>nächsten Tag</b> sichtbar!<br/>\n")
+f.write("<p>Warnungen/Fehler: " + warnings + "</p>")
 f.write("<ul>\n")
 for ct in criticalTags:
     f.write("<li>")
