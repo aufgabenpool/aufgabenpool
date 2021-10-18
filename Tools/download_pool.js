@@ -5,7 +5,7 @@
 //  Version: 0.01
 //******************************************************************************
 
-// Note: This script is SLOW, since we need to wait for Maxima and MathJax...
+// This scrip downloads all questions from pool as moodle-xml file via puppeteer.
 
 const fs = require("fs");
 const puppeteer = require('puppeteer');
