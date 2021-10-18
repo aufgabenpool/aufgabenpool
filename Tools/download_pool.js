@@ -5,7 +5,7 @@
 //  Version: 0.01
 //******************************************************************************
 
-// This scrip downloads all questions from pool as moodle-xml file via puppeteer.
+// This script downloads all questions from pool as moodle-xml file via puppeteer.
 
 const fs = require("fs");
 const puppeteer = require('puppeteer');
