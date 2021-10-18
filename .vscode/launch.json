@@ -7,7 +7,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}/Tools/",
             "program": "${workspaceFolder}/Tools/conv.py",
-            "args": ["../Rohdaten/quiz-pool-AUFGABENPOOL-20211007-0917.xml", "../Data-test/"],
+            "args": ["../Rohdaten/quiz-pool-AUFGABENPOOL-20211007-0917.xml", "../Data/"],
             "console": "integratedTerminal"
         },
         {
