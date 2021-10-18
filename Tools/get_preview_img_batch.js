@@ -56,7 +56,7 @@ let exercises = meta["exercises"];
         process.stdout.write(".");
         let exercise = exercises[i];
         let question_id = exercise["id"];
-        // only get screenshots in case the XML file updates since last sync
+        // only get screenshots if the XML file has been updated since the last sync
         let must_update = true;
         if(fs.existsSync(old_content_path + question_id + ".xml") 
                 && fs.existsSync(old_content_path + question_id + "_0.png")
@@ -64,10 +64,7 @@ let exercises = meta["exercises"];
                 && fs.existsSync(old_content_path + question_id + "_2.png")) {
             let xml_old = fs.readFileSync(old_content_path + question_id + ".xml", 'utf8');
             let xml_new = fs.readFileSync(img_out_path + question_id + ".xml", 'utf8');
-            //console.log(xml_old)
-            //console.log(xml_new)
             must_update = xml_old !== xml_new;
-            //console.log(must_update)
         }
         if(must_update == false) {
             // copy existing image files
