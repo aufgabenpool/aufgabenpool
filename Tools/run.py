@@ -44,15 +44,7 @@ if not skip_screenshots:
         print('ERROR: failed to get preview images')
         sys.exit(-1)
 
-# 4.) postprocess screenshots (set background color transparent)
-#print("postprocessing screenshots")
-#if not skip_screenshots:
-#    if which('mogrify') is None:
-#        print("warning: imagemagick is not installed!")
-#    else:
-#        os.system('cd ../Data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" *.png')
-
-# 5.) Replace current "../Data/" directory. This is done only in case no error occourred. Otherwise, the old version remains
+# 4.) Replace current "../Data/" directory. This is done only in case no error occourred. Otherwise, the old version remains
 print("moving directoy '../Data-tmp' to '../Data'")
 os.system("rm -rf ../Data/")
 os.system("mv ../Data-tmp ../Data")

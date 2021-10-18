@@ -7,8 +7,8 @@
 
 // Note: This script is SLOW, since we need to wait for Maxima and MathJax...
 // In case that "old_content_path" already contains screenshots and moodle-xml
-// files in paths "img_out_path" and "old_content_path", we can simply copy
-// old screenshots.
+// files in paths "img_out_path" and "old_content_path" have no diff, 
+// we can simply copy old screenshots from "old_content_path" to "img_out_path".
 
 const fs = require("fs");
 const { exec } = require("child_process");
