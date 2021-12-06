@@ -11,11 +11,11 @@
 
 Der aktuelle Workflow sieht vor, dass der Aufgabenbestand über Moodle verwaltet wird:
 
-	https://sell.f07-its.fh-koeln.de/moodle/
+	https://aufgabenpool.f07-its.fh-koeln.de/moodle/
 
 NutzerInnen des Pools steht die folgende Webseite zur Verfügung (noch nicht öffentlich)
 
-	https://sell.f07-its.fh-koeln.de/pool-auto/
+	https://aufgabenpool.f07-its.fh-koeln.de
 
 
 ## Informationen für Entwickler

@@ -58,7 +58,7 @@ class CriticalTag:
         self.exerciseTitle = ""
         self.tag = ""
     def __str__(self):
-        link = '<a href="https://sell.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(self.exerciseId) + '" target="_blank">Link</a>'
+        link = '<a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(self.exerciseId) + '" target="_blank">Link</a>'
         s = "Aufgabe: " + str(self.exerciseTitle) + " " + link + ", Tag: " + str(self.tag)
         return s
 

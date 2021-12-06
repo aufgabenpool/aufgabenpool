@@ -7,7 +7,7 @@
 
 // Note: This script is SLOW, since we need to wait for Maxima and MathJax...
 
-const moodle_url = 'https://sell.f07-its.fh-koeln.de/moodle'
+const moodle_url = 'https://aufgabenpool.f07-its.fh-koeln.de/moodle'
 const moodle_user = 'puppeteer';
 const moodle_pwd = 'dGDs988S#';  // TODO: must be secret!!!!!
 

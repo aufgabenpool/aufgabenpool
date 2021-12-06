@@ -511,7 +511,7 @@ export function download_selected_exercises(idx : number) {
 }
 
 export function edit_exercise(id: number) {
-    let link = "https://sell.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=" + id;
+    let link = "https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=" + id;
     window.open(link);
 }
 

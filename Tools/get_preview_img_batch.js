@@ -15,7 +15,7 @@ const { exec } = require("child_process");
 const puppeteer = require('puppeteer');
 
 // preferences
-const moodle_url = 'https://sell.f07-its.fh-koeln.de/moodle'
+const moodle_url = 'https://aufgabenpool.f07-its.fh-koeln.de/moodle'
 const moodle_user = 'puppeteer';
 const moodle_pwd = 'dGDs988S#';  // TODO: must be secret!!!!!
 const course_id = 2; // TODO: this is static...
