@@ -29,7 +29,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg">
+            <div class="col-lg bg-white px-0">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a id="pool-tab" class="nav-link active" href="#" onclick="aufgabenpool.clicked_on_pool_tab();"><b>Aufgabenpool</b></a>
@@ -38,14 +38,13 @@
                         <a id="basket-tab" class="nav-link" href="#" onclick="aufgabenpool.clicked_on_basket_tab();"><b>Aufgabenblatt</b></a>
                     </li>
                 </ul>
-                <div class="border border-top-0 p-1">
+                <div class="border border-dark border-top-0 p-1">
                     <div id="taglist_div" class="m-3"></div>
                     <div id="exercises_div" class="m-3"></div>
                     <div id="basket_div" class="m-3" style="display: none;"></div>
                     <!--<p class="p-1"><button type="button" class="btn btn-outline-primary btn-sm" onclick="download_selected_exercises();">Ausgewählte Aufgaben downloaden</button></p>
                     <p class="p-1"><button type="button" class="btn btn-outline-primary btn-sm" onclick="download_selected_exercises();">Alle angezeigten Aufgaben downloaden</button></p>-->
                 </div>
-                <br/>
             </div>    
         </div>        
     </div>

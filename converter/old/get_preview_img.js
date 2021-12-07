@@ -23,7 +23,7 @@ if(process.argv.length != 5) {
 const course_id = process.argv[2];
 //const question_id = 3282;
 const question_id = process.argv[3];
-//const img_out_path = '../Data/0.png';
+//const img_out_path = '../data/0.png';
 const img_out_path = process.argv[4];
 
 console.log(question_id)

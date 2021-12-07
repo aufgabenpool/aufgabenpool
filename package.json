@@ -5,7 +5,8 @@
     "description": "digiFellow Aufgabenpool website",
     "main": "src/index.js",
     "scripts": {
-        "build": "tsc && rollup -c"
+        "build": "tsc && rollup -c",
+        "webserver": "php -S localhost:8001"
     },
     "repository": {
         "type": "git",

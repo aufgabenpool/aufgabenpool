@@ -19,9 +19,9 @@ const moodle_url = 'https://aufgabenpool.f07-its.fh-koeln.de/moodle'
 const moodle_user = 'puppeteer';
 const moodle_pwd = 'dGDs988S#';  // TODO: must be secret!!!!!
 const course_id = 2; // TODO: this is static...
-const meta_data_path = "../Data-tmp/meta.json";
-const img_out_path = '../Data-tmp/';
-const old_content_path = '../Data/';
+const meta_data_path = "../data-tmp/meta.json";
+const img_out_path = '../data-tmp/';
+const old_content_path = '../data/';
 let first_exercise_id = 0;
 let last_exercise_id = 1e12; // only used for debugging purposes
 
@@ -102,7 +102,7 @@ let exercises = meta["exercises"];
                 }
                 // postprocess screenshot (set background color transparent)
                 // TODO: what happens if 'mogrify' is NOT installed???
-                exec('cd ../Data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" ' 
+                exec('cd ../data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" ' 
                     + question_id + "_" + k + ".png");
             }
         }

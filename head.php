@@ -10,7 +10,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="description" content="Aufgabenpool Mathematik">
     <meta name="author" content="Andreas Schwenk - TH Köln">
-    <title>Aufgabenpool</title>
+    <title>Aufgabenpool Mathematik</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script>MathJax = { loader: {load: ['input/asciimath', 'output/svg', 'ui/menu'] }, };</script>
@@ -26,5 +26,10 @@
         /*.btn:hover {
             background-color: rgba(255, 0, 0, 0.3);
         }*/
+
+        html body {
+           background-color: rgba(233, 233, 233, 1.0);
+        }
+
     </style>
 </head>

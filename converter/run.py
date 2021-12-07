@@ -15,10 +15,10 @@ print('Moodle Question Extractor - Author: Andreas Schwenk / TH Köln')
 
 skip_screenshots = '-noscreenshots' in sys.argv
 
-# 0.) Delete "../Data-tmp/"
-print("removing directory '../Data-tmp/'")
-os.system("rm -rf ../Data-tmp/")
-os.system("mkdir -p ../Data-tmp/")
+# 0.) Delete "../data-tmp/"
+print("removing directory '../data-tmp/'")
+os.system("rm -rf ../data-tmp/")
+os.system("mkdir -p ../data-tmp/")
 
 # 1.) Download question pool as moodle-xml file
 print("downloading question pool from moodle")
@@ -26,12 +26,12 @@ x = os.system('node download_pool.js')
 if x != 0:
     print('ERROR: failed to get question pool as moodle-xml file.')
     sys.exit(-1)
-moodle_xml_files = glob.glob("../Data-tmp/*.xml")
+moodle_xml_files = glob.glob("../data-tmp/*.xml")
 moodle_xml_path = max(moodle_xml_files, key=os.path.getctime)  # get newest file
 
 # 2.) create meta.json + an xml-file for each question
 print("extracting metadata from moodle-xml")
-x = os.system('python3 conv.py ' + moodle_xml_path + ' ../Data-tmp/')
+x = os.system('python3 conv.py ' + moodle_xml_path + ' ../data-tmp/')
 if x != 0:
     print('ERROR: failed to convert question pool')
     sys.exit(-1)
@@ -44,9 +44,9 @@ if not skip_screenshots:
         print('ERROR: failed to get preview images')
         sys.exit(-1)
 
-# 4.) Replace current "../Data/" directory. This is done only in case no error occourred. Otherwise, the old version remains
-print("moving directoy '../Data-tmp' to '../Data'")
-os.system("rm -rf ../Data/")
-os.system("mv ../Data-tmp ../Data")
+# 4.) Replace current "../data/" directory. This is done only in case no error occourred. Otherwise, the old version remains
+print("moving directoy '../data-tmp' to '../data'")
+os.system("rm -rf ../data/")
+os.system("mv ../data-tmp ../data")
 
 print('..extraction finished')

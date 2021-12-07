@@ -19,13 +19,13 @@ export let exercise_template = `
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="Data/!EXERCISE_ID!_0.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
+                    <img src="data/!EXERCISE_ID!_0.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
                     </div>
                     <div class="carousel-item">
-                    <img src="Data/!EXERCISE_ID!_1.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
+                    <img src="data/!EXERCISE_ID!_1.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
                     </div>
                     <div class="carousel-item">
-                    <img src="Data/!EXERCISE_ID!_2.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
+                    <img src="data/!EXERCISE_ID!_2.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
                     </div>
                 </div>
             </div>

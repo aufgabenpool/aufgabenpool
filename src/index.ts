@@ -447,20 +447,19 @@ $( document ).ready(function() {
 
 function getMetaData() {
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    let metadata_path = 'Data/meta.json' + '?time=' + timestamp; // TODO!!!! test path set!!!!!
+    let metadata_path = 'data/meta.json' + '?time=' + timestamp; // TODO!!!! test path set!!!!!
     $.ajax({
         url: metadata_path,
         type: 'GET',
-        success: function(data,status,xhr) {
+        success: function(data ,status, xhr) {
             metadata = xhr.responseText;
             metadata = JSON.parse(metadata);
             let ex = metadata["exercises"];
-            ex.sort(function(a,b) {
+            ex.sort(function(a : any, b : any) {
                 return a.title > b.title;
             });
             metadata["exercises"] = ex;
             build_document();
-            
         },
         error: function(xhr, status, error) {
             alert("ERROR: " + xhr.responseText);
@@ -517,7 +516,7 @@ export function edit_exercise(id: number) {
 
 export function download_exercise(idx : number) {
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    let exercise_path = 'Data/' + idx + '.xml?time=' + timestamp;
+    let exercise_path = 'data/' + idx + '.xml?time=' + timestamp;
     $.ajax({
         url: exercise_path,
         type: 'GET',
