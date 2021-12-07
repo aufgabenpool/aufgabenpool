@@ -91,7 +91,7 @@ let exercises = meta["exercises"];
                     // take screenshot
                     const questionDiv = await page.$(".content");
                     const box = await questionDiv.boundingBox();
-                    const yoffset = 12;  // clip links at top-right position
+                    const yoffset = 12+3;  // clip text at top-right position
                     await questionDiv.screenshot({
                         'path': screenshot_path,
                         'clip': {'x': box['x'], 'y': box['y']+yoffset, 
