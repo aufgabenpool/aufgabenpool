@@ -3,6 +3,8 @@ data-tmp/
 data-test/
 node_modules/
 
+package-lock.json
+
 # ----- macOS -----
 
 # General
