@@ -144,7 +144,7 @@ for i, question in enumerate(quiz):
             metadata["tag_count"][tag_formatted] += 1
 
             # tag valid?
-            if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet"]) \
+            if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet", "praxiserprobt"]) \
                 or (tag_formatted.startswith("maier_") and tag_formatted.count("_") != 2) \
                 or (tag_formatted.startswith("bloom_") and tag_formatted.count("_") != 1):
                 ct = CriticalTag()
