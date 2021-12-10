@@ -38,8 +38,8 @@
             </div>
             <div class="col text-center">
                 <div class="btn-group">
-                    <a id="pool-button" onclick="aufgabenpool.clicked_on_pool_tab();" class="btn btn-primary active" aria-current="page">Fragensammlung</a>
-                    <a id="basket-button" onclick="aufgabenpool.clicked_on_basket_tab();" class="btn btn-primary">Aufgabenblatt</a>
+                    <a id="pool-button" onclick="aufgabenpool.clicked_on_pool_tab();" class="btn btn-danger active" aria-current="page">Fragensammlung</a>
+                    <a id="basket-button" onclick="aufgabenpool.clicked_on_basket_tab();" class="btn btn-outline-danger">Aufgabenblatt</a>
                 </div>
             </div>
             <div class="col text-end">
