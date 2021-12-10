@@ -26,23 +26,29 @@ var metadata = null;
 var metadata_exercises = null;
 
 
-var pool_element = document.getElementById("pool-tab");
-var basket_element = document.getElementById("basket-tab");
+//var pool_element = document.getElementById("pool-tab");
+//var basket_element = document.getElementById("basket-tab");
+var pool_button = document.getElementById("pool-button");
+var basket_button = document.getElementById("basket-button");
 var taglist_div = document.getElementById("taglist_div");
 var exercises_div = document.getElementById("exercises_div");
 var basket_div = document.getElementById("basket_div");
 
 export function clicked_on_pool_tab() {
-    pool_element.className = "nav-link active";
-    basket_element.className = "nav-link";
+    //pool_element.className = "nav-link active";
+    //basket_element.className = "nav-link";
+    pool_button.className = "btn btn-primary active";
+    basket_button.className = "btn btn-primary";
     taglist_div.style.display = "block";
     exercises_div.style.display = "block";
     basket_div.style.display = "none";
 }
 
 export function clicked_on_basket_tab() {
-    pool_element.className = "nav-link";
-    basket_element.className = "nav-link active";
+    //pool_element.className = "nav-link";
+    //basket_element.className = "nav-link active";
+    pool_button.className = "btn btn-primary";
+    basket_button.className = "btn btn-primary active";
     taglist_div.style.display = "none";
     exercises_div.style.display = "none";
     build_basket_tree();

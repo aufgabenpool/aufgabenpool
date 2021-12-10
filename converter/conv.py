@@ -128,9 +128,13 @@ for i, question in enumerate(quiz):
             if "getestet" in tag_name:
                 tested = True
             tag_formatted = format_tag(tag_name)
+
+            if tag_formatted == "praxiserprobt":
+                tag_formatted = "praxiserprobt_1"
+
             q_tagset.add(tag_formatted)
             tagset.add(tag_formatted)
-
+                                 
             if tag_formatted.startswith("te_1_"):
                 has_te_1_tag = True
 
@@ -200,14 +204,14 @@ for t1 in metadata["topic_hierarchy"]:
         del metadata["topic_hierarchy"][t1][t2][""]
 
 # import taxonomy
-f = open("../Taxonomie/taxonomie.json", "r")
+f = open("../taxonomy/taxonomy.json", "r")
 tax_json = json.load(f)
 metadata["taxonomy"] = tax_json["taxonomy"]
 metadata["taxonomy_urls"] = tax_json["taxonomy_urls"]
 f.close()
 
 # parse taxonomy descriptions
-f = open("../Taxonomie/taxonomie-beschreibungen.txt", "r")
+f = open("../taxonomy/taxonomy-desc.txt", "r")
 lines = f.readlines()
 f.close()
 tag = ""

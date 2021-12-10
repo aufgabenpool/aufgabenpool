@@ -1,2 +1,2 @@
 #!/bin/bash
-cd Tools && ./run.sh
+cd converter && ./run.sh
