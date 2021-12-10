@@ -8,12 +8,12 @@
 
     <br/>
 
-    <div class="container">
-        <div class="row">
+    <div class="container px-0">
+        <div class="row px-0">
             
-            <div class="col-lg">
-                <div class="card h-100" style="width: 18rem;">
-                    <img class="card-img-top" src="img/istockphoto-925167552-612x612.png" alt="Card image cap">
+            <div class="col-lg py-1">
+                <div class="card h-100">
+                    <img class="card-img-top my-2" src="img/sheets-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Verwendbar für</h5>
                         <p class="card-text">
@@ -28,9 +28,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg">
-                <div class="card h-100" style="width: 18rem;">
-                    <img class="card-img-top" src="img/tax.png" alt="Card image cap">
+            <div class="col-lg py-1">
+                <div class="card h-100">
+                    <img class="card-img-top my-2" src="img/tax-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Eingesetzte Taxonomien</h5>
                         <p class="card-text">
@@ -45,23 +45,23 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100" style="width: 18rem;">
-                    <img class="card-img-top" src="img/istockphoto-925167552-612x612.png" alt="Card image cap">
+            <div class="col-lg py-1">
+                <div class="card h-100">
+                    <img class="card-img-top my-2" src="img/icon-new-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Aufgabenpool</h5>
                         <p class="card-text">Zentrale Sammlung von STACK-basierten Mathematikaufgaben für Moodle und Ilias.</p>
-                        <a href="pool.php" class="btn btn-primary">Direktzugang</a>
+                        <p class=""><a href="pool.php" class="btn btn-primary btn-danger">Link</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg">
-                <div class="card h-100" style="width: 18rem;">
-                    <img class="card-img-top" src="img/moodle.png" alt="Card image cap">
+            <div class="col-lg py-1">
+                <div class="card h-100">
+                    <img class="card-img-top my-2" src="img/moodle.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Fragendatenbank</h5>
-                        <p class="card-text">Beschränkter Zugriff</p>
-                        <a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle" class="btn btn-primary">Moodle</a>
+                        <p class="card-text">Moodle-Kurs zur Verwaltung der Fragendatenbank (mit beschränktem Zugriff).</p>
+                        <p class=""><a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle" class="btn btn-primary btn-danger">Link</a></p>
                     </div>
                 </div>
             </div>
