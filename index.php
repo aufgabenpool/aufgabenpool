@@ -12,7 +12,7 @@
         <div class="row px-0">
             
             <div class="col-lg py-1">
-                <div class="card h-100">
+                <div class="card h-100 border-0">
                     <img class="card-img-top my-2" src="img/sheets-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Verwendbar für</h5>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-lg py-1">
-                <div class="card h-100">
+                <div class="card h-100 border-0">
                     <img class="card-img-top my-2" src="img/tax-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Eingesetzte Taxonomien</h5>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="col-lg py-1">
-                <div class="card h-100">
+                <div class="card h-100 border-0">
                     <img class="card-img-top my-2" src="img/icon-new-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Aufgabenpool</h5>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="col-lg py-1">
-                <div class="card h-100">
+                <div class="card h-100 border-0">
                     <img class="card-img-top my-2" src="img/moodle.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Fragendatenbank</h5>
