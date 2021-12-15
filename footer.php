@@ -6,11 +6,11 @@
         <div class="col pb-3">
 
             <p class="text-center" style="font-size: 36px;">
-                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="link-light text-decoration-none">
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" target="_blank" class="link-light text-decoration-none">
                     <i class="fab fa-creative-commons"></i>
                     <i class="fab fa-creative-commons-by"></i>
                     <i class="fab fa-creative-commons-sa"></i>
-                    (CC BY-SA 4.0) 
+                    &nbsp;(CC BY-SA 4.0 DE) 
                 </a>
             </p>
 
