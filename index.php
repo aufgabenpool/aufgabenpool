@@ -9,7 +9,6 @@
 
     <div class="container px-0">
         <div class="row px-0">
-            
             <div class="col-lg py-1">
                 <div class="card h-100 border-0">
                     <img class="card-img-top my-2" src="img/sheets-2.png" alt="Card image cap">

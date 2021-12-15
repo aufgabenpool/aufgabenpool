@@ -4,6 +4,16 @@
     <br/>
     <div class="row">
         <div class="col pb-3">
+
+            <p class="text-center" style="font-size: 36px;">
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="link-light text-decoration-none">
+                    <i class="fab fa-creative-commons"></i>
+                    <i class="fab fa-creative-commons-by"></i>
+                    <i class="fab fa-creative-commons-sa"></i>
+                    (CC BY-SA 4.0) 
+                </a>
+            </p>
+
             <small>&#169; <?php echo date("Y");?> 
                 TH Köln 
                 &bullet; 
@@ -15,7 +25,7 @@
                 &bullet; 
                 Patricia Graf, B.Sc.
                 &bullet;
-                Jan Reissner, M.Sc.
+                Jan Reißner, M.Sc.
                 &bullet; 
                 Andreas Schwenk, M.Sc.
             </small>
