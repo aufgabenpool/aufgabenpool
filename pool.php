@@ -52,7 +52,7 @@
 
     <?php include 'footer.php'; ?>
 
-    <script src="build/js/aufgabenpool.min.js?v=< ?php echo time();?> "></script>
+    <script src="build/js/aufgabenpool.min.js?v=<?php echo time();?>"></script>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
