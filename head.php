@@ -72,5 +72,8 @@
         .text-info {
            color: #b42b83;
         }
+        .card {
+            border: 2px solid black;
+        }
     </style>
 </head>
