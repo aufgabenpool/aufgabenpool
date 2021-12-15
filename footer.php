@@ -17,17 +17,17 @@
             <small>&#169; <?php echo date("Y");?> 
                 TH Köln 
                 &bullet; 
-                Prof. Dr. Heiko Knospe 
+                <a href="https://www.th-koeln.de/personen/heiko.knospe/" class="link-light text-decoration-none">Prof. Dr. Heiko Knospe</a> 
                 &bullet; 
-                Prof. Dr. Jan-Philipp Schmidt
+                <a href="https://www.th-koeln.de/personen/jan-philipp.schmidt/" class="link-light text-decoration-none">Prof. Dr. Jan-Philipp Schmidt</a> 
                 &bullet; 
-                Prof. Dr. Angela Schmitz
+                <a href="https://www.th-koeln.de/personen/angela.schmitz/" class="link-light text-decoration-none">Prof. Dr. Angela Schmitz</a> 
                 &bullet; 
-                Patricia Graf, B.Sc.
+                <a href="https://www.th-koeln.de/personen/patricia_maria.graf/" class="link-light text-decoration-none">Patricia Maria Graf, B.Sc.</a> 
                 &bullet;
-                Jan Reißner, M.Sc.
+                <a href="https://www.th-koeln.de/personen/jan.reissner/" class="link-light text-decoration-none">Jan Siegfried Reißner, M.Sc.</a> 
                 &bullet; 
-                Andreas Schwenk, M.Sc.
+                <a href="https://www.th-koeln.de/personen/andreas.schwenk/" class="link-light text-decoration-none">Andreas Schwenk, M.Sc.</a> 
             </small>
             &nbsp;&nbsp;&nbsp;
             <br/>
