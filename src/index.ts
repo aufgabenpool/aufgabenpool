@@ -256,7 +256,7 @@ function capitalize_each_word(s : string) : string {
     let t = "";
     let next_uppercase = true;
     for(let i=0; i<s.length; i++) {
-        if(s[i] == ' ' || s[i] == '-') {
+        if(s[i] == ' ' || s[i] == '-' || s[i] == '/') {
             next_uppercase = true;
             t += s[i];
             continue;
