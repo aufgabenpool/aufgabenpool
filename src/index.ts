@@ -6,7 +6,14 @@
 import $ from 'jquery';
 import * as templates from './templates.js';
 
-var basket : Array<number> = [];
+const MOODLE_EDIT_QUESTION_PATH = "https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=";
+
+$( document ).ready(function() {
+    getMetaData();
+});
+
+var basket : Array<number> = []; // local ID (not moodle id!)
+var basket_xml = "";
 
 class TagButton {
     selected = false;
@@ -31,6 +38,14 @@ var basket_button = document.getElementById("basket-button");
 var taglist_div = document.getElementById("taglist_div");
 var exercises_div = document.getElementById("exercises_div");
 var basket_div = document.getElementById("basket_div");
+
+function update_tooltips() {
+    $(function () {
+        (<any>$('[data-toggle="tooltip"]')).tooltip({
+            trigger: 'hover'
+        });
+    });
+}
 
 export function clicked_on_pool_tab() {
     pool_button.className = "btn btn-danger active";
@@ -79,7 +94,8 @@ function create_tax_element(id : string, text : string, description='') {
     if(!(id in tax_selected))
         tax_selected[id] = false;
     let html_cnt = cnt==0 ? '' : ' <span class="badge rounded-pill bg-danger">' + cnt + '</span>';
-    let html = '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' + text + html_cnt + '</button> ';
+    let html = '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' 
+        + capitalize_each_word(text) + html_cnt + '</button> ';
     return html;
 }
 
@@ -130,12 +146,7 @@ function build_document() {
     document.getElementById("pool-date").innerHTML = metadata["date"];
     let tags_html = '';
     tags_html += create_tax_head('Themengebiet');
-    /*tags_html += '<br/>' + create_tax_desc('TE_1', 'I');
-    for(let topic_id in metadata["topic_hierarchy"]) {
-        let tokens = topic_id.split("_");
-        let topic = tokens[tokens.length-1];
-        tags_html += create_tax_element(topic_id, topic);
-    }*/
+    
     tags_html += '<div class="p-0 m-0" id="TE"></div>'
 
     // build taxonomy buttons from metadata
@@ -241,7 +252,25 @@ function build_topic_hierarchy() {
     }
 }
 
-function build_exercise(exercise, isBasket=false) {
+function capitalize_each_word(s : string) : string {
+    let t = "";
+    let next_uppercase = true;
+    for(let i=0; i<s.length; i++) {
+        if(s[i] == ' ' || s[i] == '-') {
+            next_uppercase = true;
+            t += s[i];
+            continue;
+        }
+        if(next_uppercase)
+            t += s[i].toUpperCase();
+        else
+            t += s[i];
+        next_uppercase = false;
+    }
+    return t;
+}
+
+function build_exercise(idx : number, exercise : any, isBasket=false) {
     let exercise_html = templates.exercise_template;
     if(isBasket)
         exercise_html = exercise_html.replaceAll("carousel_", "carouselbasket_");
@@ -252,10 +281,11 @@ function build_exercise(exercise, isBasket=false) {
     if(isBasket)
         optional_buttons += templates.remove_exercise_template;
     else
-        optional_buttons += templates.select_exercise_template;
+        optional_buttons += templates.add_exercise_to_basket_template;
     exercise_html = exercise_html.replaceAll('!OPTIONAL_BUTTONS!', optional_buttons);
     exercise_html = exercise_html.replaceAll('!TITLE!', title.toUpperCase());
-    exercise_html = exercise_html.replaceAll('!EXERCISE_ID!', exercise["id"]);
+    exercise_html = exercise_html.replaceAll('!EXERCISE_ID!', ""+idx);
+    exercise_html = exercise_html.replaceAll('!EXERCISE_MOODLE_ID!', exercise["id"]);
     let exercise_type = exercise["type"];
     if(exercise_type === 'stack')
         exercise_type = 'STACK';
@@ -272,31 +302,39 @@ function build_exercise(exercise, isBasket=false) {
         let tag = exercise_tags_sorted[j];
         if(tag.startsWith("te_1_"))
             exercise_topic_html += '<span class="">'
-                + tag.substr(5) + '</span>&nbsp;';
+                + capitalize_each_word(tag.substr(5)) + '</span>&nbsp;';
     }
     // te_2
     for(let j=0; j<exercise_tags_sorted.length; j++) {
         let tag = exercise_tags_sorted[j];
         if(tag.startsWith("te_2_"))
-        exercise_topic_html += '&raquo; <span class="">' 
-                + tag.substr(5) + '</span>&nbsp;';
+            exercise_topic_html += '&raquo; <span class="">' 
+                + capitalize_each_word(tag.substr(5)) + '</span>&nbsp;';
     }
     // te_3
     for(let j=0; j<exercise_tags_sorted.length; j++) {
         let tag = exercise_tags_sorted[j];
         if(tag.startsWith("te_3_"))
-        exercise_topic_html += '&raquo; <span class="">' 
-                + tag.substr(5) + '</span>&nbsp;';
+            exercise_topic_html += '&raquo; <span class="">' 
+                + capitalize_each_word(tag.substr(5)) + '</span>&nbsp;';
     }
     exercise_html = exercise_html.replaceAll('!TOPIC!', exercise_topic_html);
 
     let exercise_tags_html = '';
+    // type
+    for(let j=0; j<exercise_tags_sorted.length; j++) {
+        let tag = exercise_tags_sorted[j];
+        let tag_name = taxonomy_tag_names[tag];
+        if(tag.startsWith("type_"))
+            exercise_tags_html += '<span class="badge rounded-pill bg-dark">' 
+                + tag_name + '</span>&nbsp;';
+    }
     // bloom
     for(let j=0; j<exercise_tags_sorted.length; j++) {
         let tag = exercise_tags_sorted[j];
         let tag_name = taxonomy_tag_names[tag];
         if(tag.startsWith("bloom_"))
-            exercise_tags_html += '<span class="badge rounded-pill bg-success">' 
+            exercise_tags_html += '<span class="badge rounded-pill" style="background-color:#e85b22;">' 
                 + tag_name + '</span>&nbsp;';
     }
     // maier
@@ -304,9 +342,10 @@ function build_exercise(exercise, isBasket=false) {
         let tag = exercise_tags_sorted[j];
         let tag_name = taxonomy_tag_dim_names[tag] + ": " + taxonomy_tag_names[tag];
         if(tag.startsWith("maier_"))
-            exercise_tags_html += '<span class="badge rounded-pill bg-primary">' 
+            exercise_tags_html += '<span class="badge rounded-pill" style="background-color:#b42b83;">' 
                 + tag_name + '</span>&nbsp;';
     }
+    // TODO: praxiserprobt!
     exercise_html = exercise_html.replaceAll('!TAGS!', exercise_tags_html);
     return exercise_html;
 }
@@ -333,7 +372,7 @@ function build_exercises_tree() {
     for(let i=0; i<metadata_exercises.length; i++) {
         let display_exercise = true;
         let exercise = metadata_exercises[i];
-        let exercise_html = build_exercise(exercise, false);
+        let exercise_html = build_exercise(i, exercise, false);
         let exercise_tags : Array<string> = exercise['tags'];
         // filter te_1_
         let selected_te1 = get_tagdim_selection("te_1_");
@@ -350,7 +389,7 @@ function build_exercises_tree() {
         if(selected_te3.length > 0 && arr_contains(selected_te3, exercise_tags) == false)
             continue;
         
-        // TODO: do the following based on metadata to get ALL new dimensiona immediately...
+        // TODO: do the following based on metadata to get ALL new dimensions immediately...
         let selected_bloom = get_tagdim_selection("bloom_");
         if(selected_bloom.length > 0 && arr_contains(selected_bloom, exercise_tags) == false)
             continue;
@@ -378,35 +417,15 @@ function build_exercises_tree() {
         let selected_type = get_tagdim_selection("type_");
         if(selected_type.length > 0 && arr_contains(selected_type, exercise_tags) == false)
             continue;
+
+        // TODO: praxiserprobt
     
-        /*for(let t in tax_selected) {
-            if(tax_selected[t]) {
-                if(t.startsWith("type_"))  // exercise type is handled below
-                    continue;
-                let tmp = t.replaceAll('_', ':');  // TODO: replaceAll compatible with all browsers?????
-                if(exercise_tags.includes(tmp) == false) {
-                    display_exercise = false;
-                    break;
-                }
-            }
-        }
-        if(tax_selected['type_stack'] && exercise["type"] !== 'stack')
-            display_exercise = false;
-        if(tax_selected['type_truefalse'] && exercise["type"] !== 'truefalse')
-            display_exercise = false;
-        if(tax_selected['type_multichoice'] && exercise["type"] !== 'multichoice')
-            display_exercise = false;*/
         if(display_exercise)
             exercises_html += exercise_html + '<br/>';
     }
     let exercises_element = document.getElementById('exercises_div');
     exercises_element.innerHTML = exercises_html;
-    // activate button tooltips
-    $(function () {
-        (<any>$('[data-toggle="tooltip"]')).tooltip({
-            trigger: 'hover'
-        });
-    });
+    update_tooltips();
 }
 
 function build_basket_tree() {
@@ -414,36 +433,17 @@ function build_basket_tree() {
     if(basket.length == 0) {
         exercises_html += '<b>Das Aufgabenblatt ist noch leer</b>';
     } else {
-        exercises_html += '<p class="p-1"><button type="button" class="btn btn-outline-primary btn-sm" onclick="download_selected_exercises();">Aufgabenblatt im Format Moodle-XML herunterladen</button></p>';
+        exercises_html += '<p class="p-0"><button type="button" class="btn btn-outline-danger btn-lg" onclick="aufgabenpool.download_basket();" data-toggle="tooltip" data-placement="top" title="Aufgabenblatt im Format Moodle-XML herunterladen"><i class="fa fa-download" aria-hidden="true"></i></button></p>';
     }
     for(let i=0; i<basket.length; i++) {
-        let exercise = null; //metadata_exercises[basket[i]];
-        // TODO: the following is slow...
-        for(let j=0; j<metadata_exercises.length; j++) {
-            if(metadata_exercises[j]["id"] == basket[i]) {
-                exercise = metadata_exercises[j];
-                break;
-            }
-        }
-        if(exercise == null) // this should NEVER happen...
-            continue;
-        let exercise_html = build_exercise(exercise, true);
-        let exercise_tags = exercise['tags'];
+        let exercise = metadata_exercises[basket[i]];
+        let exercise_html = build_exercise(basket[i], exercise, true);
         exercises_html += exercise_html + '<br/>';
     }
     let exercises_element = document.getElementById('basket_div');
     exercises_element.innerHTML = exercises_html;
-    // activate button tooltips
-    $(function () {
-        (<any>$('[data-toggle="tooltip"]')).tooltip({
-            trigger: 'hover'
-        });
-    });
+    update_tooltips();
 }
-
-$( document ).ready(function() {
-    getMetaData();
-});
 
 function getMetaData() {
     let timestamp = Math.round((new Date()).getTime() / 1000);
@@ -478,7 +478,7 @@ export function toggleTag(tag_idx : number) {
     build_exercises_tree();
 }
 
-export function select_exercise(idx : number) {
+export function add_exercise_to_basket(idx : number) {
     // only push to basket, if not already done
     for(let i=0; i<basket.length; i++) {
         if(basket[i] == idx)
@@ -497,44 +497,91 @@ export function remove_exercise(idx : number) {
     }
     basket = new_basket;
     build_basket_tree();
-    // update button tooltips
-    $(function () {
-        (<any>$('[data-toggle="tooltip"]')).tooltip({
-            trigger: 'hover'
-        });
-    });
 }
 
-export function download_selected_exercises(idx : number) {
-    alert("... noch nicht implementiert");
-}
-
-export function edit_exercise(id: number) {
-    let link = "https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=" + id;
+export function edit_exercise(idx: number) {
+    let moodle_id = metadata_exercises[idx]["id"];
+    let link = MOODLE_EDIT_QUESTION_PATH + moodle_id;
     window.open(link);
 }
 
 export function download_exercise(idx : number) {
+    let moodle_id = metadata_exercises[idx]["id"];
     let timestamp = Math.round((new Date()).getTime() / 1000);
-    let exercise_path = 'data/' + idx + '.xml?time=' + timestamp;
+    let exercise_path = 'data/' + moodle_id + '.xml?time=' + timestamp;
     $.ajax({
         url: exercise_path,
         type: 'GET',
         success: function(data,status,xhr) {
             let exercise_xml = xhr.responseText;
-            // the following code is partly taken from https://stackoverflow.com/questions/5143504/how-to-create-and-download-an-xml-file-on-the-fly-using-javascript/16751704
-            var filename = "pool_download_" + idx + ".xml";
-            var pom = document.createElement('a');
-            var bb = new Blob([exercise_xml], {type: 'text/plain'});
-            pom.setAttribute('href', window.URL.createObjectURL(bb));
-            pom.setAttribute('download', filename);
-            pom.dataset.downloadurl = ['text/plain', pom.download, pom.href].join(':');
-            pom.draggable = true; 
-            pom.classList.add('dragout');
-            pom.click();
+            var filename = "pool_download_" + moodle_id + ".xml";
+            download_file(filename, exercise_xml);
         },
         error: function(xhr, status, error) {
             alert("ERROR: " + xhr.responseText);
         }
     });
+}
+
+export function download_basket() {
+    basket_xml = "";
+    if(basket.length > 0)
+        download_basket_next(0);
+}
+
+function download_basket_next(basket_idx : number) {
+    let moodle_id = metadata_exercises[basket[basket_idx]]["id"];
+    let timestamp = Math.round((new Date()).getTime() / 1000);
+    let exercise_path = 'data/' + moodle_id + '.xml?time=' + timestamp;
+    $.ajax({
+        url: exercise_path,
+        type: 'GET',
+        success: function(data,status,xhr) {
+            let exercise_xml_lines = xhr.responseText.split("\n");
+            let exercise_xml_edited = "";
+            // remove first two lines and last line (xml-version-encoding + quiz-element)
+            for(let i=0; i<exercise_xml_lines.length; i++) {
+                let line = exercise_xml_lines[i]
+                if(line.trim().startsWith("<?xml"))
+                    continue;
+                if(line.trim().startsWith("<quiz>"))
+                    continue;
+                if(line.trim().startsWith("</quiz>"))
+                    continue;
+                if(line.trim().length == 0)
+                    continue;
+                exercise_xml_edited += line + "\n";
+            }
+            // append to basket_xml; go to next
+            basket_xml += exercise_xml_edited;
+            basket_idx ++;
+            if(basket_idx < basket.length)
+                download_basket_next(basket_idx);
+            else
+                download_basket_final();
+        },
+        error: function(xhr, status, error) {
+            alert("ERROR: " + xhr.responseText);
+        }
+    });
+}
+
+function download_basket_final() {
+    basket_xml = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' 
+        + basket_xml 
+        + '</quiz>\n';
+    //console.log(basket_xml);
+    download_file("pool_download_basket.xml", basket_xml);
+}
+
+function download_file(filename:string, data:string) {
+    // the following code is partly taken from https://stackoverflow.com/questions/5143504/how-to-create-and-download-an-xml-file-on-the-fly-using-javascript/16751704
+    var pom = document.createElement('a');
+    var bb = new Blob([data], {type: 'text/plain'});
+    pom.setAttribute('href', window.URL.createObjectURL(bb));
+    pom.setAttribute('download', filename);
+    pom.dataset.downloadurl = ['text/plain', pom.download, pom.href].join(':');
+    pom.draggable = true; 
+    pom.classList.add('dragout');
+    pom.click();
 }

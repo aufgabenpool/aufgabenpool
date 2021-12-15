@@ -2,7 +2,6 @@
 <html lang="en">
 <?php include 'head.php'; ?>
 <body>
-    <?php /*include 'nav.php';*/ ?>
 
     <?php include 'title.php'; ?>
 
@@ -24,7 +23,6 @@
                                 <li>Digitale Prüfungen</li>
                             </ul>
                         </p>
-                        <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
             </div>
@@ -41,7 +39,6 @@
                                 <li>Inhaltsbereiche</li>
                             </ul>
                         </p>
-                        <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
             </div>
@@ -61,7 +58,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Fragendatenbank</h5>
                         <p class="card-text">Moodle-Kurs zur Verwaltung der Fragendatenbank (mit beschränktem Zugriff).</p>
-                        <p class=""><a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle" class="btn btn-primary btn-danger">Link</a></p>
+                        <p class=""><a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle/login/index.php" class="btn btn-primary btn-danger" target="_blank">Link</a></p>
                     </div>
                 </div>
             </div>
@@ -74,5 +71,5 @@
 
     <?php include 'footer.php'; ?>
 
-    <?php include 'body_scripts.php'; ?>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -4,9 +4,9 @@
         "maier_url": "https://www.pedocs.de/frontdoor.php?source_opus=13874"
     },
     "taxonomy": [
-        "head:Bloom:success:bloom_url",
+        "head:Bloom:warning:bloom_url",
         "dim::bloom:Wissen,Verständnis,Anwendung,Analyse,Synthese,Beurteilung",
-        "head:Maier:primary:maier_url",
+        "head:Maier:info:maier_url",
         "dim:Wissensart:maier_1:Fakten,Prozeduren,Konzepte,Metakognition",
         "dim:Kognitiver Prozess:maier_2:Reproduktion,naher Transfer,weiter Transfer,Problemlösen",
         "dim:Wissenseinheiten:maier_3:eine,bis zu 4,mehr als 4",

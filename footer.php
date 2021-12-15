@@ -1,13 +1,4 @@
-<!--<div class="bg-light shadow">-->
 <br/>
-
-<!--<div class="container">
-    <div class="row">
-        <div class="col pb-3">
-            <img class="p-1" src="img/logo-th-koeln.png" style="height:52px"/>&nbsp;&nbsp;&nbsp;&nbsp;
-        </div>
-    </div>
-</div>-->
 
 <div class="container bg-secondary text-white">
     <br/>
@@ -36,5 +27,3 @@
         </div>
     </div>
 </div>
-
-<!--</div>-->

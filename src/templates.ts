@@ -19,13 +19,13 @@ export let exercise_template = `
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src="data/!EXERCISE_ID!_0.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
+                    <img src="data/!EXERCISE_MOODLE_ID!_0.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
                     </div>
                     <div class="carousel-item">
-                    <img src="data/!EXERCISE_ID!_1.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
+                    <img src="data/!EXERCISE_MOODLE_ID!_1.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
                     </div>
                     <div class="carousel-item">
-                    <img src="data/!EXERCISE_ID!_2.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
+                    <img src="data/!EXERCISE_MOODLE_ID!_2.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ export let exercise_template = `
                     onclick="aufgabenpool.download_exercise('!EXERCISE_ID!')"
                     data-toggle="tooltip" 
                     data-placement="top" 
-                    title="Aufgabe im Format Moodle-XML Downloaden">
+                    title="Aufgabe im Format Moodle-XML herunterladen">
                     <i class="fa fa-download" aria-hidden="true"></i>
                 </button>
                 <button type="button" 
@@ -54,11 +54,11 @@ export let exercise_template = `
     </div>
 `;
 
-export let select_exercise_template = `
+export let add_exercise_to_basket_template = `
     <button type="button" 
         class="btn btn-outline-dark btn-sm"    
-        onclick="aufgabenpool.select_exercise('!EXERCISE_ID!')" 
-        id="btn_select_exercise_!EXERCISE_ID!"
+        onclick="aufgabenpool.add_exercise_to_basket('!EXERCISE_ID!')" 
+        id="btn_add_exercise_to_basket_!EXERCISE_ID!"
         data-toggle="tooltip" 
         data-placement="top" 
         title="Zum Aufgabenblatt hinzufügen">
