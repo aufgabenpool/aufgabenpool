@@ -314,8 +314,12 @@ function capitalize_each_word(s : string) : string {
 
 function build_exercise(idx : number, exercise : any, isBasket=false) {
     let exercise_html = templates.exercise_template;
+    //if(isBasket)
+    //    exercise_html = exercise_html.replaceAll("carousel_", "carouselbasket_");
+
     if(isBasket)
-        exercise_html = exercise_html.replaceAll("carousel_", "carouselbasket_");
+        exercise_html = exercise_html.replaceAll("preview_", "previewbasket_");
+
     let title = exercise["title"];
     if(title.startsWith('0'))  // TODO: remove this as soon as numbers are removed from Moodle
         title = title.substr(5);
@@ -463,7 +467,7 @@ function build_exercises_tree() {
         // TODO: praxiserprobt
     
         if(display_exercise)
-            exercises_html += exercise_html + '<br/><br/>';
+            exercises_html += '<br/>' + exercise_html + '<br/>';
     }
     let exercises_element = document.getElementById('exercises_div');
     exercises_element.innerHTML = exercises_html;

@@ -6,17 +6,18 @@
 // TODO: exercise type invisible!!
 
 export let exercise_template = `
-    <div class="card bg-white border-dark p-0">
+    <div class="col bg-white rounded">
         <div class="card-body m-0 p-2">
             <p class="text-center card-text mx-2 my-0 py-0">!TOPIC!</p>
             <h2 class="my-0 py-3 text-center"><b>!TITLE!</b></h2>
             <p class="card-text text-center">!TAGS!</p>
-            <div class="shadow py-2 my-4 mx-2 bg-white rounded">
+            <!--<div class="shadow py-2 my-4 mx-2 bg-white rounded">-->
+            <div class="pt-2">
                 <img id="preview_!EXERCISE_MOODLE_ID!" src="data/!EXERCISE_MOODLE_ID!_0.png" class="img-fluid" alt="TODO: https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/type/stack/questiontestrun.php?questionid=???&courseid=2">
             </div>
         </div>
         <div class="row mx-1 my-2">
-            <div class="col mx-0 text-center">
+            <div class="col mx-0 my-2 text-center">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button id="preview_btn0_!EXERCISE_MOODLE_ID!" type="button"
                         class="btn btn-outline-dark btn-sm active" 

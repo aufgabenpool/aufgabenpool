@@ -38,12 +38,23 @@
             <div class="col bg-white">
                 <div>
                     <div id="taglist_div" class="m-3"></div>
-                    <div id="exercises_div" class="m-3"></div>
-                    <div id="basket_div" class="m-3" style="display: none;"></div>
+                    <!--<div id="exercises_div" class="m-3"></div>
+                    <div id="basket_div" class="m-3" style="display: none;"></div>-->
                 </div>
             </div>    
-        </div>        
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row mx-0">
+            <div class="col mx-0">
+                <!--<div class="mx-0">-->
+                    <!--<div id="taglist_div" class="m-3"></div>-->
+                    <div id="exercises_div" class="mx-0 my-3"></div>
+                    <div id="basket_div" class="mx-0 my-3" style="display: none;"></div>
+                <!--</div>-->
+            </div>    
+        </div>
     </div>
 
     <script>
