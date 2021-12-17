@@ -2,8 +2,8 @@
     <div class="row">
         <div class="col-lg">
             <a href="https://www.th-koeln.de"><img class="p-1" src="img/logo-th-koeln.png" style="height:72px"/></a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://www.th-koeln.de"><img class="p-1" src="img/dd.png" style="height:48px"/></a>
+            <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.th-koeln.de"><img class="p-1" src="img/dd.png" style="height:48px"/></a>-->
         </div>
     </div>
     <blockquote class="blockquote text-center">

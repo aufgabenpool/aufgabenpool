@@ -8,47 +8,97 @@
 export let exercise_template = `
     <div class="card bg-white border-dark p-0">
         <div class="card-body m-0 p-2">
-            <p class="card-text my-0 py-0">!TOPIC!</p>
-            <h2 class="my-0 py-1">!TITLE!</h2>
-            <p class="card-text">!TAGS!</p>
-            <div id="carousel_!EXERCISE_ID!" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel_!EXERCISE_ID!" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel_!EXERCISE_ID!" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel_!EXERCISE_ID!" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="data/!EXERCISE_MOODLE_ID!_0.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="data/!EXERCISE_MOODLE_ID!_1.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="data/!EXERCISE_MOODLE_ID!_2.png" class="img-fluid" alt="TODO: VORSCHAUBILD">
-                    </div>
-                </div>
+            <p class="text-center card-text mx-2 my-0 py-0">!TOPIC!</p>
+            <h2 class="my-0 py-3 text-center"><b>!TITLE!</b></h2>
+            <p class="card-text text-center">!TAGS!</p>
+            <div class="shadow py-2 my-4 mx-2 bg-white rounded">
+                <img id="preview_!EXERCISE_MOODLE_ID!" src="data/!EXERCISE_MOODLE_ID!_0.png" class="img-fluid" alt="TODO: https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/type/stack/questiontestrun.php?questionid=???&courseid=2">
             </div>
         </div>
-        <div class="text-center m-1">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                !OPTIONAL_BUTTONS!
-                <button type="button" 
-                    class="btn btn-outline-dark btn-sm" 
-                    onclick="aufgabenpool.download_exercise('!EXERCISE_ID!')"
-                    data-toggle="tooltip" 
-                    data-placement="top" 
-                    title="Aufgabe im Format Moodle-XML herunterladen">
-                    <i class="fa fa-download" aria-hidden="true"></i>
-                </button>
-                <button type="button" 
-                    class="btn btn-outline-dark btn-sm" 
-                    onclick="aufgabenpool.edit_exercise('!EXERCISE_ID!')"
-                    data-toggle="tooltip" 
-                    data-placement="top" 
-                    title="Aufgabe in Moodle editieren">
-                    <i class="fa fa-edit" aria-hidden="true"></i>
-                </button>
+        <div class="row mx-1 my-2">
+            <div class="col mx-0 text-center">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="preview_btn0_!EXERCISE_MOODLE_ID!" type="button"
+                        class="btn btn-outline-dark btn-sm active" 
+                        onclick="aufgabenpool.setImage('!EXERCISE_MOODLE_ID!', 0)"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Vorschau 1">
+                        1
+                    </button>
+                    <button id="preview_btn1_!EXERCISE_MOODLE_ID!" type="button" 
+                        class="btn btn-outline-dark btn-sm" 
+                        onclick="aufgabenpool.setImage('!EXERCISE_MOODLE_ID!', 1)"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Vorschau 2">
+                        2
+                    </button>
+                    <button id="preview_btn2_!EXERCISE_MOODLE_ID!" type="button" 
+                        class="btn btn-outline-dark btn-sm" 
+                        onclick="aufgabenpool.setImage('!EXERCISE_MOODLE_ID!', 2)"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Vorschau 3">
+                        3
+                    </button>
+                    <button id="preview_btn3_!EXERCISE_MOODLE_ID!" type="button" 
+                        class="btn btn-outline-dark btn-sm" 
+                        onclick="aufgabenpool.setImage('!EXERCISE_MOODLE_ID!', 3)"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Vorschau Lösungsweg">
+                        <i class="far fa-lightbulb"></i>
+                    </button>
+                </div>
+                &nbsp;&nbsp;
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    !OPTIONAL_BUTTONS!
+                    <button type="button" 
+                        class="btn btn-outline-dark btn-sm" 
+                        onclick="aufgabenpool.download_exercise('!EXERCISE_ID!')"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Aufgabe im Format Moodle-XML herunterladen">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" 
+                        class="btn btn-outline-dark btn-sm" 
+                        onclick="aufgabenpool.edit_exercise('!EXERCISE_ID!')"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Aufgabe in Moodle editieren">
+                        <i class="fa fa-edit" aria-hidden="true"></i>
+                    </button>
+                    <button type="button"
+                        class="btn btn-outline-dark btn-sm" 
+                        onclick="aufgabenpool.report_bug('!EXERCISE_ID!')"
+                        data-toggle="tooltip" 
+                        data-placement="top" 
+                        title="Fehler melden">
+                        <i class="fas fa-bug" aria-hidden="true"></i>
+                    </button>
+                </div>
+                &nbsp;&nbsp;
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <span class="btn btn-outline-dark btn-sm">
+                        <span id="rating1">
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span id="rating2">
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span id="rating3">
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span id="rating4">
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span id="rating5">
+                            <i class="far fa-star"></i>
+                        </span>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

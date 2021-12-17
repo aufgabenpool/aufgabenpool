@@ -47,6 +47,30 @@ function update_tooltips() {
     });
 }
 
+/*export function mouseOverRating(idx:number) {
+    document.getElementById('rating'+idx).innerHTML='<i class="fas fa-star"></i>';
+}
+
+export function mouseLeaveRating(idx:number) {
+    document.getElementById('rating'+idx).innerHTML='<i class="far fa-star"></i>';
+}*/
+
+export function setImage(moodleID : number, previewIdx : number) {
+    let imgElement = document.getElementById("preview_" + moodleID);
+    (<HTMLImageElement>imgElement).src = "data/" + moodleID + "_" + previewIdx + ".png";
+    for(let i=0; i<4; i++) {
+        let btnElement = document.getElementById("preview_btn" + i + "_" + moodleID);
+        if(i == previewIdx)
+            btnElement.classList.add("active");
+        else
+            btnElement.classList.remove("active");
+    }
+}
+
+export function report_bug() {
+    alert('not yet implemented :-)');
+}
+
 export function clicked_on_pool_tab() {
     pool_button.className = "btn btn-danger active";
     basket_button.className = "btn btn-outline-danger";
@@ -70,14 +94,28 @@ function create_tax_head(id:string, color='dark', link='') {
 
 var category_texts = {};
 
-function create_tax_desc(category:string, id:string, description='') {
+function create_tax_desc(category:string, color:string, id:string, description='') : string {
     let desc_props = "";
     if(description.length > 0) {
         desc_props = ` data-toggle="tooltip" data-placement="top" title="` + description + `" `;
     }
     category_texts[category] = id;
-    let color = 'secondary';
-    return '<button id="tax_desc_' + id + '" type="button" class="btn btn-' + color + ' btn-sm m-1 py-0" onclick=""' + desc_props + '>' + id + '</button>';
+    //let color = 'secondary';
+    //return '<button id="tax_desc_' + id + '" type="button" class="btn btn-' + color + ' btn-sm m-1 py-0" onclick=""' + desc_props + '>' + id + '</button>';
+    //color='warning';
+    let fontColor = "";
+    switch(color) {
+        case 'info': fontColor='#b42b83'; break;
+    }
+    let rendered_id = id;
+    /*switch(id) {
+        case "I": rendered_id = ''; break;
+        case "II": rendered_id = '<i class="fas fa-arrow-circle-right"></i>'; break;
+        case "III": rendered_id = '<i class="fas fa-angle-double-right"></i>'; break;
+    }*/
+    let html = '&nbsp;<span class="mx-1" style="color:'+fontColor+';" id="tax_desc_' + id + '"><sub>' + rendered_id + '</sub></span>&nbsp;';
+    //console.log(html);
+    return html;
 }
 
 var tax_texts = {};
@@ -94,7 +132,9 @@ function create_tax_element(id : string, text : string, description='') {
     if(!(id in tax_selected))
         tax_selected[id] = false;
     let html_cnt = cnt==0 ? '' : ' <span class="badge rounded-pill bg-danger">' + cnt + '</span>';
-    let html = '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' 
+    //let html = '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-secondary btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' 
+        + capitalize_each_word(text) + html_cnt + '</button> ';
+    let html = '<button id="tax_element_' + id + '" type="button" class="btn btn-outline-dark btn-sm py-0 my-1" onclick="aufgabenpool.clicked_tax_element(\'' + id + '\');"' + desc_props + '>' 
         + capitalize_each_word(text) + html_cnt + '</button> ';
     return html;
 }
@@ -104,8 +144,8 @@ function mark_tag_element(id: string) {
     let text = tax_texts[id];
     element.classList.remove("py-0");
     element.classList.add("py-1");
-    element.classList.remove("btn-outline-secondary");
-    element.classList.add("btn-outline-dark");
+    //element.classList.remove("btn-outline-secondary");
+    //element.classList.add("btn-outline-dark");
     if(tax_cnt[id] > 0)
         element.innerHTML = "<b>" + text.toUpperCase() + ' <span class="badge rounded-pill bg-danger">' + tax_cnt[id] + '</span></button>' + "</b>";
     else
@@ -117,8 +157,8 @@ function unmark_tag_element(id: string) {
     let text = tax_texts[id];
     element.classList.add("py-0");
     element.classList.remove("py-1");
-    element.classList.add("btn-outline-secondary");
-    element.classList.remove("btn-outline-dark");
+    //element.classList.add("btn-outline-secondary");
+    //element.classList.remove("btn-outline-dark");
     if(tax_cnt[id] > 0)
         element.innerHTML = text + ' <span class="badge rounded-pill bg-danger">' + tax_cnt[id] + '</span></button>';
     else
@@ -126,7 +166,7 @@ function unmark_tag_element(id: string) {
 }
 
 export function clicked_tax_element(id : string) {
-    console.log("clicked on " + id); // TODO: remove this line
+    //console.log("clicked on " + id); // TODO: remove this line
     let text = tax_texts[id];
     if(tax_selected[id] == false) {
         tax_selected[id] = true;
@@ -150,6 +190,7 @@ function build_document() {
     tags_html += '<div class="p-0 m-0" id="TE"></div>'
 
     // build taxonomy buttons from metadata
+    let currentHeadColor = "dark";
     for(let i=0; i<metadata["taxonomy"].length; i++) {
         let command = metadata["taxonomy"][i];
         let tokens = command.split(":");
@@ -159,11 +200,12 @@ function build_document() {
             let url = tokens[3] in metadata["taxonomy_urls"] ? metadata["taxonomy_urls"][tokens[3]] : "";
             tags_html += i==0 ? "" : '<br/>';
             tags_html += create_tax_head(name, color, url);
+            currentHeadColor = color;
         } else if(tokens[0] === "dim") {
             let id = tokens[2];
             let name = tokens[1];
             if(name.length > 0)
-                tags_html += '<br/>' + create_tax_desc(id, name);
+                tags_html += '<br/>' + create_tax_desc(id, currentHeadColor, name);
             else
                 tags_html += '<br/>&nbsp;';
             let names = tokens[3].split(",");
@@ -207,7 +249,7 @@ function build_topic_hierarchy() {
     let tediv = document.getElementById("TE");
     tediv.innerHTML = "";
     // - first level
-    tediv.innerHTML += create_tax_desc('TE_1', 'I');
+    tediv.innerHTML += create_tax_desc('TE_1', 'dark', 'I');
     for(let te1_i in metadata["topic_hierarchy"]) {
         let tokens = te1_i.split("_");
         let topic = tokens[tokens.length-1];
@@ -218,7 +260,7 @@ function build_topic_hierarchy() {
     tediv.innerHTML += '<br/>';
     // - second level
     if(selected_te1.length > 0) {
-        tediv.innerHTML += create_tax_desc('TE_2', 'II');
+        tediv.innerHTML += create_tax_desc('TE_2', 'dark', 'II');
         for(let te1_i in metadata["topic_hierarchy"]) {
             if(selected_te1.includes(te1_i)) {
                 for(let te2_j in metadata["topic_hierarchy"][te1_i]) {
@@ -233,7 +275,7 @@ function build_topic_hierarchy() {
     }
     // - third level
     if(selected_te2.length > 0) {
-        tediv.innerHTML += '<br/>' + create_tax_desc('TE_3', 'III');
+        tediv.innerHTML += '<br/>' + create_tax_desc('TE_3', 'dark', 'III');
         for(let te1_i in metadata["topic_hierarchy"]) {
             if(selected_te1.includes(te1_i)) {
                 for(let te2_j in metadata["topic_hierarchy"][te1_i]) {
@@ -421,7 +463,7 @@ function build_exercises_tree() {
         // TODO: praxiserprobt
     
         if(display_exercise)
-            exercises_html += exercise_html + '<br/>';
+            exercises_html += exercise_html + '<br/><br/>';
     }
     let exercises_element = document.getElementById('exercises_div');
     exercises_element.innerHTML = exercises_html;
