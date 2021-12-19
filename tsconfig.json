@@ -1,12 +1,18 @@
 {
     "compilerOptions": {
         "module": "es2015",
-        "esModuleInterop": false,
+
+        "esModuleInterop": true,  // TODO: was false!!
+        "declaration": true,      // TODO: was false!!
+        "forceConsistentCasingInFileNames": true,   // TODO: was false!!
+        "strict": true,    // TODO: was false!!
+        "noImplicitAny": true,    // TODO: was false!!
+        "strictNullChecks": false,  // TODO: should be true
+
         "target": "es2015",
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
-        "strict": false,
         "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
         "noUnusedLocals": false,

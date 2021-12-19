@@ -1,10 +1,14 @@
 /**
  * AUFGABENPOOL - digiFellow Projekt
  * Author: Andreas Schwenk, TH Köln
+ * 
+ * 
+ *     TODO: must clean source code! e.g. write classes, ...
+ *     TODO: use config files for paths, settings, colors, ...
  */
 
 import $ from 'jquery';
-import * as templates from './templates.js';
+import * as templates from './templates';
 
 const MOODLE_EDIT_QUESTION_PATH = "https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=";
 
@@ -13,7 +17,7 @@ $( document ).ready(function() {
 });
 
 var basket : Array<number> = []; // local ID (not moodle id!)
-var basket_xml = "";
+var basket_xml = ""; // export file content
 
 class TagButton {
     selected = false;
@@ -29,8 +33,8 @@ var taxonomy_tag_dim_names : {[key:string]:string} = {};  // e.g. "maier_2_3" ->
 
 var tag_button_data : Array<TagButton> = [];
 
-var metadata = null;
-var metadata_exercises = null;
+var metadata : any = null;
+var metadata_exercises : any = null;
 
 
 var pool_button = document.getElementById("pool-button");
@@ -92,7 +96,7 @@ function create_tax_head(id:string, color='dark', link='') {
     return '<br/><button id="tax_head_' + id + '" type="button" class="btn btn-' + color + ' btn-sm m-1 py-0" onclick="window.open(\'' + link + '\', \'_blank\');">' + id + '</button>';
 }
 
-var category_texts = {};
+var category_texts : {[key: string]: string} = {};
 
 function create_tax_desc(category:string, color:string, id:string, description='') : string {
     let desc_props = "";
@@ -118,8 +122,8 @@ function create_tax_desc(category:string, color:string, id:string, description='
     return html;
 }
 
-var tax_texts = {};
-var tax_cnt = {};
+var tax_texts : {[key: string]: string} = {};
+var tax_cnt : {[key: string]: number}  = {};
 var tax_selected : {[id:string]:boolean} = {};
 
 function create_tax_element(id : string, text : string, description='') {
