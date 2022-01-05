@@ -1,27 +1,21 @@
 {
     "compilerOptions": {
-        "module": "es2015",
-
-        "esModuleInterop": true,  // TODO: was false!!
-        "declaration": true,      // TODO: was false!!
-        "forceConsistentCasingInFileNames": true,   // TODO: was false!!
-        "strict": true,    // TODO: was false!!
-        "noImplicitAny": true,    // TODO: was false!!
-        "strictNullChecks": false,  // TODO: should be true
-
-        "target": "es2015",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "declaration": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": false,
+        "target": "ES2020",
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist",
+        "outDir": "tmp",
         "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
-        "noUnusedLocals": false,
-        "lib": [
-            "ESNext.String",  // TODO: this may not be supported by all browsers!
-            "DOM"
-        ]
     },
-    "include": ["src/*.ts"],
+    "include": ["src/**/*.ts"],
     "lib": [
+        "DOM",
+        "ES2020"
     ]
 }
