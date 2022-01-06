@@ -9,7 +9,7 @@
         <div class="container col bg-white">
 
             <br/>
-            
+
             <div class="row py-2">
                 <div class="col">
                 </div>
@@ -18,7 +18,6 @@
                         <a id="pool-button" onclick="aufgabenpool.clicked_on_pool_tab();" class="btn btn-danger active" aria-current="page">Fragensammlung</a>
                         <a id="basket-button" onclick="aufgabenpool.clicked_on_basket_tab();" class="btn btn-outline-danger">Aufgabenblatt</a>
                     </div>
-                    
                 </div>
                 <div class="col text-end">
                     <span class="nav-link disabled">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stand: <span id="pool-date"></span></span>
@@ -41,7 +40,7 @@
                         <!--<div id="exercises_div" class="m-3"></div>
                         <div id="basket_div" class="m-3" style="display: none;"></div>-->
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
 
@@ -53,7 +52,7 @@
                         <div id="exercises_div" class="mx-0 my-3"></div>
                         <div id="basket_div" class="mx-0 my-3" style="display: none;"></div>
                     <!--</div>-->
-                </div>    
+                </div>
             </div>
         </div>
 
@@ -66,6 +65,10 @@
         <script src="build/js/aufgabenpool.min.js?v=<?php echo time();?>"></script>
 
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            pool.init();
+        </script>
 
     </body>
 </html>

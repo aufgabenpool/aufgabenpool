@@ -11,11 +11,9 @@
         "sourceMap": true,
         "outDir": "tmp",
         "skipLibCheck": true,
-        "allowSyntheticDefaultImports": true,
+        "allowSyntheticDefaultImports": true
     },
     "include": ["src/**/*.ts"],
-    "lib": [
-        "DOM",
-        "ES2020"
-    ]
+    "exclude": ["src/index-old.ts", "templates.ts"],
+    "lib": ["DOM", "ES2020"]
 }
