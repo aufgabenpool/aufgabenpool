@@ -9,10 +9,29 @@ const metaDataPath = 'data/meta.json';
 const moodleEditPath =
     'https://aufgabenpool.f07-its.fh-koeln.de/' +
     'moodle/question/question.php?&courseid=2&id=';
+const lowercaseWords = [
+    'der',
+    'die',
+    'das',
+    'des',
+    'in',
+    'im',
+    'und',
+    'auf',
+    'mit',
+    'durch',
+    'mittels',
+];
 
 export function init() {
     const pool = new Pool();
     pool.import();
+
+    TODO:  must wait for import...!
+
+    document
+        .getElementById('taglist_div')
+        .appendChild(pool.createTaxonomyHTMLElement());
 }
 
 enum TaxonomyItemType {
@@ -63,6 +82,35 @@ class Pool {
     private taxonomyHierarchyRoot: TaxonomyHierarchyItem = null;
     private tagCount: { [tagname: string]: number } = {};
     private date = '';
+
+    createTaxonomyHTMLElement(): HTMLElement {
+        const rootElement = document.createElement('div');
+        for (const item of this.taxonomy) {
+            if (item.type == TaxonomyItemType.Head) {
+                const itemData = <TaxonomyHead>item.data;
+                const button = <HTMLButtonElement>(
+                    document.createElement('button')
+                );
+                rootElement.appendChild(button);
+                button.type = 'button';
+                button.classList.add(
+                    'btn',
+                    'btn-sm',
+                    'm-1',
+                    'py-0',
+                    'btn-' + itemData.color,
+                );
+                button.addEventListener('click', function () {
+                    window.open(itemData.url, '_blank');
+                });
+                button.innerHTML = item.title;
+            } else if (item.type == TaxonomyItemType.Dimension) {
+                //
+            }
+        }
+        // TODO;
+        return rootElement;
+    }
 
     import(): void {
         // reset
@@ -152,8 +200,6 @@ class Pool {
         // examples:
         //  "Bestimmtes integral" -> "Bestimmtes Integral"
         //  "FestverzinslicheWertpapiere" -> "Festverzinsliche Wertpapiere"
-
-        // TODO: "Definition des integrals" -> "Definition des Integrals"
         let result = '';
         const n = src.length;
         for (let i = 0; i < n; i++) {
@@ -167,7 +213,14 @@ class Pool {
                 result += ch;
             }
         }
-        return result;
+        const words = result.split(' ');
+        const wordsOut: string[] = [];
+        for (const word of words) {
+            if (lowercaseWords.includes(word.toLocaleLowerCase()))
+                wordsOut.push(word.toLowerCase());
+            else wordsOut.push(word);
+        }
+        return wordsOut.join(' ');
     }
 
     private isLowercase(ch: string): boolean {
