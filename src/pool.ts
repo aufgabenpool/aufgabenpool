@@ -34,6 +34,7 @@ export class Pool {
     private taxonomyHierarchyRoot: TaxonomyHierarchyItem = null;
     private taxonomyNames: { [id: string]: string } = {};
     private tagCount: { [tagname: string]: number } = {};
+    private tagCountSelected: { [tagname: string]: number } = {};
     private date = '';
 
     private worksheetExercises: Exercise[] = [];
@@ -217,6 +218,7 @@ export class Pool {
     private updateExercisesHTMLElement_selectionMode(
         parent: HTMLElement,
     ): void {
+        this.tagCountSelected = {};
         parent.innerHTML = '';
         const selectedTags = this.getSelectedTags();
         //console.log(selectedTags);
@@ -261,6 +263,11 @@ export class Pool {
             }
             // skip, if selected tags do not match
             if (skip) continue;
+            for (const tag of exercise.tags) {
+                if (tag in this.tagCountSelected == false)
+                    this.tagCountSelected[tag] = 1;
+                else this.tagCountSelected[tag]++;
+            }
             parent.appendChild(exercise.createHTMLElement(this));
         }
     }
@@ -337,7 +344,10 @@ export class Pool {
                     button.setAttribute('data-placement', 'top');
                     button.title = dimItem.description;
                     let title = dimItem.title;
-                    const cnt = this.tagCount[dimItem.id];
+                    let cnt = 0;
+                    if (Object.keys(this.tagCountSelected).length == 0)
+                        cnt = this.tagCount[dimItem.id];
+                    else cnt = this.tagCountSelected[dimItem.id];
                     if (cnt != undefined) {
                         title +=
                             ' <span class="badge rounded-pill bg-danger">' +
@@ -353,10 +363,10 @@ export class Pool {
                         if (dimItem.selected == false) {
                             dimItem.selectChildren(false);
                         }
-                        this_.updateTaxonomyHTMLElement(parent);
                         this_.updateExercisesHTMLElement(
                             document.getElementById('exercises_div'),
                         );
+                        this_.updateTaxonomyHTMLElement(parent);
                         hideTooltips();
                         updateTooltips();
                         hideTooltips();
