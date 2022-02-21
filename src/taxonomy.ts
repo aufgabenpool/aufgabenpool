@@ -36,4 +36,39 @@ export class TaxonomyHierarchyItem {
     id = '';
     title = '';
     children: TaxonomyHierarchyItem[] = [];
+
+    sort(): void {
+        const order = [
+            'te_1_grundlagen',
+            'te_1_grenzwerte',
+            'te_1_differentialrechnung',
+            'te_1_integralrechnung',
+            'te_1_statistik',
+            'te_1_wahrscheinlichkeitsrechnung',
+            'te_1_finanzmathematik',
+        ];
+        const processed: boolean[] = [];
+        for (let i = 0; i < this.children.length; i++) {
+            processed.push(false);
+        }
+        // TODO: automate the following:
+        const childrenNew: TaxonomyHierarchyItem[] = [];
+        for (const o of order) {
+            for (let i = 0; i < this.children.length; i++) {
+                const child = this.children[i];
+                if (child.id.toLowerCase() === o) {
+                    childrenNew.push(child);
+                    processed[i] = true;
+                    break;
+                }
+            }
+        }
+        for (let i = 0; i < this.children.length; i++) {
+            if (processed[i] == false) {
+                console.log('!!!!' + this.children[i].id);
+                childrenNew.push(this.children[i]);
+            }
+        }
+        this.children = childrenNew;
+    }
 }

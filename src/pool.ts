@@ -390,6 +390,7 @@ export class Pool {
                     data['topic_hierarchy'],
                     this_.taxonomyHierarchyRoot,
                 );
+                this_.taxonomyHierarchyRoot.sort();
                 // fill taxonomy
                 // (a) topics
                 const taxonomyItem = new TaxonomyItem();
