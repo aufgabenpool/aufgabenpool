@@ -9,7 +9,7 @@ const esbuild = require('esbuild');
 esbuild.buildSync({
     platform: 'browser',
     globalName: 'aufgabenpool',
-    minify: false, // TODO!!
+    minify: true,
     target: 'es2020',
     entryPoints: ['src/index.ts'],
     bundle: true,

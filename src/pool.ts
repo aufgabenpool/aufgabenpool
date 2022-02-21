@@ -488,11 +488,11 @@ export class Pool {
                     exercise.tags = e['tags'].sort();
                     exercise.type = e['type'];
                 }
-                console.log(this_.date);
+                /*console.log(this_.date);
                 console.log(this_.tagCount);
                 console.log(this_.taxonomy);
                 console.log(this_.taxonomyHierarchyRoot);
-                console.log(this_.exercises);
+                console.log(this_.exercises);*/
 
                 document.getElementById('pool-date').innerHTML = this_.date;
                 this_.updateTaxonomyHTMLElement(
