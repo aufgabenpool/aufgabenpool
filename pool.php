@@ -15,8 +15,8 @@
                 </div>
                 <div class="col text-center">
                     <div class="btn-group">
-                        <a id="pool-button" onclick="aufgabenpool.clicked_on_pool_tab();" class="btn btn-danger active" aria-current="page">Fragensammlung</a>
-                        <a id="basket-button" onclick="aufgabenpool.clicked_on_basket_tab();" class="btn btn-outline-danger">Aufgabenblatt</a>
+                        <a id="pool-button" onclick="aufgabenpool.selectPool();" class="btn btn-danger" aria-current="page">Fragensammlung</a>
+                        <a id="worksheet-button" onclick="aufgabenpool.selectWorksheet();" class="btn btn-outline-danger">Aufgabenblatt</a>
                     </div>
                 </div>
                 <div class="col text-end">
@@ -37,8 +37,6 @@
                 <div class="col bg-white">
                     <div>
                         <div id="taglist_div" class="m-3"></div>
-                        <!--<div id="exercises_div" class="m-3"></div>
-                        <div id="basket_div" class="m-3" style="display: none;"></div>-->
                     </div>
                 </div>
             </div>
@@ -47,11 +45,8 @@
         <div class="container">
             <div class="row mx-0">
                 <div class="col mx-0">
-                    <!--<div class="mx-0">-->
-                        <!--<div id="taglist_div" class="m-3"></div>-->
-                        <div id="exercises_div" class="mx-0 my-3"></div>
-                        <div id="basket_div" class="mx-0 my-3" style="display: none;"></div>
-                    <!--</div>-->
+                    <div id="exercises_div" class="mx-0 my-3"></div>
+                    <div id="basket_div" class="mx-0 my-3" style="display: none;"></div>
                 </div>
             </div>
         </div>
@@ -67,7 +62,7 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
-            pool.init();
+            aufgabenpool.init();
         </script>
 
     </body>
