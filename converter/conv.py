@@ -2,7 +2,7 @@
 #  Moodle-XML Qustion Filter
 #  (c) 2021 by TH Köln
 #  Author: Andreas Schwenk, andreas.schwenk@th-koeln.de
-# 
+#
 #  Version: 0.01
 # ******************************************************************************
 
@@ -38,7 +38,7 @@ if not os.path.isfile(path_in):
 os.system("mkdir -p " + path_out)
 
 metadata = {
-    "exercises": [], 
+    "exercises": [],
     "date": datetime.today().strftime('%Y-%m-%d %H:%M'),
     "topic_hierarchy": {"":""},
     "tag_count": {},
@@ -134,24 +134,24 @@ for i, question in enumerate(quiz):
 
             q_tagset.add(tag_formatted)
             tagset.add(tag_formatted)
-                                 
+
             if tag_formatted.startswith("te_1_"):
                 has_te_1_tag = True
 
-            # number of occurences of tags (tag count)
+            # number of occurrences of tags (tag count)
             if tag_formatted not in metadata["tag_count"]:
                 metadata["tag_count"][tag_formatted] = 0
             metadata["tag_count"][tag_formatted] += 1
 
             # tag valid?
-            if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet", "praxiserprobt"]) \
+            if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet", "praxiserprobt", "F04-IVW", "F07-INT", "F09-IPK"]) \
                 or (tag_formatted.startswith("maier_") and tag_formatted.count("_") != 2) \
                 or (tag_formatted.startswith("bloom_") and tag_formatted.count("_") != 1):
                 ct = CriticalTag()
                 ct.exerciseId = questionid
                 ct.tag = tag_name
                 criticalTags.append(ct)
-        
+
     if has_te_1_tag == False:
         ct = CriticalTag()
         ct.exerciseId = questionid
@@ -170,7 +170,7 @@ for i, question in enumerate(quiz):
             te2 = tag
         elif tag.startswith("te_3_"):
             te3 = tag
-    
+
     if len(te1) > 0:
         if te1 not in metadata["topic_hierarchy"]:
             metadata["topic_hierarchy"][te1] = {"":""}
