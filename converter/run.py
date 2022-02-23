@@ -2,7 +2,7 @@
 #  Moodle Question Extraction
 #  (c) 2021 by TH Köln
 #  Author: Andreas Schwenk, andreas.schwenk@th-koeln.de
-# 
+#
 #  Version: 0.01
 # ******************************************************************************
 
@@ -44,8 +44,8 @@ if not skip_screenshots:
         print('ERROR: failed to get preview images')
         sys.exit(-1)
 
-# 4.) Replace current "../data/" directory. This is done only in case no error occourred. Otherwise, the old version remains
-print("moving directoy '../data-tmp' to '../data'")
+# 4.) Replace current "../data/" directory. This is done only in case no error occurred. Otherwise, the old version remains
+print("moving directory '../data-tmp' to '../data'")
 os.system("rm -rf ../data/")
 os.system("mv ../data-tmp ../data")
 
