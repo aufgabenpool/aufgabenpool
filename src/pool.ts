@@ -183,7 +183,7 @@ export class Pool {
         const path = 'data/' + exercise.moodleID + '.xml?time=' + timestamp;
         const this_ = this;
         axios
-            .get(path)
+            .post(path)
             .then(function (response) {
                 const data = response.data.split('\n');
                 let dataEdited = '';
