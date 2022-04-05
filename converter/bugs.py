@@ -6,6 +6,7 @@ html = '''
 <head><meta charset="utf-8"/><title>digifellow Aufgabenpool</title></head>
 <body>
 	<h1>Gemeldete Fehler</h1>
+    <p>Diese Liste wird zur vollen Stunde automatisch aktualisiert</p>
 	#CONTENT
 </body>
 </html>
@@ -31,8 +32,8 @@ for line in lines:
     content += '<li>'
     content += datetime.utcfromtimestamp(int(timestamp)//1000).strftime('%Y-%m-%d %H:%M:%S')
     content += ', <a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(moodleId) + '">Link (Moodle)</a>, '
-    content += ' Fehlerbeschreibung: "' + desc + '", '
-    content += ' Kontaktdaten: "' + contact + '" '
+    content += ' Fehlerbeschreibung: "' + desc.replace('\n','<br/>') + '", '
+    content += ' Kontaktdaten: "' + contact.replace('\n','<br/>') + '" '
     content += '</li>'
 
 content += '</ul>'
