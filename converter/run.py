@@ -49,4 +49,7 @@ print("moving directory '../data-tmp' to '../data'")
 os.system("rm -rf ../data/")
 os.system("mv ../data-tmp ../data")
 
+# Convert bug list to HTML
+os.system('python3 bugs.py')
+
 print('..extraction finished')
