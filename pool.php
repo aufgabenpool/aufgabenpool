@@ -4,6 +4,8 @@
     <body>
         <?php include 'title.php'; ?>
 
+        <?php include 'pool-modals.php'; ?>
+
         <br/>
 
         <div class="container col bg-white">

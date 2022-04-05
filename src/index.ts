@@ -53,6 +53,10 @@ export function selectWorksheet() {
     pool.setMode(PoolMode.WorksheetMode);
 }
 
+export function reportBug(): void {
+    pool.reportBug();
+}
+
 export function init() {
     pool = new Pool({
         metaDataPath: metaDataPath,

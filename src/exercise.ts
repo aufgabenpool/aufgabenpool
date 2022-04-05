@@ -192,7 +192,7 @@ export class Exercise {
         });
         // action for bug reporting
         actionButtons[3].addEventListener('click', function () {
-            alert('unimplemented');
+            pool.openBugReportingModal(this_);
         });
         // spacing between button groups
         spacing = document.createElement('span');

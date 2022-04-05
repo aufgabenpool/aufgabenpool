@@ -5,6 +5,8 @@
 
 import axios from 'axios';
 
+import * as bootstrap from 'bootstrap';
+
 import { downloadFile, hideTooltips, updateTooltips } from './help';
 import { Exercise } from './exercise';
 import {
@@ -40,6 +42,9 @@ export class Pool {
     private worksheetExercises: Exercise[] = [];
     private worksheetMoodleXml = '';
 
+    private bugReportingModal: bootstrap.Modal = null;
+    private bugReportingExercise: Exercise = null;
+
     constructor(config: PoolConfig) {
         this.config = config;
     }
@@ -61,6 +66,69 @@ export class Pool {
 
     getConfig(): PoolConfig {
         return this.config;
+    }
+
+    openBugReportingModal(exercise: Exercise): void {
+        this.bugReportingExercise = exercise;
+        this.bugReportingModal = new bootstrap.Modal(
+            document.getElementById('modal-bug-reporting'),
+        );
+        document.getElementById('modal-bug-reporting-title').innerHTML =
+            exercise.title;
+        (<HTMLInputElement>document.getElementById('bugreport-text')).value =
+            '';
+        (<HTMLInputElement>document.getElementById('bugreport-contact')).value =
+            '';
+        this.bugReportingModal.show();
+    }
+
+    reportBug(): void {
+        this.bugReportingModal.hide();
+        let bugTypeIdx = 0;
+        const bugTypeOptions = document.getElementsByName('bug-type');
+        for (let i = 0; i < bugTypeOptions.length; i++) {
+            if ((<HTMLInputElement>bugTypeOptions[i]).checked) {
+                bugTypeIdx = i;
+                break;
+            }
+        }
+        const bugType = ['content', 'moodle', 'ilias', 'misc'][bugTypeIdx];
+        const bugDescription = (<HTMLInputElement>(
+            document.getElementById('bugreport-text')
+        )).value;
+        const bugContactData = (<HTMLInputElement>(
+            document.getElementById('bugreport-contact')
+        )).value;
+
+        /*alert(bugType);
+        alert(bugDescription);
+        alert(bugContactData);*/
+
+        const message =
+            Date.now() +
+            '#' +
+            this.bugReportingExercise.moodleID +
+            '#' +
+            bugType +
+            '#' +
+            bugDescription.replace(/#/g, 'HASHTAG') +
+            '#' +
+            bugContactData.replace(/#/g, 'HASHTAG') +
+            '\n';
+
+        axios
+            .post(
+                'report-bug.php',
+                new URLSearchParams({
+                    msg: message,
+                }),
+            )
+            .then(function (response) {
+                const data = response.data.split('\n');
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
     }
 
     private getSelectedTags(): string[] {
