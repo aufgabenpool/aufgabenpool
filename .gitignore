@@ -3,6 +3,7 @@ data-tmp/
 data-test/
 node_modules/
 bugs/bugs.txt
+bugs/bugs.html
 
 package-lock.json
 
