@@ -97,7 +97,7 @@ export class Exercise {
         buttonGroupPreview.classList.add('btn-group');
         // TODO: role="group"
         const previewButtons: HTMLButtonElement[] = [];
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             const button = document.createElement('button');
             previewButtons.push(button);
             buttonGroupPreview.appendChild(button);
@@ -105,20 +105,23 @@ export class Exercise {
             button.classList.add('btn', 'btn-outline-dark', 'btn-sm');
             button.setAttribute('data-toggle', 'tooltip');
             button.setAttribute('data-placement', 'top');
-            button.title = i < 3 ? 'Vorschau ' + (i + 1) : 'Lösungsweg';
+            /*button.title = i < 3 ? 'Vorschau ' + (i + 1) : 'Lösungsweg';
             if (i == 0) button.classList.add('active');
             button.innerHTML =
-                i == 3 ? '<i class="far fa-lightbulb"></i>' : '' + (i + 1);
+                i == 3 ? '<i class="far fa-lightbulb"></i>' : '' + (i + 1);*/
+            button.title = 'Vorschau ' + (i + 1);
+            if (i == 0) button.classList.add('active');
+            button.innerHTML = '' + (i + 1);
         }
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             const button = previewButtons[i];
             const this_ = this;
             button.addEventListener('click', function () {
-                if (i == 3) {
+                /*if (i == 3) {
                     alert('unimplemented');
                     return;
-                }
-                for (let k = 0; k < 4; k++) {
+                }*/
+                for (let k = 0; k < 3; k++) {
                     if (i == k) previewButtons[k].classList.add('active');
                     else previewButtons[k].classList.remove('active');
                 }
