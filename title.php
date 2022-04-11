@@ -5,12 +5,19 @@
             <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://www.th-koeln.de"><img class="p-1" src="img/dd.png" style="height:48px"/></a>-->
         </div>
+        <div class="col-3 text-center pt-1 ps-5">
+            <p class="btn-outline-danger my-1 rounded" style="font-size: 16pt;">BETA VERSION</p>
+        </div>
     </div>
     <blockquote class="blockquote text-center">
         <br/>
-        <h1><b>Digitaler Aufgabenpool Mathematik</b></h1>
+        <!--<h1><b>Digitaler Aufgabenpool Mathematik</b></h1>-->
+        <h1><b>DIGITALER AUFGABENPOOL MATHEMATIK</b></h1>
         <h2>Kompetenzorientiertes digitales Prüfen</h2>
-        Gefördert durch <i>"Fellowships für Innovationen in der digitalen Hochschullehre NRW" (<a class="link-dark" href="https://www.stifterverband.org/digital-lehrfellows-nrw" target="_blank">digiFellow</a>)</i> 
+        <p class="pt-2">
+            Gefördert durch <i>"Fellowships für Innovationen in der digitalen Hochschullehre NRW" (<a class="link-dark" href="https://www.stifterverband.org/digital-lehrfellows-nrw" target="_blank">digiFellow</a>)</i>
+        </p>
+        <!--<p class="text-white bg-danger"><b>BETA Version</b></p>-->
     </blockquote>
     <div class="row">
         <br/>

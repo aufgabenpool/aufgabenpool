@@ -142,7 +142,7 @@ export class Exercise {
                 ? 'Zum Aufgabenblatt hinzufügen'
                 : 'Vom Aufgabenblatt entfernen',
             'Aufgabe im Format Moodle-XML herunterladen',
-            'Aufgabe in Moodle editieren',
+            'Aufgabe in Moodle editieren (eingeschränkter Zugriff)',
             'Fehler melden',
         ];
         const icons = [
@@ -177,12 +177,27 @@ export class Exercise {
         actionButtons[1].addEventListener('click', function () {
             const timestamp = Math.round(new Date().getTime() / 1000);
             const path = 'data/' + this_.moodleID + '.xml?time=' + timestamp;
+            // download
             axios
                 .get(path)
                 .then(function (response) {
                     const data = response.data;
                     const filename = 'pool_download_' + this_.moodleID + '.xml';
                     downloadFile(filename, data);
+                })
+                .catch(function (error) {
+                    console.error(error);
+                });
+            // statistics
+            axios
+                .post(
+                    'download.php',
+                    new URLSearchParams({
+                        moodleID: '' + this_.moodleID,
+                    }),
+                )
+                .then(function (response) {
+                    const data = response.data;
                 })
                 .catch(function (error) {
                     console.error(error);
@@ -201,28 +216,51 @@ export class Exercise {
         spacing = document.createElement('span');
         spacing.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;';
         buttonCol.appendChild(spacing);
-        // rating buttons
+        // rating button group
         const buttonGroupRating = document.createElement('div');
         buttonCol.appendChild(buttonGroupRating);
         buttonGroupRating.classList.add('btn-group');
-        buttonGroupRating.innerHTML = `
-        <span class="btn btn-outline-dark btn-sm">
-            <span id="rating1">
-                <i class="far fa-star"></i>
-            </span>
-            <span id="rating2">
-                <i class="far fa-star"></i>
-            </span>
-            <span id="rating3">
-                <i class="far fa-star"></i>
-            </span>
-            <span id="rating4">
-                <i class="far fa-star"></i>
-            </span>
-            <span id="rating5">
-                <i class="far fa-star"></i>
-            </span>
-        </span>`; // TODO
+        const ratingButtons: HTMLButtonElement[] = [];
+        for (let i = 0; i < 5; i++) {
+            const button = document.createElement('button');
+            ratingButtons.push(button);
+            buttonGroupRating.appendChild(button);
+            button.type = 'button';
+            button.classList.add('btn', 'btn-outline-dark', 'btn-sm');
+            button.setAttribute('data-toggle', 'tooltip');
+            button.setAttribute('data-placement', 'top');
+            button.title = 'Bewertung: ' + (i + 1) + '/5 Sterne';
+            //if (i == 0) button.classList.add('active');
+            button.innerHTML = '<i class="far fa-star"></i>';
+            button.onclick = function (e) {
+                for (let k = 0; k < 5; k++) {
+                    if (k <= i)
+                        ratingButtons[k].innerHTML =
+                            '<i class="fa-solid fa-star"></i>';
+                    else
+                        ratingButtons[k].innerHTML =
+                            '<i class="far fa-star"></i>';
+                }
+                axios
+                    .post(
+                        'rating.php',
+                        new URLSearchParams({
+                            moodleID: '' + this_.moodleID,
+                            stars: '' + (i + 1),
+                        }),
+                    )
+                    .then(function (response) {
+                        const data = response.data;
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            };
+        }
+        /*// spacing between button groups
+        spacing = document.createElement('span');
+        spacing.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;';
+        buttonCol.appendChild(spacing);*/
 
         // "TODO: https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/type/stack/questiontestrun.php?questionid=???&courseid=2
         return root;

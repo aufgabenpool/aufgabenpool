@@ -2,8 +2,11 @@ data/
 data-tmp/
 data-test/
 node_modules/
-bugs/bugs.txt
-bugs/bugs.html
+feedback/bugs.txt
+feedback/bugs.html
+feedback/rating.txt
+feedback/downloads.txt
+feedback/taxonomy.txt
 
 package-lock.json
 

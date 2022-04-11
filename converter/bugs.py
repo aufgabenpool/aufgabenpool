@@ -40,6 +40,6 @@ content += '</ul>'
 
 html = html.replace('#CONTENT', content)
 
-f = open('../bugs/bugs.html', 'w')
+f = open('../feedback/bugs.html', 'w')
 f.write(html)
 f.close()

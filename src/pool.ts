@@ -16,6 +16,11 @@ import {
     TaxonomyDimensionItem,
 } from './taxonomy';
 
+let googleReCaptchaResponse = '';
+function googleRecaptchaCallback(response: string): void {
+    googleReCaptchaResponse = response;
+}
+
 export interface PoolConfig {
     metaDataPath: string;
     lowercaseWords: string[];
@@ -79,11 +84,22 @@ export class Pool {
             '';
         (<HTMLInputElement>document.getElementById('bugreport-contact')).value =
             '';
+        const recaptchaElement = document.getElementById('bugreport-captcha');
+        //recaptchaElement.innerHTML = '';
+        try {
+            grecaptcha.render(recaptchaElement, {
+                sitekey: '6Lca4GQfAAAAALPpkGPIrkEJjNlxNCJvtN8SXE_9',
+                theme: 'light',
+                callback: googleRecaptchaCallback,
+            });
+        } catch (e) {
+            // on error: previous instance is used!
+        }
+        document.getElementById('bugreport-captcha-error').innerHTML = '';
         this.bugReportingModal.show();
     }
 
     reportBug(): void {
-        this.bugReportingModal.hide();
         let bugTypeIdx = 0;
         const bugTypeOptions = document.getElementsByName('bug-type');
         for (let i = 0; i < bugTypeOptions.length; i++) {
@@ -92,7 +108,9 @@ export class Pool {
                 break;
             }
         }
-        const bugType = ['content', 'moodle', 'ilias', 'misc'][bugTypeIdx];
+        const bugType = ['content', 'display', 'moodle', 'ilias', 'misc'][
+            bugTypeIdx
+        ];
         const bugDescription = (<HTMLInputElement>(
             document.getElementById('bugreport-text')
         )).value;
@@ -116,15 +134,30 @@ export class Pool {
             bugContactData.replace(/#/g, 'HASHTAG') +
             '\n';
 
+        grecaptcha.reset();
+
+        const this_ = this;
         axios
             .post(
                 'report-bug.php',
                 new URLSearchParams({
                     msg: message,
+                    googleRecaptcha: googleReCaptchaResponse,
                 }),
             )
             .then(function (response) {
-                const data = response.data.split('\n');
+                const data = response.data;
+                if (data === 'success') {
+                    document.getElementById(
+                        'bugreport-captcha-error',
+                    ).innerHTML = '';
+                    this_.bugReportingModal.hide();
+                } else {
+                    document.getElementById(
+                        'bugreport-captcha-error',
+                    ).innerHTML =
+                        '<span class="text-danger">reCaptcha war nicht erfolgreich!</span>';
+                }
             })
             .catch(function (error) {
                 console.error(error);
@@ -221,6 +254,12 @@ export class Pool {
                 'lead',
                 'text-center',
             );
+            const paragraph = document.createElement('p');
+            paragraph.classList.add('px-5');
+            div.appendChild(paragraph);
+            paragraph.innerHTML =
+                'Achtung: Es wird <i>eine</i> XML-Datei erzeugt, die neben Aufgaben vom Typ STACK auch andere Aufgabentypen enthalten kann. In manchen Fällen kann es beim Import (insbesondere in ILIAS) zu Fehlermeldungen kommen.<br/>Workaround: erstellen Sie Aufgabenblätter die nur jeweils einen Aufgabentyp enthalten.';
+
             const button = document.createElement('button');
             div.appendChild(button);
             button.type = 'button';
@@ -430,6 +469,21 @@ export class Pool {
                         dimItem.selected = !dimItem.selected;
                         if (dimItem.selected == false) {
                             dimItem.selectChildren(false);
+                        } else {
+                            // statistics
+                            axios
+                                .post(
+                                    'taxonomy.php',
+                                    new URLSearchParams({
+                                        id: dimItem.id,
+                                    }),
+                                )
+                                .then(function (response) {
+                                    const data = response.data;
+                                })
+                                .catch(function (error) {
+                                    console.error(error);
+                                });
                         }
                         this_.updateExercisesHTMLElement(
                             document.getElementById('exercises_div'),

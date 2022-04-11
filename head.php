@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+
     <style>
         .centered {
             position: absolute;
