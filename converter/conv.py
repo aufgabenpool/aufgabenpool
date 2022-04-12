@@ -122,6 +122,8 @@ for i, question in enumerate(quiz):
     else:
         warnings += "FRAGETYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
     has_te_1_tag = False
+    has_te_2_tag = False
+    has_te_3_tag = False
     if tags is not None:
         for tag in tags:
             tag_name = tag[0].text
@@ -137,6 +139,10 @@ for i, question in enumerate(quiz):
 
             if tag_formatted.startswith("te_1_"):
                 has_te_1_tag = True
+            if tag_formatted.startswith("te_2_"):
+                has_te_2_tag = True
+            if tag_formatted.startswith("te_3_"):
+                has_te_3_tag = True
 
             # number of occurrences of tags (tag count)
             if tag_formatted not in metadata["tag_count"]:
@@ -158,11 +164,26 @@ for i, question in enumerate(quiz):
         ct.tag = "'TE:1:' fehlt!"
         criticalTags.append(ct)
 
+    if has_te_2_tag == False:
+        q_tagset.add('te_2_unknown')
+        tagset.add('te_2_unknown')
+        if 'te_2_unknown' not in metadata["tag_count"]:
+            metadata["tag_count"]['te_2_unknown'] = 0
+        metadata["tag_count"]['te_2_unknown'] += 1
+    if has_te_3_tag == False:
+        q_tagset.add('te_3_unknown')
+        tagset.add('te_3_unknown')
+        if 'te_3_unknown' not in metadata["tag_count"]:
+            metadata["tag_count"]['te_3_unknown'] = 0
+        metadata["tag_count"]['te_3_unknown'] += 1
+
+
     q_tagset.remove("")
 
+
     te1 = ""
-    te2 = "NOTCLASSIFIED"
-    te3 = "NOTCLASSIFIED"
+    te2 = ""
+    te3 = ""
     for tag in q_tagset:
         if tag.startswith("te_1_"):
             te1 = tag
