@@ -53,7 +53,10 @@ export class Exercise {
     createHTMLElement(pool: Pool): HTMLElement {
         this.pool = pool;
         const root = document.createElement('div');
-        root.classList.add('col', 'bg-white', 'rounded', 'my-4');
+        root.classList.add('col', 'bg-white', 'rounded', 'my-4', 'mx-0');
+        root.style.border = 'solid';
+        root.style.borderColor = '#aaaaaa';
+        root.style.borderWidth = '1px';
         const card = document.createElement('div');
         root.appendChild(card);
         card.classList.add('card-body', 'm-0', 'p-2');
@@ -61,7 +64,7 @@ export class Exercise {
         const topic = this.createTopicHierarchyHTML();
         let p = document.createElement('p');
         card.appendChild(p);
-        p.classList.add('text-center', 'card-text', 'mx-2', 'my-0', 'my-0');
+        p.classList.add('text-center', 'card-text', 'mx-2', 'my-0');
         p.innerHTML = topic;
         // title
         const title = this.title;

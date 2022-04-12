@@ -161,8 +161,8 @@ for i, question in enumerate(quiz):
     q_tagset.remove("")
 
     te1 = ""
-    te2 = ""
-    te3 = ""
+    te2 = "not-classified"
+    te3 = "not-classified"
     for tag in q_tagset:
         if tag.startswith("te_1_"):
             te1 = tag

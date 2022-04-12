@@ -7,18 +7,6 @@
 
         <br/>
 
-
-        <!--<div id="myCaptcha"></div>
-        <button id="xxsubmit" type="button" class="btn btn-primary">blub</button>-->
-        <!--
-        <form action="?" method="POST">
-            <div class="g-recaptcha" data-sitekey="6Lca4GQfAAAAALPpkGPIrkEJjNlxNCJvtN8SXE_9">
-            </div>
-            <br/>
-            <input type="submit" value="Submit">
-        </form>
-        -->
-
         <div class="container px-0">
             <div class="row px-0">
 
@@ -29,7 +17,8 @@
                             <h5 class="card-title">Aufgabenpool</h5>
                             <p class="card-text">
                                 <ul>
-                                    <li>Zentrale Sammlung von STACK-basierten Mathematikaufgaben für Moodle und Ilias.</li>
+                                    <li>Zentrale Sammlung von STACK-basierten Mathematikaufgaben für Moodle und Ilias</li>
+                                    <li>Aufgaben aussuchen und exportieren</li>
                                 </ul>
                             </p>
                             <p class=""><a href="pool.php" class="btn btn-outline-dark w-100"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
@@ -67,6 +56,8 @@
                                     <li>Inhaltsbereiche</li>
                                 </ul>
                             </p>
+                            <br/>
+                            <p class=""><a href="doc/taxonomie-website.pdf" class="btn btn-outline-dark w-100" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
                         </div>
                     </div>
                 </div>
@@ -82,6 +73,7 @@
                                     </li>
                                 </ul>
                             </p>
+                            <br/><br/>
                             <p class=""><a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle/login/index.php" class="btn btn-outline-dark w-100" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
                         </div>
                     </div>

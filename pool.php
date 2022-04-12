@@ -44,9 +44,9 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row mx-0">
-                <div class="col mx-0">
+        <div class="container px-0">
+            <div class="row mx-0 px-0">
+                <div class="col mx-0 px-0">
                     <div id="exercises_div" class="mx-0 my-3"></div>
                     <div id="basket_div" class="mx-0 my-3" style="display: none;"></div>
                 </div>
