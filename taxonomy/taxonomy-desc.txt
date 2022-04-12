@@ -80,15 +80,16 @@ Integration und Transformation des Wissens. Schüler muss für die Aufgabenlösu
 
 @type
 @type:1 #Stack
-Randomisierte Aufgabe
+Randomisierte Aufgabe vom Typ STACK
 @type:2 #WahrFalsch
 Lösung wird als wahr/falsch bewertet
-@type:3 Multiple-Choice
+@type:3 #Multiple-Choice
 Aufgaben mit Mehrfachauswahl
-@type:4 Stack-Multiple-Choice
+@type:4 #Stack-Multiple-Choice
 Aufgaben mit Mehrfachauswahl; realisiert als randomisierte STACK Aufgabe
-@type:5 Lückenauswahl
+@type:5 #Lückenauswahl
 Auswahl von Lücken
+
 @praxiserprobt
 @praxiserprobt:1 #praxiserprobt
 Aufgaben, die bereits erfolgreich in der Lehre eingesetzt wurden
