@@ -103,9 +103,9 @@
                             </span>-->
                             <img src="img/collab.gif" style="height:50pt"/>
                             <h5 class="card-title mt-2">
-                                Interesse an einer Zusammenarbeit?
+                                Interesse an einer Zusammenarbeit?<br/> Möchten Sie Ihre Aufgaben zum Aufgabenpool hinzufügen?<br/> Sprechen Sie uns an!
                             </h5>
-                            <p>Wenden Sie sich gerne an <span class="text-dark">TODO: wer möchte hier stehen??</span></p>
+                            <!--<p>Wenden Sie sich gerne an <span class="text-dark">TODO: wer möchte hier stehen??</span></p>-->
                         </div>
                     </div>
                 </div>
