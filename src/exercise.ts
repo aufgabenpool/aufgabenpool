@@ -19,7 +19,7 @@ export class Exercise {
     private createTopicHierarchyHTML(): string {
         let html = '';
         for (const tag of this.tags) {
-            if (tag.startsWith('te_')) {
+            if (tag.startsWith('te_') && !tag.endsWith('_unknown')) {
                 if (html.length > 0) html += '&raquo; ';
                 html +=
                     '<span class="">' +
