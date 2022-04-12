@@ -54,6 +54,7 @@ const lowercaseWords = [
     'durch',
     'mittels',
     'bei',
+    'zwischen',
 ];
 
 export function formatTagAsTitle(src: string): string {
