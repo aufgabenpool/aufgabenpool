@@ -12,7 +12,7 @@ html = '''
 </html>
 '''
 
-f = open('../bugs/bugs.txt')
+f = open('../feedback/bugs.txt')
 lines = f.readlines()
 f.close()
 
