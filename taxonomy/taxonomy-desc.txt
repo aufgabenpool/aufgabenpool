@@ -31,7 +31,7 @@ Wissen über eigenes Wissen, Steuerung von Lernhandlungen, (Monitoring), Wissen 
 Abruf von Wissen aus dem Langzeitgedächtnis, Wiedergabe von gespeicherten Wissen, Nachahmung von Prozeduren, auch metakogn. und konzept. Wissen kann reproduziert werden
 @Maier:2:2 #naher Transfer
 Aufgabensituation und gespeichertes Wissen unterscheiden sich nur geringfügig; eindeutig, welches Wissen (Fakten, Konzepte, etc.) zur Anwendung kommt, einfache Verfahren anwenden, kleinschrittiges Ausführen
-@Maier:2:3 #weiter Transfer 
+@Maier:2:3 #weiter Transfer
 nwendungssituation/Aufgabe ist relativ neu, nicht sofort einsichtig, welches Wissen zur Anwendung kommt; Wissen ist allerdings in der Form vorhanden, in der es zur Anwendung kommt; Einige Anhaltspunkte sind vorgegeben, ohne jedoch auf einen Lösungsweg festzulegen
 @Maier:2:4 #Problemlösen
 unbekannte Aufgabensituation; unklar, welches Wissen zur Anwendung kommt; das zur Bearbeitung einer Situation erforderliche Wissen muss erst zusammengefügt werden; Schüler müssen auf unterschiedliche Wissensarten zurückgreifen (Fakten, Konzepte, Prozeduren, Strategiewissen); Problemlöseprozess: Problem finden bzw. definieren, Lösungen entwerfen, Lösungen umsetzen und Lösungen bewerten.
@@ -71,9 +71,24 @@ Textpassagen mit teilweise für die Aufgabenbearbeitung irrelevanten Information
 z.T. irrelevante, irritierende Formulierungen; komplexe Syntax. Aufgabe verdeckt die inneren, logischen Bezüge; logische Funktionen (Verneinungen, wenndann Verknüpfungen, Allaussagen, etc.); komplexe Satzgefüge
 
 @Maier:7 #Repräsentationsformen
-@Maier:7:1 #eine 
+@Maier:7:1 #eine
 Aufgabenstellung und Aufgabenlösung basieren auf einer Repräsentationsform. Aufgabeninformation und Aufgabenlösung basieren auf Wissen in einer Repräsentationsform; eventuell noch andere Repräsentationsformen vorhanden, die für die Lösung jedoch irrelevant sind (z.B. Bild zur Illustration)
 @Maier:7:2 #Integration
 Aufgabe gibt Wissen in verschiedenen Repräsentationsformen vor; Integration dieser Formen für die Lösung nötig; Aufgabenlösung bewegt sich  innerhalb der vorgegebenen Repräsentationsformen
 @Maier:7:3 #Transformation
 Integration und Transformation des Wissens. Schüler muss für die Aufgabenlösung das vorliegende Wissen in eine Repräsentationsform transformieren, die nicht durch die Aufgabe vorgegeben wird
+
+@type
+@type:1 #Stack
+Randomisierte Aufgabe
+@type:2 #WahrFalsch
+Lösung wird als wahr/falsch bewertet
+@type:3 Multiple-Choice
+Aufgaben mit Mehrfachauswahl
+@type:4 Stack-Multiple-Choice
+Aufgaben mit Mehrfachauswahl; realisiert als randomisierte STACK Aufgabe
+@type:5 Lückenauswahl
+Auswahl von Lücken
+@praxiserprobt
+@praxiserprobt:1 #praxiserprobt
+Aufgaben, die bereits erfolgreich in der Lehre eingesetzt wurden
