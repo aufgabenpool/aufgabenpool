@@ -11,19 +11,6 @@ const metaDataPath = 'data/meta.json';
 const moodleEditPath =
     'https://aufgabenpool.f07-its.fh-koeln.de/' +
     'moodle/question/question.php?&courseid=2&id=';
-const lowercaseWords = [
-    'der',
-    'die',
-    'das',
-    'des',
-    'in',
-    'im',
-    'und',
-    'auf',
-    'mit',
-    'durch',
-    'mittels',
-];
 
 export function selectPool() {
     const poolButton = document.getElementById('pool-button');
@@ -60,7 +47,6 @@ export function reportBug(): void {
 export function init() {
     pool = new Pool({
         metaDataPath: metaDataPath,
-        lowercaseWords: lowercaseWords,
         moodleEditPath: moodleEditPath,
     });
     pool.import();

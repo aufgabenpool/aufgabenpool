@@ -7,7 +7,12 @@ import axios from 'axios';
 
 import * as bootstrap from 'bootstrap';
 
-import { downloadFile, hideTooltips, updateTooltips } from './help';
+import {
+    downloadFile,
+    formatTagAsTitle,
+    hideTooltips,
+    updateTooltips,
+} from './help';
 import { Exercise } from './exercise';
 import {
     TaxonomyItem,
@@ -23,7 +28,6 @@ function googleRecaptchaCallback(response: string): void {
 
 export interface PoolConfig {
     metaDataPath: string;
-    lowercaseWords: string[];
     moodleEditPath: string;
 }
 
@@ -637,16 +641,17 @@ export class Pool {
         for (const tagname in data) {
             const subItem = new TaxonomyHierarchyItem();
             subItem.id = tagname;
-            subItem.title = this.formatTagAsTitle(tagname.substring(5));
+            subItem.title = formatTagAsTitle(tagname.substring(5));
             item.children.push(subItem);
             this.fillTaxonomyHierarchyRecursively(data[tagname], subItem);
         }
     }
 
-    private formatTagAsTitle(src: string): string {
+    /*private formatTagAsTitle(src: string): string {
         // examples:
         //  "Bestimmtes integral" -> "Bestimmtes Integral"
         //  "FestverzinslicheWertpapiere" -> "Festverzinsliche Wertpapiere"
+        //  "Test1" -> "Test 1"
         let result = '';
         const n = src.length;
         for (let i = 0; i < n; i++) {
@@ -656,10 +661,16 @@ export class Pool {
                 result += ch.toUpperCase();
             } else if (this.isLowercase(chPrev) && this.isUppercase(ch)) {
                 result += ' ' + ch;
+            } else if (this.isNumber(ch)) {
+                result += ' ' + ch;
             } else {
                 result += ch;
             }
         }
+        result = result.replace(/1d/g, '1D');
+        result = result.replace(/2d/g, '2D');
+        result = result.replace(/3d/g, '3D');
+        result = result.replace(/4d/g, '4D');
         const words = result.split(' ');
         const wordsOut: string[] = [];
         for (const word of words) {
@@ -670,6 +681,11 @@ export class Pool {
         return wordsOut.join(' ');
     }
 
+    private isNumber(ch: string): boolean {
+        if (ch.length < 1) return false;
+        return ch[0] >= '0' && ch[0] <= '9';
+    }
+
     private isLowercase(ch: string): boolean {
         if (ch.length < 1) return false;
         return ch[0] >= 'a' && ch[0] <= 'z';
@@ -678,5 +694,5 @@ export class Pool {
     private isUppercase(ch: string): boolean {
         if (ch.length < 1) return false;
         return ch[0] >= 'A' && ch[0] <= 'Z';
-    }
+    }*/
 }

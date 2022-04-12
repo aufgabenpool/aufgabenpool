@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 
-import { capitalizeWords, downloadFile } from './help';
+import { formatTagAsTitle, downloadFile } from './help';
 import { Pool, PoolMode } from './pool';
 
 export class Exercise {
@@ -23,7 +23,7 @@ export class Exercise {
                 if (html.length > 0) html += '&raquo; ';
                 html +=
                     '<span class="">' +
-                    capitalizeWords(tag.substring(5)) +
+                    formatTagAsTitle(tag.substring(5)) +
                     '</span>&nbsp;';
             }
         }
