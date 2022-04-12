@@ -262,7 +262,7 @@ export class Pool {
             paragraph.classList.add('px-5');
             div.appendChild(paragraph);
             paragraph.innerHTML =
-                '<p><small><i>Achtung:</i> Es wird <i>eine</i> XML-Datei erzeugt, die neben Aufgaben vom Typ STACK auch andere Aufgabentypen enthalten kann.</small></p><p><small>In manchen Fällen kann es beim Import (insbesondere in ILIAS) zu Fehlermeldungen kommen.</small></p><p><small><i>Workaround</i>: erstellen Sie Aufgabenblätter die nur jeweils einen Aufgabentyp enthalten.</small></p>';
+                '<p><small><i>Achtung:</i> Es wird <i>eine</i> XML-Datei erzeugt, die neben Aufgaben vom Typ STACK auch andere Aufgabentypen enthalten kann.</small></p><p><small>In manchen Fällen kann es beim Import (insbesondere in ILIAS) zu Fehlermeldungen kommen.</small></p><p><small><i>Workaround</i>: erstellen Sie Aufgabenblätter, die nur jeweils einen Aufgabentyp enthalten.</small></p>';
 
             const button = document.createElement('button');
             div.appendChild(button);

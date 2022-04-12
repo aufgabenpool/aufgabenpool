@@ -3,8 +3,9 @@
         <div class="col-lg">
             <a href="https://www.th-koeln.de"><img class="p-1" src="img/logo-th-koeln.png" style="height:72px"/></a>
         </div>
-        <div class="col-3 text-center pt-1 ps-5">
+        <div class="col-6 text-center pt-1 ps-5">
             <p class="btn-outline-danger my-1 rounded" style="font-size: 16pt;">BETA VERSION</p>
+            <p class="btn-outline-danger my-1 rounded" style="font-size: 8pt;">Bei technischen Problemen: Mail an <a href="mailto:andreas.schwenk@th-koeln.de" style="text-decoration:none;color:#c4121b;">andreas.schwenk@th-koeln.de</a></p>
         </div>
     </div>
     <blockquote class="blockquote text-center">
