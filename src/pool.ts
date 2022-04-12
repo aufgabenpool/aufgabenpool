@@ -456,6 +456,7 @@ export class Pool {
                     button.setAttribute('data-placement', 'top');
                     button.title = dimItem.description;
                     let title = dimItem.title;
+                    if (title == 'unknown') title = 'nicht klassifiziert';
                     let cnt = 0;
                     if (Object.keys(this.tagCountSelected).length == 0)
                         cnt = this.tagCount[dimItem.id];
@@ -647,53 +648,4 @@ export class Pool {
             this.fillTaxonomyHierarchyRecursively(data[tagname], subItem);
         }
     }
-
-    /*private formatTagAsTitle(src: string): string {
-        // examples:
-        //  "Bestimmtes integral" -> "Bestimmtes Integral"
-        //  "FestverzinslicheWertpapiere" -> "Festverzinsliche Wertpapiere"
-        //  "Test1" -> "Test 1"
-        let result = '';
-        const n = src.length;
-        for (let i = 0; i < n; i++) {
-            const ch = src[i];
-            const chPrev = i == 0 ? '' : src[i - 1];
-            if (chPrev == ' ' || chPrev == '-' || chPrev == '/') {
-                result += ch.toUpperCase();
-            } else if (this.isLowercase(chPrev) && this.isUppercase(ch)) {
-                result += ' ' + ch;
-            } else if (this.isNumber(ch)) {
-                result += ' ' + ch;
-            } else {
-                result += ch;
-            }
-        }
-        result = result.replace(/1d/g, '1D');
-        result = result.replace(/2d/g, '2D');
-        result = result.replace(/3d/g, '3D');
-        result = result.replace(/4d/g, '4D');
-        const words = result.split(' ');
-        const wordsOut: string[] = [];
-        for (const word of words) {
-            if (this.config.lowercaseWords.includes(word.toLocaleLowerCase()))
-                wordsOut.push(word.toLowerCase());
-            else wordsOut.push(word);
-        }
-        return wordsOut.join(' ');
-    }
-
-    private isNumber(ch: string): boolean {
-        if (ch.length < 1) return false;
-        return ch[0] >= '0' && ch[0] <= '9';
-    }
-
-    private isLowercase(ch: string): boolean {
-        if (ch.length < 1) return false;
-        return ch[0] >= 'a' && ch[0] <= 'z';
-    }
-
-    private isUppercase(ch: string): boolean {
-        if (ch.length < 1) return false;
-        return ch[0] >= 'A' && ch[0] <= 'Z';
-    }*/
 }
