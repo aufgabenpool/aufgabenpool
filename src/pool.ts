@@ -430,6 +430,9 @@ export class Pool {
                 let numberRendered = 0;
                 const renderedTitles = new Set<string>();
                 for (const dimItem of dimItems) {
+                    let title = dimItem.title;
+                    if (title == 'unknown') title = 'nicht klassifiziert';
+                    if (renderedTitles.has(title)) continue;
                     if (
                         dimItem.parent != null &&
                         dimItem.parent.selected == false
@@ -456,9 +459,7 @@ export class Pool {
                     button.setAttribute('data-toggle', 'tooltip');
                     button.setAttribute('data-placement', 'top');
                     button.title = dimItem.description;
-                    let title = dimItem.title;
-                    if (title == 'unknown') title = 'nicht klassifiziert';
-                    if (renderedTitles.has(title)) continue;
+
                     let cnt = 0;
                     if (Object.keys(this.tagCountSelected).length == 0)
                         cnt = this.tagCount[dimItem.id];
