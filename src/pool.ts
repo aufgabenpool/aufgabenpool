@@ -506,7 +506,7 @@ export class Pool {
                         updateTooltips();
                         hideTooltips();
                     });
-                    renderedTitles.add(title);
+                    renderedTitles.add(dimItem.title);
                     numberRendered++;
                 }
                 if (numberRendered == 0) {
