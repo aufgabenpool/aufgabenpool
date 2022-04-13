@@ -431,11 +431,7 @@ export class Pool {
                 const renderedTitles = new Set<string>();
                 for (const dimItem of dimItems) {
                     let title = dimItem.title;
-                    console.log(renderedTitles);
-                    if (renderedTitles.has(title)) {
-                        console.log('test: ' + title);
-                        continue;
-                    }
+                    if (renderedTitles.has(title)) continue;
                     if (title == 'unknown') title = 'nicht klassifiziert';
                     if (
                         dimItem.parent != null &&
