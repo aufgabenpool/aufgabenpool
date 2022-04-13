@@ -428,6 +428,7 @@ export class Pool {
                 }
                 const dimItems = item.dimensionItems;
                 let numberRendered = 0;
+                const renderedTitles = new Set<string>();
                 for (const dimItem of dimItems) {
                     if (
                         dimItem.parent != null &&
@@ -457,6 +458,7 @@ export class Pool {
                     button.title = dimItem.description;
                     let title = dimItem.title;
                     if (title == 'unknown') title = 'nicht klassifiziert';
+                    if (renderedTitles.has(title)) continue;
                     let cnt = 0;
                     if (Object.keys(this.tagCountSelected).length == 0)
                         cnt = this.tagCount[dimItem.id];
@@ -499,6 +501,7 @@ export class Pool {
                         updateTooltips();
                         hideTooltips();
                     });
+                    renderedTitles.add(title);
                     numberRendered++;
                 }
                 if (numberRendered == 0) {
