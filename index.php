@@ -74,7 +74,7 @@
                                 </ul>
                             </p>
                             <br/><br/>
-                            <p class=""><a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle/login/index.php" class="btn btn-outline-dark w-100" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                            <p class=""><a href="https://aufgabenpool.th-koeln.de/moodle/login/index.php" class="btn btn-outline-dark w-100" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
                         </div>
                     </div>
                 </div>

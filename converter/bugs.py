@@ -31,7 +31,7 @@ for line in lines:
 
     content += '<li>'
     content += datetime.utcfromtimestamp(int(timestamp)//1000).strftime('%Y-%m-%d %H:%M:%S')
-    content += ', <a href="https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(moodleId) + '">Link (Moodle)</a>, '
+    content += ', <a href="https://aufgabenpool.th-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(moodleId) + '">Link (Moodle)</a>, '
     content += ' Fehlerbeschreibung: "' + desc.replace('\n','<br/>') + '", '
     content += ' Kontaktdaten: "' + contact.replace('\n','<br/>') + '" '
     content += '</li>'
