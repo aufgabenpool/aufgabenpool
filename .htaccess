@@ -1,0 +1,1 @@
+RedirectMatch ^/pool/$ https://aufgabenpool.th-koeln.de/
