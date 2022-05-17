@@ -64,6 +64,12 @@
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
+
+            // redirect to new URL
+            if(window.location.href.includes('f07-its.fh-koeln.de')) {
+                window.location.href = 'https://aufgabenpool.th-koeln.de';
+            }
+
             aufgabenpool.init();
         </script>
 

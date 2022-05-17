@@ -117,6 +117,12 @@
 
 
         <script>
+
+            // redirect to new URL
+            if(window.location.href.includes('f07-its.fh-koeln.de')) {
+                window.location.href = 'https://aufgabenpool.th-koeln.de';
+            }
+
             /*var verifyCallback = function( response ) {
                 console.log( 'g-recaptcha-response: ' + response );
             };
