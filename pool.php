@@ -67,7 +67,7 @@
 
             // redirect to new URL
             if(window.location.href.includes('f07-its.fh-koeln.de')) {
-                window.location.href = 'https://aufgabenpool.th-koeln.de';
+                window.location.href = 'https://aufgabenpool.th-koeln.de/index.php';
             }
 
             aufgabenpool.init();
