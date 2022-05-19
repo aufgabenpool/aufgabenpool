@@ -265,7 +265,7 @@ export class Exercise {
         spacing.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;';
         buttonCol.appendChild(spacing);*/
 
-        // "TODO: https://aufgabenpool.f07-its.fh-koeln.de/moodle/question/type/stack/questiontestrun.php?questionid=???&courseid=2
+        // "TODO: https://aufgabenpool.th-koeln.de/moodle/question/type/stack/questiontestrun.php?questionid=???&courseid=2
         return root;
     }
 }

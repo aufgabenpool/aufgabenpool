@@ -9,7 +9,7 @@ let pool: Pool = null;
 
 const metaDataPath = 'data/meta.json';
 const moodleEditPath =
-    'https://aufgabenpool.f07-its.fh-koeln.de/' +
+    'https://aufgabenpool.th-koeln.de/' +
     'moodle/question/question.php?&courseid=2&id=';
 
 export function selectPool() {
