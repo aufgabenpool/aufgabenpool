@@ -124,6 +124,7 @@ for i, question in enumerate(quiz):
     has_te_1_tag = False
     has_te_2_tag = False
     has_te_3_tag = False
+    is_hidden = False
     if tags is not None:
         for tag in tags:
             tag_name = tag[0].text
@@ -136,6 +137,10 @@ for i, question in enumerate(quiz):
 
             q_tagset.add(tag_formatted)
             tagset.add(tag_formatted)
+
+            if tag_formatted.startswith("hidden"):
+                tag_formatted = "hidden_1"
+                is_hidden = True
 
             if tag_formatted.startswith("te_1_"):
                 has_te_1_tag = True
@@ -157,6 +162,12 @@ for i, question in enumerate(quiz):
                 ct.exerciseId = questionid
                 ct.tag = tag_name
                 criticalTags.append(ct)
+
+    if is_hidden:
+        ct = CriticalTag()
+        ct.exerciseId = questionid
+        ct.tag = "Aufgabe momentan in Quarentäne ('hidden')"
+        criticalTags.append(ct)
 
     if has_te_1_tag == False:
         ct = CriticalTag()

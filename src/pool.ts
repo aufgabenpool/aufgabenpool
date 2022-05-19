@@ -182,6 +182,7 @@ export class Pool {
 
     private getTagCategory(tag: string): string {
         // TODO: do not do the following code manually...
+        if (tag.startsWith('hidden_')) return 'hidden_';
         if (tag.startsWith('te_1_')) return 'te_1_';
         if (tag.startsWith('te_2_')) return 'te_2_';
         if (tag.startsWith('te_3_')) return 'te_3_';
@@ -346,6 +347,9 @@ export class Pool {
         for (const exercise of this.exercises) {
             const exerciseTagsCategories = this.getTagCategories(exercise.tags);
             // skip untagged exercises
+            if (exerciseTagsCategories.has('hidden_') == true) {
+                continue;
+            }
             if (exerciseTagsCategories.has('te_1_') == false) {
                 continue;
             }
