@@ -15,6 +15,8 @@ export class Exercise {
     tags: string[] = [];
     type = '';
     pool: Pool = null;
+    moodleCompatible = true;
+    iliasCompatible = true;
 
     private createTopicHierarchyHTML(): string {
         let html = '';
@@ -91,9 +93,30 @@ export class Exercise {
         const buttonRow = document.createElement('div');
         root.appendChild(buttonRow);
         buttonRow.classList.add('row', 'mx-1', 'my-2');
+
+        // empty column
+        const emptyCol = document.createElement('div');
+        buttonRow.appendChild(emptyCol);
+        emptyCol.classList.add('col', 'mx-0', 'my-2', 'text-start');
+
+        // button column
         const buttonCol = document.createElement('div');
         buttonRow.appendChild(buttonCol);
         buttonCol.classList.add('col', 'mx-0', 'my-2', 'text-center');
+
+        // Moodle/Ilias compatibility buttons
+        const iconsCol = document.createElement('div');
+        buttonRow.appendChild(iconsCol);
+        iconsCol.classList.add('col', 'mx-0', 'my-2', 'text-end');
+        let iconsStr = '';
+        if (this.moodleCompatible)
+            iconsStr +=
+                '<img src="img/moodle-icon-sm.png" style="height:36px;" data-toggle="tooltip" data-placement="top" title="Aufgabe kann in Moodle importiert werden"/> ';
+        if (this.iliasCompatible)
+            iconsStr +=
+                '<img src="img/ilias-icon-sm.png" style="height:36px;" data-toggle="tooltip" data-placement="top" title="Aufgabe kann in Ilias importiert werden"/> ';
+        iconsCol.innerHTML = iconsStr;
+
         // preview buttons
         const buttonGroupPreview = document.createElement('div');
         buttonCol.appendChild(buttonGroupPreview);
@@ -260,6 +283,7 @@ export class Exercise {
                     });
             };
         }
+
         /*// spacing between button groups
         spacing = document.createElement('span');
         spacing.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;';

@@ -263,24 +263,56 @@ export class Pool {
             paragraph.classList.add('px-5');
             div.appendChild(paragraph);
             paragraph.innerHTML =
-                '<p><small><i>Achtung:</i> Es wird <i>eine</i> XML-Datei erzeugt, die neben Aufgaben vom Typ STACK auch andere Aufgabentypen enthalten kann.</small></p><p><small>In manchen Fällen kann es beim Import (insbesondere in ILIAS) zu Fehlermeldungen kommen.</small></p><p><small><i>Workaround</i>: erstellen Sie Aufgabenblätter, die nur jeweils einen Aufgabentyp enthalten.</small></p>';
+                '<br/>' +
+                '<p>Beim Export wird Datei im Format Moodle XML erzeugt, die alle Aufgaben aus dem Aufgabenblatt enthält.</p>' +
+                '<p><i>Hinweis:</i> Momentan können nur Aufgaben vom Typ STACK erfolgreich in Ilias importiert werden.</p>';
 
-            const button = document.createElement('button');
-            div.appendChild(button);
-            button.type = 'button';
-            button.classList.add('btn', 'btn-outline-dark', 'btn-sm');
-            button.setAttribute('data-toggle', 'tooltip');
-            button.setAttribute('data-placement', 'top');
-            button.title = 'Aufgabenblatt im Format Moodle-XML herunterladen';
-            button.innerHTML =
-                '<span style="font-size: 24pt;">' +
-                '<i class="fa-solid fa-download"></i>' +
-                '</span>';
             const this_ = this;
-            button.addEventListener('click', function () {
+
+            // Download exercises for Moodle
+            const buttonMoodle = document.createElement('button');
+            div.appendChild(buttonMoodle);
+            buttonMoodle.type = 'button';
+            buttonMoodle.classList.add('btn', 'btn-outline-dark', 'btn-sm');
+            buttonMoodle.setAttribute('data-toggle', 'tooltip');
+            buttonMoodle.setAttribute('data-placement', 'top');
+            buttonMoodle.title =
+                'Aufgabenblatt im Format Moodle-XML herunterladen';
+            buttonMoodle.innerHTML =
+                '<span style="font-size: 36pt;">' +
+                '<i class="fa-solid fa-download"></i>' +
+                ' <img src="img/moodle-icon-sm.png" style="height:24px;"/>' +
+                '</span>';
+            buttonMoodle.addEventListener('click', function () {
                 this_.worksheetMoodleXml = '';
                 if (this_.worksheetExercises.length > 0) {
-                    this_.downloadWorksheet_next(0);
+                    this_.downloadWorksheet_next(0, true, false);
+                }
+            });
+
+            // horizontal gap
+            const empty = document.createElement('span');
+            empty.innerHTML = '&nbsp;';
+            div.appendChild(empty);
+
+            // Download exercises for Moodle
+            const buttonIlias = document.createElement('button');
+            div.appendChild(buttonIlias);
+            buttonIlias.type = 'button';
+            buttonIlias.classList.add('btn', 'btn-outline-dark', 'btn-sm');
+            buttonIlias.setAttribute('data-toggle', 'tooltip');
+            buttonIlias.setAttribute('data-placement', 'top');
+            buttonIlias.title =
+                'Aufgabenblatt im Format Moodle-XML herunterladen (nur Ilias-kompatible Aufgaben)';
+            buttonIlias.innerHTML =
+                '<span style="font-size: 36pt;">' +
+                '<i class="fa-solid fa-download"></i>' +
+                ' <img src="img/ilias-icon-sm.png" style="height:24px;"/>' +
+                '</span>';
+            buttonIlias.addEventListener('click', function () {
+                this_.worksheetMoodleXml = '';
+                if (this_.worksheetExercises.length > 0) {
+                    this_.downloadWorksheet_next(0, false, true);
                 }
             });
         }
@@ -289,7 +321,11 @@ export class Pool {
         }
     }
 
-    private downloadWorksheet_next(index: number) {
+    private downloadWorksheet_next(
+        index: number,
+        moodleCompatible: boolean,
+        iliasCompatible: boolean,
+    ) {
         const exercise = this.worksheetExercises[index];
         const timestamp = Math.round(new Date().getTime() / 1000);
         const path = 'data/' + exercise.moodleID + '.xml?time=' + timestamp;
@@ -309,9 +345,17 @@ export class Pool {
                     dataEdited += line + '\n';
                 }
                 // append to basket_xml; go to next
-                this_.worksheetMoodleXml += dataEdited;
+                if (
+                    (moodleCompatible && exercise.moodleCompatible) ||
+                    (iliasCompatible && exercise.iliasCompatible)
+                )
+                    this_.worksheetMoodleXml += dataEdited;
                 if (index + 1 < this_.worksheetExercises.length)
-                    this_.downloadWorksheet_next(index + 1);
+                    this_.downloadWorksheet_next(
+                        index + 1,
+                        moodleCompatible,
+                        iliasCompatible,
+                    );
                 else this_.downloadWorksheet_final();
             })
             .catch(function (error) {
@@ -623,6 +667,8 @@ export class Pool {
                     exercise.title = e['title'];
                     exercise.tags = e['tags'].sort();
                     exercise.type = e['type'];
+                    exercise.moodleCompatible = true;
+                    exercise.iliasCompatible = exercise.type === 'stack';
                 }
                 /*console.log(this_.date);
                 console.log(this_.tagCount);
