@@ -668,7 +668,9 @@ export class Pool {
                     exercise.tags = e['tags'].sort();
                     exercise.type = e['type'];
                     exercise.moodleCompatible = true;
-                    exercise.iliasCompatible = exercise.type === 'stack';
+                    exercise.iliasCompatible =
+                        exercise.type === 'stack' ||
+                        exercise.type === 'stack-multichoice';
                 }
                 /*console.log(this_.date);
                 console.log(this_.tagCount);
