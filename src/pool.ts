@@ -264,8 +264,9 @@ export class Pool {
             div.appendChild(paragraph);
             paragraph.innerHTML =
                 '<br/>' +
-                '<p>Beim Export wird eine Datei im Format "Moodle XML" erzeugt. Diese enthält alle Aufgaben des Aufgabenblatts.</p>' +
-                '<p><i>Hinweis:</i> In Ilias können momentan nur Aufgaben vom Typ STACK erfolgreich importiert werden.</p>';
+                '<p>Beim Export wird eine Datei im Format "Moodle XML" erzeugt.</p>' +
+                '<p>In Moodle können über "Moodle XML" alle Pool-Aufgabentypen in Moodle importiert werden. Mit dem Moodle-Button erhält man daher alle ausgewählten Aufgaben.</p>' +
+                '<p>In Ilias können momentan über "Moodle XML" nur die Pool-Aufgaben vom Typ STACK erfolgreich importiert werden (ca. 90% der Aufgaben). Mit dem Ilias-Button erhält man daher nur die ausgewählten Aufgaben vom Typ STACK."</p>';
 
             const this_ = this;
 

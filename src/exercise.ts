@@ -20,13 +20,23 @@ export class Exercise {
 
     private createTopicHierarchyHTML(): string {
         let html = '';
+        let lastLevel = 0;
         for (const tag of this.tags) {
             if (tag.startsWith('te_') && !tag.endsWith('_unknown')) {
-                if (html.length > 0) html += '&raquo; ';
+                if (html.length > 0) {
+                    if (tag.startsWith('te_1') && lastLevel == 1) html += ', ';
+                    if (tag.startsWith('te_2') && lastLevel == 2) html += ', ';
+                    if (tag.startsWith('te_3') && lastLevel == 3) html += ', ';
+                    else html += '&raquo; '; // ">>"
+                }
                 html +=
                     '<span class="">' +
                     formatTagAsTitle(tag.substring(5)) +
                     '</span>&nbsp;';
+
+                if (tag.startsWith('te_1')) lastLevel = 1;
+                if (tag.startsWith('te_2')) lastLevel = 2;
+                if (tag.startsWith('te_3')) lastLevel = 3;
             }
         }
         return html;

@@ -191,6 +191,25 @@ for i, question in enumerate(quiz):
 
     q_tagset.remove("")
 
+    # te1 = []
+    # te2 = []
+    # te3 = []
+    # for tag in q_tagset:
+    #     if tag.startswith("te_1_"):
+    #         te1.append(tag)
+    #     elif tag.startswith("te_2_"):
+    #         te2.append(tag)
+    #     elif tag.startswith("te_3_"):
+    #         te3.append(tag)
+    # for te1_i in te1:
+    #     if te1_i not in metadata["topic_hierarchy"]:
+    #         metadata["topic_hierarchy"][te1_i] = {"":""}
+    # for te2_i in te2:
+    #     if te2_i not in metadata["topic_hierarchy"]:
+    #         metadata["topic_hierarchy"][te2_i] = {"":""}
+    # for te3_i in te3:
+    #     if te1_i not in metadata["topic_hierarchy"]:
+    #         metadata["topic_hierarchy"][te3_i] = {"":""}
 
     te1 = ""
     te2 = ""

@@ -5,9 +5,12 @@
             "name": "conv.py",
             "type": "python",
             "request": "launch",
-            "cwd": "${workspaceFolder}/Tools/",
-            "program": "${workspaceFolder}/Tools/conv.py",
-            "args": ["../Rohdaten/quiz-pool-AUFGABENPOOL-20211007-0917.xml", "../Data/"],
+            "cwd": "${workspaceFolder}/converter/",
+            "program": "${workspaceFolder}/converter/conv.py",
+            "args": [
+                "../data/quiz-pool-AUFGABENPOOL-20220412-1400.xml",
+                "../Data/_test/"
+            ],
             "console": "integratedTerminal"
         },
         {
@@ -15,9 +18,7 @@
             "cwd": "${workspaceFolder}/Tools/",
             "program": "${workspaceFolder}/Tools/get_preview_img.js",
             "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "skipFiles": ["<node_internals>/**"],
             "type": "pwa-node"
         },
         {
@@ -25,9 +26,7 @@
             "cwd": "${workspaceFolder}/Tools/",
             "program": "${workspaceFolder}/Tools/get_preview_img_batch.js",
             "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "skipFiles": ["<node_internals>/**"],
             "type": "pwa-node"
         },
         {
