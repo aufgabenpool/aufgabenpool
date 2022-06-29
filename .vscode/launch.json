@@ -34,7 +34,7 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "cwd": "${workspaceFolder}/Tools/",
+            "cwd": "${workspaceFolder}/stat/",
             "console": "integratedTerminal"
         }
     ]

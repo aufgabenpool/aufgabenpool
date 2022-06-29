@@ -1,0 +1,2394 @@
+
+=== Ableitung sin(x)^2+cos(x)^2 ===
+te_1_Differentialrechnung
+te_2_Ableitung
+te_3_Elementare funktionen
+
+=== Def-Bereich im R^2 ===
+
+=== Definitheit einer Matrix ===
+
+=== eps Umgebung ===
+
+=== Fehlerfortpflanzung ===
+
+=== Fehlerfortpflanzung2 ===
+
+=== Gradient ===
+
+=== Hesse-Matrix ===
+
+=== Hesse-Matrix ===
+
+=== Implizite Funktion ===
+
+=== Implizite Funktion: Tangente ===
+
+=== Linearisierung ===
+
+=== Ökonomische Bedeutung Steuerfunktion ===
+te_1_Differentialrechnung
+
+=== Partielle Ableitungen ===
+
+=== Rotation ===
+
+=== Tangente ===
+te_1_Differentialrechnung
+te_2_Tangente
+
+=== Tangentialebene ===
+
+=== Ableitung: 2. Ordnung ===
+te_2_Ableitung
+te_1_Differentialrechnung
+te_3_Höhere ableitungen
+
+=== Ableitung: a*(x+b)^c+d ===
+te_2_Ableitung
+te_1_Differentialrechnung
+te_3_Kettenregel
+
+=== Ableitung: dz/dx ===
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Ableitung: elementare Funktionen ===
+te_2_Ableitung
+te_3_Elementare funktionen
+te_1_Differentialrechnung
+
+=== Ableitungen einer Lagrange-Funktion ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Berechnung einer Steuer ===
+te_1_Differentialrechnung
+
+=== Differenzenquotient ===
+te_1_Differentialrechnung
+te_2_Ableitung
+te_3_Definition
+
+=== Elastizität ===
+te_1_Differentialrechnung
+
+=== Elastizität Bedeutung ===
+te_1_Differentialrechnung
+
+=== Fehlerfortpflanzung ===
+
+=== Folge R^2 ===
+
+=== Geschwindigkeit und Beschleunigung - Raumschiff ===
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Gradient R^2 ===
+
+=== Gradient R^3 ===
+
+=== Grenzkostenfunktion ===
+te_1_Differentialrechnung
+
+=== Hessematrix Extrema ===
+
+=== Implizite Funktionen ===
+
+=== Jacobi+Linearistierung ===
+
+=== Kettenregel ===
+te_3_Kettenregel
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Kurvendiskussion: gebrochenrationale Funktion ===
+te_1_Differentialrechnung
+te_2_Kurvendiskussion
+te_3_Grenzwerte
+te_3_Lokale extremstellen
+
+=== Kurvendiskussion: stationäre Stellen ===
+te_2_Kurvendiskussion
+te_1_Differentialrechnung
+te_3_Stationäre stellen
+
+=== Kurvendiskussion: stationäre Stellen, Monotonie ===
+te_2_Kurvendiskussion
+te_3_Höhere ableitungen
+te_3_Lokale extremstellen
+te_1_Differentialrechnung
+te_3_Monotonie
+te_2_Ableitung
+
+=== Kurvendiskussion: steilster Anstieg ===
+te_2_Kurvendiskussion
+te_1_Differentialrechnung
+
+=== Lagrange ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Lagrange-Funktion aufstellen ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Linearisierung einer Funktion ===
+
+=== Lokale Extremstelle bestimmen ===
+te_2_Kurvendiskussion
+te_3_Lokale extremstellen
+te_1_Differentialrechnung
+*HIDDEN*
+
+=== Maximalen Gewinn bestimmen ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Maximum ===
+
+=== Maximum ===
+
+=== Minimum ===
+
+=== Newton-Verfahren: Effektivzins ===
+te_1_Differentialrechnung
+te_2_Newton-verfahren
+
+=== Nutzenmaximierung mit Lagrange-Funktion ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Optimale Absatzmenge bestimmen ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Optimierung Gewinn ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Optimierung Umsatz ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Partielle Ableitung ===
+te_3_Kettenregel
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Partielle Ableitung ===
+
+=== Partielle Ableitung 1./2. Ord ===
+
+=== Partielle Ableitung 2. Ordnung ===
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Partielle Ableitungen bestimmen ===
+te_3_Kettenregel
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== partielle Steigung in Punkt ===
+
+=== Produktregel ===
+te_3_Produktregel
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Produktregel ===
+te_2_Ableitung
+te_1_Differentialrechnung
+te_3_Produktregel
+
+=== Produktregel ===
+te_2_Ableitung
+te_1_Differentialrechnung
+te_3_Produktregel
+
+=== Quotienten- und Kettenregel ===
+te_3_Kettenregel
+te_2_Ableitung
+te_1_Differentialrechnung
+te_3_Quotientenregel
+
+=== Quotientenregel ===
+te_2_Ableitung
+te_1_Differentialrechnung
+te_3_Quotientenregel
+
+=== Rotation, Divergenz ===
+
+=== Stationären Punkt bestimmen ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Summenregel ===
+te_3_Summenregel
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Summenregel ===
+te_2_Ableitung
+te_3_Elementare funktionen
+te_1_Differentialrechnung
+te_3_Summenregel
+
+=== Tangente ===
+te_1_Differentialrechnung
+te_2_Tangente
+
+=== Tangente: Näherungswert ===
+te_1_Differentialrechnung
+te_2_Tangente
+
+=== Tangente: parallel zu Gerade ===
+te_1_Differentialrechnung
+te_2_Tangente
+
+=== Taylorentwicklung: Taylorpolynom 3. Grades ===
+te_2_Ableitung
+te_3_Höhere ableitungen
+te_1_Differentialrechnung
+te_2_Taylorentwicklung
+te_3_Taylorpolynom
+
+=== Taylorpolynom ===
+te_2_Taylorentwicklung
+te_3_Taylorpolynom
+te_1_Differentialrechnung
+
+=== Totales Differential ===
+
+=== Totales Differential ===
+te_2_Ableitung
+te_1_Differentialrechnung
+
+=== Typ der Extremstelle bestimmen ===
+te_2_Kurvendiskussion
+te_3_Stationäre stellen
+te_1_Differentialrechnung
+
+=== Umsatz-, Kosten- und Gewinnfunktion auswerten ===
+te_1_Differentialrechnung
+
+=== Vektorfeld ===
+
+=== Implizite Funktionen ===
+
+=== komponentenweise Konvergenz ===
+
+=== Kurvendiskussion: lokale Extremstellen ===
+te_2_Kurvendiskussion
+te_3_Lokale extremstellen
+te_1_Differentialrechnung
+
+=== Definition des Integrals: Ober-, Untersumme abschätzen ===
+te_1_Integralrechnung
+te_2_Definition des integrals
+te_3_Obersummen/untersummen
+
+=== Definition des Integrals: Rechenregeln ===
+te_1_Integralrechnung
+te_2_Definition des integrals
+
+=== Flächenberechnung: Fläche zwischen Graph und x-Achse ===
+te_1_Integralrechnung
+te_2_Flächenberechnung
+te_3_Flächen zwischen graphen
+
+=== Integration: F und F' ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Bestimmtes integral
+
+=== Mehrdimensionale Integration ===
+te_1_Integralrechnung
+
+=== Ableitung, Stammfunktion ===
+te_1_Integralrechnung
+te_2_Integration
+
+=== bestimmtes Integral f(x,y) ===
+te_2_Integration
+te_3_Bestimmtes integral
+te_1_Integralrechnung
+
+=== bestimmtes Integral f(x,y) ===
+te_2_Integration
+te_3_Bestimmtes integral
+te_1_Integralrechnung
+
+=== bestimmtes Integral f(x,y)=a ===
+te_2_Integration
+te_3_Bestimmtes integral
+te_1_Integralrechnung
+
+=== bestimmtes Integral f(x,y)=sinx*cosy ===
+te_2_Integration
+te_3_Bestimmtes integral
+te_1_Integralrechnung
+
+=== Definition des Integrals: Obersumme/Untersumme ===
+te_1_Integralrechnung
+te_2_Definition des integrals
+te_3_Obersummen/untersummen
+
+=== Flächenberechnung: Fläche zwischen Graph und x-Achse ===
+te_2_Flächenberechnung
+te_1_Integralrechnung
+te_3_Flächen zwischen graphen
+
+=== Grenze eines Integrals bestimmen ===
+te_1_Integralrechnung
+
+=== Integration der Ableitung ===
+te_1_Integralrechnung
+te_2_Integration
+
+=== Integration: bestimmte Integrale ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Bestimmtes integral
+
+=== Integration: bestimmtes Integral ===
+te_2_Integration
+te_3_Bestimmtes integral
+te_1_Integralrechnung
+
+=== Integration: gebrochenrationale Funktionen ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Unbestimmtes integral
+
+=== Integration: gebrochenrationale Funktionen ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Unbestimmtes integral
+
+=== Integration: Partialbruchzerlegung ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partialbruchzerlegung
+
+=== Integration: Partialbruchzerlegung ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partialbruchzerlegung
+
+=== Integration: Partialbruchzerlegung ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partialbruchzerlegung
+
+=== Integration: Partialbruchzerlegung ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partialbruchzerlegung
+
+=== Integration: Partialbruchzerlegung ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partialbruchzerlegung
+
+=== Integration: Partialbruchzerlegung ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partialbruchzerlegung
+
+=== Integration: partielle Integration ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Partielle integration
+
+=== Integration: partielle Integration ===
+te_2_Integration
+te_3_Partielle integration
+te_1_Integralrechnung
+
+=== Integration: partielle Integration - bestimmt ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Bestimmtes integral
+te_3_Partielle integration
+
+=== Integration: partielle Integration - unbestimmt ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Unbestimmtes integral
+te_3_Partielle integration
+
+=== Integration: Stammintegral ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Stammintegral
+
+=== Integration: Substitutionsregel ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Substitutionsregel
+
+=== Integration: Substitutionsregel ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Substitutionsregel
+
+=== Integration: Substitutionsregel ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Substitutionsregel
+
+=== Integration: Substitutionsregel ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Substitutionsregel
+
+=== Integration: unbestimmte Integrale ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Unbestimmtes integral
+
+=== Integration: unbestimmtes Integral ===
+te_2_Integration
+te_3_Unbestimmtes integral
+te_1_Integralrechnung
+
+=== Integration: unbestimmtes Integral - Exponentialfunktion ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Unbestimmtes integral
+
+=== Integration: unbestimmtes Integral - Wurzelfunktion ===
+te_2_Integration
+te_3_Unbestimmtes integral
+te_1_Integralrechnung
+
+=== Integration: uneigentliche Integrale erster Art ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Uneigentliche integrale
+
+=== Integration: uneigentliche Integrale erster Art ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Uneigentliche integrale
+
+=== Integration: uneigentliche Integrale zweiter Art ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Uneigentliche integrale
+
+=== Integration: uneigentliche Integrale ===
+te_1_Integralrechnung
+te_2_Integration
+te_3_Uneigentliche integrale
+
+=== Kostenfunktion durch Integration bestimmen ===
+te_1_Integralrechnung
+
+=== Obere Grenze mit gegebener Fläche bestimmen ===
+te_2_Flächenberechnung
+te_1_Integralrechnung
+
+=== Partielle Integration ===
+te_2_Integration
+te_3_Partielle integration
+te_1_Integralrechnung
+
+=== Stammfunktion bestimmen ===
+te_1_Integralrechnung
+te_2_Integration
+
+=== Stammfunktion einer linearen Steuerfunktion ===
+te_1_Integralrechnung
+te_2_Integration
+
+=== Stammfunktion einer Steuerfunktion ===
+te_1_Integralrechnung
+te_2_Integration
+
+=== Stammfunktion und Ableitung ===
+te_1_Integralrechnung
+te_2_Integration
+
+=== Stammfunktion von Polynomen ===
+te_2_Integration
+te_1_Integralrechnung
+
+=== Stammfunktion, Ableitung, Graph zuweisen ===
+te_1_Integralrechnung
+
+=== Strecke/Geschwindigkeit - fallender Körper ===
+te_1_Integralrechnung
+
+=== unbestimmtes Integral f(x,y) ===
+te_2_Integration
+te_3_Unbestimmtes integral
+te_1_Integralrechnung
+
+=== Injektiv, Surjektiv und Bijektiv ===
+te_1_Elementare Funktionen
+te_1_Grundlagen
+te_2_Funktionen
+te_3_injektiv surjektiv bijektiv
+
+=== Injektiv, Surjektiv und Bijektiv (Fkt.) ===
+te_3_injektiv surjektiv bijektiv
+te_1_Elementare Funktionen
+te_1_Grundlagen
+te_2_Funktionen
+
+=== Definitions-, Wertebereich ===
+te_1_Elementare Funktionen
+te_2_Potenz- und Wurzelfunktionen
+te_3_Definitionsbereich
+te_3_Wertebereich
+
+=== Gerade Funktionen ===
+te_1_Elementare Funktionen
+te_2_rationale Funktionen
+
+=== Monotonie, Beschränktheit ===
+te_2_Kurvendiskussion
+te_3_Monotonie
+te_2_rationale Funktionen
+te_1_Elementare Funktionen
+te_1_Differentialrechnung
+
+=== Umkehrfunktion ===
+te_1_Elementare Funktionen
+te_2_Umkehrfunktionen
+
+=== Umkehrfunktion (2) ===
+te_2_Umkehrfunktionen
+te_1_Elementare Funktionen
+
+=== Umkehrfunktion (3) ===
+te_2_Potenz- und Wurzelfunktionen
+te_2_Umkehrfunktionen
+te_1_Elementare Funktionen
+
+=== Ungerade Funktionen ===
+te_2_rationale Funktionen
+te_1_Elementare Funktionen
+
+=== Exponentialfunktion Parameter bestimmen ===
+te_1_Elementare Funktionen
+te_2_Exponentialfunktionen
+
+=== Funktion beschreiben - quadratisch ===
+te_1_Elementare Funktionen
+te_2_Polynome
+
+=== Funktion beschreiben: Trigonometrische Funktionen ===
+te_1_Elementare Funktionen
+te_2_Trigonometrische Funktionen
+
+=== Funktionen: Umkehrfunktionen ===
+te_3_Definitionsbereich
+te_1_Elementare Funktionen
+te_2_Umkehrfunktionen
+
+=== Funktionen: Verkettung von y=x^a-4, y=1/x, y=(x-b)^b ===
+te_2_Exponentialfunktionen
+te_1_Elementare Funktionen
+te_2_Polynome
+
+=== Linearfaktorzerlegung ===
+te_1_Elementare Funktionen
+te_2_Polynome
+
+=== Monotonie Plot ===
+te_1_Differentialrechnung
+te_2_Kurvendiskussion
+te_3_Monotonie
+te_1_Elementare Funktionen
+
+=== Monotonie, Beschränktheit ===
+te_1_Differentialrechnung
+te_2_Kurvendiskussion
+te_3_Monotonie
+te_1_Elementare Funktionen
+
+=== Trigonometrische Funktionen bestimmen ===
+te_2_Trigonometrische Funktionen
+te_1_Elementare Funktionen
+
+=== Trigonometrische Funktionen bestimmen (einfacher) ===
+te_2_Trigonometrische Funktionen
+te_1_Elementare Funktionen
+
+=== Trigonometrische Funktionen vom Diagramm bestimmen ===
+te_2_Trigonometrische Funktionen
+te_1_Elementare Funktionen
+
+=== Umkehrfunktion: gebrochenrationale Funktion ===
+te_2_Umkehrfunktionen
+te_1_Elementare Funktionen
+
+=== Umkehrfunktionen ===
+te_2_Umkehrfunktionen
+te_1_Elementare Funktionen
+
+=== Umkehrung von Potenzfunktionen ===
+te_2_Umkehrfunktionen
+te_1_Elementare Funktionen
+
+=== Verkettung ===
+te_1_Elementare Funktionen
+te_1_Grundlagen
+te_2_Funktionen
+te_3_Verkettung
+
+=== Verkettung (2) ===
+te_2_Funktionen
+te_3_Verkettung
+te_1_Elementare Funktionen
+te_1_Grundlagen
+
+=== Verkettung von Funktionen ===
+te_2_Funktionen
+te_3_Verkettung
+te_1_Elementare Funktionen
+te_1_Grundlagen
+
+=== 1/sin-Folge ===
+te_1_Grenzwerte
+te_2_Folgen
+
+=== Folgen Eigenschaften ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Grenzwerte
+
+=== Fourier-Reihe Koeffizienten a0 ===
+te_1_Grenzwerte
+te_2_Reihen
+
+=== Grenzwert Wurzel ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Grenzwerte
+
+=== Häufungspunkt ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Häufungspunkte
+
+=== Konvergente Reihe ===
+te_1_Grenzwerte
+te_2_Reihen
+te_3_Konvergenzkriterien
+
+=== Konvergenztypen ===
+te_3_Konvergenzkriterien
+te_1_Grenzwerte
+te_2_Folgen
+
+=== Nullfolgen ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Grenzwerte
+
+=== Sandwich Lemma ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Grenzwerte
+
+=== Abstand Folge Grenzwert ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Grenzwerte
+
+=== Folge mit Polynombruch ===
+te_1_Grenzwerte
+te_2_Folgen
+te_3_Grenzwerte
+
+=== Folgen Häufungspunkte ===
+te_3_Häufungspunkte
+te_1_Grenzwerte
+te_2_Folgen
+
+=== Funktionen: Nullstellen und Polstellen von sqrt(P/Q-1) ===
+te_1_Grenzwerte
+te_2_Grenzwerte bei Funktionen
+te_3_Berechnung von Grenzwerten
+
+=== Funktionen: Nullstellen, Polstellen und Asymptoten einer gebrochenrationalen Funktion ===
+te_1_Grenzwerte
+te_2_Grenzwerte bei Funktionen
+te_3_Berechnung von Grenzwerten
+
+=== Geometrische Reihe ===
+te_1_Grenzwerte
+te_2_Reihen
+
+=== Grenzwert einer Funktion bestimmen ===
+te_1_Grenzwerte
+te_2_GrenzwertebeiFunktionen
+te_3_Berechnung
+te_2_Grenzwerte bei Funktionen
+te_3_Berechnung von Grenzwerten
+
+=== Majoranten- und Minorantenkriterium ===
+te_1_Grenzwerte
+te_2_Reihen
+te_3_Geometrische Reihe
+
+=== Nennerpolynom wenn Pol und Asymptote gegeben ===
+te_1_Grenzwerte
+te_2_Asymptoten
+
+=== Quotientenkriterium ===
+te_1_Grenzwerte
+te_2_Reihen
+
+=== Stetige Funktion ===
+te_2_Stetigkeit
+te_1_Grenzwerte
+
+=== Stetigkeit ===
+te_1_Grenzwerte
+te_2_Grenzwerte bei Funktionen
+te_3_Berechnung von Grenzwerten
+te_2_Stetigkeit
+
+=== Stetigkeit ===
+te_1_Grenzwerte
+te_2_Grenzwerte bei Funktionen
+te_3_Berechnung von Grenzwerten
+
+=== Stetigkeit ===
+te_1_Grenzwerte
+te_2_Grenzwerte bei Funktionen
+te_3_Berechnung von Grenzwerten
+
+=== Summe von Reihen ===
+te_1_Grenzwerte
+te_2_Reihen
+
+=== Wurzelkriterium ===
+te_1_Grenzwerte
+te_2_Reihen
+
+=== Mengenlehre: Vergleichszeichen ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_2_Ungleichungen
+
+=== Mengenlehre: Zahlenmengen ===
+te_1_Grundlagen
+te_2_Mengenlehre
+
+=== Gleichung: rationale Zahlen ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Gleichungen
+te_2_Zahlen
+
+=== Gleichungen: Pascalsches Dreieck ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Potenzgleichungen
+
+=== Gleichungen: quadratische Gleichung ===
+te_3_quadratische Gleichungen
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen: quadratische Gleichung - p-q-Formel ===
+te_3_quadratische Gleichungen
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen: Schnitzelbrötchen ===
+te_2_Gleichungen
+te_1_Grundlagen
+
+=== Mengenlehre: Element ===
+te_2_Mengenlehre
+te_1_Grundlagen
+
+=== Mengenlehre: Kreuzprodukt (1) ===
+te_3_Kreuzprodukt
+te_1_Grundlagen
+te_2_Mengenlehre
+
+=== Mengenlehre: Kreuzprodukt (2) ===
+te_1_Grundlagen
+te_2_Mengenlehre
+te_3_vereinigung_schnitt_Differenz
+te_3_Kreuzprodukt
+
+=== Zahlen: Rationale Zahlen ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Kombinatorik: Binomialkoeffizienten ===
+te_1_Grundlagen
+te_2_Kombinatorik
+te_3_Binomialkoeffizienten
+
+=== Definitions- und Wertebereich bestimmen ===
+te_1_Grundlagen
+
+=== Definitionsbereich ermitteln ===
+te_1_Grundlagen
+te_2_Funktionen
+te_3_Definitionsbereich
+
+=== Entschädigung mit Selbsthalt ===
+te_1_Grundlagen
+
+=== Funktionswerte bestimmen ===
+te_1_Grundlagen
+te_2_Funktionen
+te_3_Verkettung
+
+=== Gewinnfunktion aufstellen ===
+te_1_Grundlagen
+
+=== Gleichungen (1) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (10) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (2) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (3) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (4) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (5) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (6) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (7) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (8) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen (9) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen - Umformen ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen: Betragsgleichungen (1) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Betragsgleichungen
+
+=== Gleichungen: Betragsgleichungen (2) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Betragsgleichungen
+
+=== Gleichungen: Betragsgleichungen (3) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Betragsgleichungen
+
+=== Gleichungen: Betragsgleichungen (4) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Betragsgleichungen
+
+=== Gleichungen: Brüche auflösen (1) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen: Brüche auflösen (2) ===
+te_1_Grundlagen
+te_2_Gleichungen
+
+=== Gleichungen: Exponentialgleichung ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Exponentialgleichungen
+
+=== Gleichungen: Exponentialgleichungen ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Exponentialgleichungen
+
+=== Gleichungen: Potenzgleichungen ===
+te_3_Potenzgleichungen
+te_1_Grundlagen
+te_2_Gleichungen
+*HIDDEN*
+
+=== Gleichungen: quadratische Gleichungen (1) ===
+te_3_quadratische Gleichungen
+te_1_Grundlagen
+te_2_Gleichungen
+*HIDDEN*
+
+=== Gleichungen: quadratische Gleichungen (2) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_quadratische Gleichungen
+
+=== Gleichungen: quadratische Gleichungen (3) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_quadratische Gleichungen
+*HIDDEN*
+
+=== Gleichungen: quadratische Gleichungen (4) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_quadratische Gleichungen
+
+=== Gleichungen: quadratische Gleichungen (5) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_quadratische Gleichungen
+*HIDDEN*
+
+=== Gleichungen: quadratische Gleichungen (6) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_quadratische Gleichungen
+*HIDDEN*
+
+=== Gleichungen: Wurzelgleichungen (1) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+
+=== Gleichungen: Wurzelgleichungen (2) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+
+=== Gleichungen: Wurzelgleichungen (3) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+
+=== Gleichungen: Wurzelgleichungen (4) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+
+=== Gleichungen: Wurzelgleichungen (5) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+
+=== Gleichungen: Wurzelgleichungen (6) ===
+te_1_Grundlagen
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+
+=== Kombinatorik: Binomialkoeffizient ===
+te_2_Kombinatorik
+te_3_Binomialkoeffizienten
+te_1_Grundlagen
+*HIDDEN*
+
+=== Kostenfunktion mit 2-Punkte-Form aufstellen ===
+te_1_Grundlagen
+
+=== Mengenlehre: Vereinigung, Schnitt, Differenz und Kreuzprodukt ===
+te_3_vereinigung_schnitt_Differenz
+te_3_Kreuzprodukt
+te_1_Grundlagen
+te_2_Mengenlehre
+
+=== Nullstelle bestimmen ===
+te_1_Grundlagen
+
+=== Nullstelle bestimmen ===
+te_1_Grundlagen
+
+=== Ökonomisch sinnvoller Definitions- und Wertebereich ===
+te_1_Grundlagen
+
+=== Ökonomische Funktion aufstellen ===
+te_1_Grundlagen
+
+=== Polstelle einer Funktion bestimmen ===
+te_1_Grundlagen
+
+=== Quadratische Gleichung lösen ===
+te_2_Gleichungen
+te_3_quadratische Gleichungen
+te_1_Grundlagen
+
+=== Rechnen mit Potenzen ===
+te_1_Grundlagen
+
+=== Rechnen mit Summenzeichen ===
+te_1_Grundlagen
+
+=== Regula Falsi ===
+te_1_Grundlagen
+
+=== Terme vereinfachen ===
+te_1_Grundlagen
+
+=== Ungleichungen: Betragsungleichungen (1) ===
+te_1_Grundlagen
+te_2_Ungleichungen
+te_3_Betragsungleichungen
+
+=== Ungleichungen: Betragsungleichungen (2) ===
+te_1_Grundlagen
+te_2_Ungleichungen
+te_3_Betragsungleichungen
+
+=== Zahlen und Gleichungen: Potenzrechnung ===
+te_2_Gleichungen
+te_3_Wurzelgleichungen
+te_3_Potenzgleichungen
+te_1_Grundlagen
+te_2_Zahlen
+te_3_Potenzen Wurzeln
+
+=== Zahlen und Gleichungen: SummenIndex Verschiebung (1) ===
+te_3_Summen Produkte
+te_1_Grundlagen
+te_2_Zahlen
+te_2_Gleichungen
+
+=== Zahlen und Gleichungen: SummenIndex Verschiebung (2) ===
+te_3_Summen Produkte
+te_1_Grundlagen
+te_2_Zahlen
+te_2_Gleichungen
+
+=== Zahlen: Addition von Brüchen ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_3_Summen
+
+=== Zahlen: Infimum, Supremum, Minimum und Maximum ===
+te_1_Grundlagen
+te_2_Zahlen
+te_3_Minimum Maximum
+te_3_Infimum Supremum
+
+=== Zahlen: Potenzen (1) ===
+te_1_Grundlagen
+te_3_Potenzen
+te_2_Zahlen
+
+=== Zahlen: Potenzen (2) ===
+te_1_Grundlagen
+te_3_Potenzen
+te_2_Zahlen
+
+=== Zahlen: Potenzen (3) ===
+te_1_Grundlagen
+te_3_Potenzen
+te_2_Zahlen
+
+=== Zahlen: Potenzen (4) ===
+te_1_Grundlagen
+te_3_Potenzen
+te_2_Zahlen
+
+=== Zahlen: Potenzen (5) ===
+te_1_Grundlagen
+te_3_Potenzen
+te_2_Zahlen
+
+=== Zahlen: Potenzen - Faktorisieren ===
+te_3_Potenzen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Produkte (1) ===
+te_2_Zahlen
+te_3_Produkte
+te_1_Grundlagen
+
+=== Zahlen: Produkte (2) ===
+te_1_Grundlagen
+te_2_Zahlen
+te_3_Produkte
+
+=== Zahlen: Produkte (3) ===
+te_1_Grundlagen
+te_2_Zahlen
+te_3_Summen Produkte
+
+=== Zahlen: Rationale Zahlen - Addition (1) ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+
+=== Zahlen: Rationale Zahlen - Addition (2) ===
+te_2_Zahlen
+te_1_Grundlagen
+te_3_Rationale Zahlen
+
+=== Zahlen: Rationale Zahlen - Addition und Division ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+
+=== Zahlen: Rationale Zahlen - Division (1) ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+
+=== Zahlen: Rationale Zahlen - Division (2) ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+
+=== Zahlen: rationale Zahlen - Kürzen (1) ===
+te_2_Zahlen
+te_3_Rationale Zahlen
+te_1_Grundlagen
+
+=== Zahlen: rationale Zahlen - Kürzen (2) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen - Multiplikation (1) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen - Multiplikation (2) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen - Multiplikation (3) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen - Subtraktion (1) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen - Subtraktion (2) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen - Summen und Produkte ===
+te_1_Grundlagen
+te_2_Zahlen
+te_3_Rationale Zahlen
+
+=== Zahlen: Rationale Zahlen - Zusammenfassen ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Rationale Zahlen vereinfachen ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: rationale Zahlen zusammenfassen (1) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: rationale Zahlen zusammenfassen (2) ===
+te_3_Rationale Zahlen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Summen (1) ===
+te_3_Summen Produkte
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Summen (2) ===
+te_3_Summen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== Zahlen: Summen (3) ===
+te_3_Summen
+te_1_Grundlagen
+te_2_Zahlen
+
+=== "Stripping" einer Kuponanleihe ===
+te_1_Finanzmathematik
+te_2_FestverzinslicheWertpapiere
+
+=== Alternativen Zins einer Bankanlage bestimmen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== Angebote von Banken vergleichen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== Barwert berechnen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Barwert einer Nullkuponanleihe ===
+te_1_Finanzmathematik
+te_2_FestverzinslicheWertpapiere
+
+=== Barwert oder Endwert einer Zeitrente bestimmen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Zeitrenten
+
+=== Barwert und Endwert eines Zahlungsstroms ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Barwertfunktion eines Zahlungsstroms angeben ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== Bedeutung Notation Zeitrenten reversed ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Zeitrenten
+
+=== Bestimmung Effektivzins ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Effektivzins
+
+=== Bestimmung Effektivzins Pfandleihe ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Effektivzins
+
+=== Endwert berechnen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Endwert mit Zinsintensität bestimmen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Ewige Rente (Höhe der Rente) ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Zeitrenten
+
+=== Ewige Rente (Höhe des Kapitals) ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Zeitrenten
+
+=== Jährliche Verzinsung bestimmen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== Kapitalwert bestimmen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Konkurrenzprodukt ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Kurse von Anleihen bestimmen ===
+te_1_Finanzmathematik
+te_2_FestverzinslicheWertpapiere
+
+=== Kurswert einer Kuponanleihe ===
+te_1_Finanzmathematik
+te_2_FestverzinslicheWertpapiere
+
+=== Laufzeit eines Darlehens ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== Rendite einer Anleihe ===
+te_1_Finanzmathematik
+te_2_FestverzinslicheWertpapiere
+
+=== Rendite einer Bankanlage bestimmen ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== Restschuld berechnen ===
+te_1_Finanzmathematik
+
+=== Restschuld berechnen (2) ===
+te_1_Finanzmathematik
+
+=== Restschuld berechnen (3) ===
+te_1_Finanzmathematik
+
+=== Restschuld eines Darlehens ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== Rumpfannuität eines Darlehens ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== Spar- und Entsparvorgang (Kapital für Zeitrente) ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Spar- und Entsparvorgang (Rentenhöhe für Kapital) ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_BarwertEndwert
+
+=== Unterjährige Verzinsung ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== Zeitrenten ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+te_3_Zeitrenten
+
+=== Zinsintensität ===
+te_1_Finanzmathematik
+te_2_Zinsrechnung
+
+=== zukünftige Restschuld berechnen ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== zukünftige Restschuld berechnen (2) ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== zukünftige Restschuld berechnen (3) ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== zukünftige Restschuld mit Zahlungsausfall berechnen ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== zukünftige Restschuld mit Zahlungsausfall berechnen (2) ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== zukünftige Restschuld mit Zahlungsausfall berechnen (3) ===
+te_1_Finanzmathematik
+te_2_Tilgungsrechnung
+
+=== Ebene GF(2) ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== Elemente GF(2)^2 ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== Untervektorraum R^2 ===
+te_2_Vektorraum
+te_3_Untervektorraum
+
+=== Zahl GF(2) ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== 7.3 Kreuzprodukt ===
+te_2_Vektorrechnung
+te_3_vektorprodukt
+
+=== Gerade: GF(3)^2 ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== GF(2), GF(3) Elemente ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== GF2 Elemente ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== Kreuzpro ===
+te_3_vektorprodukt
+te_2_Vektorrechnung
+
+=== Lineare Algebra: Modulo ===
+te_2_Vektorraum
+te_3_Endliche körper
+
+=== Norm in R^a ===
+te_2_Vektorrechnung
+te_3_Norm
+
+=== Vekrorrechnung: Kollinearität ===
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+
+=== Vektoren: Gegeben sind a und b. Bestimmen Sie x und y mit den Kriterien. (R3) ===
+te_2_Vektorrechnung
+te_3_Rechenregeln
+
+=== Vektoren: Gegeben sind Skalarprodukte, rechnen Sie orthogonale Vektor (R3) ===
+te_3_Skalarprodukt
+te_2_Vektorrechnung
+
+=== Vektoren: orthogonal zu a und b (R3) ===
+te_3_vektorprodukt
+te_2_Vektorrechnung
+
+=== Vektoren: Orthogonale Vektor (R2) ===
+te_3_Skalarprodukt
+te_2_Vektorrechnung
+
+=== Vektoren: Projektion und Lot von a auf b (R2) ===
+te_2_Vektorraum
+
+=== Vektoren: Vektor-, Kreutz- und Spatprodukt (R3) ===
+te_2_Vektorrechnung
+te_3_Rechenregeln
+
+=== Vektorräume: Vektor normieren (R3) ===
+te_2_Vektorrechnung
+te_3_Norm
+
+=== Vektorrechnung - Kreuzprodukt ===
+te_2_Vektorrechnung
+te_3_vektorprodukt
+
+=== Vektorrechnung: (euk., 1-, unendl.) Norm ===
+te_2_Vektorrechnung
+te_3_Norm
+
+=== ähnliche Matrizen ===
+te_1_Lineare Algebra
+te_2_Matrizen
+
+=== charakt. Polynom ===
+te_1_Lineare Algebra
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+
+=== charakt. Polynom 2 ===
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_3_Berechnung
+
+=== Drehmatrix ===
+te_2_Lineare Abbildungen
+te_1_Lineare Algebra
+te_2_Orthogonale Abbildungen
+te_3_Drehung
+
+=== Eigenwerte Eigenvektoren ===
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_3_Eigenvektoren
+
+=== Inverse ex nicht 2 ===
+te_1_Lineare Algebra
+te_2_Inverse Matrix
+
+=== lin Abb Stoffel+ 2 ===
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_1_Lineare Algebra
+
+=== lin Hülle Bild ===
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_1_Lineare Algebra
+
+=== linaear unabh ===
+te_1_Lineare Algebra
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+
+=== Lineare Abbildung Verkettung GF(2) ===
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_1_Lineare Algebra
+
+=== Lineare Algebra: orthogonale Matrix 2 ===
+te_2_Orthogonale Abbildungen
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Orthogonale Matrizen ===
+te_2_Orthogonale Abbildungen
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Regularität ===
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+te_1_Lineare Algebra
+te_2_Determinante
+te_3_Regularität
+te_2_Matrizen
+te_3_Rang
+
+=== Lineare Algebra: singuläre Matrix ===
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+te_1_Lineare Algebra
+te_2_Determinante
+
+=== Lineare Gleichungssysteme: Lösbarkeit ===
+te_1_Lineare Algebra
+te_2_Lineare Gleichungssysteme
+te_3_Lösbarkeit
+
+=== Lineare Gleichungssysteme: Lösunsmenge ===
+te_1_Lineare Algebra
+te_2_Lineare Gleichungssysteme
+te_3_Lösungsmenge
+
+=== lineare Unabhängigkeit GF(2) ===
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+te_1_Lineare Algebra
+
+=== Matrix Multiplikation GF(3) - 2 ===
+te_1_Lineare Algebra
+te_2_Matrizen
+te_3_Multiplikation
+
+=== orthogonale Matrix ===
+te_2_Orthogonale Abbildungen
+te_1_Lineare Algebra
+
+=== Transponierte Produkte ===
+te_1_Lineare Algebra
+te_2_Matrizen
+te_3_Multiplikation
+
+=== Zusammenhang l.a., Inverse, Basis ===
+te_2_Matrizen
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+te_2_Determinante
+te_3_Rang
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Rang Matrix 2 ===
+te_1_Lineare Algebra
+te_2_Matrizen
+te_3_Rang
+
+=== Abbildungsmatrix, orthogonal ===
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_2_Orthogonale Abbildungen
+te_3_Drehung
+te_1_Lineare Algebra
+te_3_Spiegelung
+
+=== Beziehung von EW und EV ===
+te_3_Eigenvektoren
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_3_Berechnung
+
+=== chara Polynom1 ===
+te_2_Lineare Abbildungen
+te_1_Lineare Algebra
+te_2_Eigenwerte
+
+=== Cramersche Regel ===
+te_2_Determinante
+te_2_Inverse Matrix
+te_1_Lineare Algebra
+te_3_Cramersche Regel
+te_2_Lineare Gleichungssysteme
+te_2_Matrizen
+
+=== Determinante GF(2) ===
+te_1_Lineare Algebra
+te_2_Determinante
+te_3_Regularität
+
+=== Determinante, Basis komplex ===
+te_2_Matrizen
+te_2_Lineare Unabhängigkeit
+te_1_Lineare Algebra
+te_2_Determinante
+te_3_Basis
+te_3_Rang
+
+=== Eigenvektoren: Transformationsmatrix (2x2) ===
+te_2_Matrizen
+te_3_Eigenvektoren
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_2_Basiswechsel
+te_3_Transformationswechsel
+
+=== Eigenwerte: Eigenwerte einer Inverse (3x3) ===
+te_2_Matrizen
+te_2_Inverse Matrix
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_3_Berechnung
+
+=== Eigenwerte: Eigenwerte gegeben, a und b bestimmen. ===
+te_2_Matrizen
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_3_Berechnung
+
+=== Lineare Algebra: Abbildungsmatrix ===
+te_2_Matrizen
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Basis ===
+te_2_Matrizen
+te_2_Lineare Unabhängigkeit
+te_3_Basis
+te_1_Lineare Algebra
+te_3_Rang
+
+=== Lineare Algebra: Basiswechsel R^3 ===
+te_2_Lineare Unabhängigkeit
+te_3_Basis
+te_1_Lineare Algebra
+te_2_Vektorrechnung
+
+=== Lineare Algebra: Basiswechsel R^3 (e_i) ===
+te_2_Lineare Unabhängigkeit
+te_1_Lineare Algebra
+te_3_Basis
+
+=== Lineare Algebra: Basiswechsel R^3 2 ===
+te_2_Lineare Unabhängigkeit
+te_3_Basis
+te_2_Vektorrechnung
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Datenvektoren, Mittelwert ===
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_1_Lineare Algebra
+te_3_Kern
+
+=== Lineare Algebra: Determinante 3x3 ===
+te_2_Matrizen
+te_2_Determinante
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Determinante 3x3 Matrix ===
+te_2_Matrizen
+te_2_Determinante
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Determinante 4x4 ===
+te_2_Matrizen
+te_2_Determinante
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Determinante a ===
+te_2_Matrizen
+te_2_Determinante
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Dimension ===
+te_2_Lineare Unabhängigkeit
+te_1_Lineare Algebra
+te_3_Dimension
+
+=== Lineare Algebra: Eigenvektoren 2x2 ===
+te_3_Eigenvektoren
+te_1_Lineare Algebra
+te_2_Eigenwerte
+te_2_Matrizen
+
+=== Lineare Algebra: Eigenwerte (komplex) ===
+te_2_Matrizen
+te_1_Lineare Algebra
+te_2_Eigenwerte
+
+=== Lineare Algebra: Eigenwerte (reell) ===
+te_2_Matrizen
+te_3_Eigenvektoren
+te_1_Lineare Algebra
+te_2_Eigenwerte
+
+=== Lineare Algebra: Erzeugendensystem, Basis ===
+te_2_Lineare Unabhängigkeit
+te_3_Basis
+te_1_Lineare Algebra
+te_3_Erzeugendensystem
+
+=== Lineare Algebra: GF(2) Kern ===
+te_2_Matrizen
+te_2_Lineare Abbildungen
+te_1_Lineare Algebra
+te_3_Kern
+
+=== Lineare Algebra: Inverse ===
+te_2_Matrizen
+te_2_Inverse Matrix
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Inverse GF(2), GF(3), R ===
+te_2_Matrizen
+te_1_Lineare Algebra
+te_2_Inverse Matrix
+
+=== Lineare Algebra: Lineare Abhängigkeit (MC) ===
+te_2_Lineare Unabhängigkeit
+te_3_Ab- und Unabhängigkeit
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Matrixmultiplikation ===
+te_3_Multiplikation
+te_1_Lineare Algebra
+te_2_Matrizen
+
+=== Lineare Algebra: Matrizenrechnung ===
+te_3_Multiplikation
+te_1_Lineare Algebra
+te_2_Matrizen
+te_3_Addition
+
+=== Lineare Algebra: Matrizenrechnung ===
+te_2_Matrizen
+te_3_Multiplikation
+te_2_Lineare Gleichungssysteme
+te_1_Lineare Algebra
+
+=== Lineare Algebra: MC, Inverse, Determinante ===
+te_2_Matrizen
+te_2_Inverse Matrix
+te_2_Determinante
+te_1_Lineare Algebra
+
+=== Lineare Algebra: Produkt, Dimensionen ===
+te_2_Matrizen
+te_2_Lineare Unabhängigkeit
+te_3_Multiplikation
+te_1_Lineare Algebra
+te_3_Dimension
+
+=== Lineare Algebra: Rang ===
+te_1_Lineare Algebra
+te_2_Matrizen
+te_3_Rang
+
+=== Lineare Algebra: Standardbasis Abbildungsmatrix ===
+te_2_Lineare Abbildungen
+te_2_Vektorrechnung
+te_1_Lineare Algebra
+te_3_Skalarprodukt
+
+=== Lineare Gleichungen: Fortbewegungsmittel ===
+te_1_Lineare Algebra
+te_2_Lineare Gleichungssysteme
+te_3_Gauß-Algorithmus
+
+=== Lineare Gleichungssysteme: Lösbarkeit ===
+te_3_Lösbarkeit
+te_1_Lineare Algebra
+te_2_Lineare Gleichungssysteme
+
+=== Lineare Unabhängigkeit, komplex ===
+te_2_Lineare Unabhängigkeit
+te_3_Basis
+te_3_Dimension
+te_1_Lineare Algebra
+
+=== Lineares Gleichungssystem: Gauß-Algorithmus ===
+te_3_Gauß-Algorithmus
+te_1_Lineare Algebra
+te_2_Lineare Gleichungssysteme
+
+=== Martizen: Geben Sie eine Matrix A mit det(A) = a. ===
+te_2_Determinante
+te_1_Lineare Algebra
+te_2_Matrizen
+
+=== Matrizen: Inverse Matrix (Parameter) ===
+te_2_Inverse Matrix
+te_1_Lineare Algebra
+te_2_Matrizen
+
+=== ONB ===
+te_2_Lineare Unabhängigkeit
+te_1_Lineare Algebra
+te_3_Orthonormalbasis
+
+=== Orthogonale Matrix ===
+te_2_Matrizen
+te_2_Lineare Unabhängigkeit
+te_2_Determinante
+te_3_Orthonormalbasis
+te_1_Lineare Algebra
+
+=== Vektorräume: 4 Linear abhängige Vektoren (R3) ===
+te_2_Lineare Unabhängigkeit
+te_1_Lineare Algebra
+
+=== Verkettung linearer Abbildungen ===
+te_2_Matrizen
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_1_Lineare Algebra
+
+=== Lin Abb Matrix ===
+te_2_Matrizen
+te_2_Lineare Abbildungen
+te_3_Abbildungsmatrix
+te_2_Vektorrechnung
+te_1_Lineare Algebra
+te_3_vektorprodukt
+
+=== lin. unabhängig ===
+te_2_Lineare Unabhängigkeit
+te_1_Lineare Algebra
+
+=== Lineare Algebra: orthogonal invertierbar ===
+te_2_Matrizen
+te_2_Inverse Matrix
+te_1_Lineare Algebra
+
+=== Komplexe Zahlen: Schwingung Def ===
+
+=== Darstellungsformen komplZahlen ===
+
+=== Komplexe Zahlen: Darstellungsformen ===
+
+=== Transformation kompl Zahlen ===
+
+=== Komplexe Zahlen: Betrag und Argument ===
+
+=== Komplexe zahlen: Darstellungen ===
+
+=== Komplexe Zahlen: Polarform, Hauptwert ===
+
+=== Komplexe Zahlen: quadr. Gleichung ===
+
+=== Komplexe Zahlen: Quadrant (komplex konjugiert) ===
+
+=== Komplexe Zahlen: Wurzel Def ===
+
+=== Komplexe Zahlen: z^4 ===
+
+=== Wertemenge Folge ===
+
+=== Grenzwert Folge, Reihe ===
+
+=== Komplexe Nullstellen ===
+
+=== komplexe Potenzreihe ===
+
+=== Komplexe Zahlen: Betrag, Argument,... ===
+
+=== Komplexe Zahlen: Betrag, Potenz ===
+
+=== Komplexe Zahlen: Division ===
+
+=== Komplexe Zahlen: Division ===
+
+=== Komplexe Zahlen: Euler Div, Multip. ===
+
+=== Komplexe Zahlen: Exponentialform ===
+
+=== Komplexe Zahlen: Exponentialform ===
+
+=== Komplexe Zahlen: e^iz ===
+
+=== Komplexe Zahlen: Kartesische Form ===
+
+=== Komplexe Zahlen: Kartesische Form (leicht) ===
+
+=== Komplexe Zahlen: komplex zu reell ===
+
+=== Komplexe Zahlen: Komplexe Schwingung ===
+
+=== Komplexe Zahlen: Multiplikation ===
+
+=== Komplexe Zahlen: Multiplikation Komplex Konjugation ===
+
+=== Komplexe Zahlen: Normal zu Exponentialform ===
+
+=== Komplexe Zahlen: Polardarstellung von 1/a+i*1/a ===
+
+=== Komplexe Zahlen: Potenz ===
+
+=== Komplexe Zahlen: Potenzreihe ===
+
+=== Komplexe Zahlen: Quadratische Gleichung 2 ===
+
+=== Komplexe Zahlen: Quadratische Gleichungen ===
+
+=== Komplexe Zahlen: Schwingungen re&komp ===
+
+=== Komplexe Zahlen: Sinusschwingung ===
+
+=== Komplexe Zahlen: z^3 = a ===
+
+=== Komplexe Zahlen: z^4 = -a ===
+
+=== Komplexe: Zahlen Betrag ===
+
+=== DGL 2.Ordnung ZuordnenNeu Lösungen ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+te_3_Homogen
+
+=== DGL 1.Ord Auswahl V2 ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== DGL 1.Ord AWP ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== DGL 1.Ord AWP mit Graph ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== DGL 2.Ord Ansatz ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+te_3_Inhomogen
+
+=== DGL 2.Ord hom ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+te_3_Homogen
+
+=== DGL 2.Ordnung ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL 2.Ordnung Auswahl ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL 2.Ordnung V2 ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL: Trennung der Variablen (MC) ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+te_3_Trennbare variablen
+
+=== DGL: 1. Ordnung (a berechnen) ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== DGL: 1. Ordnung mit AWP (Cosinus) ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== DGL: 1. Ordnung mit AWP (e-Funktion) ===
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== DGL: 2. Ord mit AWP (e-Funktion) ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL: 2. Ordnung mit AWP (Sinus) ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL: 2. Ordnung, komplex (AWP) ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL: 2. Ordnung, reell (AWP) ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+
+=== DGL: Anwendung in der Elektrotechnik ===
+te_1_Differentialgleichungen
+
+=== DGL: Anwendung Newton ===
+te_1_Differentialgleichungen
+
+=== Differenzialgleichungen: bestimmen Sie a und b, Lösungen gegeben. ===
+te_1_Differentialgleichungen
+te_2_2. Ordnung
+te_3_Homogen
+
+=== Trennung der Variablen ===
+te_3_Trennbare variablen
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== Trennung der Variablen tan ===
+te_3_Trennbare variablen
+te_1_Differentialgleichungen
+te_2_1. Ordnung
+
+=== chi^2 Unabhängigkeit ===
+te_1_Statistik
+te_2_DeskriptiveStatistik2d
+te_3_Unabhängigkeit
+
+=== Gleitender Durchschnitt ===
+te_1_Statistik
+te_2_Zeitreihen
+
+=== Häufigkeiten ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Häufigkeiten
+
+=== Häufigkeiten bestimmen ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Häufigkeiten
+
+=== Häufigkeitssumme und Häufigkeitsdichte ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Häufigkeiten
+
+=== Interpretation Konzentrationsmaße ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Konzentrationsmaße
+
+=== Klassierung erstellen ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Häufigkeiten
+
+=== Kontingenzkoeffizient ===
+te_1_Statistik
+te_2_DeskriptiveStatistik2d
+te_3_Unabhängigkeit
+
+=== Konzentrationskoeffizient ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Konzentrationsmaße
+
+=== Konzentrationsmaße ===
+te_1_Statistik
+te_2_DeskriptiveStatistik1d
+te_3_Konzentrationsmaße
+
+=== Korrelation ===
+te_1_Statistik
+te_2_DeskriptiveStatistik2d
+te_3_Korrelation
+
+=== Korrelation (ohne Kovarianz) ===
+te_1_Statistik
+te_2_DeskriptiveStatistik2d
+te_3_Korrelation
+
+=== Lagemaße ===
+te_1_Statistik
+
+=== Lagemaße (2) ===
+te_1_Statistik
+
+=== Lagemaße Beispiel Versicherung ===
+te_1_Statistik
+
+=== Lagemaße Beispiel Versicherung (2) ===
+te_1_Statistik
+
+=== Lineare Regression ===
+te_1_Statistik
+
+=== Lineare Regression (Fixkosten und variable Kosten) ===
+te_1_Statistik
+
+=== Lineare Regression (ohne Kovarianz) ===
+te_1_Statistik
+
+=== Lineare Regression (Prognose) ===
+te_1_Statistik
+
+=== Median und Mittelwert ===
+te_1_Statistik
+
+=== Mengen- und Preisindex ===
+te_1_Statistik
+
+=== Mittelwert und Median ===
+te_1_Statistik
+
+=== Nichtlineare Regression ===
+te_1_Statistik
+
+=== Preisindex ===
+te_1_Statistik
+
+=== Prognose auf Basis einer Zeitreihe ===
+te_1_Statistik
+
+=== Rechnen mit Verteilungsfunktion ===
+te_1_Statistik
+
+=== Saisonbereinigte Zeitreihe ===
+te_1_Statistik
+
+=== Streuungsmaße ===
+te_1_Statistik
+
+=== Unabhängigkeit ===
+te_1_Statistik
+
+=== Unabhängigkeit ===
+te_1_Statistik
+
+=== Varianzanalyse ===
+te_1_Statistik
+
+=== Variationskoeffizient ===
+te_1_Statistik
+
+=== Verhältniszahlen ===
+te_1_Statistik
+
+=== Verknüpfung von Indizes ===
+te_1_Statistik
+
+=== Verteilungsfunktion (Beta-Verteilung) ===
+te_1_Statistik
+
+=== Gruppentafel ===
+
+=== Gruppe Def ===
+
+=== Körper ===
+
+=== Körper Def ===
+
+=== Abstand paralleler Ebenen ===
+
+=== Abstand Punkt von Punkten ===
+
+=== Abstand Punkt-Gerade ===
+
+=== Analytische Geometrie: Abstand des Punktes P von Geraden (R2) ===
+
+=== Analytische Geometrie: Abstand des Punktes von Geraden, Flaeche des Dreiecks (R3) ===
+
+=== Analytische Geometrie: Abstand eines Punkts von einer Ebene (R3) ===
+
+=== Analytische Geometrie: Ebene in der Form x+by+cz=d ===
+
+=== Analytische Geometrie: Normaleneinheitsvektor einer Ebene (R3) ===
+
+=== Analytische Geometrie: Parameterform einer Geraden (R2) ===
+
+=== Analytische Geometrie: Punkt auf Geraden bestimmen (R3) ===
+
+=== Analytische Geometrie: Punkt-Richtungsform einer Ebene (R3) ===
+
+=== Analytische Geometrie: Schar der Geraden - senkrecht zu Ebene (R3) ===
+
+=== Analytische Geometrie: Spiegelung einer Geraden an einer Ebene (R3) ===
+
+=== Analytische Geometrie: Spiegelung von P an der Ebene E (R3) ===
+
+=== Gruppe Matrizen ===
+
+=== Lineare Algebra: Verknüpfung ===
+
+=== Vektoren: Projektion und Lot von a auf b (R3) ===
+
+=== Vektoren: Vektor a=P1P2, |a|, Einheitsvektor (R3) ===
+
+=== Vektorräume: Projektion auf Lin(v) (R3) ===
+
+=== Vektorrechnung - Schnittp. 2 Geraden ===
+
+=== Bedingte Wahrscheinlichkeit ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_BedingteWahrscheinlichkeiten
+
+=== Bedingte Wahrscheinlichkeiten ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_BedingteWahrscheinlichkeiten
+
+=== Binomialverteilung ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_Wahrscheinlichkeiten
+
+=== Binomialverteilung (2) ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_Wahrscheinlichkeiten
+
+=== Binomialverteilung (3) ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_Wahrscheinlichkeiten
+
+=== Binomialverteilung Erwartungswert und Varianz ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_DiskreteVerteilungen
+te_3_Binomialverteilung
+
+=== Empirische Verteilungsfunktion ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_DiskreteVerteilungen
+
+=== Erwartungswert (Lebensversicherung 2) ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvariablen
+te_3_Erwartungswert
+
+=== Erwartungswert (Lebensversicherung) ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvariablen
+te_3_Erwartungswert
+
+=== Erwartungswert (Nachfragefunktion) ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvariablen
+te_3_Erwartungswert
+
+=== Exponentialverteilung ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_StetigeVerteilungen
+te_3_Exponentialverteilung
+
+=== Gemeinsame Verteilung ===
+te_2_DeskriptiveStatistik2d
+te_1_Wahrscheinlichkeitsrechnung
+
+=== Gleichverteilung ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_StetigeVerteilungen
+te_3_Gleichverteilung
+
+=== Kombinatorik 1 ===
+te_3_Wahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+
+=== Kombinatorik 2 ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_Wahrscheinlichkeiten
+
+=== Kombinatorik 3 ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+te_3_Wahrscheinlichkeiten
+
+=== Kovarianz und Korrelation ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvariablen
+te_3_Kovarianz
+
+=== Laplace Wahrscheinlichkeiten ===
+te_3_Wahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvorgänge
+
+=== Laplace-Experiment ===
+te_2_Zufallsvorgänge
+te_3_Wahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+
+=== Poisson-Verteilung ===
+te_2_DiskreteVerteilungen
+te_1_Wahrscheinlichkeitsrechnung
+te_3_Poisson
+
+=== Satz von Bayes ===
+te_2_Zufallsvorgänge
+te_3_BedingteWahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+
+=== Totale Wahrscheinlichkeit ===
+te_2_Zufallsvorgänge
+te_3_BedingteWahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+
+=== Urnenmodell ===
+te_3_Wahrscheinlichkeiten
+te_2_Zufallsvorgänge
+te_3_BedingteWahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+
+=== Varianz (Lebensversicherung 2) ===
+te_1_Wahrscheinlichkeitsrechnung
+te_2_Zufallsvariablen
+te_3_Varianz
+
+=== Varianz (Lebensversicherung) ===
+te_2_Zufallsvariablen
+te_3_Varianz
+te_1_Wahrscheinlichkeitsrechnung
+
+=== Wahrscheinlichkeiten ===
+te_2_Zufallsvorgänge
+te_3_BedingteWahrscheinlichkeiten
+te_1_Wahrscheinlichkeitsrechnung
+
+
+
+
+ANZAHL AUFGABEN INSGESAMT:
+560
+
+
+ANZAHL AUFGABEN VERSTECKT/HIDDEN:
+7
+
+
+TE1:
+[Anzahl Aufgaben ohne TE1, Anzahl Aufgaben 1x TE1, Anzahl Aufgaben 2x TE1, ...]
+[118, 434, 8, 0, 0, 0, 0, 0, 0, 0]
+
+TE2:
+[Anzahl Aufgaben ohne TE2, Anzahl Aufgaben 1x TE2, Anzahl Aufgaben 2x TE2, ...]
+[150, 362, 39, 8, 1, 0, 0, 0, 0, 0]
+
+TE3:
+[Anzahl Aufgaben ohne TE3, Anzahl Aufgaben 1x TE3, Anzahl Aufgaben 2x TE3, ...]
+[267, 265, 24, 4, 0, 0, 0, 0, 0, 0]
+
