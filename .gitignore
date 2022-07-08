@@ -1,6 +1,7 @@
 data/
 data-tmp/
 data-test/
+testdata/output/
 node_modules/
 feedback/bugs.txt
 feedback/bugs.html

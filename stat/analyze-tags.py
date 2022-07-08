@@ -1,5 +1,5 @@
 # ******************************************************************************
-#  Moodle-XML Qustion Filter
+#  Moodle-XML Question Filter
 #  (c) 2021 by TH Köln
 #  Author: Andreas Schwenk, andreas.schwenk@th-koeln.de
 #

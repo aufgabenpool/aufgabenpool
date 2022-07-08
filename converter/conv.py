@@ -1,18 +1,20 @@
 # ******************************************************************************
-#  Moodle-XML Qustion Filter
-#  (c) 2021 by TH Köln
+#  Moodle-XML Question Filter
+#  (c) 2021-2022 by TH Köln
 #  Author: Andreas Schwenk, andreas.schwenk@th-koeln.de
-#
-#  Version: 0.01
+#  Dependencies: pip3 install lxml
+#  Version: 0.02
 # ******************************************************************************
 
+# This file converters the Moodle question database (format
+# Moodle-XML) into a JSON file that contains alls metadata
+# to be displayed in the shop-website.
+# Also a Moodle-XML file is written for each question.
+
+# 2022-07-08: This file does not check, if data is semantically valid
+# (e.g. if tags are valid). Checking is now done in the editor.
 
 # TODO: remove all unused taxonomy json files and other unused config files!!
-# TODO: code doc of this file!
-
-
-# dependencies:
-#   pip3 install lxml
 
 import os
 import os.path
@@ -22,49 +24,44 @@ import sys
 from lxml import etree
 from datetime import datetime
 
+# read arguments
 if len(sys.argv) != 3:
-    print("usage: python3 conv.py INPUTPATH OUTPUTPATH")
+    print("usage: python3 conv.py INPUT_PATH OUTPUT_PATH")
     sys.exit(-1)
 
-warnings = ""
-
+# get input and output path from arguments
 path_in = sys.argv[1]
-path_out = sys.argv[2]
-
 if not os.path.isfile(path_in):
     print("error: input path does not exist")
     sys.exit(-1)
+path_out = sys.argv[2]
 
+# create output path (if not exists)
 os.system("mkdir -p " + path_out)
 
+# warning string (displayed after conversion)
+warnings = ""
+
+# contents of output JSON-file
 metadata = {
+    # list of questions
     "exercises": [],
+    # current date-time
     "date": datetime.today().strftime('%Y-%m-%d %H:%M'),
+    # tree representation of topic level 1, 2, 3
     "topic_hierarchy": {"":""},
+    # number of occurrences for each tag
     "tag_count": {},
+    # textual description for each taxonomy entry
     "taxonomy_desc": {}
 }
 
+# initialize XML-parser
 parser = etree.XMLParser(strip_cdata=False)
 tree = etree.parse(path_in, parser)
 quiz = tree.getroot()
 
-tagset = {""}
-questionid = 0
-
-class CriticalTag:
-    def __init__(self):
-        self.exerciseId = ""
-        self.exerciseTitle = ""
-        self.tag = ""
-    def __str__(self):
-        link = '<a href="https://aufgabenpool.th-koeln.de/moodle/question/question.php?&courseid=2&id=' + str(self.exerciseId) + '" target="_blank">Link</a>'
-        s = "Aufgabe: " + str(self.exerciseTitle) + " " + link + ", Tag: " + str(self.tag)
-        return s
-
-criticalTags = []
-
-
+# format tag
 def format_tag(tag):
     # replaces e.g. "TE:1:Differentialrechung" -> "te_1_Differentialrechnung"
     tag = tag.replace(":", "_")
@@ -80,63 +77,70 @@ def format_tag(tag):
         tag_new += tk
     return tag_new
 
+# initialize set that contains all tags
+tagset = {""}
 for i in range(1,20):
     id = 'type_' + str(i)
     tagset.add(id)
     metadata["tag_count"][id] = 0
+
+# convert all questions
+questionid = 0
+category = ''
 
 for i, question in enumerate(quiz):
     if question.tag is etree.Comment:
         questionid = question.text
         questionid = int(questionid[11:].strip())
         continue
-    t = question.attrib['type']
-    if t == "category":
-        current_category = question.find('category')[0].text
+    if question.attrib['type'] == "category":
+        category = question.find('category')[0].text
         continue
+
+    # get question string = Moodle-XML data of question as string
     questionStr = etree.tostring(question, encoding='unicode', pretty_print=True)
     questionStr = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' + str(questionStr) + '\n</quiz>\n'
+
+    # get question type (e.g. "stack", ...)
     questionType = question.attrib['type']
     if questionType == 'stack' and ('<type>checkbox</type>' in questionStr):
         questionType = 'stack-multichoice'
-    #print(questionType)
-    name = question.find('name')[0].text
-    tested = False
-    tags = question.find('tags')
-    q_tagset = {""}
+
+    # get question title
+    questionTitle = question.find('name')[0].text
+    questionTags = question.find('tags')
+
+    outputTags = {""}
+
     if questionType == "stack":
-        q_tagset.add('type_1')
-        metadata["tag_count"]['type_1'] += 1
+        outputTags.add('type_1')
     elif questionType == "truefalse":
-        q_tagset.add('type_2')
-        metadata["tag_count"]['type_2'] += 1
+        outputTags.add('type_2')
     elif questionType == "multichoice":
-        q_tagset.add('type_3')
-        metadata["tag_count"]['type_3'] += 1
+        outputTags.add('type_3')
     elif questionType == "stack-multichoice":
-        q_tagset.add('type_4')
-        metadata["tag_count"]['type_4'] += 1
+        outputTags.add('type_4')
     elif questionType == "gapselect":
-        q_tagset.add('type_5')
-        metadata["tag_count"]['type_5'] += 1
+        outputTags.add('type_5')
     else:
         warnings += "FRAGETYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
+
     has_te_1_tag = False
     has_te_2_tag = False
     has_te_3_tag = False
+
     is_hidden = False
-    if tags is not None:
-        for tag in tags:
+
+    if questionTags is not None:
+        for tag in questionTags:
             tag_name = tag[0].text
-            if "getestet" in tag_name:
-                tested = True
+
             tag_formatted = format_tag(tag_name)
 
             if tag_formatted == "praxiserprobt":
                 tag_formatted = "praxiserprobt_1"
 
-            q_tagset.add(tag_formatted)
-            tagset.add(tag_formatted)
+            outputTags.add(tag_formatted)
 
             if tag_formatted.startswith("hidden"):
                 tag_formatted = "hidden_1"
@@ -149,103 +153,59 @@ for i, question in enumerate(quiz):
             if tag_formatted.startswith("te_3_"):
                 has_te_3_tag = True
 
-            # number of occurrences of tags (tag count)
-            if tag_formatted not in metadata["tag_count"]:
-                metadata["tag_count"][tag_formatted] = 0
-            metadata["tag_count"][tag_formatted] += 1
+    # remove empty tag (if present)
+    outputTags.remove("")
 
-            # tag valid?
-            if ("_" not in tag_formatted and tag_formatted not in ["getestet", "ungetestet", "praxiserprobt", "F04-IVW", "F07-INT", "F09-IPK"]) \
-                or (tag_formatted.startswith("maier_") and tag_formatted.count("_") != 2) \
-                or (tag_formatted.startswith("bloom_") and tag_formatted.count("_") != 1):
-                ct = CriticalTag()
-                ct.exerciseId = questionid
-                ct.tag = tag_name
-                criticalTags.append(ct)
+    # skip question if it is not tagged correctly.
+    # also skip, if the question is "hidden"
+    if is_hidden or has_te_1_tag == False:
+        continue
 
-    if is_hidden:
-        ct = CriticalTag()
-        ct.exerciseId = questionid
-        ct.tag = "Aufgabe momentan in Quarentäne ('hidden')"
-        criticalTags.append(ct)
-
-    if has_te_1_tag == False:
-        ct = CriticalTag()
-        ct.exerciseId = questionid
-        ct.tag = "'TE:1:' fehlt!"
-        criticalTags.append(ct)
-
-    if has_te_2_tag == False:
-        q_tagset.add('te_2_unknown')
-        tagset.add('te_2_unknown')
-        if 'te_2_unknown' not in metadata["tag_count"]:
-            metadata["tag_count"]['te_2_unknown'] = 0
-        metadata["tag_count"]['te_2_unknown'] += 1
-    if has_te_3_tag == False:
-        q_tagset.add('te_3_unknown')
-        tagset.add('te_3_unknown')
-        if 'te_3_unknown' not in metadata["tag_count"]:
-            metadata["tag_count"]['te_3_unknown'] = 0
-        metadata["tag_count"]['te_3_unknown'] += 1
-
-
-    q_tagset.remove("")
-
-    # te1 = []
-    # te2 = []
-    # te3 = []
-    # for tag in q_tagset:
-    #     if tag.startswith("te_1_"):
-    #         te1.append(tag)
-    #     elif tag.startswith("te_2_"):
-    #         te2.append(tag)
-    #     elif tag.startswith("te_3_"):
-    #         te3.append(tag)
-    # for te1_i in te1:
-    #     if te1_i not in metadata["topic_hierarchy"]:
-    #         metadata["topic_hierarchy"][te1_i] = {"":""}
-    # for te2_i in te2:
-    #     if te2_i not in metadata["topic_hierarchy"]:
-    #         metadata["topic_hierarchy"][te2_i] = {"":""}
-    # for te3_i in te3:
-    #     if te1_i not in metadata["topic_hierarchy"]:
-    #         metadata["topic_hierarchy"][te3_i] = {"":""}
-
-    te1 = ""
-    te2 = ""
-    te3 = ""
-    for tag in q_tagset:
+    # get topic hierarchy tags for each level 1, 2, 3
+    te1 = '' # there is exactly one tag of topic level 1
+    te2 = '' # there is exactly one tag of topic level 2
+    te3 = [] # there is at least one tag of topic level 3
+    for tag in outputTags:
         if tag.startswith("te_1_"):
             te1 = tag
         elif tag.startswith("te_2_"):
             te2 = tag
         elif tag.startswith("te_3_"):
-            te3 = tag
+            te3.append(tag)
 
-    if len(te1) > 0:
-        if te1 not in metadata["topic_hierarchy"]:
-            metadata["topic_hierarchy"][te1] = {"":""}
-        if len(te2) > 0:
-            if te2 not in metadata["topic_hierarchy"][te1]:
-                metadata["topic_hierarchy"][te1][te2] = {"":""}
-            if len(te3) > 0:
-                if te3 not in metadata["topic_hierarchy"][te1][te2]:
-                    metadata["topic_hierarchy"][te1][te2][te3] = {}
+    # Reconstruct topic hierarchy. This is unambiguously,
+    # since there is exactly one tag of topic level 1 and only one tag of topic level 2
+    if te1 not in metadata["topic_hierarchy"]:
+        metadata["topic_hierarchy"][te1] = {"":""}
+    if te2 not in metadata["topic_hierarchy"][te1]:
+        metadata["topic_hierarchy"][te1][te2] = {"":""}
+    for te3_ in te3:
+        if te3_ not in metadata["topic_hierarchy"][te1][te2]:
+            metadata["topic_hierarchy"][te1][te2][te3_] = {}
 
+    # add question to meta data
     metadata['exercises'].append({
         'id': questionid,
-        'title': name,
-        'tags': list(q_tagset),
-        'category': current_category,
+        'title': questionTitle,
+        'tags': list(outputTags),
+        'category': category,
         'type': questionType}
     )
+
+    # add question tags to global tagset
+    for tag in outputTags:
+        tagset.add(tag)
+        if tag not in metadata["tag_count"]:
+            metadata["tag_count"][tag] = 0
+        metadata["tag_count"][tag] += 1
+
+    # write question file (Moodle-XML)
     f = open(path_out + str(questionid) + ".xml", "w")
     f.write(questionStr)
     f.close()
 
-
+# remove empty tag of taglist (if present)
 tagset.remove("")
-#metadata["tags"] = list(tagset)
 
 # remove empty tags
 del metadata["topic_hierarchy"][""]
@@ -281,26 +241,4 @@ for line in lines:
 f = open(path_out + "meta.json", "w")
 metadata_json = json.dumps(metadata, indent=4)
 f.write(metadata_json)
-f.close()
-
-# write critical tags to file
-f = open(path_out + "critical_tags.html", "w")
-f.write("<!DOCTYPE html>\n")
-f.write("<html>\n")
-f.write("<head><meta charset=\"utf-8\"/><title>digifellow Aufgabenpool</title></head>\n")
-f.write("<body>\n")
-f.write("<h1>Potenziell fehlerhafte Tags</h1>\n")
-f.write("Im Falle von fehlerhaften Auflistungen: ")
-f.write("Mail an <a href=\"mailto:andreas.schwenk@th-koeln.de\">andreas.schwenk@th-koeln.de</a> senden!<br/><br/>\n")
-f.write("ACHTUNG: Diese Liste wird automatisch jede volle Stunde aktualisiert. ")
-f.write(" In Moodle vorgenommene Änderungen werden also erst zur <b>nächsten vollen Stunde</b> (+ etwas Delay für den Verarbeitungsvorgang) sichtbar!<br/>\n")
-f.write("<p>Warnungen/Fehler: " + warnings + "</p>")
-f.write("<ul>\n")
-for ct in criticalTags:
-    f.write("<li>")
-    f.write(str(ct) + "<br/>\n")
-    f.write("</li>")
-f.write("</ul>\n")
-f.write("</body>")
-f.write("</html>")
 f.close()
