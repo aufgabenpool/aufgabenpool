@@ -8,6 +8,8 @@ feedback/bugs.html
 feedback/rating.txt
 feedback/downloads.txt
 feedback/taxonomy.txt
+editor/node_modules/
+editor/edit-log.txt
 
 package-lock.json
 
