@@ -57,7 +57,7 @@ let exercises = meta['exercises'];
     await userPassword.focus();
     await userPassword.type(moodle_pwd);
     await page.click('#loginbtn');
-    await page.waitForNavigation();
+    await page.waitForNavigation({ waitUntil: 'networkidle0' });
     // for all exercises...
     for (
         let i = first_exercise_id;
