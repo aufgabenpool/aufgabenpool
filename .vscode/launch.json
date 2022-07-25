@@ -8,7 +8,7 @@
             "cwd": "${workspaceFolder}/converter/",
             "program": "${workspaceFolder}/converter/conv.py",
             "args": [
-                "../testdata/quiz-pool-AUFGABENPOOL-20220701-1700.xml",
+                "../testdata/quiz-pool-AUFGABENPOOL-20220725-1446.xml",
                 "../testdata/output/"
             ],
             "console": "integratedTerminal"
