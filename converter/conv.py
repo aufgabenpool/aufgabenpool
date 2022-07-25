@@ -166,8 +166,9 @@ for i, question in enumerate(quiz):
             if tag_formatted.startswith("te_3_"):
                 has_te_3_tag = True
 
-            if tag_formatted.startswith("bloom_"):
-                has_bloom = True
+            for kk in range(0, 6):
+                if tag_formatted.startswith("bloom_" + str(kk+1)):
+                    has_bloom = True
             for kk in range(0, 7):
                 if tag_formatted.startswith("maier_" + str(kk+1) + "_"):
                     has_maier[kk] = True
