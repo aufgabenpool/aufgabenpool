@@ -6,15 +6,14 @@
 #  Version: 0.02
 # ******************************************************************************
 
-# This file converters the Moodle question database (format
-# Moodle-XML) into a JSON file that contains alls metadata
-# to be displayed in the shop-website.
-# Also a Moodle-XML file is written for each question.
+# This file converters the Moodle question database (format Moodle-XML)
+# into a JSON file that contains all metadata to be displayed on the website.
 
-# 2022-07-08: This file does not check, if data is semantically valid
-# (e.g. if tags are valid). Checking is now done in the editor.
+# Also a Moodle-XML file is written for each question (including questions that
+# are currently hidden).
 
-# TODO: remove all unused taxonomy json files and other unused config files!!
+# 2022-07-08: This file does NOT check, if data is semantically valid
+# (e.g. if tags are valid). Checking is now done in the tag-editor.
 
 import os
 import os.path
@@ -24,7 +23,8 @@ import sys
 from lxml import etree
 from datetime import datetime
 
-# read arguments
+# read arguments: INPUT_PATH := moodle XML file, OUTPUT_PATH := directory where
+# "meta.json" and moodle-XML files (one for each exercises) are written.
 if len(sys.argv) != 3:
     print("usage: python3 conv.py INPUT_PATH OUTPUT_PATH")
     sys.exit(-1)
@@ -53,7 +53,9 @@ metadata = {
     # number of occurrences for each tag
     "tag_count": {},
     # textual description for each taxonomy entry
-    "taxonomy_desc": {}
+    "taxonomy_desc": {},
+    # all question IDs, including currently unused
+    "all_exercise_ids": []
 }
 
 # initialize XML-parser
@@ -97,9 +99,17 @@ for i, question in enumerate(quiz):
         category = question.find('category')[0].text
         continue
 
+    metadata["all_exercise_ids"].append(questionid)
+
     # get question string = Moodle-XML data of question as string
     questionStr = etree.tostring(question, encoding='unicode', pretty_print=True)
     questionStr = '<?xml version="1.0" encoding="UTF-8"?>\n<quiz>\n' + str(questionStr) + '\n</quiz>\n'
+
+    # write question file (Moodle-XML) - this is also done for exercises that are
+    # currently NOT active, so that preview-screenshots are taken
+    f = open(path_out + str(questionid) + ".xml", "w")
+    f.write(questionStr)
+    f.close()
 
     # get question type (e.g. "stack", ...)
     questionType = question.attrib['type']
@@ -123,7 +133,7 @@ for i, question in enumerate(quiz):
     elif questionType == "gapselect":
         outputTags.add('type_5')
     else:
-        warnings += "FRAGETYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
+        warnings += "FRAGE-TYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
 
     has_te_1_tag = False
     has_te_2_tag = False
@@ -199,11 +209,6 @@ for i, question in enumerate(quiz):
             metadata["tag_count"][tag] = 0
         metadata["tag_count"][tag] += 1
 
-    # write question file (Moodle-XML)
-    f = open(path_out + str(questionid) + ".xml", "w")
-    f.write(questionStr)
-    f.close()
-
 # remove empty tag of taglist (if present)
 tagset.remove("")
 
@@ -239,6 +244,7 @@ for line in lines:
 
 # write metadata to file
 f = open(path_out + "meta.json", "w")
+metadata["all_exercise_ids"].sort()
 metadata_json = json.dumps(metadata, indent=4)
 f.write(metadata_json)
 f.close()
