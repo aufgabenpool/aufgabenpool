@@ -139,6 +139,9 @@ for i, question in enumerate(quiz):
     has_te_2_tag = False
     has_te_3_tag = False
 
+    has_bloom = False
+    has_maier = [False, False, False, False, False, False, False]
+
     is_hidden = False
 
     if questionTags is not None:
@@ -163,6 +166,12 @@ for i, question in enumerate(quiz):
             if tag_formatted.startswith("te_3_"):
                 has_te_3_tag = True
 
+            if tag_formatted.startswith("bloom_"):
+                has_bloom = True
+            for kk in range(0, 7):
+                if tag_formatted.startswith("maier_" + str(kk+1) + "_"):
+                    has_maier[kk] = True
+
     # remove empty tag (if present)
     outputTags.remove("")
 
@@ -170,6 +179,11 @@ for i, question in enumerate(quiz):
     # also skip, if the question is "hidden"
     if is_hidden or has_te_1_tag == False:
         continue
+    if has_bloom == False:
+        continue
+    for kk in range(0, 7):
+        if has_maier[kk] == False:
+            continue
 
     # get topic hierarchy tags for each level 1, 2, 3
     te1 = '' # there is exactly one tag of topic level 1
