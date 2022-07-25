@@ -44,6 +44,7 @@ let exercises = meta['exercises'];
     });
     // goto login page
     const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(60000);
     await page.goto(moodle_url + '/login/index.php', { waitUntil: 'load' });
     // login with user data
     const userInput = await page.waitForSelector('#username');

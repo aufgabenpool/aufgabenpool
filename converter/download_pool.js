@@ -30,6 +30,8 @@ const export_url = moodle_url + '/question/export.php?courseid=' + course_id;
 
     // goto login page
     const page = await browser.newPage();
+    await page.setDefaultNavigationTimeout(60000);
+
     await page.goto(moodle_url + '/login/index.php', { waitUntil: 'load' });
 
     // login with user data
