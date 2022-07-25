@@ -7,7 +7,7 @@
 
 // Note: This script is SLOW, since we need to wait for Maxima and MathJax...
 // In case that "old_content_path" already contains screenshots and moodle-xml
-// files in paths "img_out_path" and "old_content_path" have no diff,
+// files in paths "img_out_path" and "old_content_path" have equal contents,
 // we can simply copy old screenshots from "old_content_path" to "img_out_path".
 
 const fs = require('fs');
@@ -123,7 +123,7 @@ let exercises = meta['exercises'];
                 } catch (e) {
                     console.log('failed to get screenshot for exercise ' + i);
                 }
-                // postprocess screenshot (set background color transparent)
+                // post-process screenshot (set background color transparent)
                 // TODO: what happens if 'mogrify' is NOT installed???
                 exec(
                     'cd ../data-tmp/ && mogrify -format png -fill "#FFFFFF" -opaque "#E7F3F5" ' +
