@@ -393,12 +393,13 @@ export class Pool {
             const exerciseTagsCategories = this.getTagCategories(exercise.tags);
             // skip untagged exercises
             if (exerciseTagsCategories.has('hidden_') == true) {
+                // TODO: this should not occur anymore (skipped in conversion process)
                 continue;
             }
             if (exerciseTagsCategories.has('te_1_') == false) {
                 continue;
             }
-            if (
+            /*if (
                 selectedTagsCategories.has('te_2_') &&
                 !exerciseTagsCategories.has('te_2_')
             ) {
@@ -409,7 +410,7 @@ export class Pool {
                 !exerciseTagsCategories.has('te_3_')
             ) {
                 continue;
-            }
+            }*/
             // check matching
             let skip = false;
             for (const tag of exercise.tags) {
