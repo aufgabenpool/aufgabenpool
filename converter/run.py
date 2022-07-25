@@ -9,6 +9,7 @@
 import os
 import sys
 import glob
+import time
 from shutil import which
 
 print('Moodle Question Extractor - Author: Andreas Schwenk / TH Köln')
@@ -35,6 +36,9 @@ x = os.system('python3 conv.py ' + moodle_xml_path + ' ../data-tmp/')
 if x != 0:
     print('ERROR: failed to convert question pool')
     sys.exit(-1)
+
+# wait a second...
+time.sleep(1)
 
 # 3.) create screenshots as preview
 print("creating screenshots")
