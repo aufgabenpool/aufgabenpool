@@ -47,7 +47,7 @@ const export_url = moodle_url + '/question/export.php?courseid=' + course_id;
     await userPassword.type(moodle_pwd);
 
     await page.click('#loginbtn');
-    await page.waitForNavigation();
+    await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
     // goto export page
     await page.goto(export_url, { waitUntil: 'load', timeout: 0 });
@@ -62,7 +62,7 @@ const export_url = moodle_url + '/question/export.php?courseid=' + course_id;
     });
 
     await page.click('#id_submitbutton');
-    await page.waitForNavigation();
+    await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
     //await page.screenshot({'path': "/Users/andi/Downloads/test-export-moodle-xml.png"});
 
