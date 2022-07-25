@@ -45,7 +45,10 @@ let exercises = meta['exercises'];
     // goto login page
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(60000);
-    await page.goto(moodle_url + '/login/index.php', { waitUntil: 'load' });
+    await page.goto(moodle_url + '/login/index.php', {
+        waitUntil: 'load',
+        timeout: 0,
+    });
     // login with user data
     const userInput = await page.waitForSelector('#username');
     await userInput.focus();
@@ -104,7 +107,7 @@ let exercises = meta['exercises'];
                             question_id +
                             '&courseid=' +
                             course_id,
-                        { waitUntil: 'load' },
+                        { waitUntil: 'load', timeout: 0 },
                     );
                     // wait for MathJax rendering
                     await new Promise((resolve) => setTimeout(resolve, 1500));

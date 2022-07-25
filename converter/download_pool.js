@@ -32,7 +32,10 @@ const export_url = moodle_url + '/question/export.php?courseid=' + course_id;
     const page = await browser.newPage();
     await page.setDefaultNavigationTimeout(60000);
 
-    await page.goto(moodle_url + '/login/index.php', { waitUntil: 'load' });
+    await page.goto(moodle_url + '/login/index.php', {
+        waitUntil: 'load',
+        timeout: 0,
+    });
 
     // login with user data
     const userInput = await page.waitForSelector('#username');
@@ -47,7 +50,7 @@ const export_url = moodle_url + '/question/export.php?courseid=' + course_id;
     await page.waitForNavigation();
 
     // goto export page
-    await page.goto(export_url, { waitUntil: 'load' });
+    await page.goto(export_url, { waitUntil: 'load', timeout: 0 });
 
     // select Moodle-XML checkbox
     await page.click('#id_format_xml');
