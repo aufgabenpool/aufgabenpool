@@ -135,9 +135,9 @@ for i, question in enumerate(quiz):
     else:
         warnings += "FRAGE-TYP '" + questionType + "' im Shopsystem noch nicht implementiert! "
 
-    has_te_1_tag = False
-    has_te_2_tag = False
-    has_te_3_tag = False
+    te_1_tag_count = False
+    te_2_tag_count = False
+    te_3_tag_count = False
 
     has_bloom = False
     has_maier = [False, False, False, False, False, False, False]
@@ -160,11 +160,11 @@ for i, question in enumerate(quiz):
                 is_hidden = True
 
             if tag_formatted.startswith("te_1_"):
-                has_te_1_tag = True
+                te_1_tag_count += 1
             if tag_formatted.startswith("te_2_"):
-                has_te_2_tag = True
+                te_2_tag_count += 1
             if tag_formatted.startswith("te_3_"):
-                has_te_3_tag = True
+                te_3_tag_count += 1
 
             for kk in range(0, 6):
                 if tag_formatted.startswith("bloom_" + str(kk+1)):
@@ -178,7 +178,7 @@ for i, question in enumerate(quiz):
 
     # skip question if it is not tagged correctly.
     # also skip, if the question is "hidden"
-    if is_hidden or has_te_1_tag == False:
+    if is_hidden or te_1_tag_count != 1:
         continue
     if has_bloom == False:
         continue
