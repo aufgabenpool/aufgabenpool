@@ -13,7 +13,7 @@
 
 		<style>
 			body { background-color: #eeeeee; }
-		</style>              
+		</style>
 
 	</head>
 
@@ -30,12 +30,12 @@
 
 			<small>Moodle Username</small>
 			<input class="form-control" type="text" id="username" name="username">
-			<small>Moodle Passwort</small> 
+			<small>Moodle Passwort</small>
 			<input class="form-control" type="password" id="password" name="password">
 
 			<br/>
 
-			<button type="button" class="btn btn-sm btn-success" onclick="login();">Login</button>            
+			<button type="button" class="btn btn-sm btn-success" onclick="login();">Login</button>
                         <button type="button" class="btn btn-sm btn-danger" onclick="logout();">Logout</button>
 
 			<span id="login-info"></span>
@@ -145,7 +145,7 @@ function showCategories() {
     }
     for (let i=0; i<topCategories.length; i++)
       topCategories[i] = topCategories[i].children[0];
-   
+
 
     const element = document.getElementById("categories");
     let html = '<ul>';
@@ -154,7 +154,7 @@ function showCategories() {
     }
     html += '</ul>';
     element.innerHTML = html;
- 
+
     //console.log(topCategories);
   });
 }
@@ -193,7 +193,7 @@ function showTaglists(_updateDropDownLists=false) {
       let html = '<h1>Tags der Themengebietsebene ' + level + '</h1>';
       for (const tag of topicTaglists[level-1]) {
         html += tag.rawname.substr(5) + ',&nbsp ';
-      } 
+      }
       html += `<br/><br/>
         <b>Neues Tag anlegen:</b>
         <input type="text" id="newtagname`+level+`" required>
@@ -240,7 +240,7 @@ function showQuestions(categoryId, categoryName) {
 
     let html = '';
     questions = response.data;
-    
+
     let numQuestionsWithError = 0;
 
     let questionIdx = 0;
@@ -255,10 +255,10 @@ function showQuestions(categoryId, categoryName) {
 
       html += '<h2>' + question.name + '</h2>';
 
-// TODO: moodle link url MUST include correct course number!! 
+// TODO: moodle link url MUST include correct course number!!
 let courseId = 2;
 
-      html += 'Moodle-ID: ' + questionId + ' <a href="https://aufgabenpool.th-koeln.de/moodle/question/question.php?returnurl=%2Fquestion%2Fedit.php%3Fcourseid%3D2&courseid='+courseId+'&id='+questionId+'" target="_blank">Moodle-Link</a>' + '<br/>';
+      html += 'Moodle-ID: ' + questionId + ' <a href="https://aufgabenpool.th-koeln.de/moodle/question/bank/editquestion/question.php?returnurl=%2Fquestion%2Fedit.php%3Fcourseid%3D2&courseid='+courseId+'&id='+questionId+'" target="_blank">Moodle-Link</a>' + '<br/>';
 
       html += '<hr/>';
       html += '<div class="col text-center">';
@@ -361,7 +361,7 @@ let courseId = 2;
         <div class="form-check form-check-inline">
           <label class="form-check-label"><b>Aufgabe praxiserprobt</b>&nbsp;</label>
           <input class="form-check-input" type="checkbox" id="question_` + questionId + `_testedInPractice">
-        </div>`; 
+        </div>`;
 
       html += '&nbsp;&nbsp;';
 
@@ -484,7 +484,7 @@ let courseId = 2;
 
       document.getElementById('_bloom_' + questionId + '_' + bloom).checked = true;
       for (let i=0; i<maier.length; i++)
-        document.getElementById('_maier_' + i + '_' + questionId + '_' + maier[i]).checked = true; 
+        document.getElementById('_maier_' + i + '_' + questionId + '_' + maier[i]).checked = true;
 
       document.getElementById('question_' + questionId + '_testedInPractice').checked = practiceTested;
       document.getElementById('question_' + questionId + '_hidden').checked = hidden;

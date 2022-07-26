@@ -10,7 +10,7 @@ let pool: Pool = null;
 const metaDataPath = 'data/meta.json';
 const moodleEditPath =
     'https://aufgabenpool.th-koeln.de/' +
-    'moodle/question/question.php?&courseid=2&id=';
+    'moodle/question/bank/editquestion/question.php?&courseid=2&id=';
 
 export function selectPool() {
     const poolButton = document.getElementById('pool-button');
