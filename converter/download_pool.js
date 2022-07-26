@@ -7,18 +7,23 @@
 
 // This script downloads all questions from pool as moodle-xml file via puppeteer.
 
+// dependencies
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const path = require('path');
 
 // preferences
+const moodle_major_version = 4; // switch to 3 for moodle 3.x
 const moodle_url = 'https://aufgabenpool.th-koeln.de/moodle';
 const moodle_user = 'puppeteer';
 const moodle_pwd = 'dGDs988S#'; // TODO: must be secret!!!!!
 const course_id = 2; // TODO: this is static...
 const download_path = path.resolve('../data-tmp/') + path.sep;
 
-const export_url = moodle_url + '/question/export.php?courseid=' + course_id;
+let export_url = '';
+if (moodle_major_version == 3)
+    moodle_url + '/question/export.php?courseid=' + course_id;
+else moodle_url + '/question/bank/export.php?courseid=' + course_id;
 
 // download question pool as moodle-xml file
 (async () => {
