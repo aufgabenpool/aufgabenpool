@@ -145,7 +145,7 @@ app.post('/writeTags', (request, response) => {
     console.log(questionId);
     console.log(questionTagIds);
 
-    // TODO: mysql.esacpe(..) !!
+    // TODO: mysql.escape(..) !!
 
     // delete old tags
     const query = 'DELETE FROM mdl_tag_instance WHERE itemid=' + questionId;
