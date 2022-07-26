@@ -22,8 +22,9 @@ const download_path = path.resolve('../data-tmp/') + path.sep;
 
 let export_url = '';
 if (moodle_major_version == 3)
-    moodle_url + '/question/export.php?courseid=' + course_id;
-else moodle_url + '/question/bank/export.php?courseid=' + course_id;
+    export_url = moodle_url + '/question/export.php?courseid=' + course_id;
+else
+    export_url = moodle_url + '/question/bank/export.php?courseid=' + course_id;
 
 // download question pool as moodle-xml file
 (async () => {
