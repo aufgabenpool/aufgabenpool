@@ -24,7 +24,10 @@ let export_url = '';
 if (moodle_major_version == 3)
     export_url = moodle_url + '/question/export.php?courseid=' + course_id;
 else
-    export_url = moodle_url + '/question/bank/export.php?courseid=' + course_id;
+    export_url =
+        moodle_url +
+        '/question/bank/exportquestions/export.php?courseid=' +
+        course_id;
 
 // download question pool as moodle-xml file
 (async () => {
@@ -61,16 +64,29 @@ else
     // select Moodle-XML checkbox
     await page.click('#id_format_xml');
 
+    /*await page.screenshot({
+        path: '/Users/andi/Downloads/test-export-moodle-xml.png',
+    });*/
+
     // set download path
-    await page._client.send('Page.setDownloadBehavior', {
+    /*await page._client.send('Page.setDownloadBehavior', {
+        behavior: 'allow',
+        downloadPath: download_path,
+    });*/
+    // set download path ... puppeteer 15: https://github.com/berstend/puppeteer-extra/issues/651
+    const client = await page.target().createCDPSession();
+    await client.send('Page.setDownloadBehavior', {
         behavior: 'allow',
         downloadPath: download_path,
     });
 
+    // click on export button
     await page.click('#id_submitbutton');
     await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
-    //await page.screenshot({'path': "/Users/andi/Downloads/test-export-moodle-xml.png"});
+    /*await page.screenshot({
+        path: '/Users/andi/Downloads/test-export-moodle-xml2.png',
+    });*/
 
     // wait to complete the download
     await new Promise((resolve) => setTimeout(resolve, 15000));

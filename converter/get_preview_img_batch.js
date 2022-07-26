@@ -58,6 +58,7 @@ let exercises = meta['exercises'];
     await userPassword.type(moodle_pwd);
     await page.click('#loginbtn');
     await page.waitForNavigation({ waitUntil: 'networkidle0' });
+
     // for all exercises...
     for (
         let i = first_exercise_id;
@@ -103,7 +104,7 @@ let exercises = meta['exercises'];
                     // goto question preview
                     await page.goto(
                         moodle_url +
-                            '/question/preview.php?id=' +
+                            '/question/bank/previewquestion/preview.php?id=' +
                             question_id +
                             '&courseid=' +
                             course_id,
@@ -111,6 +112,20 @@ let exercises = meta['exercises'];
                     );
                     // wait for MathJax rendering
                     await new Promise((resolve) => setTimeout(resolve, 1500));
+
+                    /*await page.screenshot({
+                        path: '/Users/andi/Downloads/test-screenshot-moodle.png',
+                    });*/
+
+                    // remove upper-right links (https://stackoverflow.com/questions/50867065/puppeteer-removing-elements-by-class)
+                    let div_selector_to_remove = '.questiontestslink';
+                    await page.evaluate((sel) => {
+                        var elements = document.querySelectorAll(sel);
+                        for (var i = 0; i < elements.length; i++) {
+                            elements[i].parentNode.removeChild(elements[i]);
+                        }
+                    }, div_selector_to_remove);
+
                     // take screenshot
                     const questionDiv = await page.$('.content');
                     const box = await questionDiv.boundingBox();
