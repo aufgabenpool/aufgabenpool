@@ -69,12 +69,26 @@
                             <h5 class="card-title">Fragendatenbank</h5>
                             <p class="card-text">
                                 <ul>
-                                    <li>Moodle-Kurs zur Verwaltung der Fragendatenbank <i>(eingeschränkter Zugriff)</i>
+                                    <li>Moodle-Kurs zur Verwaltung der Fragendatenbank
+                                        <!--<i>(eingeschränkter Zugriff)</i>-->
                                     </li>
                                 </ul>
                             </p>
-                            <p class=""><a href="https://aufgabenpool.th-koeln.de/moodle/login/index.php" class="btn btn-outline-dark w-100" target="_blank">Moodle <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
-                            <p class=""><a href="https://aufgabenpool.th-koeln.de/editor/index.html" class="btn btn-outline-dark w-100" target="_blank">Tagging Editor <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                            <div class="py-2"></div>
+                            <p class="">
+                                <a href="https://aufgabenpool.th-koeln.de/moodle/" class="btn btn-outline-dark w-100" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    &nbsp;&nbsp;Moodle
+                                    <i class="fa-solid fa-lock"></i>
+                                </a>
+                            </p>
+                            <p class="">
+                                <a href="https://aufgabenpool.th-koeln.de/editor/index.html" class="btn btn-outline-dark w-100" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    &nbsp;&nbsp;Tagging Editor
+                                    <i class="fa-solid fa-lock"></i>
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
