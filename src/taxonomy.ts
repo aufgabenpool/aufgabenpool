@@ -46,6 +46,7 @@ export class TaxonomyHierarchyItem {
             'te_1_statistik',
             'te_1_wahrscheinlichkeitsrechnung',
             'te_1_finanzmathematik',
+            'te_1_lineare algebra',
         ];
         const processed: boolean[] = [];
         for (let i = 0; i < this.children.length; i++) {
