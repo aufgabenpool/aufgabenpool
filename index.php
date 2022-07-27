@@ -83,7 +83,7 @@
                                 </a>
                             </p>
                             <p class="">
-                                <a href="https://aufgabenpool.th-koeln.de/editor/index.html" class="btn btn-outline-dark w-100" target="_blank">
+                                <a href="https://aufgabenpool.th-koeln.de/edit/" class="btn btn-outline-dark w-100" target="_blank">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     &nbsp;&nbsp;Tagging Editor
                                     <i class="fa-solid fa-lock"></i>
