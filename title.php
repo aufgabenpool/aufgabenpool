@@ -28,6 +28,7 @@
         <div class="col-lg text-center">
             <a id="link-start" class="link-dark text-decoration-none" style="font-size: 125%;" href="index.php"><b>Startseite</b></a>&nbsp;&nbsp;
             <a id="link-pool" class="link-dark text-decoration-none" style="font-size: 125%;" href="pool.php"><b>Aufgabenpool</b></a>&nbsp;&nbsp;
+            <a id="link-help" class="link-dark text-decoration-none" style="font-size: 125%;" href="help.php"><b>Hilfe</b></a>&nbsp;&nbsp;
         </div>
     </div>
 </div>

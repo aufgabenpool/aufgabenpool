@@ -1,0 +1,25 @@
+# Diese Datei enthält die aktuelle Themenhierarchie zur Darstellung auf
+# der Seite https://aufgabenpool.th-koeln.de/help.php
+
+# Formatierung:
+#   - 4 Leerzeichen für die Einrückung / KEINE Tabs.
+#   - Kommentare per Hashtag
+#   - Leere Zeilen erlaubt
+
+# Konvertierung automatisch per JavaScript in help.php
+
+* Grundlagen
+    * Mengenlehre
+        * Vereinigung, Schnitt, Differenz
+        * Kreuzprodukt
+        * Potenzmenge
+    * Zahlen
+        * Natürliche Zahlen
+        * Ganze Zahlen
+        * Rationale Zahlen
+        * Reelle Zahlen
+        * Summen, Produkte
+    * Kombinatorik
+        * Fakultät
+    * Binomialkoeffizienten
+* Grenzwerte

@@ -13,6 +13,9 @@
 
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 
+    <script src="node_modules/markdown-it/dist/markdown-it.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+
     <style>
         .centered {
             position: absolute;
