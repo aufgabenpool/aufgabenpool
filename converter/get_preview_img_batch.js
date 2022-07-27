@@ -33,7 +33,7 @@ if (process.argv.length == 4) {
 // get exercise meta data
 let meta = fs.readFileSync(meta_data_path);
 meta = JSON.parse(meta);
-let exercises = meta['exercises'];
+let exercises = meta['all_exercise_ids'];
 
 // take screenshots
 (async () => {
@@ -66,8 +66,9 @@ let exercises = meta['exercises'];
         i++
     ) {
         process.stdout.write('.');
-        let exercise = exercises[i];
-        let question_id = exercise['id'];
+        //let exercise = exercises[i];
+        //let question_id = exercise['id'];
+        let question_id = exercises[i];
         // only get screenshots if the XML file has been updated since the last sync
         let must_update = true;
         if (
@@ -140,7 +141,10 @@ let exercises = meta['exercises'];
                         },
                     });
                 } catch (e) {
-                    console.log('failed to get screenshot for exercise ' + i);
+                    console.log(
+                        'failed to get screenshot for exercise ID ' +
+                            question_id,
+                    );
                 }
                 // post-process screenshot (set background color transparent)
                 // TODO: what happens if 'mogrify' is NOT installed???
