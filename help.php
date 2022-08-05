@@ -15,8 +15,9 @@
             </div>
         </div>
 
-        <div id="collaboration"></div>
-        <div id="topics"></div>
+        <div id="userguide"></div>
+        <!--<div id="collaboration"></div>
+        <div id="topics"></div>-->
 
         <script>
             document.getElementById("link-help").innerHTML = '<b><span class="text-danger">Hilfe</span></b>';
@@ -37,8 +38,9 @@
                 });
             }
 
-            generateContent('collaboration');
-            generateContent('topics');
+            //generateContent('collaboration');
+            //generateContent('topics');
+            generateContent('userguide');
 
         </script>
 

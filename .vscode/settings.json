@@ -44,6 +44,7 @@
         "ltnp",
         "lxml",
         "maier",
+        "markdownit",
         "Mathematik",
         "mathjaxloader",
         "mogrify",
@@ -77,6 +78,7 @@
         "timemodified",
         "tiuserid",
         "truefalse",
+        "userguide",
         "userid",
         "Vorschau"
     ]
