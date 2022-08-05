@@ -20,7 +20,7 @@
         <div id="topics"></div>-->
 
         <script>
-            document.getElementById("link-help").innerHTML = '<b><span class="text-danger">Hilfe</span></b>';
+            //document.getElementById("link-help").innerHTML = '<b><span class="text-danger">Hilfe</span></b>';
 
             function generateContent(id) {
                 axios.get("help/" + id + ".md").then(function (response) {
