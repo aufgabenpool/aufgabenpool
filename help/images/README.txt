@@ -1,1 +1,1 @@
-Hier Bilder einfügen
+Hier Bilder im Format PNG(!!) einfügen
