@@ -15,13 +15,9 @@
             </div>
         </div>
 
-        <div id="userguide"></div>
-        <!--<div id="collaboration"></div>
-        <div id="topics"></div>-->
+        <div id="devguide"></div>
 
         <script>
-            //document.getElementById("link-help").innerHTML = '<b><span class="text-danger">Hilfe</span></b>';
-
             function generateContent(id) {
                 axios.get("help/" + id + ".md").then(function (response) {
                     html = new markdownit().render(response.data);
@@ -38,9 +34,7 @@
                 });
             }
 
-            //generateContent('collaboration');
-            //generateContent('topics');
-            generateContent('userguide');
+            generateContent('devguide');
 
         </script>
 
