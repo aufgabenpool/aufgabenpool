@@ -11,6 +11,14 @@ Wenn Sie Ihre Aufgabensammlung in diesen Aufgabenpool hinzufügen möchten, so g
 
 Im Aufgabenpool wird die Herkunft der Aufgaben sichtbar sein.
 
+## Test
+
+Abbildung:
+
+![](images/moodle-ilias.png)
+
+
+
 
 ## Themenhierarchie
 
