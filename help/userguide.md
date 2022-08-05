@@ -1,4 +1,4 @@
-## Nutzeranleitung
+## Anleitung zur Nutzung des Aufgabenpools
 
 Blub
 
