@@ -543,26 +543,39 @@
                             html += '<br/>';
 
                             html +=
-                                '<p>ACHTUNG: die folgenden Checkboxen sind noch nicht funktional</p><br/>';
-
-                            html +=
-                                `
-        <div class="form-check form-check-inline">
-          <label class="form-check-label"><b>Fehler beim Import in Ilias</b>&nbsp;</label>
-          <input class="form-check-input" type="checkbox" id="question_` +
-                                questionId +
-                                `_iliasImportError">
-        </div>`;
+                                '<p>ACHTUNG: die folgenden Checkboxen sind noch nicht funktional!!</p>';
 
                             html += '<b>Qualitätsgesichert/geprüft:</b> ';
-                            html +=
-                                `
+                            const qsNames = [
+                                'visuell',
+                                'sprachlich',
+                                'inhaltlich',
+                                'Tagging',
+                                'Import Ilias',
+                                'Import Moodle',
+                            ];
+                            const qsIds = [
+                                'qsVisuell',
+                                'qsSprachlich',
+                                'qsInhaltlich',
+                                'qsTagging',
+                                'qsImportIlias',
+                                'qsImportMoodle',
+                            ];
+                            for (let i = 0; i < qsNames.length; i++) {
+                                html +=
+                                    `
         <div class="form-check form-check-inline">
-          <label class="form-check-label"><b>visuell</b>&nbsp;</label>
+          <label class="form-check-label"><b>` +
+                                    qsNames[i] +
+                                    `</b>&nbsp;</label>
           <input class="form-check-input" type="checkbox" id="question_` +
-                                questionId +
-                                `_qsVisuell">
+                                    questionId +
+                                    `_` +
+                                    qsIds[i] +
+                                    `">
         </div>`;
+                            }
 
                             html += '<br/>';
                             html += '<br/>';
