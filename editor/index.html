@@ -626,6 +626,13 @@
                             let iliasImportError = false;
                             let practiceTested = false;
 
+                            let qsVisuell = false;
+                            let qsSprachlich = false;
+                            let qsInhaltlich = false;
+                            let qsTagging = false;
+                            let qsImportIlias = false;
+                            let qsImportMoodle = false;
+
                             for (const tagId in question.tags) {
                                 const tag = question.tags[tagId];
                                 if (tag.name.startsWith('te:1:')) te1.push(tag);
@@ -656,6 +663,18 @@
                                     practiceTested = true;
                                 else if (tag.name === 'ilias-import-error')
                                     iliasImportError = true;
+                                else if (tag.name === 'qs:visuellgeprueft')
+                                    qsVisuell = true;
+                                else if (tag.name === 'qs:sprachlichgeprueft')
+                                    qsSprachlich = true;
+                                else if (tag.name === 'qs:inhaltlichgeprueft')
+                                    qsInhaltlich = true;
+                                else if (tag.name === 'qs:tagginggeprueft')
+                                    qsTagging = true;
+                                else if (tag.name === 'qs:importiliasgeprueft')
+                                    qsImportIlias = true;
+                                else if (tag.name === 'qs:importmoodlegeprueft')
+                                    qsImportMoodle = true;
                                 else {
                                     error = true;
                                     statusMsg +=
@@ -810,6 +829,25 @@
                             document.getElementById(
                                 'question_' + questionId + '_iliasImportError',
                             ).checked = iliasImportError;
+
+                            document.getElementById(
+                                'question_' + questionId + '_qsVisuell',
+                            ).checked = qsVisuell;
+                            document.getElementById(
+                                'question_' + questionId + '_qsSprachlich',
+                            ).checked = qsSprachlich;
+                            document.getElementById(
+                                'question_' + questionId + '_qsInhaltlich',
+                            ).checked = qsInhaltlich;
+                            document.getElementById(
+                                'question_' + questionId + '_qsTagging',
+                            ).checked = qsTagging;
+                            document.getElementById(
+                                'question_' + questionId + '_qsImportIlias',
+                            ).checked = qsImportIlias;
+                            document.getElementById(
+                                'question_' + questionId + '_qsImportMoodle',
+                            ).checked = qsImportMoodle;
 
                             //if(practiceTested) console.log(question.name); // TODO: TEST!!!!!
 
@@ -987,6 +1025,34 @@
                     'question_' + questionId + '_iliasImportError',
                 );
                 if (element.checked) questionTags.push('ilias-import-error');
+
+                // QS
+                element = document.getElementById(
+                    'question_' + questionId + '_qsVisuell',
+                );
+                if (element.checked) questionTags.push('qs:visuellgeprueft');
+                element = document.getElementById(
+                    'question_' + questionId + '_qsSprachlich',
+                );
+                if (element.checked) questionTags.push('qs:sprachlichgeprueft');
+                element = document.getElementById(
+                    'question_' + questionId + '_qsInhaltlich',
+                );
+                if (element.checked) questionTags.push('qs:inhaltlichgeprueft');
+                element = document.getElementById(
+                    'question_' + questionId + '_qsTagging',
+                );
+                if (element.checked) questionTags.push('qs:tagginggeprueft');
+                element = document.getElementById(
+                    'question_' + questionId + '_qsImportIlias',
+                );
+                if (element.checked)
+                    questionTags.push('qs:importiliasgeprueft');
+                element = document.getElementById(
+                    'question_' + questionId + '_qsImportMoodle',
+                );
+                if (element.checked)
+                    questionTags.push('qs:importmoodlegeprueft');
 
                 // get tag Ids (...slow implementation)
                 for (let k = 0; k < questionTags.length; k++) {
