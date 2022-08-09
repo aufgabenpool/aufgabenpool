@@ -507,41 +507,7 @@
 
                             html += '<br/>';
 
-                            // misc
-                            html +=
-                                `
-        <div class="form-check form-check-inline">
-          <label class="form-check-label"><b>Aufgabe gesperrt</b>&nbsp;</label>
-          <input class="form-check-input" type="checkbox" id="question_` +
-                                questionId +
-                                `_hidden">
-        </div>`;
-
-                            html += '&nbsp;&nbsp;';
-
-                            html +=
-                                `
-        <div class="form-check form-check-inline">
-          <label class="form-check-label"><b>Aufgabe praxiserprobt</b>&nbsp;</label>
-          <input class="form-check-input" type="checkbox" id="question_` +
-                                questionId +
-                                `_testedInPractice">
-        </div>`;
-
-                            html += '&nbsp;&nbsp;';
-
-                            html +=
-                                `
-        <div class="form-check form-check-inline">
-          <label class="form-check-label"><b>Fehler beim Import in Ilias (DIESES TAG WIRD SPÄTER ENTFERNT!)</b>&nbsp;</label>
-          <input class="form-check-input" type="checkbox" id="question_` +
-                                questionId +
-                                `_iliasImportError">
-        </div>`;
-
-                            html += '<br/>';
-                            html += '<br/>';
-
+                            // QS
                             html +=
                                 '<b>Qualitätsgesichert/geprüft:</b> &nbsp;&nbsp;';
                             const qsNames = [
@@ -574,6 +540,44 @@
                                     `">
         </div>`;
                             }
+
+                            html += '<br/>';
+                            html += '<br/>';
+
+                            // misc
+
+                            html += '<b>Sonstiges:</b> &nbsp;&nbsp;';
+
+                            html +=
+                                `
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">Aufgabe gesperrt&nbsp;</label>
+          <input class="form-check-input" type="checkbox" id="question_` +
+                                questionId +
+                                `_hidden">
+        </div>`;
+
+                            html += '&nbsp;&nbsp;';
+
+                            html +=
+                                `
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">Aufgabe praxiserprobt&nbsp;</label>
+          <input class="form-check-input" type="checkbox" id="question_` +
+                                questionId +
+                                `_testedInPractice">
+        </div>`;
+
+                            html += '&nbsp;&nbsp;';
+
+                            html +=
+                                `
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">ehler beim Import in Ilias (DIESES TAG WIRD SPÄTER ENTFERNT!)&nbsp;</label>
+          <input class="form-check-input" type="checkbox" id="question_` +
+                                questionId +
+                                `_iliasImportError">
+        </div>`;
 
                             html += '<br/>';
                             html += '<br/>';
