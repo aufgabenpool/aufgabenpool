@@ -103,6 +103,7 @@
 
                 <br />
 
+                <a id="questions-stat-anchor"></a>
                 <div id="questionsStat"></div>
 
                 <div id="questions"></div>
@@ -217,6 +218,7 @@
 
             function clickedCategory(catId, catName) {
                 showQuestions(catId, catName);
+                document.location.hash = '#questions-stat-anchor';
             }
 
             function showTaglists(_updateDropDownLists = false) {
