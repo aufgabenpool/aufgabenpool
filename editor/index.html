@@ -220,12 +220,7 @@
             function clickedCategory(catId, catName) {
                 showQuestions(catId, catName);
                 // jump to questions statistics anchor
-                setTimeout(function () {
-                    let url = window.location.href;
-                    location.href = '#questions-stat-anchor';
-                    window.scrollBy(0, 128);
-                    history.replaceState(null, null, url);
-                }, 750);
+                window.scrollBy(0, 256);
             }
 
             function showTaglists(_updateDropDownLists = false) {
