@@ -219,7 +219,7 @@
             function clickedCategory(catId, catName) {
                 showQuestions(catId, catName);
                 // jump to questions statistics anchor
-                let url = location.href;
+                let url = window.location.href;
                 location.href = '#questions-stat-anchor';
                 history.replaceState(null, null, url);
             }
