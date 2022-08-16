@@ -4,7 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="description" content="Aufgabenpool Mathematik">
-    <meta name="author" content="Andreas Schwenk - TH Köln">
+    <meta name="author" content="TH Köln">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#ea5a00">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ea5a00">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <title>Aufgabenpool Mathematik</title>
 
