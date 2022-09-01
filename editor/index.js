@@ -212,18 +212,34 @@ app.post('/questions', (request, response) => {
 
     // Moodle 3:
     // const query = 'SELECT id, category, name FROM mdl_question WHERE category=' + categoryId;
+
     // Moodle 4:
-    const query =
+    /*const query =
         'SELECT mdl_question.id, mdl_question_bank_entries.questioncategoryid AS category, mdl_question.name FROM mdl_question INNER JOIN mdl_question_versions ON mdl_question.id=mdl_question_versions.questionid INNER JOIN mdl_question_bank_entries ON mdl_question_versions.questionbankentryid=mdl_question_bank_entries.id WHERE mdl_question_bank_entries.questioncategoryid=' +
-        categoryId;
+        categoryId;*/
+    const query =
+        'SELECT mdl_question.id, mdl_question_bank_entries.questioncategoryid AS category, mdl_question.name, mdl_question_versions.version, mdl_question_versions.questionbankentryid ' +
+        'FROM mdl_question ' +
+        'INNER JOIN mdl_question_versions ON mdl_question.id=mdl_question_versions.questionid ' +
+        'INNER JOIN mdl_question_bank_entries ON mdl_question_versions.questionbankentryid=mdl_question_bank_entries.id ' +
+        'WHERE mdl_question_bank_entries.questioncategoryid=' +
+        categoryId +
+        ' ORDER BY mdl_question_versions.questionbankentryid ASC, mdl_question_versions.version DESC';
+
     connection.query(query, [], function (error, results, fields) {
+        const questionBankEntryIds = new Set();
         for (const result of results) {
+            if (questionBankEntryIds.has(result.questionbankentryid)) {
+                // skip old versions of question
+                continue;
+            }
             questions[parseInt(result.id)] = {
                 id: result.id,
                 category: result.category,
                 name: result.name,
                 tags: {},
             };
+            questionBankEntryIds.add(result.questionbankentryid);
         }
         const query2 =
             'SELECT mdl_tag_instance.itemid, mdl_tag_instance.tagid, mdl_tag.name, mdl_tag.rawname FROM mdl_tag_instance INNER JOIN mdl_tag ON mdl_tag_instance.tagid=mdl_tag.id ORDER BY mdl_tag_instance.itemid;';
