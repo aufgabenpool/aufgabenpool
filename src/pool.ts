@@ -92,7 +92,8 @@ export class Pool {
         //recaptchaElement.innerHTML = '';
         try {
             grecaptcha.render(recaptchaElement, {
-                sitekey: '6Lca4GQfAAAAALPpkGPIrkEJjNlxNCJvtN8SXE_9',
+                //sitekey: '6Lca4GQfAAAAALPpkGPIrkEJjNlxNCJvtN8SXE_9',
+                sitekey: '6LfMeMUhAAAAAIWWOH2Wz-yOgSxtjQrwEfvYtxMq',
                 theme: 'light',
                 callback: googleRecaptchaCallback,
             });
