@@ -8,7 +8,7 @@ Hier [ein Link](https://www-cs-faculty.stanford.edu/~knuth/).
 
 Eine Abbildung
 
-![](images/moodle-ilias.png)
+
 
 ## Weitere Überschrift
 
@@ -43,3 +43,27 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 ![](images/4.png)
 
 -Ist die Auswahl beendet, kehren Sie wieder zum Seitenanfang zurück und klicken auf "Aufgabenblatt"
+
+-Die Aufgaben können nun als moodle.xml Datei heruntergeladen werden durch klicken auf den entsprechenden Button
+
+![](images/moodle-ilias.png)
+
+## Import in Ilias
+
+-Anmelden bei Ilias
+
+-Gehen Sie in den entsprechenden Kurs, in dem Sie die Aufgaben hochladen wollen
+
+-Nun kann ein Fragenpool für Tests erstellt werden
+
+-Dazu klicken Sie auf "Neues Objekt hinzufügen" und anschließend auf "Fragenpool für Tests"
+
+![](images/7.png)
+
+-Wählen Sie einen Titel und klicken anschließend auf "Frage erstellen"
+
+-Wählen Sie beim Fragetyp "STACK Frage" aus und klicken dann auf "Erstellen"
+
+-Nun klicken Sie auf "Frage aus MoodleXML importieren"
+
+![](images/10.png)
