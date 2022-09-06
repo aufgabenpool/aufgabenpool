@@ -48,6 +48,7 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 ![](images/moodle-ilias.png)
 
+
 ## Import in Ilias
 
 -Anmelden bei Ilias
@@ -70,6 +71,32 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 -Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Importieren"
 
+-Sie haben die Fragen erfolgreich importiert!
+
 -Durch klicken auf "Fragenpool für Tests" lässt sich nun auf die Aufgaben zugreifen
 
 ![](images/11.png)
+
+
+## Import in Moodle
+
+-Anmelden bei Moodle
+
+-Gehen Sie in den entsprechenden Kurs, in dem Sie die Aufgaben hochladen wollen
+
+-Wählen Sie eine Kategorie aus oder erstellen Sie ggf. eine neue Kategorie
+
+![](images/14.png)
+
+-Nun klicken Sie auf "Import", wählen anschließend als Dateiformat "Moodle-XML-Format" und klicken dann auf "Datei wählen ..."
+
+![](images/15.png)
+
+-Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Datei hochladen"
+
+-Dann klicken Sie unten auf "Import"
+
+-Nun sollten Sie eine Vorschau der Fragen sehen. Scrollen Sie nach unten und klicken auf "Weiter"
+
+-Sie haben die Fragen erfolgreich importiert!
+
