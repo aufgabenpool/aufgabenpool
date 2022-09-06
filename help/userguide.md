@@ -77,7 +77,7 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 -Gehen Sie in den entsprechenden Kurs, in dem Sie die Aufgaben hochladen wollen
 
--Wählen Sie eine Kategorie aus oder erstellen Sie ggf. eine neue Kategorie
+-Wählen Sie eine Kategorie aus oder erstellen Sie ggf. eine neue Kategorie durch klicken auf "Kategorie hinzufügen"
 
 ![](images/14.png)
 
