@@ -72,4 +72,4 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 -Durch klicken auf "Fragenpool für Tests" lässt sich nun auf die Aufgaben zugreifen
 
-![](images/10.png)
+![](images/11.png)
