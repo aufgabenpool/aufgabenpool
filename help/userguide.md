@@ -67,3 +67,9 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 -Nun klicken Sie auf "Frage aus MoodleXML importieren"
 
 ![](images/10.png)
+
+-Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Importieren"
+
+-Durch klicken auf "Fragenpool für Tests" lässt sich nun auf die Aufgaben zugreifen
+
+![](images/10.png)
