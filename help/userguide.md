@@ -2,7 +2,7 @@
 
 - Große Auswahl an Aufgaben zu verschiedenen Themen
 - Gezielte Zusammenstellung von Aufgaben zu einem Aufgabenblatt möglich
-- Import nach Moodle oder Ilias
+- Dieses Aufgabenblatt kann in Moodle oder Ilias importiert werden
 
 Hier [ein Link](https://www-cs-faculty.stanford.edu/~knuth/).
 
@@ -18,7 +18,7 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 -Den Aufgabenpool finden Sie [hier](https://aufgabenpool.th-koeln.de/pool.php) (ggf. anmelden)
 
--Hier kann nun ein Aufgabenblatt zusammengestellt werden, um eine moodle-xml Datei zu erstellen, welche in Moodle oder Ilias importiert werden kann
+-Hier kann nun ein Aufgabenblatt zusammengestellt werden, um eine moodle-xml Datei zu erzeugen, welche in Moodle oder Ilias importiert werden kann
 
 -Das Aufgabenblatt finden Sie hier
 
