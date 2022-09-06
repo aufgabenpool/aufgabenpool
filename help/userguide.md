@@ -13,4 +13,4 @@ Eine Abbildung
 
 Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-sheet/)
 
-[Link zum Aufgabenpool](https://aufgabenpool.th-koeln.de/pool.php)(ggf. anmelden)
+[Link zum Aufgabenpool](https://aufgabenpool.th-koeln.de/pool.php) (ggf. anmelden)
