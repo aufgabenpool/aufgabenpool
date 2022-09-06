@@ -26,6 +26,8 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 -Dieses ist zu Beginn leer. Nun können Aufgaben hinzugefügt werden
 
+-Falls Sie auf den Button "Aufgabenblatt" geklickt haben, müssen Sie jetzt wieder zurück zur Fragensammlung. Dazu einmal auf "Fragensammlung" klicken
+
 -Themengebiet auswählen
 
 ![](images/2.png)
@@ -35,3 +37,9 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 -Aufgaben können nun einzeln zum Aufgabenblatt hinzugefügt werden
 
 ![](images/3.png)
+
+-ACHTUNG: Manche Aufgaben können nicht in Ilias importiert werden. Das erkennen Sie an dem Symbol in der unteren rechten Ecke der Aufgabe
+
+![](images/4.png)
+
+-Ist die Auswahl beendet, kehren Sie wieder zum Seitenanfang zurück und klicken auf "Aufgabenblatt"
