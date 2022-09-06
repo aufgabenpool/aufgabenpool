@@ -44,7 +44,7 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 
 -Ist die Auswahl beendet, kehren Sie wieder zum Seitenanfang zurück und klicken auf "Aufgabenblatt"
 
--Die Aufgaben können nun als moodle.xml Datei heruntergeladen werden durch klicken auf den entsprechenden Button
+-Die Aufgaben können nun als moodle.xml Datei heruntergeladen werden durch klicken auf den entsprechenden Button (orange für den Import in Moodle, blau für Ilias)
 
 ![](images/moodle-ilias.png)
 
