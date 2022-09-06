@@ -1,16 +1,9 @@
-## Anleitung zur Nutzung des Aufgabenpools
+# Anleitung zur Nutzung des Aufgabenpools
 
 - Große Auswahl an Aufgaben zu verschiedenen Themen
 - Gezielte Zusammenstellung von Aufgaben zu einem Aufgabenblatt möglich
 - Dieses Aufgabenblatt kann in Moodle oder Ilias importiert werden
 
-Hier [ein Link](https://www-cs-faculty.stanford.edu/~knuth/).
-
-Eine Abbildung
-
-
-
-## Weitere Überschrift
 
 Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-sheet/)
 
