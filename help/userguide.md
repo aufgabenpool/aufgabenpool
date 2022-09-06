@@ -23,3 +23,15 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 -Das Aufgabenblatt finden Sie hier
 
 ![](images/5.png)
+
+-Dieses ist zu Beginn leer. Nun können Aufgaben hinzugefügt werden
+
+-Themengebiet auswählen
+
+![](images/2.png)
+
+-Die Aufgaben zu dem ausgewählten Themengebiet finden Sie unten
+
+-Aufgaben können nun einzeln zum Aufgabenblatt hinzugefügt werden
+
+![](images/3.png)
