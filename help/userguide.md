@@ -27,7 +27,7 @@ Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenp
 
 -Die Aufgaben zu dem ausgewählten Themengebiet finden Sie unten
 
--Aufgaben können nun einzeln zum Aufgabenblatt hinzugefügt werden
+-Aufgaben können nun einzeln zum Aufgabenblatt hinzugefügt werden durch klicken auf den entsprechenden Button unterhalb der Aufgabe
 
 ![](images/3.png)
 
