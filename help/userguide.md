@@ -5,9 +5,9 @@
 - Dieses Aufgabenblatt kann in Moodle oder Ilias importiert werden
 
 
-Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-sheet/)
+Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenpool in Moodle oder Ilias verwenden können. Im ersten Teil wird erklärt, wie man sich eine Datei mit Aufgaben - ein sogenanntes "Aufgabenblatt" - herunterlädt. Im zweiten Teil wird gezeigt, wie die Aufgaben in Ilias (2.a) oder in Moodle (2.b) importiert werden können.
 
-## Aufgabenblatt erstellen
+## 1. Aufgabenblatt erstellen
 
 -Den Aufgabenpool finden Sie [hier](https://aufgabenpool.th-koeln.de/pool.php) (ggf. anmelden)
 
@@ -42,7 +42,7 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 ![](images/moodle-ilias.png)
 
 
-## Import in Ilias
+## 2.a Import in Ilias
 
 -Anmelden bei Ilias
 
@@ -71,7 +71,7 @@ Informationen über Markdown z.B. [hier](https://www.markdownguide.org/cheat-she
 ![](images/11.png)
 
 
-## Import in Moodle
+## 2.b Import in Moodle
 
 -Anmelden bei Moodle
 
