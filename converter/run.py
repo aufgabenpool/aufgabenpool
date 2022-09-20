@@ -6,6 +6,9 @@
 #  Version: 0.01
 # ******************************************************************************
 
+# This file updates the pool database (source: Moodle 4), creates screenshots
+# as preview images, ...
+
 import os
 import sys
 import glob

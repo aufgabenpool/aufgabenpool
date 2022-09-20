@@ -10,6 +10,7 @@ feedback/downloads.txt
 feedback/taxonomy.txt
 editor/node_modules/
 editor/edit-log.txt*
+converter/config.json
 
 package-lock.json
 

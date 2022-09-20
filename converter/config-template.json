@@ -1,0 +1,5 @@
+{
+    "moodle_url": "https://aufgabenpool.th-koeln.de/moodle",
+    "moodle_puppeteer_user": "puppeteer",
+    "moodle_puppeteer_password": "PUT_THE_PASSWORD_HERE"
+}

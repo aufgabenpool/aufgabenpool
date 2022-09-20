@@ -15,9 +15,21 @@ const { exec } = require('child_process');
 const puppeteer = require('puppeteer');
 
 // preferences
-const moodle_url = 'https://aufgabenpool.th-koeln.de/moodle';
-const moodle_user = 'puppeteer';
-const moodle_pwd = 'dGDs988S#'; // TODO: must be secret!!!!!
+
+if (fs.existsSync('config.json') == false) {
+    console.log(
+        'ERROR: config.json not found: ' +
+            'copy "config-template.json" to "config.json" ' +
+            'and make changes',
+    );
+    process.exit(-1);
+}
+const config = JSON.parse(fs.readFileSync('config.txt'));
+
+const moodle_url = config['moodle_url'];
+const moodle_user = config['moodle_puppeteer_user'];
+const moodle_pwd = config['moodle_puppeteer_password'];
+
 const course_id = 2; // TODO: this is static...
 const meta_data_path = '../data-tmp/meta.json';
 const img_out_path = '../data-tmp/';
