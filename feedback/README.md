@@ -1,7 +1,0 @@
--   this directory contains file "bugs.txt"
--   format: each bug is written in a line. columns (separated by hashtag):
-    -   unix timestamp
-    -   moodle ID of the exercise
-    -   bug type (one of content, moodle, ilias, misc)
-    -   bug description
-    -   bug contact data
