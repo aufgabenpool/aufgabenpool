@@ -1,3 +1,21 @@
+# Aufgabenpool Mathematik
+
+This repository hosts all code of [https://aufgabenpool.th-koeln.de](https://aufgabenpool.th-koeln.de).
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
+x
+
 ## Fellowships für Innovationen in der digitalen Hochschullehre (digiFellow)
 
 # Digitaler Aufgabenpool Mathematik ![Logo](Logo/aufgabenpool-logo.png)

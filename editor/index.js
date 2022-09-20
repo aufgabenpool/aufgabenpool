@@ -3,29 +3,36 @@
 // license: GPLv3
 // description: question editing tool (server)
 
-// This server listens to port 3000. You may need to set up an Apache2 proxy server.
-// Show all process that listen to port 3000 on Debian:
+// This server listens to port 3000.
+// You may need to set up an Apache2 proxy server accordingly.
+
+// Show all process that listen to port 3000 in Debian:
 //   apt install net-tools
 //   netstat -ltnp | grep -w ':3000'
 
+// import dependencies
 const express = require('express');
 const session = require('express-session');
 const mysql = require('mysql');
 const bcrypt = require('bcryptjs');
 
+// log
 console.log('Aufgabenpool Editor, 2022 by Andreas Schwenk, TH Koeln');
 console.log('Started: ' + new Date().toLocaleString());
 
+// connect to SQL-database
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'moodle',
-    password: 'moodle',
+    password: 'moodle', // your moodle DB should accessible ONLY from localhost!
     database: 'moodle',
     multipleStatements: false,
 });
 
+// init express js
 const app = express();
 
+// create the "application"
 app.use(
     session({
         secret: 'secret',
@@ -36,13 +43,16 @@ app.use(
     }),
 );
 
+// express js preferences
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// get root HTML file
 app.get('/', (request, response) => {
     response.sendFile('index.html', { root: __dirname });
 });
 
+// handler to read all question categories from Moodle database
 app.get('/categories', (request, response) => {
     if (
         typeof request.session.username === 'undefined' ||
@@ -68,6 +78,7 @@ app.get('/categories', (request, response) => {
     });
 });
 
+// handler to read all tags from Moodle database
 app.post('/taglist', (request, response) => {
     if (
         typeof request.session.username === 'undefined' ||
@@ -77,7 +88,6 @@ app.post('/taglist', (request, response) => {
         response.end();
         return;
     }
-    //let query = "SELECT id, name, rawname FROM mdl_tag WHERE (LOWER(name) LIKE 'te:%') ORDER BY NAME;";
     let query = 'SELECT id, name, rawname FROM mdl_tag ORDER BY NAME;';
     let taglist = [];
     connection.query(query, [], function (error, results, fields) {
@@ -94,6 +104,7 @@ app.post('/taglist', (request, response) => {
     });
 });
 
+// handler to create a new tag in Moodle database
 app.post('/createTag', (request, response) => {
     if (
         typeof request.session.username === 'undefined' ||
@@ -127,6 +138,7 @@ app.post('/createTag', (request, response) => {
     });
 });
 
+// handler write tags of a question into the Moodle database
 app.post('/writeTags', (request, response) => {
     if (
         typeof request.session.username === 'undefined' ||
@@ -194,6 +206,7 @@ app.post('/writeTags', (request, response) => {
     });
 });
 
+// handler to read all questions from Moodle database
 app.post('/questions', (request, response) => {
     if (
         typeof request.session.username === 'undefined' ||
@@ -214,9 +227,6 @@ app.post('/questions', (request, response) => {
     // const query = 'SELECT id, category, name FROM mdl_question WHERE category=' + categoryId;
 
     // Moodle 4:
-    /*const query =
-        'SELECT mdl_question.id, mdl_question_bank_entries.questioncategoryid AS category, mdl_question.name FROM mdl_question INNER JOIN mdl_question_versions ON mdl_question.id=mdl_question_versions.questionid INNER JOIN mdl_question_bank_entries ON mdl_question_versions.questionbankentryid=mdl_question_bank_entries.id WHERE mdl_question_bank_entries.questioncategoryid=' +
-        categoryId;*/
     const query =
         'SELECT mdl_question.id, mdl_question_bank_entries.questioncategoryid AS category, mdl_question.name, mdl_question_versions.version, mdl_question_versions.questionbankentryid ' +
         'FROM mdl_question ' +
@@ -261,6 +271,7 @@ app.post('/questions', (request, response) => {
     });
 });
 
+// login handler
 app.post('/login', (request, response) => {
     const username = request.body.username;
     const password = request.body.password;
@@ -295,10 +306,12 @@ app.post('/login', (request, response) => {
     });
 });
 
+// logout handler
 app.post('/logout', (request, response) => {
     request.session.username = '';
     request.session.userid = -1;
     response.end();
 });
 
+// start listening
 app.listen(3000);
