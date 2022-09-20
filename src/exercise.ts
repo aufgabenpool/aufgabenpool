@@ -8,15 +8,18 @@ import axios from 'axios';
 import { formatTagAsTitle, downloadFile } from './help';
 import { Pool, PoolMode } from './pool';
 
+/**
+ * Question
+ */
 export class Exercise {
-    moodleID = 0;
+    moodleID = 0; // identifier used in the moodle DB
     moodleCategory = '';
-    title = '';
-    tags: string[] = [];
-    type = '';
-    pool: Pool = null;
-    moodleCompatible = true;
-    iliasCompatible = true;
+    title = ''; // title of the question
+    tags: string[] = []; // set of tags
+    type = ''; // type of the question (e.g. "stack")
+    pool: Pool = null; // reference to question pool := list of all questions
+    moodleCompatible = true; // true, if this question is compatible with Moodle
+    iliasCompatible = true; // true, if this question is compatible with Ilias
 
     private createTopicHierarchyHTML(): string {
         let html = '';

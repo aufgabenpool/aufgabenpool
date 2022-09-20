@@ -25,22 +25,6 @@ export function hideTooltips() {
     }
 }
 
-/*export function capitalizeWords(s: string): string {
-    let t = '';
-    let next_uppercase = true;
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] == ' ' || s[i] == '-' || s[i] == '/') {
-            next_uppercase = true;
-            t += s[i];
-            continue;
-        }
-        if (next_uppercase) t += s[i].toUpperCase();
-        else t += s[i];
-        next_uppercase = false;
-    }
-    return t;
-}*/
-
 const lowercaseWords = [
     'der',
     'die',
@@ -107,7 +91,8 @@ function isUppercase(ch: string): boolean {
 }
 
 export function downloadFile(filename: string, data: string) {
-    // the following code is partly taken from https://stackoverflow.com/questions/5143504/how-to-create-and-download-an-xml-file-on-the-fly-using-javascript/16751704
+    // the following code is partly taken from
+    // https://stackoverflow.com/questions/5143504/how-to-create-and-download-an-xml-file-on-the-fly-using-javascript/16751704
     const pom = document.createElement('a');
     const blob = new Blob([data], { type: 'text/plain' });
     pom.setAttribute('href', window.URL.createObjectURL(blob));

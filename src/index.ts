@@ -7,6 +7,7 @@ import { Pool, PoolMode } from './pool';
 
 let pool: Pool = null;
 
+// configuration
 const metaDataPath = 'data/meta.json';
 const moodleEditPath =
     'https://aufgabenpool.th-koeln.de/' +
