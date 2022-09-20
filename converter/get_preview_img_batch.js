@@ -24,7 +24,7 @@ if (fs.existsSync('config.json') == false) {
     );
     process.exit(-1);
 }
-const config = JSON.parse(fs.readFileSync('config.txt'));
+const config = JSON.parse(fs.readFileSync('config.json'));
 
 const moodle_url = config['moodle_url'];
 const moodle_user = config['moodle_puppeteer_user'];
