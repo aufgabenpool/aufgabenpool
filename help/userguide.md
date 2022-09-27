@@ -86,7 +86,7 @@ Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenp
 
 ![](images/15.png)
 
-- Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Datei hochladen". Alternativ kann die Datei auch per "drag and drop" in das dafür vorgesehene Feld gezogen werden
+- Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Datei hochladen". Alternativ kann die Datei auch per "Drag-and-drop" in das dafür vorgesehene Feld gezogen werden
 
 - Dann klicken Sie unten auf "Import"
 
