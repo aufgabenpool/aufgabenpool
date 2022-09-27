@@ -1,15 +1,12 @@
 # Anleitung zur Nutzung des Aufgabenpools
 
-- Große Auswahl an Aufgaben zu verschiedenen Themen
-- Gezielte Zusammenstellung von Aufgaben zu einem Aufgabenblatt möglich
-- Dieses Aufgabenblatt kann in Moodle oder Ilias importiert werden
-
+Der Aufgabenpool bietet eine große Auswahl an verschiedenen Aufgaben, die nach Themengebieten und Taxonomien selektierbar sind.
 
 Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenpool in Moodle oder Ilias verwenden können. Im ersten Teil wird erklärt, wie man sich eine Datei mit Aufgaben - ein sogenanntes "Aufgabenblatt" - herunterlädt. Im zweiten Teil wird gezeigt, wie die Aufgaben in Ilias (2.a) oder in Moodle (2.b) importiert werden können.
 
 ## 1. Aufgabenblatt erstellen
 
--Den Aufgabenpool finden Sie [hier](https://aufgabenpool.th-koeln.de/pool.php) (ggf. anmelden)
+- Den Aufgabenpool finden Sie [hier](https://aufgabenpool.th-koeln.de/pool.php) (ggf. anmelden)
 
 -Hier kann nun ein Aufgabenblatt zusammengestellt werden, um eine moodle-xml Datei zu erzeugen, welche in Moodle oder Ilias importiert werden kann
 
