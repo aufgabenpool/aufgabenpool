@@ -22,7 +22,7 @@ Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenp
 
 ![](images/2.png)
 
-- Die Auswahl ist auch weiter verfeinerbar: Es gibt drei Themengebietsebenen und weitere Auswahlmöglichkeiten. Um näheres zu Erfahren, einfach mit dem Mauszeiger über die Buttons fahren.
+- Die Auswahl ist auch weiter verfeinerbar: Es gibt drei Themengebietsebenen und weitere Auswahlmöglichkeiten. Um näheres zu erfahren, einfach mit dem Mauszeiger über die Buttons fahren.
 
 - Nach der Auswahl der Themengebiete erscheinen die zugehörigen Aufgaben unterhalb der Auswahlbereichs
 
@@ -39,6 +39,8 @@ Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenp
 - Die Aufgaben können nun als moodle.xml Datei heruntergeladen werden durch klicken auf den entsprechenden Button (orange für den Import in Moodle, blau für Ilias)
 
 ![](images/moodle-ilias.png)
+
+- Befinden sich ausversehen Aufgaben auf dem Aufgabenblatt, die nicht für den Ilias-Import geeignet sind, während man eine Datei für den Import nach Ilias erstellt (durch klicken auf den blauen Ilias-Button), werden in der Regel nur die Aufgaben heruntergeladen, die auch für den Import nach Ilias geeignet sind. Fehler beim Import in Ilias können aber in diesem Fall nicht ausgeschlossen werden
 
 
 ## 2.a Import in Ilias
@@ -72,23 +74,23 @@ Dies ist eine Schritt für Schritt Anleitung, wie Sie Aufgaben aus dem Aufgabenp
 
 ## 2.b Import in Moodle
 
--Anmelden bei Moodle
+- Anmelden bei Moodle
 
--Gehen Sie in den entsprechenden Kurs, in dem Sie die Aufgaben hochladen wollen
+- Gehen Sie in den entsprechenden Kurs, in dem Sie die Aufgaben hochladen wollen
 
--Wählen Sie eine Kategorie aus oder erstellen Sie ggf. eine neue Kategorie durch klicken auf "Kategorie hinzufügen"
+- Wählen Sie eine Kategorie aus oder erstellen Sie ggf. eine neue Kategorie durch klicken auf "Kategorie hinzufügen"
 
 ![](images/14.png)
 
--Nun klicken Sie auf "Import", wählen anschließend als Dateiformat "Moodle-XML-Format" und klicken dann auf "Datei wählen ..."
+- Nun klicken Sie auf "Import", wählen anschließend als Dateiformat "Moodle-XML-Format" und klicken dann auf "Datei wählen ..."
 
 ![](images/15.png)
 
--Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Datei hochladen"
+- Wählen Sie die gewünschte Datei aus (falls nicht anders eingestellt, befindet sie sich im Download Ordner und heißt my-worksheet.xml) und klicken anschließend auf "Datei hochladen"
 
--Dann klicken Sie unten auf "Import"
+- Dann klicken Sie unten auf "Import"
 
--Nun sollten Sie eine Vorschau der Fragen sehen. Scrollen Sie nach unten und klicken auf "Weiter"
+- Nun sollten Sie eine Vorschau der Fragen sehen. Scrollen Sie nach unten und klicken auf "Weiter"
 
--Sie haben die Fragen erfolgreich importiert!
+- Sie haben die Fragen erfolgreich importiert!
 
