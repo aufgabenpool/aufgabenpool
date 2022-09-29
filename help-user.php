@@ -30,7 +30,7 @@
                         '<p><img class="img-fluid shadow mx-5 my-2 p-2 w-75 rounded" src="help/images/moodle-ilias.png" alt=""></p>',
                         '<p><img class="img-fluid shadow mx-5 my-2 p-2 w-33 rounded" src="help/images/moodle-ilias.png" alt=""></p>');
 
-                    console.log(html);
+                    //console.log(html);
 
                     document.getElementById(id).innerHTML = html;
                 });
