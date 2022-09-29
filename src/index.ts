@@ -8,7 +8,7 @@ import { Pool, PoolMode } from './pool';
 let pool: Pool = null;
 
 // configuration
-const metaDataPath = 'data/meta.json';
+const metaDataPath = 'data/meta.json?v=' + Date.now();
 const moodleEditPath =
     'https://aufgabenpool.th-koeln.de/' +
     'moodle/question/bank/editquestion/question.php?&courseid=2&id=';
