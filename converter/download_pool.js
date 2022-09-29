@@ -12,11 +12,22 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 const path = require('path');
 
+// read config
+if (fs.existsSync('config.json') == false) {
+    console.log(
+        'ERROR: config.json not found: ' +
+            'copy "config-template.json" to "config.json" ' +
+            'and make changes',
+    );
+    process.exit(-1);
+}
+const config = JSON.parse(fs.readFileSync('config.json'));
+const moodle_url = config['moodle_url'];
+const moodle_user = config['moodle_puppeteer_user'];
+const moodle_pwd = config['moodle_puppeteer_password'];
+
 // preferences
 const moodle_major_version = 4; // switch to 3 for moodle 3.x
-const moodle_url = 'https://aufgabenpool.th-koeln.de/moodle';
-const moodle_user = 'puppeteer';
-const moodle_pwd = 'dGDs988S#'; // TODO: must be secret!!!!!
 const course_id = 2; // TODO: this is static...
 const download_path = path.resolve('../data-tmp/') + path.sep;
 
@@ -60,6 +71,13 @@ else
 
     // goto export page
     await page.goto(export_url, { waitUntil: 'load', timeout: 0 });
+
+    // >>>>>>>>>>>>>>>>>>>>>><
+    /*await page.screenshot({
+        path: '/Users/andi/Downloads/test-export-moodle-xml.png',
+    });
+    process.exit(-1);*/
+    // >>>>>>>>>>>>>>>>>>>>>><
 
     // select Moodle-XML checkbox
     await page.click('#id_format_xml');
