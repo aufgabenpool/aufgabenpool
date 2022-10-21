@@ -17,7 +17,7 @@
 
         <script>
             function generateContent(id) {
-                axios.get("help/" + id + ".md").then(function (response) {
+                axios.get("help/" + id + ".md?v="+Date.now()).then(function (response) {
                     html = new markdownit().render(response.data);
 
                     //html = html.replace(/<p>/g, "<p class=\"lead\">");
