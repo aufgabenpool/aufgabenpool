@@ -12,21 +12,26 @@ Die folgenden Abschnitte beschreiben die einzelnen Schritte im Detail.
 
 ## 1. Upload der Aufgaben in Moodle
 
-Loggen Sie sich in [Moodle](https://aufgabenpool.th-koeln.de/moodle/) ein und wählen Sie Ihren _Kurs_ für den Upload aus. Sie finden dort eine (zunächst leere) "Fragensammlung". Nach Auswahl dieser, klicken Sie auf das oben stehende Dropdownmenü und wählen "Import" aus.
+Loggen Sie sich in [Moodle](https://aufgabenpool.th-koeln.de/moodle/) ein und wählen Sie Ihren _Kurs_ für den Upload aus. Sie finden dort eine (zunächst leere) "Fragensammlung". Wählen Sie diese aus.
+
+In der Upload-Maske angekommen (siehe Abbildung 1), kann man mit einem Klick auf "Fragen" (siehe roter Kreis in der Abbildung) und der darauffolgenden Auswahl von "Import" zur Import-Maske gelangen (siehe Abbildung 2).
 
 _Hinweis: Aufgaben sollten nach Themengebieten hochgeladen werden, sodass man diese nicht im Nachhinein noch sortieren muss._
 
-Abbildung 1: Upload-Maske (Fragensammlung)
-In der Upload-Maske (siehe Abbildung 1) angekommen, kann man mit einem Klick auf „Fragen“ (siehe roter Kreis in Abbildung 1) und der darauffolgenden Auswahl von „Import“ zur Import-Maske gelangen (siehe Abbildung 2).
+![](images/upload-1.jpg)
 
-Abbildung 2: Import-Maske
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Abbildung 1: Upload-Maske (Fragensammlung)_
 
-[1] In der Import-Maske wird zunächst das Dateiformat der hochzuladenden Aufgaben angegeben. Hier z.B. „Moodle-XML-Format“ (siehe Abbildung 2). Das Fragezeichen hinter den Dateiformaten zeigt mehr Informationen zum jeweiligen Dateiformat an.
+![](images/upload-2.jpg)
 
-[2] Als Nächstes wird unter „Allgemeines“ die Importkategorie ausgewählt. Diese sind nach Themengebieten erstellt, weshalb ein Upload von mehreren Aufgaben gleichzeitig nur aus einem übergeordneten Themengebiet stammen sollten. Wie man eine Aufgabe nach einer falschen Zuordnung im Nachhinein noch verschiebt wird im späteren Verlauf erläutert.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Abbildung 2: Import-Maske_
 
-[3] Nun können Aufgaben im zuvor gewählten Dateiformat (hier Moodle-XML-Format) hochgeladen werden. Dies kann per Drag-and-drop oder durch einen Klick auf „Datei wählen“ geschehen.
-In einem grün hinterlegten Feld wird einem die erfolgreich importierte Anzahl an Aufgaben („Fragen“) angezeigt. Bei Fehlern wird eine rot hinterlegte Fehlermeldung dargestellt. Mit einem Klick auf „Weiter“ wird man zur Kategorie weitergeleitet, in die man die Aufgabe(n) importiert hat. Hier kann man importierte Aufgaben bearbeiten und auch wieder löschen.
+1. In der Import-Maske wird zunächst das Dateiformat der hochzuladenden Aufgaben angegeben. Hier z.B. "Moodle-XML-Format" (siehe Abbildung 2). Das Fragezeichen hinter den Dateiformaten zeigt mehr Informationen zum jeweiligen Dateiformat an.
+
+2. Als Nächstes wird unter "Allgemeines" die Importkategorie ausgewählt. Diese sind nach Themengebieten erstellt, weshalb ein Upload von mehreren Aufgaben gleichzeitig nur aus einem übergeordneten Themengebiet stammen sollten. Wie man eine Aufgabe nach einer falschen Zuordnung im Nachhinein noch verschiebt wird im späteren Verlauf erläutert.
+
+3. Nun können Aufgaben im zuvor gewählten Dateiformat (hier Moodle-XML-Format) hochgeladen werden. Dies kann per Drag-and-drop oder durch einen Klick auf "Datei wählen" geschehen.
+   In einem grün hinterlegten Feld wird einem die erfolgreich importierte Anzahl an Aufgaben ("Fragen") angezeigt. Bei Fehlern wird eine rot hinterlegte Fehlermeldung dargestellt. Mit einem Klick auf "Weiter" wird man zur Kategorie weitergeleitet, in die man die Aufgabe(n) importiert hat. Hier kann man importierte Aufgaben bearbeiten und auch wieder löschen.
 
 ## 2. Aufgaben Taggen
 
@@ -34,29 +39,31 @@ Für die inhaltliche Einordnung legt man für jede hochgeladene Aufgabe eine Men
 
 Das Taggen der Aufgaben wird an anderer Stelle fortgeführt:
 LINK
-In der Tagging-Oberfläche angekommen navigiert man zunächst unter „Kategorien“ zur gewünschten Kategorie, in die man neue Aufgaben hochgeladen hat (in unserem Beispiel „Differentialrechnung“).
+In der Tagging-Oberfläche angekommen navigiert man zunächst unter "Kategorien" zur gewünschten Kategorie, in die man neue Aufgaben hochgeladen hat (in unserem Beispiel "Differentialrechnung").
 Scrollt man nun runter werden alle Aufgaben der gewählten Kategorie aneinandergereiht. Jede Aufgabe lässt sich nun mit der folgenden Maske taggen (siehe Abbildung 3).
 
-Abbildung 3: Tagging-Maske (Beispiel: Quotientenregel aus Differentialrechnung mit gesetzten Tags)
+![](images/upload-3.jpg)
 
-[1] Unter den Kategorien und über allen Aufgaben der Kategorie, wird die aktuell ausgewählte Kategorie angezeigt, wie viele Aufgaben diese enthält und bei wie vielen Aufgaben davon noch Handlungsbedarf bezüglich zu setzender Tags besteht, damit sie den Status „OK“ erlangen (siehe Abbildung 3, unten).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Abbildung 3: Tagging-Maske (Beispiel: Quotientenregel aus Differentialrechnung mit gesetzten Tags)_
 
-[2] Hier wird der Titel der Aufgabe und ein Beispielbild der Aufgabe angezeigt. Unterhalb des Aufgabentitels befindet sich ein „Moodle-Link“ (siehe Abbildung 3). Mit diesem Link kann man direkt zur Bearbeitung dieser Frage in die Fragensammlung gelangen. Anhand des Beispielbilds können die nun folgenden Tags gesetzt werden.
+1. Unter den Kategorien und über allen Aufgaben der Kategorie, wird die aktuell ausgewählte Kategorie angezeigt, wie viele Aufgaben diese enthält und bei wie vielen Aufgaben davon noch Handlungsbedarf bezüglich zu setzender Tags besteht, damit sie den Status "OK" erlangen (siehe Abbildung 3, unten).
 
-[3] Themengebiets-Tags dienen einer Zuordnung bis hin zu einer dritten Ebenen („TE3“). Auf dritter Ebene können sogar bis zu vier (a bis d) Themengebiet-Tags verteilt werden. Von Ebene zu Ebene (1 bis 3 und nicht a bis d) wird genauer spezifiziert, um was für einen Typ Aufgabe es sich thematisch handelt. Diese Themengebiet-Tags sind bereits vorgegeben.
+2. Hier wird der Titel der Aufgabe und ein Beispielbild der Aufgabe angezeigt. Unterhalb des Aufgabentitels befindet sich ein "Moodle-Link" (siehe Abbildung 3). Mit diesem Link kann man direkt zur Bearbeitung dieser Frage in die Fragensammlung gelangen. Anhand des Beispielbilds können die nun folgenden Tags gesetzt werden.
 
-[4] Der Herkunfts-Tag identifiziert den Uploader bzw. dessen Institution. Hier zum Beispiel „F07-INT“ (Fakultät 07 für Informations-, Medien- und Elektrotechnik - Institut für Nachrichtentechnik). Herkunftstags werden administrativ neu angelegt.
+3. Themengebiets-Tags dienen einer Zuordnung bis hin zu einer dritten Ebenen ("TE3"). Auf dritter Ebene können sogar bis zu vier (a bis d) Themengebiet-Tags verteilt werden. Von Ebene zu Ebene (1 bis 3 und nicht a bis d) wird genauer spezifiziert, um was für einen Typ Aufgabe es sich thematisch handelt. Diese Themengebiet-Tags sind bereits vorgegeben.
 
-[5] Taxonomie-Tags nach Bloom und Maier dienen der systematischen Einordnung der Aufgaben. Eine genauere Erklärung der verschiedenen Tags finden Sie im Anhang.
+4. Der Herkunfts-Tag identifiziert den Uploader bzw. dessen Institution. Hier zum Beispiel "F07-INT" (Fakultät 07 für Informations-, Medien- und Elektrotechnik - Institut für Nachrichtentechnik). Herkunftstags werden administrativ neu angelegt.
 
-[6] An dieser Stelle kann festgestellt werden, inwiefern die Aufgabe qualitätsgeprüft ist. Dabei unterscheidet man visuell (falsche Formatierung, falscher Absatz usw.), sprachlich (Rechtschreib- und Grammatikfehler, sonstige Fehler im Schriftbild in Aufgabe, Hinweistexten oder Lösungswegen usw.), inhaltlich (inhaltliche Fehler in der Aufgabenstellung oder Lösung usw.), Tagging (sind die Tags oberhalb von [6] richtig gesetzt), Import Ilias (lässt sich die Aufgabe ohne Fehler nach Ilias importieren) und Import Moodle (lässt sich die Aufgabe ohne Fehler nach Moodle importieren).
+5. Taxonomie-Tags nach Bloom und Maier dienen der systematischen Einordnung der Aufgaben. Eine genauere Erklärung der verschiedenen Tags finden Sie im Anhang.
 
-[7] Gibt es Fehler innerhalb der Aufgabe, befindet sich die Aufgabe noch in Bearbeitung oder soll diese noch nicht öffentlich im Aufgabenpool sichtbar werden, dann kann die „Aufgabe gesperrt“ werden und taucht somit nicht im öffentlichen und finalen Aufgabenpool auf. Außerdem kann man mit dem Tag „Aufgabe praxiserprobt“ festhalten, dass eine Aufgabe bereits an einem z.B. studentischem Publikum zur Anwendung gekommen ist.
-Sind alle Tags gesetzt, muss man diese mit einem Klick auf „Änderungen speichern“ sichern. Diesen Vorgang wiederholt man für alle Aufgaben.
+6. [Der folgende Punkt ist nur durch die TH Köln durchführbar:] An dieser Stelle kann festgestellt werden, inwiefern die Aufgabe qualitätsgeprüft ist. Dabei unterscheidet man visuell (falsche Formatierung, falscher Absatz usw.), sprachlich (Rechtschreib- und Grammatikfehler, sonstige Fehler im Schriftbild in Aufgabe, Hinweistexten oder Lösungswegen usw.), inhaltlich (inhaltliche Fehler in der Aufgabenstellung oder Lösung usw.), Tagging (sind die Tags oberhalb von 6. richtig gesetzt), Import Ilias (lässt sich die Aufgabe ohne Fehler nach Ilias importieren) und Import Moodle (lässt sich die Aufgabe ohne Fehler nach Moodle importieren).
+
+7. Gibt es Fehler innerhalb der Aufgabe, befindet sich die Aufgabe noch in Bearbeitung oder soll diese noch nicht öffentlich im Aufgabenpool sichtbar werden, dann kann die "Aufgabe gesperrt" werden und taucht somit nicht im öffentlichen und finalen Aufgabenpool auf. Außerdem kann man mit dem Tag "Aufgabe praxiserprobt" festhalten, dass eine Aufgabe bereits an einem z.B. studentischem Publikum zur Anwendung gekommen ist.
+   Sind alle Tags gesetzt, muss man diese mit einem Klick auf "Änderungen speichern" sichern. Diesen Vorgang wiederholt man für alle Aufgaben.
 
 ## 3. Qualitätssicherung
 
-TODO
+Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar. TODO.
 
 # Anhang (Taxonomie-Tags)
 
@@ -128,7 +135,7 @@ TODO
 
 **Anzahl der Wissenseinheiten** &nbsp; `[maier:3:*]`
 
-Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wissenselemente aus der Perspektive eines „Experten“; jeweils hierarchisch höchste Ebene betrachten (z.B. keine Subprozeduren aufzählen)
+Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wissenselemente aus der Perspektive eines "Experten"; jeweils hierarchisch höchste Ebene betrachten (z.B. keine Subprozeduren aufzählen)
 
 -   **Aufgaben mit einer Wissenseinheit** &nbsp; `[maier:3:1]`
     Nur ein Begriff, Konzept oder eine Prozedur auf höchster Ebene zu aktivieren.
@@ -161,7 +168,7 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 
 -   **Aufgaben mit konstruiertem Lebensweltbezug** &nbsp; `[maier:5:2]`
 
-    Verknüpfung zwischen Fachwissen und Lebenswelt stark konstruiert; entspricht eher nicht den Erfahrungen des Schülers; Analogien zur eigenen Erfahrung kaum erkennbar; Bezug wirkt „aufgesetzt“; Fachwissen soll eingekleidet werden
+    Verknüpfung zwischen Fachwissen und Lebenswelt stark konstruiert; entspricht eher nicht den Erfahrungen des Schülers; Analogien zur eigenen Erfahrung kaum erkennbar; Bezug wirkt "aufgesetzt"; Fachwissen soll eingekleidet werden
 
 -   **Aufgaben mit konstruiertem, aber authentisch wirkendem Lebensweltbezug** &nbsp; `[maier:5:3]`
 
