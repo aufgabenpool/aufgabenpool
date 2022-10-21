@@ -1,6 +1,6 @@
 # Anleitung zum Upload neuer Aufgaben
 
-Wir freuen uns über neue Aufgaben! Nehmen Sie bitte zunächst mit uns Kontakt auf, um im E-Learning-System _Moodle_ Zugriff zu erhalten (Kontaktdaten stehen und auf dieser Seite).
+Wir freuen uns über neue Aufgaben! Nehmen Sie bitte zunächst mit uns Kontakt auf, um im E-Learning-System _Moodle_ Zugriff zu erhalten (Kontaktdaten stehen unten auf dieser Seite).
 
 Im Wesentlichen umfasst der Prozess die folgenden drei Schritte:
 
@@ -16,8 +16,6 @@ Loggen Sie sich in [Moodle](https://aufgabenpool.th-koeln.de/moodle/) ein und w�
 
 In der Upload-Maske angekommen (siehe Abbildung 1), kann man mit einem Klick auf "Fragen" (siehe roter Kreis in der Abbildung) und der darauffolgenden Auswahl von "Import" zur Import-Maske gelangen (siehe Abbildung 2).
 
-_Hinweis: Aufgaben sollten nach Themengebieten hochgeladen werden, sodass man diese nicht im Nachhinein noch sortieren muss._
-
 ![](images/upload-1.jpg)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Abbildung 1: Upload-Maske (Fragensammlung)_
@@ -31,14 +29,15 @@ _Hinweis: Aufgaben sollten nach Themengebieten hochgeladen werden, sodass man di
 2. Als Nächstes wird unter "Allgemeines" die Importkategorie ausgewählt. Diese sind nach Themengebieten erstellt, weshalb ein Upload von mehreren Aufgaben gleichzeitig nur aus einem übergeordneten Themengebiet stammen sollten. Wie man eine Aufgabe nach einer falschen Zuordnung im Nachhinein noch verschiebt wird im späteren Verlauf erläutert.
 
 3. Nun können Aufgaben im zuvor gewählten Dateiformat (hier Moodle-XML-Format) hochgeladen werden. Dies kann per Drag-and-drop oder durch einen Klick auf "Datei wählen" geschehen.
-   In einem grün hinterlegten Feld wird einem die erfolgreich importierte Anzahl an Aufgaben ("Fragen") angezeigt. Bei Fehlern wird eine rot hinterlegte Fehlermeldung dargestellt. Mit einem Klick auf "Weiter" wird man zur Kategorie weitergeleitet, in die man die Aufgabe(n) importiert hat. Hier kann man importierte Aufgaben bearbeiten und auch wieder löschen.
+
+    In einem grün hinterlegten Feld wird einem die erfolgreich importierte Anzahl an Aufgaben ("Fragen") angezeigt. Bei Fehlern wird eine rot hinterlegte Fehlermeldung dargestellt. Mit einem Klick auf "Weiter" wird man zur Kategorie weitergeleitet, in die man die Aufgabe(n) importiert hat. Hier kann man importierte Aufgaben bearbeiten und auch wieder löschen.
 
 ## 2. Aufgaben Taggen
 
 Für die inhaltliche Einordnung legt man für jede hochgeladene Aufgabe eine Menge von Tags fest (z.B. zu Inhaltsgebieten, Taxonomien nach Bloom und Maier).
 
-Das Taggen der Aufgaben wird an anderer Stelle fortgeführt:
-LINK
+Das Taggen der Aufgaben wird über den [Tagging-Editor](https://aufgabenpool.th-koeln.de/edit/) fortgeführt. Die Logindaten sind dieselben wie in Moodle.
+
 In der Tagging-Oberfläche angekommen navigiert man zunächst unter "Kategorien" zur gewünschten Kategorie, in die man neue Aufgaben hochgeladen hat (in unserem Beispiel "Differentialrechnung").
 Scrollt man nun runter werden alle Aufgaben der gewählten Kategorie aneinandergereiht. Jede Aufgabe lässt sich nun mit der folgenden Maske taggen (siehe Abbildung 3).
 
@@ -52,20 +51,23 @@ Scrollt man nun runter werden alle Aufgaben der gewählten Kategorie aneinanderg
 
 3. Themengebiets-Tags dienen einer Zuordnung bis hin zu einer dritten Ebenen ("TE3"). Auf dritter Ebene können sogar bis zu vier (a bis d) Themengebiet-Tags verteilt werden. Von Ebene zu Ebene (1 bis 3 und nicht a bis d) wird genauer spezifiziert, um was für einen Typ Aufgabe es sich thematisch handelt. Diese Themengebiet-Tags sind bereits vorgegeben.
 
-4. Der Herkunfts-Tag identifiziert den Uploader bzw. dessen Institution. Hier zum Beispiel "F07-INT" (Fakultät 07 für Informations-, Medien- und Elektrotechnik - Institut für Nachrichtentechnik). Herkunftstags werden administrativ neu angelegt.
+4. Der Herkunfts-Tag identifiziert den Uploader bzw. dessen Institution. Hier zum Beispiel "F07-INT" (TH Köln - Fakultät 07 für Informations-, Medien- und Elektrotechnik - Institut für Nachrichtentechnik). Herkunftstags werden administrativ neu angelegt.
 
 5. Taxonomie-Tags nach Bloom und Maier dienen der systematischen Einordnung der Aufgaben. Eine genauere Erklärung der verschiedenen Tags finden Sie im Anhang.
 
 6. [Der folgende Punkt ist nur durch die TH Köln durchführbar:] An dieser Stelle kann festgestellt werden, inwiefern die Aufgabe qualitätsgeprüft ist. Dabei unterscheidet man visuell (falsche Formatierung, falscher Absatz usw.), sprachlich (Rechtschreib- und Grammatikfehler, sonstige Fehler im Schriftbild in Aufgabe, Hinweistexten oder Lösungswegen usw.), inhaltlich (inhaltliche Fehler in der Aufgabenstellung oder Lösung usw.), Tagging (sind die Tags oberhalb von 6. richtig gesetzt), Import Ilias (lässt sich die Aufgabe ohne Fehler nach Ilias importieren) und Import Moodle (lässt sich die Aufgabe ohne Fehler nach Moodle importieren).
 
 7. Gibt es Fehler innerhalb der Aufgabe, befindet sich die Aufgabe noch in Bearbeitung oder soll diese noch nicht öffentlich im Aufgabenpool sichtbar werden, dann kann die "Aufgabe gesperrt" werden und taucht somit nicht im öffentlichen und finalen Aufgabenpool auf. Außerdem kann man mit dem Tag "Aufgabe praxiserprobt" festhalten, dass eine Aufgabe bereits an einem z.B. studentischem Publikum zur Anwendung gekommen ist.
-   Sind alle Tags gesetzt, muss man diese mit einem Klick auf "Änderungen speichern" sichern. Diesen Vorgang wiederholt man für alle Aufgaben.
+
+Sind alle Tags gesetzt, muss man diese mit einem Klick auf "Änderungen speichern" sichern. Diesen Vorgang wiederholt man für alle Aufgaben.
 
 ## 3. Qualitätssicherung
 
-Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar. TODO.
+Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar, sondern müssen seitens der TH Köln gesichtet und explizit freigeschaltet werden.
 
 # Anhang (Taxonomie-Tags)
+
+_Hinweis: Die unten stehenden Tags sind auch in Moodle sichtbar. Dort haben sie den in der eckigen Klammer stehenen Namen._
 
 ## Bloom
 
@@ -97,7 +99,7 @@ Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar. T
 
 ## Maier
 
-**Art des Wissens** &nbsp; `[maier:1:*]`
+**Art des Wissens**
 
 -   **Faktenwissen** &nbsp; `[maier:1:1]`
 
@@ -115,7 +117,7 @@ Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar. T
 
     Wissen über eigenes Wissen, Steuerung von Lernhandlungen, (Monitoring), Wissen über Informationsverarbeitungsstrategien, wird direkt in der Aufgabenstellung angeregt oder gefordert
 
-**Kognitive Prozesse** &nbsp; `[maier:2:*]`
+**Kognitive Prozesse**
 
 -   **Reproduktion** &nbsp; `[maier:2:1]`
 
@@ -133,7 +135,7 @@ Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar. T
 
     unbekannte Aufgabensituation; unklar, welches Wissen zur Anwendung kommt; das zur Bearbeitung einer Situation erforderliche Wissen muss erst zusammengefügt werden; Schüler müssen auf unterschiedliche Wissensarten zurückgreifen (Fakten, Konzepte, Prozeduren, Strategiewissen); Problemlöseprozess: Problem finden bzw. definieren, Lösungen entwerfen, Lösungen umsetzen und Lösungen bewerten.
 
-**Anzahl der Wissenseinheiten** &nbsp; `[maier:3:*]`
+**Anzahl der Wissenseinheiten**
 
 Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wissenselemente aus der Perspektive eines "Experten"; jeweils hierarchisch höchste Ebene betrachten (z.B. keine Subprozeduren aufzählen)
 
@@ -146,7 +148,7 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 -   **Aufgaben mit mehr als vier Wissenseinheiten** &nbsp; `[maier:3:3]`
     Eine große Zahl (mehr als 4) verschiedener Begriffe, Konzepte oder Prozeduren muss gleichzeitig aktiviert werden
 
-**Offenheit der Aufgabenstellung** &nbsp; `[maier:4:*]`
+**Offenheit der Aufgabenstellung**
 
 -   **Definierte und konvergente Aufgaben** &nbsp; `[maier:4:1]`
 
@@ -160,7 +162,7 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 
     Die Schüler erhalten Informationen über ein Problem, eine Situation, etc. Es sind unterschiedliche Fragestellungen denkbar; eine Problemsituation ist die einzige Handlungsaufforderung; damit sind auch mehrere Lösungen (bzw. Lösungswege) gesucht bzw. richtig
 
-**Lebensweltbezug** &nbsp; `[maier:5:*]`
+**Lebensweltbezug**
 
 -   **Aufgaben ohne Lebensweltbezug** &nbsp; `[maier:5:1]`
 
@@ -178,7 +180,7 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 
     Keine Differenz zwischen Aufgabe und Lebenswelt; reale Problemstellung ist zu bearbeiten
 
-**Sprachlogische Komplexität** &nbsp; `[maier:6:*]`
+**Sprachlogische Komplexität**
 
 -   **Aufgaben mit einfacher sprachlogischer Komplexität** &nbsp; `[maier:6:1]`
 
@@ -192,7 +194,7 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 
     z.T. irrelevante, irritierende Formulierungen; komplexe Syntax. Aufgabe verdeckt die inneren, logischen Bezüge; logische Funktionen (Verneinungen, wenn-dann Verknüpfungen, Allaussagen, etc.); komplexe Satzgefüge
 
-**Repräsentationsformen des Wissens** &nbsp; `[maier:7:*]`
+**Repräsentationsformen des Wissens**
 
 -   **Aufgaben mit einer Repräsentationsform** &nbsp; `[maier:7:1]`
 

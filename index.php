@@ -111,6 +111,18 @@
                             <h5 class="card-title mt-2">
                                 Interesse an einer Zusammenarbeit?<br/> Möchten Sie Ihre Aufgaben zum Aufgabenpool hinzufügen?<br/> Sprechen Sie uns an!
                             </h5>
+
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col">
+                                    <a href="help-dev.php" class="btn btn-outline-dark w-100" target="_blank">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        &nbsp;&nbsp;Weitere Informationen
+                                    </a>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+
                             <!--<p>Wenden Sie sich gerne an <span class="text-dark">TODO: wer möchte hier stehen??</span></p>-->
                         </div>
                     </div>
