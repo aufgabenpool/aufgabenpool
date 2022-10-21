@@ -10,7 +10,14 @@
 
         <div class="container col bg-white">
 
-            <br/>
+            <div class="row py-2">
+                <div class="col text-center lead">
+                    <a href="help-user.php" target="_blank" style="text-decoration: none; color: black;">
+                        <i class="fa-regular fa-circle-question"></i>
+                        Hilfe
+                    </a>
+                </div>
+            </div>
 
             <div class="row py-2">
                 <div class="col">
