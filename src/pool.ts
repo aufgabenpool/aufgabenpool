@@ -412,8 +412,6 @@ export class Pool {
                     break;
                 }
             }*/
-
-            // NEW
             let skip = false;
             for (const tag of selectedTags) {
                 if (exercise.tags.includes(tag) == false) {
@@ -421,7 +419,6 @@ export class Pool {
                     break;
                 }
             }
-
             // skip, if selected tags do not match
             if (skip) continue;
             // update tag count
