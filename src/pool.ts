@@ -400,21 +400,9 @@ export class Pool {
             if (exerciseTagsCategories.has('te_1_') == false) {
                 continue;
             }
-            /*if (
-                selectedTagsCategories.has('te_2_') &&
-                !exerciseTagsCategories.has('te_2_')
-            ) {
-                continue;
-            }
-            if (
-                selectedTagsCategories.has('te_3_') &&
-                !exerciseTagsCategories.has('te_3_')
-            ) {
-                continue;
-            }*/
             // check matching
-            let skip = false;
-            for (const tag of exercise.tags) {
+            /*let skip = false;
+            for (const tag of exercise.tags.sort()) {
                 const category = this.getTagCategory(tag);
                 if (
                     selectedTagsCategories.has(category) &&
@@ -423,14 +411,26 @@ export class Pool {
                     skip = true;
                     break;
                 }
+            }*/
+
+            // NEW
+            let skip = false;
+            for (const tag of selectedTags) {
+                if (exercise.tags.includes(tag) == false) {
+                    skip = true;
+                    break;
+                }
             }
+
             // skip, if selected tags do not match
             if (skip) continue;
+            // update tag count
             for (const tag of exercise.tags) {
                 if (tag in this.tagCountSelected == false)
                     this.tagCountSelected[tag] = 1;
                 else this.tagCountSelected[tag]++;
             }
+            // create HTML and append
             parent.appendChild(exercise.createHTMLElement(this));
         }
     }
