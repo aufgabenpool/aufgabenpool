@@ -223,7 +223,7 @@ Aufgaben sind im Pool nur dann sichtbar, wenn die folgenden Merkmale geprüft wu
 
 Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in der Form `[te:X:NAME]`, wobei `X` die Werte 1 bis 3 annehmen kann. Beispiel: `[te:1:Grundlagen]`, `[te:2:Mengenlehre]`, `[te:3:Potenzmenge]`.
 
-**Grundlagen** `[te:1:Grundlagen]`
+### **Grundlagen** `[te:1:Grundlagen]`
 
 -   Mengenlehre
     -   Vereinigung, Schnitt, Differenz
@@ -272,7 +272,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Lösungsmenge
     -   Betragsungleichungen
 
-**Elementare Funktionen** `[te:1:ElementareFunktionen]`
+### **Elementare Funktionen** `[te:1:ElementareFunktionen]`
 
 -   Polynome
     -   Nullstellen
@@ -299,7 +299,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Wertebereich
     -   Arkusfunktionen
 
-**Grenzwerte** `[te:1:Grenzwerte]`
+### **Grenzwerte** `[te:1:Grenzwerte]`
 
 -   Folgen
     -   Definition
@@ -323,7 +323,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Minimum, Maximum
 -   Asymptoten
 
-**Differentialrechnung** `[te:1:Differentialrechnung]`
+### **Differentialrechnung** `[te:1:Differentialrechnung]`
 
 -   Ableitung
     -   Definition
@@ -354,7 +354,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
 -   Newton-Verfahren
 -   Interpolation
 
-**Integralrechnung** `[te:1:Integralrechnung]`
+### **Integralrechnung** `[te:1:Integralrechnung]`
 
 -   Definition des Integrals
     -   Obersummen/Untersummen
@@ -376,7 +376,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
 -   Numerische Integration
 -   Kurvenintegrale
 
-**Finanzmathematik** `[te:1:Finanzmathematik]`
+### **Finanzmathematik** `[te:1:Finanzmathematik]`
 
 -   Zinsrechnung
     -   BarwertEndwert
@@ -385,7 +385,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
 -   Tilgungsrechnung
 -   FestverzinslicheWertpapiere
 
-**Statistik** `[te:1:Statistik]`
+### **Statistik** `[te:1:Statistik]`
 
 -   Deskriptive Statistik 1-d
     -   Skalenniveaus
@@ -418,7 +418,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   t-Verteilung
     -   F-Verteilung
 
-**Wahrscheinlichkeitsrechnung** `[te:1:Wahrscheinlichkeitsrechnung]`
+### **Wahrscheinlichkeitsrechnung** `[te:1:Wahrscheinlichkeitsrechnung]`
 
 -   Zufallsvorgänge
     -   Wahrscheinlichkeiten
@@ -440,7 +440,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Binomialverteilung
     -   Hypergeometrisch
 
-**Lineare Algebra** `[te:1:LineareAlgebra]`
+### **Lineare Algebra** `[te:1:LineareAlgebra]`
 
 -   Vektorrechnung
     -   Rechenregeln
@@ -505,7 +505,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Lineare Transformation
     -   Drehung
 
-**Differentialgleichungen** `[te:1:Differentialgleichungen]`
+### **Differentialgleichungen** `[te:1:Differentialgleichungen]`
 
 -   Erster Ordnung
     -   Konstante Koeffizienten
@@ -517,7 +517,7 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Homogen
     -   Inhomogen
 
-**Komplexe Zahlen** `[te:1:KomplexeZahlen]`
+### **Komplexe Zahlen** `[te:1:KomplexeZahlen]`
 
 -   Rechenregeln
     -   Normalform
