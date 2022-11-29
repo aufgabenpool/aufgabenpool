@@ -36,7 +36,7 @@ In der Upload-Maske angekommen (siehe Abbildung 1), kann man mit einem Klick auf
 
 Für die inhaltliche Einordnung legt man für jede hochgeladene Aufgabe eine Menge von Tags fest (z.B. zu Inhaltsgebieten, Taxonomien nach Bloom und Maier).
 
-Das Taggen der Aufgaben wird über den [Tagging-Editor](https://aufgabenpool.th-koeln.de/edit/) fortgeführt. Die Logindaten sind dieselben wie in Moodle.
+Das Taggen der Aufgaben wird über den [Tagging-Editor](https://aufgabenpool.th-koeln.de/edit/) fortgeführt. Die Login-Daten sind dieselben wie in Moodle.
 
 In der Tagging-Oberfläche angekommen navigiert man zunächst unter "Kategorien" zur gewünschten Kategorie, in die man neue Aufgaben hochgeladen hat (in unserem Beispiel "Differentialrechnung").
 Scrollt man nun runter werden alle Aufgaben der gewählten Kategorie aneinandergereiht. Jede Aufgabe lässt sich nun mit der folgenden Maske taggen (siehe Abbildung 3).
@@ -67,7 +67,7 @@ Ihre Aufgaben sind nach dem Taggen noch nicht direkt im Aufgabenpool sichtbar, s
 
 # Anhang (Taxonomie-Tags)
 
-_Hinweis: Die unten stehenden Tags sind auch in Moodle sichtbar. Dort haben sie den in der eckigen Klammer stehenen Namen._
+_Hinweis: Die unten stehenden Tags sind auch in Moodle sichtbar. Dort haben sie den in der eckigen Klammer stehenden Namen._
 
 ## Bloom
 
@@ -121,7 +121,7 @@ _Hinweis: Die unten stehenden Tags sind auch in Moodle sichtbar. Dort haben sie 
 
 -   **Reproduktion** &nbsp; `[maier:2:1]`
 
-    Abruf von Wissen aus dem Langzeitgedächtnis, Wiedergabe von gespeicherten Wissen, Nachahmung von Prozeduren, auch metakogn. und konzept. Wissen kann reproduziert werden
+    Abruf von Wissen aus dem Langzeitgedächtnis, Wiedergabe von gespeicherten Wissen, Nachahmung von Prozeduren, auch metakognitives und konzeptionelles Wissen kann reproduziert werden
 
 -   **Naher Transfer** &nbsp; `[maier:2:2]`
 
@@ -207,3 +207,339 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 -   **Integration und Transformation des Wissens** &nbsp; `[maier:7:3]`
 
     Schüler muss für die Aufgabenlösung das vorliegende Wissen in eine Repräsentationsform transformieren, die nicht durch die Aufgabe vorgegeben wird
+
+## Qualitätssicherungsmerkmale
+
+Aufgaben werde im Pool nur dann sichtbar, wenn die folgenden Merkmale geprüft wurden:
+
+-   visuell geprüft `[qs:visuellgeprueft]`
+-   sprachlich geprüft `[qs:sprachlichgeprueft]`
+-   inhaltlich geprüft `[qs:inhaltlichgeprueft]`
+-   Tagging geprüft `[qs:tagginggeprueft]`
+-   Import Ilias geprüft `[qs:importiliasgeprueft]`
+-   Import Moodle geprüft `[qs:importmoodlegeprueft]`
+
+## Themengebietsebenen
+
+Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in der Form `[te:X:NAME]`, wobei `X` die Werte 1 bis 3 annehmen kann. Beispiel: `[te:1:Grundlagen]`, `[te:2:Mengenlehre]`, `[te:3:Potenzmenge]`.
+
+**Grundlagen** `[te:1:Grundlagen]`
+
+-   Mengenlehre
+    -   Vereinigung, Schnitt, Differenz
+    -   Kreuzprodukt
+    -   Potenzmenge
+-   Zahlen
+    -   Natürliche Zahlen
+    -   Ganze Zahlen
+    -   Rationale Zahlen
+    -   Reelle Zahlen
+    -   Summen, Produkte
+    -   Potenzen, Wurzeln
+    -   Ordnung, Intervalle
+    -   Betrag
+    -   Minimum, Maximum
+    -   Infimum, Supremum
+    -   Komplexe Zahlen
+-   Kombinatorik
+    -   Fakultät
+    -   Binomialkoeffizienten
+-   Aussagenlogik
+    -   Aussagen
+    -   Prädikate
+-   Vollständige Induktion
+-   Algebraische Strukturen
+    -   Gruppen
+    -   Ringe
+    -   Körper
+    -   Restklassen
+-   Funktionen
+    -   Definitionsbereich
+    -   Wertebereich
+    -   Graph
+    -   Relationen
+    -   injektiv, surjektiv, bijektiv
+    -   Verkettung
+    -   Umkehrfunktion
+    -   Symmetrie
+-   Gleichungen
+    -   Quadratische Gleichungen
+    -   Betragsgleichungen
+    -   Exponentialgleichungen
+    -   Wurzelgleichungen
+    -   Potenzgleichungen
+-   Ungleichungen
+
+    -   Lösungsmenge
+    -   Betragsungleichungen
+
+**Elementare Funktionen** `[te:1:ElementareFunktionen]`
+
+-   Polynome
+    -   Nullstellen
+-   Rationale Funktionen
+    -   Definitionsbereich
+    -   Nullstellen
+    -   Polstellen
+    -   Hebbare Lücken
+-   Potenz- und Wurzelfunktionen
+    -   Rechenregeln
+-   Exponentialfunktionen
+    -   Rechenregeln
+-   Logarithmusfunktionen
+    -   Rechenregeln
+-   Trigonometrische Funktionen
+    -   Definition
+    -   Grad- und Bogenmaß
+    -   Geometrie
+    -   Rechenregeln
+    -   Nullstellen
+    -   Frequenz
+-   Umkehrfunktionen
+    -   Definitionsbereich
+    -   Wertebereich
+    -   Arkusfunktionen
+
+**Grenzwerte** `[te:1:Grenzwerte]`
+
+-   Folgen
+    -   Definition
+    -   Grenzwerte
+    -   Häufungspunkte
+    -   Uneigentliche Grenzwerte
+-   Reihen
+    -   Geometrische Reihe
+    -   Konvergenzkriterien
+-   Potenzreihen
+    -   Konvergenzradius
+    -   Reihenentwicklungen
+-   Grenzwerte bei Funktionen
+    -   Definition
+    -   Berechnung von Grenzwerten
+    -   Uneigentliche Grenzwerte
+-   Stetigkeit
+    -   Elementare Funktionen
+    -   Stückweise definierte Funktionen
+    -   Zwischenwertsatz
+    -   Minimum, Maximum
+-   Asymptoten
+
+**Differentialrechnung** `[te:1:Differentialrechnung]`
+
+-   Ableitung
+    -   Definition
+    -   Faktorregel
+    -   Summenregel
+    -   Produktregel
+    -   Quotientenregel
+    -   Ketteregel
+    -   Umkehrfunktion
+    -   Elementare Funktionen
+    -   Höhere Ableitungen
+-   Tangente
+-   Taylorentwicklung
+    -   Taylorpolynom
+    -   Taylorreihe
+-   Kurvendiskussion
+    -   stationäre Stellen
+    -   lokale Extremstellen
+    -   Mittelwertsatz
+    -   Monotonie
+    -   Krümmung
+    -   Wendepunkte
+    -   Sattelpunkte
+    -   Nullstellen
+    -   Grenzwerte
+-   Regel von de l'Hospital
+-   Fehlerrechnung
+-   Newton-Verfahren
+-   Interpolation
+
+**Integralrechnung** `[te:1:Integralrechnung]`
+
+-   Definition des Integrals
+    -   Obersummen/Untersummen
+    -   Additivität
+    -   Summenregel
+    -   Faktorregel
+    -   Mittelwertsatz
+-   Flächenberechnung
+    -   Fläche zwischen Graphen
+-   Integration
+    -   Hauptsatz
+    -   Stammintegrale
+    -   Bestimmtes Integral
+    -   Unbestimmtes Integral
+    -   Partielle Integration
+    -   Substitutionsregel
+    -   Partialbruchzerlegung
+    -   Uneigentliche Integrale
+-   Numerische Integration
+-   Kurvenintegrale
+
+**Finanzmathematik** `[te:1:Finanzmathematik]`
+
+-   Zinsrechnung
+    -   BarwertEndwert
+    -   Zeitrenten
+    -   Effektivzins
+-   Tilgungsrechnung
+-   FestverzinslicheWertpapiere
+
+**Statistik** `[te:1:Statistik]`
+
+-   Deskriptive Statistik 1-d
+    -   Skalenniveaus
+    -   Häufigkeiten
+    -   Lageparameter
+    -   Streuungsparameter
+    -   Konzentrationsmaße
+-   Deskriptive Statistik 2-d
+    -   Korrelation
+    -   Regression
+    -   Unabhängigkeit
+-   Deskriptive Statistik n-d
+    -   Regression
+-   Verhältnis- und Indexzahlen
+-   Zeitreihen
+-   Punkt-Schätzung
+    -   Schätzfunktionen
+    -   Maximum-Likelihood-Prinzip
+    -   Bayes-Schätzfunktionen
+-   Intervall-Schätzung
+-   Signifikanztests
+    -   t-Test
+    -   Binomialtest
+    -   Zweistichprobentests
+    -   Varianzanalyse
+    -   Anpassungstests
+    -   Korrelationstest
+-   Testverteilungen
+    -   chi^2-Verteilung
+    -   t-Verteilung
+    -   F-Verteilung
+
+**Wahrscheinlichkeitsrechnung** `[te:1:Wahrscheinlichkeitsrechnung]`
+
+-   Zufallsvorgänge
+    -   Wahrscheinlichkeiten
+    -   Bedingte Wahrscheinlichkeiten
+    -   Unabhängigkeit
+-   Zufallsvariablen
+    -   mehrdimensionale Zufallsvariablen
+    -   Erwartungswert
+    -   Varianz
+    -   Kovarianz
+-   Gesetz der großen Zahlen
+-   Stetige Verteilungen
+    -   Gleichverteilung
+    -   Normalverteilung
+    -   Exponentialverteilung
+    -   Weibull-Verteilung
+-   Diskrete Verteilungen
+    -   Poisson
+    -   Binomialverteilung
+    -   Hypergeometrisch
+
+**Lineare Algebra** `[te:1:LineareAlgebra]`
+
+-   Vektorrechnung
+    -   Rechenregeln
+    -   Skalarprodukt
+    -   Norm
+    -   Winkel
+    -   Vektorprodukt
+-   Analytische Geometrie
+    -   2D Raum
+    -   3D Raum
+    -   Geraden
+    -   Ebenen
+-   Matrizen
+    -   Addition
+    -   Multiplikation
+    -   Rang
+-   Lineare Gleichungssysteme
+    -   Lösungsmenge
+    -   Gauß-Algorithmus
+    -   Zeilenstufenform
+    -   freie Variablen
+    -   Lösbarkeit
+-   Lineare Unabhängigkeit
+    -   Ab- und Unabhängkeit
+    -   Erzeugendensystem
+    -   Basis
+    -   Dimension
+    -   Orthonormalbasis
+-   Inverse Matrix
+    -   Existenz
+    -   Gauß-Algorithmus
+    -   Cramersche Regel
+-   Determinante
+    -   Rechenregeln
+    -   Regularität
+-   Vektorraum
+    -   Körper R
+    -   Körper C
+    -   Endliche Körper
+    -   Untervektorraum
+-   Lineare Abbildungen
+    -   Abbildungsmatrix
+    -   Kern
+    -   Bild
+    -   Isomorphismus
+-   Orthogonale Abbildungen
+    -   Definition
+    -   Drehung
+    -   Spiegelung
+    -   Unitäre Abbdildungen
+-   Eigenwerte
+    -   Eigenvektoren
+    -   Berechnung
+    -   Vielfachheit
+-   Basiswechsel
+    -   Koordinaten
+    -   Transformationsmatrix
+    -   Diagonalisierbarkeit
+    -   Singulärwertzerlegung
+-   Homogene Koordinaten
+    -   Verschiebung
+    -   Lineare Transformation
+    -   Drehung
+
+**Differentialgleichungen** `[te:1:Differentialgleichungen]`
+
+-   Erster Ordnung
+    -   Konstante Koeffizienten
+    -   Homogen
+    -   Inhomogen
+    -   Trennbare Variablen
+-   Zweiter Ordnung
+    -   Konstante Koeffizienten
+    -   Homogen
+    -   Inhomogen
+
+**Komplexe Zahlen** `[te:1:KomplexeZahlen]`
+
+-   Rechenregeln
+    -   Normalform
+    -   Polarform
+    -   Betrag
+    -   Argument
+    -   Potenzen
+    -   Wurzeln
+-   Folgen
+    -   Konvergenz
+    -   Nullfolge
+-   Reihen
+    -   Konvergenz
+    -   Absolute Konvergenz
+    -   Konvergenzkriterien
+-   Potenzreihen
+    -   Konvergenzradius
+    -   Spezielle Reihen
+-   Funktionen
+    -   Polynome
+    -   Hauptsatz der Algebra
+    -   rationale Funktionen
+    -   Exponentialfunktion
+    -   Eulersche Formel
