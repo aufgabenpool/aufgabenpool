@@ -269,7 +269,6 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   Wurzelgleichungen
     -   Potenzgleichungen
 -   Ungleichungen
-
     -   Lösungsmenge
     -   Betragsungleichungen
 
