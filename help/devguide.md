@@ -210,14 +210,14 @@ Wissenseinheiten: Die für eine Aufgabe zu aktivierenden, fachspezifischen Wisse
 
 ## Qualitätssicherungsmerkmale
 
-Aufgaben werde im Pool nur dann sichtbar, wenn die folgenden Merkmale geprüft wurden:
+Aufgaben sind im Pool nur dann sichtbar, wenn die folgenden Merkmale geprüft wurden:
 
--   visuell geprüft `[qs:visuellgeprueft]`
--   sprachlich geprüft `[qs:sprachlichgeprueft]`
--   inhaltlich geprüft `[qs:inhaltlichgeprueft]`
--   Tagging geprüft `[qs:tagginggeprueft]`
--   Import Ilias geprüft `[qs:importiliasgeprueft]`
--   Import Moodle geprüft `[qs:importmoodlegeprueft]`
+-   visuell geprüft `[qs:visuellGeprueft]`
+-   sprachlich geprüft `[qs:sprachlichGeprueft]`
+-   inhaltlich geprüft `[qs:inhaltlichGeprueft]`
+-   Tagging geprüft `[qs:taggingGeprueft]`
+-   Import Ilias geprüft `[qs:importIliasGeprueft]`
+-   Import Moodle geprüft `[qs:importMoodleGeprueft]`
 
 ## Themengebietsebenen
 
