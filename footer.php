@@ -20,7 +20,7 @@
 <a href="https://www.th-koeln.de/personen/heiko.knospe/" class="link-light text-decoration-none">Prof. Dr. Heiko Knospe</a>,
 <a href="https://www.th-koeln.de/personen/jan-philipp.schmidt/" class="link-light text-decoration-none">Prof. Dr. Jan-Philipp Schmidt</a>,
 <a href="https://www.th-koeln.de/personen/angela.schmitz/" class="link-light text-decoration-none">Prof. Dr. Angela Schmitz</a>,
-<a href="https://www.th-koeln.de/personen/patricia_maria.graf/" class="link-light text-decoration-none">Patricia Maria Graf, B.Sc.</a>,
+<a href="https://www.th-koeln.de/personen/patricia_maria.graf/" class="link-light text-decoration-none">Patricia Maria Graf, M.Sc.</a>,
 <a href="https://www.th-koeln.de/personen/jan.reissner/" class="link-light text-decoration-none">Jan Siegfried Reißner, M.Sc.</a> und
 <a href="https://www.th-koeln.de/personen/andreas.schwenk/" class="link-light text-decoration-none">Andreas Schwenk, M.Sc.</a>
 unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de" class="link-light">CC BY-SA 4.0 DE</a> via <a href="https://aufgabenpool.th-koeln.de" class="link-light">aufgabenpool.th-koeln.de</a>.
@@ -35,7 +35,7 @@ unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de
                 &bullet;
                 <a href="https://www.th-koeln.de/personen/angela.schmitz/" class="link-light text-decoration-none">Prof. Dr. Angela Schmitz</a>
                 &bullet;
-                <a href="https://www.th-koeln.de/personen/patricia_maria.graf/" class="link-light text-decoration-none">Patricia Maria Graf, B.Sc.</a>
+                <a href="https://www.th-koeln.de/personen/patricia_maria.graf/" class="link-light text-decoration-none">Patricia Maria Graf, M.Sc.</a>
                 &bullet;
                 <a href="https://www.th-koeln.de/personen/jan.reissner/" class="link-light text-decoration-none">Jan Siegfried Reißner, M.Sc.</a>
                 &bullet;
