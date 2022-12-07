@@ -564,3 +564,21 @@ Die folgenden Themengebietsebenen wurden festgelegt. Ebene `X` erhält Tags in d
     -   rationale Funktionen
     -   Exponentialfunktion
     -   Eulersche Formel
+-   Komplexe Schwingungen
+    -   Definition
+    -   Sinusschwingung
+    -   Überlagerung
+
+### **Angewandte Mathematik**
+
+`[te:1:Angewandte Mathematik]`
+
+-   Rechenarithmetik
+    -   Zahlensysteme
+    -   Fehlerrechnung
+    -   Gleitpunktzahlen
+-   Nullstellenbestimmung
+    -   Newtonverfahren
+    -   Bisektionsverfahren
+-   Iterationsverfahren für LGS
+    -   Einzelschritt-Verfahren
