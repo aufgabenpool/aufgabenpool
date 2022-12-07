@@ -8,7 +8,7 @@ Grundsätzlich lässt sich die Umsetzung des Aufgabenpools auch in anderen Konte
 ## Team an der TH Köln
 
 -   Fakultät 04: Prof. Dr. Jan-Philipp Schmidt
--   Fakultät 07: Prof. Dr. Heiko Knospe, Wiss. Mitarbeiter\*innen Patricia Graf, B.Sc. und Andreas Schwenk, M.Sc.
+-   Fakultät 07: Prof. Dr. Heiko Knospe, Wiss. Mitarbeiter\*innen Patricia Graf, M.Sc. und Andreas Schwenk, M.Sc.
 -   Fakultät 09: Prof. Dr. Angela Schmitz, Wiss. Mitarbeiter Jan Reißner, M.Sc.
 
 ## Über dieses Repository
