@@ -65,7 +65,7 @@ app.get('/categories', (request, response) => {
         return;
     }
     // read access file (TODO: must be improved!)
-    let access = {};
+    let access = [];
     if (fs.existsSync('access.txt')) {
         let lines = fs.readFileSync('access.txt', 'utf-8').split('\n');
         for (let line of lines) {
@@ -73,7 +73,13 @@ app.get('/categories', (request, response) => {
             if (line.length == 0 || line.startsWith('#')) continue;
             let tokens = line.split(';');
             if (tokens.length < 2) continue;
-            access[tokens[0].trim()] = tokens[1].trim().split(',');
+
+            access.push({
+                user_id: parseInt(tokens[0].trim()),
+                course_category: tokens[1].trim(),
+            });
+
+            //access[parseInt(tokens[0].trim())] = tokens[1].trim().split(',');
         }
     }
     console.log('access-list:');
