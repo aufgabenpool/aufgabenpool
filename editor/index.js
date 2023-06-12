@@ -131,8 +131,11 @@ app.get('/categories', (request, response) => {
 });
 
 function get_top_category(hierarchy, id) {
-    while (id != 0) {
+    let i = 0;
+    while (id != '0') {
         id = hierarchy[id];
+        i++;
+        if (i > 100) return -1;
     }
     return id;
 }
