@@ -12,6 +12,7 @@ editor/node_modules/
 editor/edit-log.txt*
 converter/config.json
 editor/preview/
+editor/access.txt
 
 package-lock.json
 
