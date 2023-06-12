@@ -97,9 +97,9 @@ connection.query(query, [], function (error, results, fields) {
                 await new Promise((resolve) => setTimeout(resolve, 1500)); // TODO: was 1500
 
                 // TODO: remove the following!!
-                await page.screenshot({
+                /*await page.screenshot({
                     path: 'preview/___debug.png',
-                });
+                });*/
 
                 // remove upper-right links (https://stackoverflow.com/questions/50867065/puppeteer-removing-elements-by-class)
                 let div_selector_to_remove = '.questiontestslink';
@@ -111,18 +111,25 @@ connection.query(query, [], function (error, results, fields) {
                 }, div_selector_to_remove);
 
                 // take screenshot
-                const questionDiv = await page.$('.content');
-                const box = await questionDiv.boundingBox();
-                const yoffset = 12 + 3; // clip text at top-right position
-                await questionDiv.screenshot({
-                    path: screenshot_path,
-                    clip: {
-                        x: box['x'],
-                        y: box['y'] + yoffset,
-                        width: box['width'],
-                        height: box['height'] - yoffset,
-                    },
-                });
+                let questionDiv = await page.$('.content');
+                if (questionDiv == null) {
+                    questionDiv = await page.$('.errormessage');
+                    await page.screenshot({
+                        path: screenshot_path,
+                    });
+                } else {
+                    const box = await questionDiv.boundingBox();
+                    const yoffset = 15; // clip text at top-right position
+                    await questionDiv.screenshot({
+                        path: screenshot_path,
+                        clip: {
+                            x: box['x'],
+                            y: box['y'] + yoffset,
+                            width: box['width'],
+                            height: box['height'] - yoffset,
+                        },
+                    });
+                }
             } catch (e) {
                 console.log(
                     'failed to get screenshot for exercise ID ' + question_id,
