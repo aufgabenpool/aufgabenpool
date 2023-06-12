@@ -114,16 +114,13 @@ app.get('/categories', (request, response) => {
             hierarchy[entry.id] = entry.parent;
         }
         if (!is_admin) {
+            //let top_category = get_top_category(hierarchy, 161);
             categories = filter_access(
                 request.session.userid,
                 access,
                 hierarchy,
             );
         }
-
-        let xxx = get_top_category(hierarchy, 161);
-        console.log('test = ' + xxx);
-        //console.log(hierarchy);
 
         response.send(categories);
         response.end();
@@ -143,8 +140,13 @@ function get_top_category(hierarchy, id) {
 }
 
 function filter_access(user_id, access_list, hierarchy) {
-    console.log(hierarchy);
-    return [];
+    let new_access_list = [];
+    for (let entry of access_list) {
+        let top = get_top_category(hierarchy, entry.id);
+        if (top < 0) continue;
+        new_access_list.push(entry);
+    }
+    return new_access_list;
 }
 
 // handler to read all tags from Moodle database
