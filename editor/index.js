@@ -72,11 +72,14 @@ app.get('/categories', (request, response) => {
             line = line.trim();
             if (line.length == 0 || line.startsWith('#')) continue;
             let tokens = line.split(';');
-            console.log(tokens);
+            if (tokens.length < 2) continue;
+            access[tokens[0].trim()] = tokens[1].trim().split(',');
         }
     }
-    //console.log('access-list:');
-    //console.log(access);
+    console.log('access-list:');
+    console.log(access);
+    console.log('userid:');
+    console.log(request.session.userid);
 
     // TODO: only get categories that current user is allowed to read/write!!!!!
     let query = 'SELECT id, parent, name FROM mdl_question_categories;';
