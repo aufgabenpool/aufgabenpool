@@ -134,8 +134,8 @@ function get_top_category(hierarchy, id) {
     let i = 0;
     let old_id = id;
     while (id != 0) {
-        id = hierarchy[id];
         old_id = id;
+        id = hierarchy[id];
         i++;
         if (i > 100) return -1;
     }
