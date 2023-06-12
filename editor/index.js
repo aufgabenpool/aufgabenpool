@@ -11,7 +11,6 @@
 //   netstat -ltnp | grep -w ':3000'
 
 // import dependencies
-const fs = require('fs');
 const express = require('express');
 const session = require('express-session');
 const mysql = require('mysql');
@@ -279,7 +278,13 @@ app.post('/login', (request, response) => {
     const query =
         'SELECT id, password FROM mdl_user WHERE username=' +
         mysql.escape(username);
+
+    console.log(query);
+
     connection.query(query, [], function (error, results, fields) {
+        console.log('RESULTS:');
+        console.log(results);
+
         if (error) {
             console.log('ERROR:');
             console.log(error);
