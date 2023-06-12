@@ -39,7 +39,6 @@ connection.query(query, [], function (error, results, fields) {
                 'screenshot for question ' + entry.id + ' is up to date.',
             );
         }
-        break; // TODO
     }
 
     ////////////////////////////////////////////////////////////////////////////////////
