@@ -77,6 +77,9 @@ connection.query(query, [], function (error, results, fields) {
         await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
         for (let question_id of must_update_ids) {
+            console.log(
+                'taking screenshot for question ' + question_id + ' ...',
+            );
             let screenshot_path = 'preview/' + question_id + '.png';
             try {
                 // goto question preview
