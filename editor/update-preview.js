@@ -100,5 +100,8 @@ connection.query(query, [], function (error, results, fields) {
         browser.close();
         // bye..
         console.log('..ready');
+
+        connection.destroy();
+        process.exit(0);
     })();
 });
