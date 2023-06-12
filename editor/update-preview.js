@@ -27,11 +27,17 @@ connection.query(query, [], function (error, results, fields) {
         let new_question_text = entry.questiontext;
         let path = 'preview/' + entry.id + '.txt';
         if (fs.existsSync(path)) {
-            old_question_text = fs.readFileSync(path);
+            old_question_text = fs.readFileSync(path, { encoding: 'utf-8' });
         }
         if (old_question_text !== new_question_text) {
             fs.writeFileSync(path, new_question_text, { encoding: 'utf-8' });
-            console.log('must retake screenshot for question ' + entry.id);
+            console.log(
+                'must retake screenshot for question ' + entry.id + '.',
+            );
+        } else {
+            console.log(
+                'screenshot for question ' + entry.id + ' is up to date.',
+            );
         }
         break; // TODO
     }
