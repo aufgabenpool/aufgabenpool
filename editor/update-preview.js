@@ -28,10 +28,14 @@ connection.query(query, [], function (error, results, fields) {
         let old_question_text = '';
         let new_question_text = entry.questiontext;
         let path = 'preview/' + entry.id + '.txt';
+        let pathImg = 'preview/' + entry.id + '.png';
         if (fs.existsSync(path)) {
             old_question_text = fs.readFileSync(path, { encoding: 'utf-8' });
         }
-        if (old_question_text !== new_question_text) {
+        if (
+            old_question_text !== new_question_text ||
+            fs.existsSync(pathImg) == false
+        ) {
             fs.writeFileSync(path, new_question_text, { encoding: 'utf-8' });
             console.log(
                 'must retake screenshot for question ' + entry.id + '.',
