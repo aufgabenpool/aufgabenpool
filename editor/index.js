@@ -132,12 +132,14 @@ app.get('/categories', (request, response) => {
 
 function get_top_category(hierarchy, id) {
     let i = 0;
-    while (id != '0') {
+    let old_id = id;
+    while (id != 0) {
         id = hierarchy[id];
+        old_id = id;
         i++;
         if (i > 100) return -1;
     }
-    return id;
+    return old_id;
 }
 
 function filter_access(user_id, access_list, hierarchy) {
