@@ -11,6 +11,7 @@
 //   netstat -ltnp | grep -w ':3000'
 
 // import dependencies
+const fs = require('fs');
 const express = require('express');
 const session = require('express-session');
 const mysql = require('mysql');
@@ -50,6 +51,32 @@ app.use(express.urlencoded({ extended: true }));
 // get root HTML file
 app.get('/', (request, response) => {
     response.sendFile('index.html', { root: __dirname });
+});
+
+// handler to update preview images
+app.get('/update_preview', (request, response) => {
+    if (
+        typeof request.session.username === 'undefined' ||
+        request.session.username.length == 0
+    ) {
+        response.send({});
+        response.end();
+        return;
+    }
+    let query = 'SELECT id FROM mdl_question;';
+    let question_ids = [];
+    connection.query(query, [], function (error, results, fields) {
+        for (const entry of results) {
+            question_ids.push(entry.id);
+        }
+
+        if (fs.existsSync('preview') == false)
+            fs.mkdirSync('preview', { recursive: true });
+        fs.writeFileSync('preview/questions.txt', question_ids.join(','));
+
+        response.send(question_ids);
+        response.end();
+    });
 });
 
 // handler to read all question categories from Moodle database
