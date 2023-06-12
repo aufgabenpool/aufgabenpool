@@ -118,6 +118,7 @@ app.get('/categories', (request, response) => {
             categories = filter_access(
                 request.session.userid,
                 access,
+                categories,
                 hierarchy,
             );
         }
@@ -139,9 +140,9 @@ function get_top_category(hierarchy, id) {
     return old_id;
 }
 
-function filter_access(user_id, access_list, hierarchy) {
+function filter_access(user_id, access_list, categories, hierarchy) {
     let new_access_list = [];
-    for (let entry of access_list) {
+    for (let entry of categories) {
         let top = get_top_category(hierarchy, entry.id);
         if (top < 0) continue;
         new_access_list.push(entry);
