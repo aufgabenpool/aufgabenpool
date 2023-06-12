@@ -11,6 +11,7 @@
 //   netstat -ltnp | grep -w ':3000'
 
 // import dependencies
+const fs = require('fs');
 const express = require('express');
 const session = require('express-session');
 const mysql = require('mysql');
@@ -63,6 +64,14 @@ app.get('/categories', (request, response) => {
         response.end();
         return;
     }
+    // read access file (TODO: must be improved!)
+    let access = '';
+    if (fs.existsSync('access.txt')) {
+        access = fs.readFileSync('access.txt');
+    }
+    console.log('access-list:');
+    console.log(access);
+
     // TODO: only get categories that current user is allowed to read/write!!!!!
     let query = 'SELECT id, parent, name FROM mdl_question_categories;';
     let categories = [];
