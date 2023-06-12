@@ -74,7 +74,16 @@ app.get('/update_preview', (request, response) => {
             fs.mkdirSync('preview', { recursive: true });
         fs.writeFileSync('preview/questions.txt', question_ids.join(','));
 
-        response.send(question_ids);
+        ////////////////////////////////////////////////////////////////////////////////////
+        const config = JSON.parse(fs.readFileSync('../converter/config.json'));
+        const moodle_url = config['moodle_url'];
+        const moodle_user = config['moodle_puppeteer_user'];
+        const moodle_pwd = config['moodle_puppeteer_password'];
+
+        response.send(moodle_url);
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        //TODO response.send(question_ids);
         response.end();
     });
 });
