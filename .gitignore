@@ -11,6 +11,7 @@ feedback/taxonomy.txt
 editor/node_modules/
 editor/edit-log.txt*
 converter/config.json
+editor/preview/
 
 package-lock.json
 
