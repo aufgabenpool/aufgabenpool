@@ -277,7 +277,8 @@ app.post('/login', (request, response) => {
     const password = request.body.password;
     const query =
         'SELECT id, password FROM mdl_user WHERE username=' +
-        mysql.escape(username);
+        mysql.escape(username) +
+        ';';
 
     console.log(query);
 
@@ -285,7 +286,7 @@ app.post('/login', (request, response) => {
         console.log('RESULTS:');
         console.log(results);
 
-        if (error) {
+        if (error || results.length == 0) {
             console.log('ERROR:');
             console.log(error);
             request.session.username = '';
