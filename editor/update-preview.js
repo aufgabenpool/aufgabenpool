@@ -122,6 +122,8 @@ connection.query(query, [], function (error, results, fields) {
                 console.log(
                     'failed to get screenshot for exercise ID ' + question_id,
                 );
+                console.log('Error: ');
+                console.log(e);
             }
         }
 
