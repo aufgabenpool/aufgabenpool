@@ -146,6 +146,7 @@ function filter_access(user_id, access_list, hierarchy) {
         if (top < 0) continue;
         new_access_list.push(entry);
     }
+    console.log('filtered access list: ' + new_access_list);
     return new_access_list;
 }
 
