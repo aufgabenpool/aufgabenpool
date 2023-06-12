@@ -113,16 +113,28 @@ app.get('/categories', (request, response) => {
             });
             hierarchy[entry.id] = entry.parent;
         }
-        if (!is_admin)
+        if (!is_admin) {
             categories = filter_access(
                 request.session.userid,
                 access,
                 hierarchy,
             );
+        }
+
+        let xxx = get_top_category(161);
+        console.log('test = ' + xxx);
+
         response.send(categories);
         response.end();
     });
 });
+
+function get_top_category(hierarchy, id) {
+    while (id != 0) {
+        id = hierarchy[id];
+    }
+    return id;
+}
 
 function filter_access(user_id, access_list, hierarchy) {
     console.log(hierarchy);
