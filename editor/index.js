@@ -73,13 +73,10 @@ app.get('/categories', (request, response) => {
             if (line.length == 0 || line.startsWith('#')) continue;
             let tokens = line.split(';');
             if (tokens.length < 2) continue;
-
             access.push({
                 user_id: parseInt(tokens[0].trim()),
-                course_category: tokens[1].trim(),
+                course_category: parseInt(tokens[1].trim()),
             });
-
-            //access[parseInt(tokens[0].trim())] = tokens[1].trim().split(',');
         }
     }
     console.log('access-list:');
@@ -98,10 +95,16 @@ app.get('/categories', (request, response) => {
                 name: entry.name,
             });
         }
+        categories = filter_access(request.session.userid, access, categories);
         response.send(categories);
         response.end();
     });
 });
+
+function filter_access(user_id, access_list, categories) {
+    console.log(categories);
+    return [];
+}
 
 // handler to read all tags from Moodle database
 app.post('/taglist', (request, response) => {
