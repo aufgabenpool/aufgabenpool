@@ -145,7 +145,16 @@ function filter_access(user_id, access_list, categories, hierarchy) {
     for (let entry of categories) {
         let top = get_top_category(hierarchy, entry.id);
         if (top < 0) continue;
-        new_access_list.push(entry);
+
+        let allowed = false;
+        for (let a of access_list) {
+            if (a.user_id == user_id && top == a.course_category) {
+                allowed = true;
+                break;
+            }
+        }
+
+        if (allowed) new_access_list.push(entry);
     }
     console.log('filtered access list: ' + new_access_list);
     return new_access_list;
