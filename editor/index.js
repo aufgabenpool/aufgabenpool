@@ -281,6 +281,8 @@ app.post('/login', (request, response) => {
         mysql.escape(username);
     connection.query(query, [], function (error, results, fields) {
         if (error) {
+            console.log('ERROR:');
+            console.log(error);
             request.session.username = '';
             response.send('LOGIN FEHLGESCHLAGEN');
             response.end();
