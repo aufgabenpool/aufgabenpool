@@ -13,6 +13,7 @@ editor/edit-log.txt*
 converter/config.json
 editor/preview/
 editor/access.txt
+editor/admins.txt
 
 package-lock.json
 
