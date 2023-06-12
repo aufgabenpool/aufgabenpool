@@ -46,7 +46,7 @@ app.use(
 // express js preferences
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('preview')); // handle static files in the preview directory
+app.use('/preview', express.static('preview')); // handle static files in the preview directory
 
 // get root HTML file
 app.get('/', (request, response) => {
