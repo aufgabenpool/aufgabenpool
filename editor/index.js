@@ -121,9 +121,9 @@ app.get('/categories', (request, response) => {
             );
         }
 
-        //let xxx = get_top_category(161);
-        //console.log('test = ' + xxx);
-        console.log(hierarchy);
+        let xxx = get_top_category(hierarchy, 161);
+        console.log('test = ' + xxx);
+        //console.log(hierarchy);
 
         response.send(categories);
         response.end();
