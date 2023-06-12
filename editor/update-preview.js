@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
     multipleStatements: false,
 });
 
-let query = 'SELECT id FROM mdl_question;';
+let query = 'SELECT id, questiontext FROM mdl_question;';
 let question_ids = [];
 connection.query(query, [], function (error, results, fields) {
     for (const entry of results) {
@@ -21,6 +21,20 @@ connection.query(query, [], function (error, results, fields) {
     if (fs.existsSync('preview') == false)
         fs.mkdirSync('preview', { recursive: true });
     fs.writeFileSync('preview/questions.txt', question_ids.join(','));
+
+    for (const entry of results) {
+        let old_question_text = '';
+        let new_question_text = entry.questiontext;
+        let path = 'preview/' + entry.id + '.txt';
+        if (fs.existsSync(path)) {
+            old_question_text = fs.readFileSync(path);
+        }
+        if (old_question_text !== new_question_text) {
+            fs.writeFileSync(path, new_question_text, { encoding: 'utf-8' });
+            console.log('must retake screenshot for question ' + entry.id);
+        }
+        break; // TODO
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////
     const config = JSON.parse(fs.readFileSync('../converter/config.json'));
