@@ -94,7 +94,7 @@ connection.query(query, [], function (error, results, fields) {
                     { waitUntil: 'load', timeout: 0 },
                 );
                 // wait for MathJax rendering
-                await new Promise((resolve) => setTimeout(resolve, 1500));
+                await new Promise((resolve) => setTimeout(resolve, 2500)); // TODO: was 1500
 
                 // remove upper-right links (https://stackoverflow.com/questions/50867065/puppeteer-removing-elements-by-class)
                 let div_selector_to_remove = '.questiontestslink';
