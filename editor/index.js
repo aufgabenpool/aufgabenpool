@@ -65,12 +65,18 @@ app.get('/categories', (request, response) => {
         return;
     }
     // read access file (TODO: must be improved!)
-    let access = '';
+    let access = {};
     if (fs.existsSync('access.txt')) {
-        access = fs.readFileSync('access.txt');
+        let lines = fs.readFileSync('access.txt', 'utf-8').split('\n');
+        for (let line of lines) {
+            line = line.trim();
+            if (line.length == 0 || line.startsWith('#')) continue;
+            let tokens = line.split(';');
+            console.log(tokens);
+        }
     }
-    console.log('access-list:');
-    console.log(access);
+    //console.log('access-list:');
+    //console.log(access);
 
     // TODO: only get categories that current user is allowed to read/write!!!!!
     let query = 'SELECT id, parent, name FROM mdl_question_categories;';
