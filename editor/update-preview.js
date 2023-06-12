@@ -22,6 +22,8 @@ connection.query(query, [], function (error, results, fields) {
         fs.mkdirSync('preview', { recursive: true });
     fs.writeFileSync('preview/questions.txt', question_ids.join(','));
 
+    let must_update_ids = [];
+
     for (const entry of results) {
         let old_question_text = '';
         let new_question_text = entry.questiontext;
@@ -34,6 +36,7 @@ connection.query(query, [], function (error, results, fields) {
             console.log(
                 'must retake screenshot for question ' + entry.id + '.',
             );
+            must_update_ids.push(entry.id);
         } else {
             console.log(
                 'screenshot for question ' + entry.id + ' is up to date.',
@@ -46,8 +49,6 @@ connection.query(query, [], function (error, results, fields) {
     const moodle_url = config['moodle_url'];
     const moodle_user = config['moodle_puppeteer_user'];
     const moodle_pwd = config['moodle_puppeteer_password'];
-
-    const question_id = 5900; // TODO
 
     // https://aufgabenpool.th-koeln.de/moodle/question/bank/previewquestion/preview.php?id=5900
 
@@ -75,44 +76,46 @@ connection.query(query, [], function (error, results, fields) {
         await page.click('#loginbtn');
         await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
-        let screenshot_path = 'preview/' + question_id + '.png';
-        try {
-            // goto question preview
-            await page.goto(
-                moodle_url +
-                    '/question/bank/previewquestion/preview.php?id=' +
-                    question_id,
-                { waitUntil: 'load', timeout: 0 },
-            );
-            // wait for MathJax rendering
-            await new Promise((resolve) => setTimeout(resolve, 1500));
+        for (let question_id of must_update_ids) {
+            let screenshot_path = 'preview/' + question_id + '.png';
+            try {
+                // goto question preview
+                await page.goto(
+                    moodle_url +
+                        '/question/bank/previewquestion/preview.php?id=' +
+                        question_id,
+                    { waitUntil: 'load', timeout: 0 },
+                );
+                // wait for MathJax rendering
+                await new Promise((resolve) => setTimeout(resolve, 1500));
 
-            // remove upper-right links (https://stackoverflow.com/questions/50867065/puppeteer-removing-elements-by-class)
-            let div_selector_to_remove = '.questiontestslink';
-            await page.evaluate((sel) => {
-                var elements = document.querySelectorAll(sel);
-                for (var i = 0; i < elements.length; i++) {
-                    elements[i].parentNode.removeChild(elements[i]);
-                }
-            }, div_selector_to_remove);
+                // remove upper-right links (https://stackoverflow.com/questions/50867065/puppeteer-removing-elements-by-class)
+                let div_selector_to_remove = '.questiontestslink';
+                await page.evaluate((sel) => {
+                    var elements = document.querySelectorAll(sel);
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].parentNode.removeChild(elements[i]);
+                    }
+                }, div_selector_to_remove);
 
-            // take screenshot
-            const questionDiv = await page.$('.content');
-            const box = await questionDiv.boundingBox();
-            const yoffset = 12 + 3; // clip text at top-right position
-            await questionDiv.screenshot({
-                path: screenshot_path,
-                clip: {
-                    x: box['x'],
-                    y: box['y'] + yoffset,
-                    width: box['width'],
-                    height: box['height'] - yoffset,
-                },
-            });
-        } catch (e) {
-            console.log(
-                'failed to get screenshot for exercise ID ' + question_id,
-            );
+                // take screenshot
+                const questionDiv = await page.$('.content');
+                const box = await questionDiv.boundingBox();
+                const yoffset = 12 + 3; // clip text at top-right position
+                await questionDiv.screenshot({
+                    path: screenshot_path,
+                    clip: {
+                        x: box['x'],
+                        y: box['y'] + yoffset,
+                        width: box['width'],
+                        height: box['height'] - yoffset,
+                    },
+                });
+            } catch (e) {
+                console.log(
+                    'failed to get screenshot for exercise ID ' + question_id,
+                );
+            }
         }
 
         // destroy puppeteer
