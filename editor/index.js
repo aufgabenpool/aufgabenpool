@@ -66,6 +66,22 @@ app.get('/categories', (request, response) => {
     }
     // read access file (TODO: must be improved!)
     let access = [];
+    let admins = [];
+    let is_admin = false;
+    if (fs.existsSync('admins.txt')) {
+        let lines = fs.readFileSync('admins.txt', 'utf-8').split('\n');
+        for (let line of lines) {
+            line = line.trim();
+            if (line.length == 0 || line.startsWith('#')) continue;
+            let tokens = line.split(',');
+            for (let token of tokens) {
+                if (parseInt(token) == request.session.userid) {
+                    console.log('==admin==');
+                    is_admin = true;
+                }
+            }
+        }
+    }
     if (fs.existsSync('access.txt')) {
         let lines = fs.readFileSync('access.txt', 'utf-8').split('\n');
         for (let line of lines) {
@@ -87,6 +103,7 @@ app.get('/categories', (request, response) => {
     // TODO: only get categories that current user is allowed to read/write!!!!!
     let query = 'SELECT id, parent, name FROM mdl_question_categories;';
     let categories = [];
+    let hierarchy = {};
     connection.query(query, [], function (error, results, fields) {
         for (const entry of results) {
             categories.push({
@@ -94,15 +111,21 @@ app.get('/categories', (request, response) => {
                 parent: entry.parent,
                 name: entry.name,
             });
+            hierarchy[entry.id] = entry.parent;
         }
-        categories = filter_access(request.session.userid, access, categories);
+        if (!is_admin)
+            categories = filter_access(
+                request.session.userid,
+                access,
+                hierarchy,
+            );
         response.send(categories);
         response.end();
     });
 });
 
-function filter_access(user_id, access_list, categories) {
-    console.log(categories);
+function filter_access(user_id, access_list, hierarchy) {
+    console.log(hierarchy);
     return [];
 }
 
