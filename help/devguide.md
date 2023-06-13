@@ -12,7 +12,7 @@ Die folgenden Abschnitte beschreiben die einzelnen Schritte im Detail.
 
 ## 1. Upload der Aufgaben in Moodle
 
-Loggen Sie sich in [Moodle](https://aufgabenpool.th-koeln.de/moodle/) ein und wählen Sie Ihren _Kurs_ für den Upload aus. Sie finden dort eine (zunächst leere) "Fragensammlung". Wählen Sie diese aus.
+Loggen Sie sich in [Moodle](https://aufgabenpool.th-koeln.de/moodle/) ein und wählen Sie Ihren _Kurs_ (meist benannt nach der Hochschule) für den Upload aus. Sie finden dort eine (zunächst leere) "Fragensammlung". Wählen Sie diese aus.
 
 In der Upload-Maske angekommen (siehe Abbildung 1), kann man mit einem Klick auf "Fragen" (siehe roter Kreis in der Abbildung) und der darauffolgenden Auswahl von "Import" zur Import-Maske gelangen (siehe Abbildung 2).
 
@@ -26,7 +26,9 @@ In der Upload-Maske angekommen (siehe Abbildung 1), kann man mit einem Klick auf
 
 1. In der Import-Maske wird zunächst das Dateiformat der hochzuladenden Aufgaben angegeben. Hier z.B. "Moodle-XML-Format" (siehe Abbildung 2). Das Fragezeichen hinter den Dateiformaten zeigt mehr Informationen zum jeweiligen Dateiformat an.
 
-2. Als Nächstes wird unter "Allgemeines" die Importkategorie ausgewählt. Diese sind nach Themengebieten erstellt, weshalb ein Upload von mehreren Aufgaben gleichzeitig nur aus einem übergeordneten Themengebiet stammen sollten. Wie man eine Aufgabe nach einer falschen Zuordnung im Nachhinein noch verschiebt wird im späteren Verlauf erläutert.
+2. _VORBEMERKUNG: Sofern Sie nicht mehr als 200 Aufgaben hochladen sind Importkategorien **nicht** erforderlich._
+
+    Als Nächstes wird unter "Allgemeines" die Importkategorie ausgewählt. Diese sind nach Themengebieten erstellt, weshalb ein Upload von mehreren Aufgaben gleichzeitig nur aus einem übergeordneten Themengebiet stammen sollten. Wie man eine Aufgabe nach einer falschen Zuordnung im Nachhinein noch verschiebt wird im späteren Verlauf erläutert.
 
 3. Nun können Aufgaben im zuvor gewählten Dateiformat (hier Moodle-XML-Format) hochgeladen werden. Dies kann per Drag-and-drop oder durch einen Klick auf "Datei wählen" geschehen.
 
