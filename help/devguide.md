@@ -43,6 +43,8 @@ Das Taggen der Aufgaben wird über den [Tagging-Editor](https://aufgabenpool.th-
 In der Tagging-Oberfläche angekommen navigiert man zunächst unter "Kategorien" zur gewünschten Kategorie, in die man neue Aufgaben hochgeladen hat (in unserem Beispiel "Differentialrechnung").
 Scrollt man nun runter werden alle Aufgaben der gewählten Kategorie aneinandergereiht. Jede Aufgabe lässt sich nun mit der folgenden Maske taggen (siehe Abbildung 3).
 
+_ACHTUNG: Die Vorschaubilder werden alle 15 Minuten aktualisiert. Für ein angenehmes Arbeiten sollte man nach dem Upload in Moodle bis zur Aktualisierung warten._
+
 ![](images/upload-3.jpg)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Abbildung 3: Tagging-Maske (Beispiel: Quotientenregel aus Differentialrechnung mit gesetzten Tags)_
