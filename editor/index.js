@@ -24,7 +24,7 @@ console.log('Started: ' + new Date().toLocaleString());
 // connect to SQL-database
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'moodle',
+    user: 'root',
     password: 'moodle', // your moodle DB should accessible ONLY from localhost!
     database: 'moodle',
     multipleStatements: false,
